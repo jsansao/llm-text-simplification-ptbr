@@ -33,8 +33,8 @@
 A simplificação textual é uma tarefa fundamental do Processamento de
 Linguagem Natural que visa reduzir a complexidade linguística de textos,
 preservando seu significado original. Este trabalho avalia cinco LLMs
---- GPT-4o mini, GPT-4o, Claude Sonnet 4.6, Llama 4 Scout e Qwen 2.5 7B
---- na tarefa de simplificação textual para o português brasileiro,
+(GPT-4o mini, GPT-4o, Claude Sonnet 4.6, Llama 4 Scout e Qwen 2.5 7B)
+na tarefa de simplificação textual para o português brasileiro,
 utilizando o dataset PorSimplesSent. Testamos três estratégias
 de prompting (zero-shot, few-shot, chain-of-thought) e fine-tuning de
 três variações do PTT5-small (60M) com LoRA rank 8, rank 32 e
@@ -46,7 +46,7 @@ similaridade (ROUGE-1 $\geq$ 0,66), enquanto o Llama 4 Scout alcança os maiores
 legibilidade (Flesch $\Delta = +13,2$, Fog $\Delta = -4,0$).
 O fine-tuning do PTT5-small supera todos os
 resultados de prompting em similaridade (ROUGE-1 até 0,74, SARI até
-55,5), demonstrando que o treinamento em domínio específico compensa a
+55,5). Isso mostra que o treinamento em domínio específico compensa a
 diferença de escala. Uma avaliação complementar
 LLM-as-judge com dois modelos juízes (Gemini 3.1 Flash Lite e GPT-4o
 mini) confirma a fluência e adequação
@@ -60,8 +60,10 @@ de prompting.
 \begin{abstract}
 Text simplification is a fundamental Natural Language Processing task that
 aims to reduce the linguistic complexity of texts while preserving their
-original meaning. This work evaluates five LLMs---GPT-4o mini, GPT-4o,
-Claude Sonnet 4.6, Llama 4 Scout, and Qwen 2.5 7B---on text simplification
+original meaning. This work evaluates five LLMs
+(GPT-4o mini, GPT-4o,
+Claude Sonnet 4.6, Llama 4 Scout, and Qwen 2.5 7B)
+on text simplification
 for Brazilian Portuguese using the PorSimplesSent dataset. We test three
 prompting strategies (zero-shot, few-shot, chain-of-thought) and fine-tune
 three PTT5-small (60M) variants with LoRA rank 8, rank 32, and full
@@ -142,7 +144,7 @@ sentença, nos quais o texto original foi efetivamente simplificado
 Com o advento dos LLMs, diversos estudos avaliaram seu potencial para
 simplificação textual. \citet{feng2023} analisaram a capacidade
 zero-shot e few-shot do ChatGPT e GPT-3.5 em benchmarks de
-simplificação de sentenças, demonstrando que LLMs superam
+simplificação de sentenças. Os resultados indicam que LLMs superam
 métodos supervisionados anteriores e alcançam qualidade
 comparável a anotadores humanos.
 
@@ -217,7 +219,7 @@ tokens, e as simplificadas, 17,6 tokens. Para este experimento,
 selecionamos uma amostra estratificada de 200 pares, dividindo o
 dataset em tercis de tamanho (número de tokens) e sorteando
 proporcionalmente dentro de cada estrato (67/67/66 amostras, seed=42).
-Essa estratificação garante que a amostra preserve a distribuição
+A amostra preserva a distribuição
 de comprimentos do dataset original: o primeiro tercil contém frases
 de até 15 tokens (média 11,6), o segundo de 16 a 24 tokens (média
 19,3), e o terceiro acima de 24 tokens (média 34,1). Dessa forma,
@@ -225,9 +227,9 @@ a amostra de 200 pares reflete a diversidade de tamanhos do
 PorSimplesSent, evitando que frases muito curtas ou muito longas
 sejam super-representadas. O tamanho da amostra foi limitado pelo
 custo de APIs: cada modelo de prompting requer 3 a 4 chamadas por
-amostra (diferentes prompts), e cada execução LLM-as-judge consome
-14--20 chamadas por amostra (9 modelos $\times$ 3 execuções),
-totalizando milhares de chamadas de API além dos limites gratuitos
+amostra, e cada execução LLM-as-judge consome
+14--20 chamadas por amostra (9 modelos $\times$ 3 execuções).
+Ao todo, são milhares de chamadas de API além dos limites gratuitos
 das plataformas. Com n=200, o teste bootstrap pareado (10.000
 iterações) tem poder estatístico de 0,80 para detectar diferenças
 de $\Delta$R1 $\geq 0,03$ ($\alpha = 0,05$, duas caudas),
@@ -235,8 +237,8 @@ suficiente para as comparações realizadas neste trabalho
 \citep{cohen1988}.
 
 Identificamos um par (\#16) no qual original e referência tratam de
-tópicos distintos (vacinação vs.\ servidora pública), indicando possível
-erro de alinhamento; tal amostra foi mantida na análise por representar
+tópicos distintos (vacinação vs.\ servidora pública), provavelmente um
+erro de alinhamento. A amostra foi mantida na análise por representar
 cenários reais de ruído em dados de simplificação textual. Durante a
 inspeção manual da amostra estratificada, este foi o único par
 identificado com esse problema.
@@ -262,7 +264,7 @@ Selecionamos cinco LLMs que representam diferentes categorias:
 Acessamos todos os modelos via OpenRouter API\footnote{IDs dos modelos: \texttt{openai/gpt-4o-mini}, \texttt{openai/gpt-4o-2024-11-20}, \texttt{anthropic/claude-sonnet-4.6}, \texttt{meta-llama/llama-4-scout-17b-16e-instruct}, \texttt{qwen/qwen-2.5-7b-instruct} (acesso em junho/2026).}.
 Os parâmetros de geração foram temperatura 0,0 e limite de 512 tokens de
 saída (768 para chain-of-thought). Temperatura 0,0 foi adotada para
-garantir reprodutibilidade e comparação justa entre modelos, seguindo
+garantir reprodutibilidade e comparação justa entre modelos, conforme
 prática comum em avaliação de LLMs \citep{zhao2021calibrate}. Todos os modelos foram
 avaliados nas estratégias zero-shot e few-shot (k=3); Qwen 2.5 7B,
 Llama 4 Scout, GPT-4o mini e GPT-4o foram adicionalmente avaliados com
@@ -279,7 +281,7 @@ instruir o modelo diretamente sem exemplos. O few-shot
 \citep{brown2020} fornece três pares original--simplificada extraídos
 do próprio PorSimplesSent como exemplos do comportamento desejado. O
 chain-of-thought \citep{wei2022} instrui o modelo a raciocinar passo a
-passo antes de produzir a resposta final, com o objetivo de verificar
+passo antes de produzir a resposta final. O objetivo é verificar
 se o raciocínio explícito beneficia a tarefa de simplificação. Os
 templates específicos foram:
 
@@ -402,7 +404,7 @@ Executamos três rodadas com temperatura 0,3 para verificar a
 consistência, abrangendo 200 amostras para cada um dos nove
 modelos, totalizando 5.400 avaliações de modelo e 600 sanity checks
 (avaliação da própria referência humana). Os prompts não continham
-identificação do modelo avaliado --- o juiz recebia apenas o texto
+identificação do modelo avaliado; o juiz recebia apenas o texto
 original, a referência humana e a saída do sistema.
 
 A extração das notas da resposta do juiz foi feita por um parser que
@@ -517,11 +519,11 @@ GPT-4o mini   & zero & 18,7 & +11,1 & 18,6 & $-3,0$ \\
 A Tabela~\ref{tab:similaridade} apresenta as métricas de similaridade
 para 200 amostras. A similaridade entre o texto original e a referência
 humana (baseline Humano Ref) serve como referencial superior:
-ROUGE-1 = 0,76 e BERTScore = 0,91, indicando que as simplificações
+ROUGE-1 = 0,76 e BERTScore = 0,91. As simplificações
 humanas preservam boa parte do vocabulário original. A linha {\tt Cópia}
 estabelece o piso: copiar o original produz SARI = 15,8, já que nenhuma
 adição ou deleção é realizada. A referência humana contra o próprio
-original produz SARI = 24,6, servindo como valor de referência
+original produz SARI = 24,6, é o valor de referência
 para contextualizar a escala da métrica. Tecnicamente, o SARI
 requer texto fonte, predição e uma lista de referências; aqui
 usamos o original como única referência, de modo que o resultado
@@ -533,9 +535,8 @@ medem o quanto a saída do modelo se afasta do texto original. Quanto
 menor o valor, mais o modelo alterou a frase. Nesse aspecto, o
 Qwen 2.5 7B com few-shot apresenta o maior R1$_{OP}$
 (0,78), e o Claude S. 4.6 (0,76) e GPT-4o mini (0,74) também produzem
-simplificações conservadoras,
-indicando que todos os prompts produzem simplificações que se afastam
-moderadamente do original. O Llama 4 Scout, por outro lado, produz os
+simplificações conservadoras. Todos os prompts produzem simplificações que se afastam
+moderadamente do original. O Llama 4 Scout produz os
 menores R1$_{OP}$ (0,59--0,65), coerente com suas simplificações mais
 agressivas.
 
@@ -547,7 +548,7 @@ melhores (ROUGE-1 =
 GPT-4o mini (R-1 = 0,65, SARI = 39,2). O GPT-4o (full) e o Llama 4
 Scout apresentam desempenho inferior (R-1 = 0,63 e 0,58,
 respectivamente). O Qwen 2.5 7B, modelo aberto de 7B, iguala-se ao
-Claude S. 4.6 em ROUGE-1, confirmando que modelos abertos menores
+Claude S. 4.6 em ROUGE-1. Modelos abertos menores
 podem ser tão eficazes quanto modelos proprietários para esta
 tarefa.
 
@@ -563,7 +564,7 @@ significativas para todos os quatro modelos
 
 A Tabela~\ref{tab:legibilidade} apresenta os índices de legibilidade
 para 200 amostras. A referência humana apresenta melhoria Flesch de
-+7,9 e redução Fog de $-1,9$ em relação ao original, servindo como
++7,9 e redução Fog de $-1,9$ em relação ao original, é o
 baseline de legibilidade. O Llama 4 Scout se destaca com ganhos
 superiores ao humano: melhoria Flesch de +13,2 e redução Fog de $-4,0$
 na estratégia few-shot. O Claude S. 4.6 zero-shot também supera o
@@ -658,17 +659,17 @@ conservador, refletindo uma característica inerente ao PTT5-small.
 \label{fig:loss}
 \end{figure*}
 
-O Qwen 2.5 0.5B, por outro lado, apresentou R-1 de 0,60, SARI de 41,8
-e F$\Delta = +9,6$, indicando simplificações menos similares
-lexicalmente mas com ganhos de legibilidade substanciais, superando
+O Qwen 2.5 0.5B apresentou R-1 de 0,60, SARI de 41,8
+e F$\Delta = +9,6$. As simplificações são menos similares
+lexicalmente, mas os ganhos de legibilidade são substanciais, superando
 o PTT5 em F$\Delta$ (+9,6 vs.\ +2,6 a +4,2).
 
 As tr\^es variantes do PTT5-small superam \textbf{todos} os
 resultados de prompting em ROUGE e SARI, apesar de terem 10--100$\times$
 menos parâmetros que os LLMs avaliados. O Qwen 2.5 0.5B, treinado com
-QLoRA, não atinge o mesmo patamar, indicando que a escala reduzida
-(0,5B parâmetros) limita o aprendizado mesmo com fine-tuning. Isso
-demonstra que o fine-tuning em domínio específico pode superar a lacuna
+QLoRA, não atinge o mesmo patamar: a escala reduzida
+(0,5B parâmetros) limita o aprendizado mesmo com fine-tuning.
+Portanto, o fine-tuning em domínio específico pode superar a lacuna
 de escala para modelos a partir de 60M parâmetros na tarefa de
 simplificação textual.
 
@@ -838,12 +839,12 @@ Rank & Simplicidade & Fluência & Adequação \\
 
 Os modelos de prompting obtêm notas altas em simplicidade
 (4,51--4,73), fluência (4,80--5,00) e adequação (4,72--4,90).
-O GPT-4o lidera em simplicidade (4,73) e adequação (4,90),
-enquanto Claude e GPT-4o atingem fluência máxima (5,00).
-O Qwen 2.5 7B apresenta simplicidade ligeiramente inferior
-(4,51), coerente com seu ganho de legibilidade mais modesto.
+O GPT-4o lidera em simplicidade (4,73) e adequação (4,90);
+Claude e GPT-4o atingem fluência máxima (5,00).
+O Qwen 2.5 7B tem simplicidade ligeiramente inferior
+(4,51), o que é coerente com seu ganho de legibilidade mais modesto.
 O Llama 4 Scout, apesar de liderar em F$\Delta$, tem a fluência
-mais baixa entre os modelos de prompting (4,80), refletindo
+mais baixa entre os modelos de prompting (4,80) por causa de
 ocasionais quebras de estruturas gramaticais.
 
 Os modelos fine-tunados revelam padrões qualitativos importantes.
@@ -863,16 +864,16 @@ os modelos, consistentes com as alucinações semânticas observadas
 rigorosa'').
 
 A correlação de Spearman entre as notas do LLM-judge e o ROUGE-1
-revela relações complementares: simplicidade correlaciona-se
-negativamente com ROUGE-1 ($\rho = -0,113$, $p < 0,001$),
-sugerindo que modelos que maximizam similaridade lexical
+revela relações complementares. Simplicidade correlaciona-se
+negativamente com ROUGE-1 ($\rho = -0,113$, $p < 0,001$):
+modelos que maximizam similaridade lexical
 (como o PTT5) tendem a produzir simplificações percebidas como
 menos simplificadas pelo juiz, embora o efeito seja pequeno
 (R$^2 < 0,02$). Fluência ($\rho = 0,130$) e adequação ($\rho = 0,246$)
-apresentam correlações positivas fracas com ROUGE-1 ($p < 0,001$),
-sugerindo que maior similaridade lexical está associada a saídas
-mais fluentes e adequadas, mas o efeito é pequeno. Esses resultados
-indicam que as métricas automáticas e o LLM-judge capturam aspectos
+apresentam correlações positivas fracas com ROUGE-1 ($p < 0,001$):
+maior similaridade lexical está associada a saídas
+mais fluentes e adequadas, mas o efeito é pequeno.
+Em conjunto, as métricas automáticas e o LLM-judge capturam aspectos
 complementares da simplificação textual.
 
 \subsection{Análise de Concordância entre Juízes Automáticos}
@@ -1004,8 +1005,8 @@ especialmente para modelos de prompting ($\Delta \approx 0,12$), onde
 as diferenças entre as saídas são mais sutis e a variabilidade das
 avaliações do GPT-4o mini é maior.
 
-Este resultado tem implicações importantes para a metodologia
-LLM-as-judge: a escolha do modelo juiz impacta significativamente as
+Esse resultado afeta a metodologia
+LLM-as-judge: a escolha do modelo juiz impacta as
 avaliações, especialmente quando as diferenças entre os sistemas
 avaliados são pequenas. Recomenda-se o uso de múltiplos juízes
 automáticos e a reportação da concordância entre eles como parte da
@@ -1031,12 +1032,12 @@ que as métricas automáticas de similaridade (ROUGE, SARI) e o
 LLM-judge capturam aspectos complementares: ROUGE mede sobreposição
 lexical, enquanto o juiz avalia o efeito perceptual da simplificação.
 
-Um resultado particularmente relevante é que quatro modelos superam o
+Um resultado relevante é que quatro modelos superam o
 baseline humano de legibilidade (Llama 4 Scout, Claude S. 4.6,
 GPT-4o mini e GPT-4o zero-shot), indicando que LLMs podem simplificar
 além do nível das referências do dataset. Isto sugere que as
 referências do PorSimplesSent, embora válidas, não representam o
-``nível máximo'' de simplificação possível --- as referências humanas
+``nível máximo'' de simplificação possível: as referências humanas
 priorizam a preservação do significado sobre a maximalidade da
 simplificação, e ganhos de legibilidade além delas não implicam
 necessariamente simplificações superiores. As notas de adequação do
