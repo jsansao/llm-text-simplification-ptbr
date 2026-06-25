@@ -1,0 +1,1436 @@
+{
+  "strategy": "zero_shot",
+  "num_samples": 200,
+  "metrics": {
+    "rouge1": 0.5366,
+    "rouge2": 0.3341,
+    "rougeL": 0.482,
+    "bertscore_mean": 0.8194,
+    "bertscore_std": 0.056,
+    "ori_pred_rouge1": 0.59,
+    "ori_pred_rouge2": 0.3731,
+    "ori_pred_rougeL": 0.5185,
+    "ori_pred_bertscore_mean": 0.8371,
+    "ori_pred_bertscore_std": 0.0485,
+    "ori_ref_rouge1": 0.7626,
+    "ori_ref_rouge2": 0.658,
+    "ori_ref_rougeL": 0.7386,
+    "ori_ref_bertscore_mean": 0.9069,
+    "ori_ref_bertscore_std": 0.0625,
+    "sari": 34.3409,
+    "flesch_original": 7.61,
+    "flesch_prediction": 20.47,
+    "flesch_improvement": 12.86,
+    "fog_original": 21.63,
+    "fog_prediction": 17.66,
+    "fog_improvement": -3.98,
+    "ref_flesch_original": 7.61,
+    "ref_flesch_prediction": 15.51,
+    "ref_flesch_improvement": 7.89,
+    "ref_fog_original": 21.63,
+    "ref_fog_prediction": 19.73,
+    "ref_fog_improvement": -1.9
+  },
+  "results": [
+    {
+      "idx": 0,
+      "original": "O livro também busca conscientizar os mergulhadores sobre o patrimônio subaquático.",
+      "reference": "O livro também busca alertar os mergulhadores sobre a riqueza que está debaixo da água.",
+      "prediction": "**O livro também quer ensinar os mergulhadores a valorizar e proteger o patrimônio subaquático.**",
+      "raw_output": "**O livro também quer ensinar os mergulhadores a valorizar e proteger o patrimônio subaquático.**"
+    },
+    {
+      "idx": 1,
+      "original": "No sábado, os amantes da ufologia voltaram para casa sem nenhum registro especial.",
+      "reference": "No sábado, as pessoas que gostam da ufologia voltaram para casa sem nenhum registro especial.",
+      "prediction": "**No sábado, os fãs de ufologia foram para casa sem nada de especial para mostrar.**",
+      "raw_output": "**No sábado, os fãs de ufologia foram para casa sem nada de especial para mostrar.**"
+    },
+    {
+      "idx": 2,
+      "original": "Com três papeizinhos dobrados, de cerca de dois centímetros, há um santinho de Frei Galvão.",
+      "reference": "Aparecem três papeizinhos dobrados junto com um santinho de Frei Galvão.",
+      "prediction": "**\n\nHá um santinho de Frei Galvão feito com três pequenos papéis dobrados, de cerca de dois centímetros.",
+      "raw_output": "**Simplificação:**\n\nHá um santinho de Frei Galvão feito com três pequenos papéis dobrados, de cerca de dois centímetros."
+    },
+    {
+      "idx": 3,
+      "original": "-- Eu sei que é imprudência, mas só dirijo na praia, só para aprender.",
+      "reference": "Mas só dirijo na praia, para aprender.",
+      "prediction": "**\n— Eu sei que é arriscado, mas só dirijo na praia, para treinar.",
+      "raw_output": "**Simplificação:**\n— Eu sei que é arriscado, mas só dirijo na praia, para treinar."
+    },
+    {
+      "idx": 4,
+      "original": "O posto que descumprir a norma poderá ser fechado:",
+      "reference": "O posto que deixar de cumprir a norma poderá ser fechado:",
+      "prediction": "**O posto que não seguir a regra poderá ser fechado.**",
+      "raw_output": "**O posto que não seguir a regra poderá ser fechado.**"
+    },
+    {
+      "idx": 5,
+      "original": "Os técnicos temiam que ela pudesse se soltar na reentrada e danificar a nave.",
+      "reference": "Os técnicos temiam que ela pudesse se soltar na entrada na atmosfera e estragar a nave.",
+      "prediction": "**Os técnicos tinham medo de que ela se soltasse durante a reentrada e danificasse a nave.**",
+      "raw_output": "**Os técnicos tinham medo de que ela se soltasse durante a reentrada e danificasse a nave.**"
+    },
+    {
+      "idx": 6,
+      "original": "A Capital vivencia um fenômeno contraditório:",
+      "reference": "A Capital vivencia um fenômeno incoerente:",
+      "prediction": "**A Capital passa por uma situação contraditória:**",
+      "raw_output": "**A Capital passa por uma situação contraditória:**"
+    },
+    {
+      "idx": 7,
+      "original": "-- É um alento, porque significa custo menor da matéria-prima -- afirma Castro.",
+      "reference": "Ela significa o custo menor da matéria-prima -- afirma Castro.",
+      "prediction": "\"É uma boa notícia, pois significa que a matéria-prima vai custar menos\", diz Castro.",
+      "raw_output": "\"É uma boa notícia, pois significa que a matéria-prima vai custar menos\", diz Castro."
+    },
+    {
+      "idx": 8,
+      "original": "Dentro de até 40 dias, o herói estará de volta, com chapéu novo.",
+      "reference": "O herói estará de volta com chapéu novo dentro de até 40 dias.",
+      "prediction": "**O herói volta em até 40 dias, com um chapéu novo.**",
+      "raw_output": "**O herói volta em até 40 dias, com um chapéu novo.**"
+    },
+    {
+      "idx": 9,
+      "original": "A principal tarefa agendada será instalar uma plataforma de armazenamento do lado de fora da estação.",
+      "reference": "A principal tarefa será instalar uma plataforma de depósito do lado de fora da estação.",
+      "prediction": "**A principal tarefa programada será instalar uma plataforma de armazenamento do lado de fora da estação.**",
+      "raw_output": "**A principal tarefa programada será instalar uma plataforma de armazenamento do lado de fora da estação.**"
+    },
+    {
+      "idx": 10,
+      "original": "Falta de trabalho dificulta troca da rua por abrigo.",
+      "reference": "Falta de trabalho torna mais difícil a troca da rua por abrigo.",
+      "prediction": "**Sem emprego, é difícil sair das ruas.**",
+      "raw_output": "**Sem emprego, é difícil sair das ruas.**"
+    },
+    {
+      "idx": 11,
+      "original": "Mas há pelo menos uma coisa a se dizer a favor do barrigudo:",
+      "reference": "Mas há pelo menos uma coisa a se dizer a favor do homem de barriga grande:",
+      "prediction": "**Mas o barrigudo tem pelo menos um ponto positivo:**",
+      "raw_output": "**Mas o barrigudo tem pelo menos um ponto positivo:**"
+    },
+    {
+      "idx": 12,
+      "original": "A ferramenta foi apresentada por executivos do Google no planetário em Hamburgo, Alemanha.",
+      "reference": "Executivos do google apresentaram a ferramenta no planetário de Hamburgo, na Alemanha.",
+      "prediction": "**\n\nExecutivos do Google apresentaram a ferramenta em um planetário em Hamburgo, na Alemanha.",
+      "raw_output": "**Simplificação:**\n\nExecutivos do Google apresentaram a ferramenta em um planetário em Hamburgo, na Alemanha."
+    },
+    {
+      "idx": 13,
+      "original": "No Estado, as zonas wi-fi, locais com redes sem fio, estão engatinhando.",
+      "reference": "No Estado, as zonas wi-fi estão no começo.",
+      "prediction": "**\n\nNo Estado, as zonas wi-fi ainda estão no começo.",
+      "raw_output": "**Simplificação:**\n\nNo Estado, as zonas wi-fi ainda estão no começo."
+    },
+    {
+      "idx": 14,
+      "original": "Um equivalente europeu está na Alemanha, aguardando o mesmo fim.",
+      "reference": "Um equivalente europeu está na Alemanha, aguardando um fim igual.",
+      "prediction": "**\n\nNa Europa, há um equivalente na Alemanha, esperando pelo mesmo destino.",
+      "raw_output": "**Simplificação:**\n\nNa Europa, há um equivalente na Alemanha, esperando pelo mesmo destino."
+    },
+    {
+      "idx": 15,
+      "original": "Ele estuda, trabalha com o pai e, agora, vai ficar marcado.",
+      "reference": "Ele estuda, trabalha com o pai.",
+      "prediction": "**Ele estuda, trabalha com o pai e agora vai ter problemas.**\n\n(Substituí \"vai ficar marcado\" por \"vai ter problemas\", pois é uma expressão mais clara e direta, mantendo o sentido de consequência negativa.)",
+      "raw_output": "**Ele estuda, trabalha com o pai e agora vai ter problemas.**\n\n(Substituí \"vai ficar marcado\" por \"vai ter problemas\", pois é uma expressão mais clara e direta, mantendo o sentido de consequência negativa.)"
+    },
+    {
+      "idx": 16,
+      "original": "Sem contra-indicações, as gotinhas devem ser tomadas até mesmo por crianças com febre.",
+      "reference": "Maria Aparecida müller vilarino é coordenadora do núcleo de vacinação da Secretaria Municipal da Saúde.",
+      "prediction": "**As gotinhas podem ser tomadas por crianças com febre, desde que não haja contraindicações.**",
+      "raw_output": "**As gotinhas podem ser tomadas por crianças com febre, desde que não haja contraindicações.**"
+    },
+    {
+      "idx": 17,
+      "original": "De casa em casa, as capelinhas propagam a fé e promovem a convivência entre vizinhos.",
+      "reference": "As capelinhas espalham a fé de casa em casa.",
+      "prediction": "**\n\nAs capelinhas passam de casa em casa. Elas espalham a fé e aproximam os vizinhos.",
+      "raw_output": "**Simplificação:**\n\nAs capelinhas passam de casa em casa. Elas espalham a fé e aproximam os vizinhos."
+    },
+    {
+      "idx": 18,
+      "original": "Alguns cogitaram espantar as abelhas com jornais em chamas.",
+      "reference": "Alguns pensaram em espantar as abelhas com jornais em chamas.",
+      "prediction": "**Alguns pensaram em usar jornais em chamas para afastar as abelhas.**",
+      "raw_output": "**Alguns pensaram em usar jornais em chamas para afastar as abelhas.**"
+    },
+    {
+      "idx": 19,
+      "original": "Enquanto fiscais davam cabo das peças, outras 75 mil já se acumulavam nos depósitos da secretaria.",
+      "reference": "No momento em que fiscais davam cabo das peças, outras 75 mil se acumulavam nos depósitos da secretaria.",
+      "prediction": "**\n\nEnquanto os fiscais destruíam as peças apreendidas, outras 75 mil já estavam guardadas nos depósitos da secretaria.",
+      "raw_output": "**Simplificação:**\n\nEnquanto os fiscais destruíam as peças apreendidas, outras 75 mil já estavam guardadas nos depósitos da secretaria."
+    },
+    {
+      "idx": 20,
+      "original": "A Venezuela na encruzilhada.",
+      "reference": "A Venezuela em um momento decisivo.",
+      "prediction": "**A Venezuela em um momento decisivo.**\n\n(O país enfrenta uma escolha importante sobre seu futuro.)",
+      "raw_output": "**A Venezuela em um momento decisivo.**\n\n(O país enfrenta uma escolha importante sobre seu futuro.)"
+    },
+    {
+      "idx": 21,
+      "original": "\"Essa pessoa não perceberia a Terra, que seria ofuscada pela luminosidade solar \", explicou Steiner.",
+      "reference": "\"Essa pessoa não perceberia a Terra, que seria escondida pela claridade solar \", explicou Steiner.",
+      "prediction": "\"Essa pessoa não conseguiria ver a Terra, pois ela seria encoberta pela luz do Sol\", explicou Steiner.",
+      "raw_output": "\"Essa pessoa não conseguiria ver a Terra, pois ela seria encoberta pela luz do Sol\", explicou Steiner."
+    },
+    {
+      "idx": 22,
+      "original": "Mas, por razões éticas, não se pode fazer experimentos de interrupção com esses pacientes.",
+      "reference": "Mas, de acordo com as regras médicas, não se pode fazer experiências de interrupção com esses pacientes.",
+      "prediction": "**Mas, por questões éticas, não é possível fazer experimentos interrompendo o tratamento desses pacientes.**",
+      "raw_output": "**Mas, por questões éticas, não é possível fazer experimentos interrompendo o tratamento desses pacientes.**"
+    },
+    {
+      "idx": 23,
+      "original": "A massa da proteína, então, pode ser calculada.",
+      "reference": "A massa da proteína pode ser calculada em seguida.",
+      "prediction": "** Então, é possível calcular a massa da proteína.",
+      "raw_output": "**Simplificação:** Então, é possível calcular a massa da proteína."
+    },
+    {
+      "idx": 24,
+      "original": "E com um detalhe holywoodiano:",
+      "reference": "E com um detalhe de cinema:",
+      "prediction": "**E com um detalhe digno de Hollywood:**",
+      "raw_output": "**E com um detalhe digno de Hollywood:**"
+    },
+    {
+      "idx": 25,
+      "original": "A entrega da nova casa aos Silva está prevista para daqui a 15 dias.",
+      "reference": "A nova casa dos Silva vai ser entregue daqui a 15 dias.",
+      "prediction": "**A família Silva vai receber a nova casa em 15 dias.**",
+      "raw_output": "**A família Silva vai receber a nova casa em 15 dias.**"
+    },
+    {
+      "idx": 26,
+      "original": "A informação foi, naturalmente, primeiro dada aos astronautas.",
+      "reference": "A informação foi dada primeiro aos astronautas.",
+      "prediction": "**Os astronautas foram os primeiros a receber a informação.**",
+      "raw_output": "**Os astronautas foram os primeiros a receber a informação.**"
+    },
+    {
+      "idx": 27,
+      "original": "Essas amostras poderão conter, também, sinais de formas de vida que sobrevivem em temperaturas elevadas.",
+      "reference": "Essas amostras também poderão conter sinais de formas de vida que sobrevivem em temperaturas elevadas.",
+      "prediction": "** Essas amostras também podem ter sinais de seres vivos que sobrevivem em altas temperaturas.",
+      "raw_output": "**Simplificação:** Essas amostras também podem ter sinais de seres vivos que sobrevivem em altas temperaturas."
+    },
+    {
+      "idx": 28,
+      "original": "Mas um robô industrial não precisaria de tanta precisão para suas atividades rotineiras.",
+      "reference": "Mas um robô industrial não precisaria de tanta precisão em suas atividades de rotina.",
+      "prediction": "**Mas um robô industrial não precisa de tanta precisão para fazer suas tarefas do dia a dia.**",
+      "raw_output": "**Mas um robô industrial não precisa de tanta precisão para fazer suas tarefas do dia a dia.**"
+    },
+    {
+      "idx": 29,
+      "original": "Naquele país, a ave é considerada uma praga.",
+      "reference": "Naquele país, a ave é considerada uma desgraça.",
+      "prediction": "**Naquele país, a ave é considerada uma praga.**\n\nA frase já está bastante simples e clara. Uma possível variação seria:\n\n\"Naquele país, essa ave é vista como uma praga.\"\n\nO significado é o mesmo, mas o uso de **\"essa\"** e **\"vista como\"** torna a frase um pouco mais natural na fala cotidiana.",
+      "raw_output": "**Naquele país, a ave é considerada uma praga.**\n\nA frase já está bastante simples e clara. Uma possível variação seria:\n\n\"Naquele país, essa ave é vista como uma praga.\"\n\nO significado é o mesmo, mas o uso de **\"essa\"** e **\"vista como\"** torna a frase um pouco mais natural na fala cotidiana."
+    },
+    {
+      "idx": 30,
+      "original": "Como vês, não há ninguém lá.",
+      "reference": "Não há ninguém lá.",
+      "prediction": "**Como você pode ver, não tem ninguém lá.**",
+      "raw_output": "**Como você pode ver, não tem ninguém lá.**"
+    },
+    {
+      "idx": 31,
+      "original": "Santa Rosa registrou o maior aumento do período -- 0,99% -- de R$ 2,73 para 2,757.",
+      "reference": "Santa Rosa registrou o maior aumento do período -- 0,99% -- de R$ 2,73 para R$ 2,757.",
+      "prediction": "**\n\nSanta Rosa teve o maior aumento do período: 0,99%, passando de R$ 2,73 para R$ 2,757.",
+      "raw_output": "**Simplificação:**\n\nSanta Rosa teve o maior aumento do período: 0,99%, passando de R$ 2,73 para R$ 2,757."
+    },
+    {
+      "idx": 32,
+      "original": "O trabalho foi coordenado pelo geocientista Charles Vörösmarty, da Universidade de New Hampshire, nos Estados Unidos.",
+      "reference": "O trabalho foi dirigido pelo geocientista Charles Vörösmarty, da Universidade de New Hampshire, nos Estados Unidos.",
+      "prediction": "**\n\nO trabalho foi coordenado por Charles Vörösmarty, um geocientista da Universidade de New Hampshire, nos Estados Unidos.",
+      "raw_output": "**Simplificação:**\n\nO trabalho foi coordenado por Charles Vörösmarty, um geocientista da Universidade de New Hampshire, nos Estados Unidos."
+    },
+    {
+      "idx": 33,
+      "original": "Canteiros de obras parecem ter sido abandonados às pressas, com retroescavadeiras no meio do trabalho.",
+      "reference": "Parece que as pessoas abandonaram os canteiros de obras às pressas, deixando retroescavadeiras no meio do trabalho.",
+      "prediction": "**Obras parecem ter sido abandonadas de repente, com máquinas ainda no meio do serviço.**",
+      "raw_output": "**Obras parecem ter sido abandonadas de repente, com máquinas ainda no meio do serviço.**"
+    },
+    {
+      "idx": 34,
+      "original": "Cada participante foi acompanhado por três funcionários da equipe durante o desafio.",
+      "reference": "Três funcionários da equipe acompanharam cada participante durante o desafio.",
+      "prediction": "**Três funcionários acompanharam cada participante durante o desafio.**",
+      "raw_output": "**Três funcionários acompanharam cada participante durante o desafio.**"
+    },
+    {
+      "idx": 35,
+      "original": "Para evitar um choque térmico, os animais permanecem presos por pelo menos uma hora.",
+      "reference": "Os animais permanecem presos por pelo menos uma hora, com o objetivo de evitar um choque de temperatura.",
+      "prediction": "**Os animais ficam presos por pelo menos uma hora para se adaptarem à temperatura do local.**",
+      "raw_output": "**Os animais ficam presos por pelo menos uma hora para se adaptarem à temperatura do local.**"
+    },
+    {
+      "idx": 36,
+      "original": "Os EUA, disse ele, foram um dos últimos países a assinar a Declaração de Helsinque.",
+      "reference": "Ele disse que os EUA foram um dos últimos países a assinar a Declaração de Helsinque.",
+      "prediction": "**Segundo ele, os EUA foram um dos últimos países a assinar a Declaração de Helsinque.**\n\n(A frase já é bastante simples e clara. O único ajuste foi reorganizar a ordem das palavras para tornar a leitura mais fluida.)",
+      "raw_output": "**Segundo ele, os EUA foram um dos últimos países a assinar a Declaração de Helsinque.**\n\n(A frase já é bastante simples e clara. O único ajuste foi reorganizar a ordem das palavras para tornar a leitura mais fluida.)"
+    },
+    {
+      "idx": 37,
+      "original": "Riquelme, de cinco anos, enfrentou uma casa em chamas.",
+      "reference": "Riquelme enfrentou uma casa em chamas.",
+      "prediction": "**Riquelme, de cinco anos, enfrentou um incêndio em casa.**",
+      "raw_output": "**Riquelme, de cinco anos, enfrentou um incêndio em casa.**"
+    },
+    {
+      "idx": 38,
+      "original": "A estrada que leva à fronteira com o Líbano segue a direção da orla.",
+      "reference": "A estrada até a fronteira com o Líbano segue a direção do litoral.",
+      "prediction": "**A estrada para a fronteira com o Líbano acompanha a costa.**",
+      "raw_output": "**A estrada para a fronteira com o Líbano acompanha a costa.**"
+    },
+    {
+      "idx": 39,
+      "original": "Sob a orientação do pesquisador Ekkehard Hansen, ele desenvolve o projeto como parte de seu doutorado.",
+      "reference": "Ele desenvolve o projeto como parte de seu doutorado sob a orientação do pesquisador Ekkehard Hansen.",
+      "prediction": "**\n\nEle desenvolve o projeto como parte do seu doutorado, com a orientação do pesquisador Ekkehard Hansen.",
+      "raw_output": "**Simplificação:**\n\nEle desenvolve o projeto como parte do seu doutorado, com a orientação do pesquisador Ekkehard Hansen."
+    },
+    {
+      "idx": 40,
+      "original": "Em trajetos longos, os dois costumam jogar seus games preferidos.",
+      "reference": "Os dois costumam jogar seus games preferidos em viagens longas.",
+      "prediction": "**Em viagens longas, os dois jogam seus games favoritos.**",
+      "raw_output": "**Em viagens longas, os dois jogam seus games favoritos.**"
+    },
+    {
+      "idx": 41,
+      "original": "A denúncia surgiu dos professores preocupados com a segurança dos estudantes e funcionários.",
+      "reference": "Os professores denunciaram as más condições da escola, porque estavam preocupados com a segurança dos estudantes e funcionários.",
+      "prediction": "**Professores preocupados com a segurança de alunos e funcionários fizeram a denúncia.**",
+      "raw_output": "**Professores preocupados com a segurança de alunos e funcionários fizeram a denúncia.**"
+    },
+    {
+      "idx": 42,
+      "original": "A coisa muda de figura com o novo mamífero, ou o que sobrou dele.",
+      "reference": "A coisa muda de figura com o novo mamífero.",
+      "prediction": "**A situação muda com o novo mamífero, ou o que restou dele.**",
+      "raw_output": "**A situação muda com o novo mamífero, ou o que restou dele.**"
+    },
+    {
+      "idx": 43,
+      "original": "É a segunda destruição ocorrida este ano na Capital.",
+      "reference": "É a segunda destruição deste ano na Capital.",
+      "prediction": "**É a segunda vez que isso acontece na Capital este ano.**",
+      "raw_output": "**É a segunda vez que isso acontece na Capital este ano.**"
+    },
+    {
+      "idx": 44,
+      "original": "Isso pode azeitar as engrenagens do pólo metalmecânico da Serra.",
+      "reference": "Isso pode ser bom para o pólo metalmecânico da Serra.",
+      "prediction": "**Isso pode impulsionar a indústria metal-mecânica da Serra.**",
+      "raw_output": "**Isso pode impulsionar a indústria metal-mecânica da Serra.**"
+    },
+    {
+      "idx": 45,
+      "original": "O relatório também apontou um risco que ronda o procedimento:",
+      "reference": "O relatório também apontou um risco desse procedimento:",
+      "prediction": "**O relatório também mostrou um risco no procedimento:**",
+      "raw_output": "**O relatório também mostrou um risco no procedimento:**"
+    },
+    {
+      "idx": 46,
+      "original": "Somados, os empreendimentos detalhados representam 2% da energia consumida no país.",
+      "reference": "A Pampa e a Seival representam 2% da energia consumida no país.",
+      "prediction": "**Juntos, esses empreendimentos consomem 2% de toda a energia do país.**",
+      "raw_output": "**Juntos, esses empreendimentos consomem 2% de toda a energia do país.**"
+    },
+    {
+      "idx": 47,
+      "original": "\"Mas o problema maior é o dano causado localmente logo depois da picada\".",
+      "reference": "Diz: \"Mas o problema maior é o dano causado no local em seguida à picada\".",
+      "prediction": "\"Mas o maior problema é o estrago que a picada causa no local.\"",
+      "raw_output": "\"Mas o maior problema é o estrago que a picada causa no local.\""
+    },
+    {
+      "idx": 48,
+      "original": "A relação espúria começa no abdome da aranha, onde a Hymenoepimecis injeta os ovos.",
+      "reference": "A relação começa na barriga da aranha, onde a Hymenoepimecis coloca os ovos.",
+      "prediction": "**A relação começa quando a Hymenoepimecis injeta seus ovos na barriga da aranha.**",
+      "raw_output": "**A relação começa quando a Hymenoepimecis injeta seus ovos na barriga da aranha.**"
+    },
+    {
+      "idx": 49,
+      "original": "\"Temos que ter em mente que a soja transgênica não desaparecerá no próximo ano\".",
+      "reference": "\"Temos de ter em mente que a soja transgênica não desaparecerá no próximo ano\".",
+      "prediction": "**\"A soja transgênica ainda vai existir por muito tempo.\"**",
+      "raw_output": "**\"A soja transgênica ainda vai existir por muito tempo.\"**"
+    },
+    {
+      "idx": 50,
+      "original": "No entanto, há restrições.",
+      "reference": "Mas há limitações.",
+      "prediction": "**Mas existem limites.**",
+      "raw_output": "**Mas existem limites.**"
+    },
+    {
+      "idx": 51,
+      "original": "No Brasil, a primeira adesão ocorreu em 2001, com 11 cidades.",
+      "reference": "No Brasil, o primeiro apoio ocorreu em 2001, com 11 cidades.",
+      "prediction": "** Em 2001, 11 cidades brasileiras aderiram pela primeira vez.",
+      "raw_output": "**Simplificação:** Em 2001, 11 cidades brasileiras aderiram pela primeira vez."
+    },
+    {
+      "idx": 52,
+      "original": "Meirelles pede prudência e Mantega vê só uma correção.",
+      "reference": "Mantega vê só um ajuste.",
+      "prediction": "**\n\nMeirelles pede cuidado e Mantega acredita que é só um ajuste.",
+      "raw_output": "**Simplificação:**\n\nMeirelles pede cuidado e Mantega acredita que é só um ajuste."
+    },
+    {
+      "idx": 53,
+      "original": "Enquanto não põem os pés na praia de Nusa Dua, porém, os flashes vão para Kerry.",
+      "reference": "Mas, enquanto não põem os pés na praia de Nusa Dua, os flashes vão para Kerry.",
+      "prediction": "** Antes de chegarem à praia de Nusa Dua, as fotos são tiradas de Kerry.",
+      "raw_output": "**Simplificação:** Antes de chegarem à praia de Nusa Dua, as fotos são tiradas de Kerry."
+    },
+    {
+      "idx": 54,
+      "original": "A vigília noturna fez parte do Encontro Nacional de Estudos Ufológicos, realizado de sexta a domingo.",
+      "reference": "A observação noturna fez parte do Encontro Nacional de Estudos Ufológicos, realizado de sexta-feira a domingo.",
+      "prediction": "**\n\nA vigília noturna aconteceu durante o Encontro Nacional de Estudos Ufológicos, que foi realizado de sexta-feira a domingo.",
+      "raw_output": "**Simplificação:**\n\nA vigília noturna aconteceu durante o Encontro Nacional de Estudos Ufológicos, que foi realizado de sexta-feira a domingo."
+    },
+    {
+      "idx": 55,
+      "original": "Assim, a semana mais turbulenta do ano fechou em recuperação para os investidores.",
+      "reference": "Com isso, a semana mais agitada do ano fechou em recuperação para os investidores.",
+      "prediction": "** Assim, a semana mais agitada do ano terminou bem para os investidores.",
+      "raw_output": "**Simplificação:** Assim, a semana mais agitada do ano terminou bem para os investidores."
+    },
+    {
+      "idx": 56,
+      "original": "Na política, a participação também será restrita.",
+      "reference": "A organização reúne mais ou menos mil mulheres.",
+      "prediction": "**Na política, a participação também será limitada.**",
+      "raw_output": "**Na política, a participação também será limitada.**"
+    },
+    {
+      "idx": 57,
+      "original": "Transportaram Caetana, um whippet (um galgo pequeno, explicam) por 1.250 quilômetros.",
+      "reference": "Caetana é um whippet, um galgo pequeno.",
+      "prediction": "Transportaram Caetana, uma cachorra da raça whippet, por 1.250 quilômetros.",
+      "raw_output": "Transportaram Caetana, uma cachorra da raça whippet, por 1.250 quilômetros."
+    },
+    {
+      "idx": 58,
+      "original": "-- Os novos cardeais provêm de várias partes do mundo.",
+      "reference": "-- Os novos cardeais vêm de várias partes do mundo.",
+      "prediction": "**Os novos cardeais vêm de diferentes partes do mundo.**",
+      "raw_output": "**Os novos cardeais vêm de diferentes partes do mundo.**"
+    },
+    {
+      "idx": 59,
+      "original": "Germano Bonow (PFL) era seu companheiro de chapa.",
+      "reference": "Germano Bonow era seu companheiro de chapa.",
+      "prediction": "Germano Bonow, do PFL, era seu parceiro de candidatura.",
+      "raw_output": "Germano Bonow, do PFL, era seu parceiro de candidatura."
+    },
+    {
+      "idx": 60,
+      "original": "Nessa última safra, 2006/2007, os produtores seguraram mais o produto na expectativa de melhores preços.",
+      "reference": "Na safra 2006/2007, os produtores seguraram mais o produto na expectativa de melhores preços.",
+      "prediction": "**\n\nNa última safra, de 2006/2007, os produtores esperaram mais para vender, na esperança de conseguir preços melhores.",
+      "raw_output": "**Simplificação:**\n\nNa última safra, de 2006/2007, os produtores esperaram mais para vender, na esperança de conseguir preços melhores."
+    },
+    {
+      "idx": 61,
+      "original": "A discussão sobre a biotecnologia nacional está enviesada, pois está sendo entendida como sinônimo de transgenia.",
+      "reference": "A discussão sobre a biotecnologia nacional está orientada de forma inadequada, pois está sendo entendida como sinônimo de transgenia.",
+      "prediction": "**\n\nO debate sobre biotecnologia no Brasil está distorcido, porque as pessoas confundem biotecnologia com transgênicos, como se fossem a mesma coisa.",
+      "raw_output": "**Simplificação:**\n\nO debate sobre biotecnologia no Brasil está distorcido, porque as pessoas confundem biotecnologia com transgênicos, como se fossem a mesma coisa."
+    },
+    {
+      "idx": 62,
+      "original": "A Venezuela vive dias tensos.",
+      "reference": "A Venezuela vive dias difíceis.",
+      "prediction": "A Venezuela está passando por um momento difícil.",
+      "raw_output": "A Venezuela está passando por um momento difícil."
+    },
+    {
+      "idx": 63,
+      "original": "A obra pode levar dois anos para ser concluída.",
+      "reference": "A obra pode levar dois anos para terminar.",
+      "prediction": "**A obra pode demorar dois anos para ficar pronta.**",
+      "raw_output": "**A obra pode demorar dois anos para ficar pronta.**"
+    },
+    {
+      "idx": 64,
+      "original": "Praia é lugar para cachorro?",
+      "reference": "Praia é lugar de cachorro?",
+      "prediction": "**Cachorro pode ir à praia?**",
+      "raw_output": "**Cachorro pode ir à praia?**"
+    },
+    {
+      "idx": 65,
+      "original": "\"Esse é o período em que podemos realizar a interrupção \", diz.",
+      "reference": "\"Esse é o período em que podemos realizar a interrupção\".",
+      "prediction": "\"Esse é o momento em que podemos fazer a pausa\", diz.",
+      "raw_output": "\"Esse é o momento em que podemos fazer a pausa\", diz."
+    },
+    {
+      "idx": 66,
+      "original": "Os animaizinhos são filhotes -- cervos e zebras, por exemplo -- que nasceram no parque e, por algum motivo, tiveram de ser criados por veterinários.",
+      "reference": "Os animaizinhos são filhotes que nasceram no parque e, por algum motivo, tiveram de ser criados por veterinários.",
+      "prediction": "Os animaizinhos são filhotes criados por veterinários do parque. São animais como cervos e zebras que nasceram lá, mas precisaram de cuidados especiais.",
+      "raw_output": "Os animaizinhos são filhotes criados por veterinários do parque. São animais como cervos e zebras que nasceram lá, mas precisaram de cuidados especiais."
+    },
+    {
+      "idx": 67,
+      "original": "Em relação às diárias, por exemplo, quando o valor recebido com elas extrapola 50% do salário dos deputados, é preciso fazer o recolhimento de INSS.",
+      "reference": "Por exemplo, no caso das diárias, quando o valor recebido extrapola 50% do salário dos deputados, é preciso pagar o INSS.",
+      "prediction": "**\n\nAs diárias pagas aos deputados têm um limite. Quando o valor recebido ultrapassa 50% do salário deles, é obrigatório pagar o INSS sobre esse valor.",
+      "raw_output": "**Simplificação:**\n\nAs diárias pagas aos deputados têm um limite. Quando o valor recebido ultrapassa 50% do salário deles, é obrigatório pagar o INSS sobre esse valor."
+    },
+    {
+      "idx": 68,
+      "original": "Só espero que essa decisão de restrição parcial ao plenário seja provisória -- defendeu o líder da bancada do PC do B, Raul Carrion.",
+      "reference": "Só espero que essa decisão de limitação parcial ao plenário seja provisória -- defendeu Raul Carrion.",
+      "prediction": "\"Espero que essa restrição ao plenário seja temporária\", disse o líder do PC do B, Raul Carrion.",
+      "raw_output": "\"Espero que essa restrição ao plenário seja temporária\", disse o líder do PC do B, Raul Carrion."
+    },
+    {
+      "idx": 69,
+      "original": "A portas fechadas, os delegados debruçavam-se sobre o texto final da conferência, o chamado mapa do caminho de Bali.",
+      "reference": "O texto final é chamado de mapa do caminho de Bali.",
+      "prediction": "**\n\nEm reunião fechada, os delegados discutiam o texto final da conferência, conhecido como \"mapa do caminho de Bali\".",
+      "raw_output": "**Simplificação:**\n\nEm reunião fechada, os delegados discutiam o texto final da conferência, conhecido como \"mapa do caminho de Bali\"."
+    },
+    {
+      "idx": 70,
+      "original": "Aos 58 anos, dom Odilo, atual arcebispo de São Paulo, se tornará o mais jovem cardeal brasileiro -- os demais têm mais de 70 anos.",
+      "reference": "Ele se tornará o mais jovem cardeal brasileiro.",
+      "prediction": "Dom Odilo tem 58 anos e é arcebispo de São Paulo. Ele vai se tornar cardeal e será o mais jovem do Brasil, já que os outros cardeais brasileiros têm mais de 70 anos.",
+      "raw_output": "Dom Odilo tem 58 anos e é arcebispo de São Paulo. Ele vai se tornar cardeal e será o mais jovem do Brasil, já que os outros cardeais brasileiros têm mais de 70 anos."
+    },
+    {
+      "idx": 71,
+      "original": "De acordo com o procurador-geral do Legislativo gaúcho, Fernando Ferreira, a Casa não tem poder para impor punições aos envolvidos.",
+      "reference": "O procurador-geral da Assembléia diz que ela não tem poder para punir os envolvidos.",
+      "prediction": "**\n\nSegundo Fernando Ferreira, procurador-geral da Assembleia Legislativa do Rio Grande do Sul, a instituição não tem autoridade para punir os envolvidos.",
+      "raw_output": "**Simplificação:**\n\nSegundo Fernando Ferreira, procurador-geral da Assembleia Legislativa do Rio Grande do Sul, a instituição não tem autoridade para punir os envolvidos."
+    },
+    {
+      "idx": 72,
+      "original": "De acordo com o UNAIDS, em 2007, foram investidos US$ 10 bilhões no enfrentamento da epidemia no mundo.",
+      "reference": "De acordo com o UNAIDS, investiram-se US$ 10 bilhões para enfrentar a epidemia no mundo em 2007.",
+      "prediction": "**\n\nEm 2007, o mundo gastou US$ 10 bilhões no combate à epidemia, segundo o UNAIDS.",
+      "raw_output": "**Simplificação:**\n\nEm 2007, o mundo gastou US$ 10 bilhões no combate à epidemia, segundo o UNAIDS."
+    },
+    {
+      "idx": 73,
+      "original": "O Rio Grande do Sul começa a trilhar o mesmo caminho da Europa, que está dispensando as fraldas.",
+      "reference": "O Rio Grande do Sul começa a seguir o mesmo caminho da Europa, que está dispensando as fraldas.",
+      "prediction": "**O Rio Grande do Sul está seguindo o exemplo da Europa e deixando de usar fraldas descartáveis.**",
+      "raw_output": "**O Rio Grande do Sul está seguindo o exemplo da Europa e deixando de usar fraldas descartáveis.**"
+    },
+    {
+      "idx": 74,
+      "original": "Para a Secretaria Municipal do Meio Ambiente (Smam), freqüentadores da Redenção não devem se assustar com a morte do cavalo provocada pelo ataque de abelhas.",
+      "reference": "Na opinião da Secretaria Municipal do Meio Ambiente, os freqüentadores da Redenção não devem se assustar com a morte do cavalo provocada pelo ataque de abelhas.",
+      "prediction": "A Secretaria Municipal do Meio Ambiente (Smam) pede calma aos visitantes do parque da Redenção. Segundo o órgão, a morte do cavalo picado por abelhas não é motivo de preocupação.",
+      "raw_output": "A Secretaria Municipal do Meio Ambiente (Smam) pede calma aos visitantes do parque da Redenção. Segundo o órgão, a morte do cavalo picado por abelhas não é motivo de preocupação."
+    },
+    {
+      "idx": 75,
+      "original": "A chegada do apresentador à residência dos quatro integrantes da família Silva, que terá sua casa toda reformada, surpreendeu os moradores e a vizinhança.",
+      "reference": "A chegada do apresentador à residência da família Silva surpreendeu os moradores e os vizinhos.",
+      "prediction": "O apresentador chegou de surpresa à casa da família Silva. A família tem quatro pessoas e vai ganhar uma reforma completa na casa. A chegada surpreendeu tanto os moradores quanto os vizinhos.",
+      "raw_output": "O apresentador chegou de surpresa à casa da família Silva. A família tem quatro pessoas e vai ganhar uma reforma completa na casa. A chegada surpreendeu tanto os moradores quanto os vizinhos."
+    },
+    {
+      "idx": 76,
+      "original": "-- Não se trata apenas de um protesto, mas de um aprendizado que eles passam adiante -- avaliou.",
+      "reference": "Trata-se também de um aprendizado que elas passam adiante -- avaliou.",
+      "prediction": "-- Não é só um protesto. É também um ensinamento que eles transmitem para outras pessoas -- disse.",
+      "raw_output": "-- Não é só um protesto. É também um ensinamento que eles transmitem para outras pessoas -- disse."
+    },
+    {
+      "idx": 77,
+      "original": "O trabalho do Estado agora é restringir ao máximo o número de pessoas atingidas -- disse Terra.",
+      "reference": "O trabalho do estado agora é diminuir ao máximo o número de pessoas atingidas -- disse Terra.",
+      "prediction": "\"O Estado precisa limitar ao máximo o número de vítimas\", disse Terra.",
+      "raw_output": "\"O Estado precisa limitar ao máximo o número de vítimas\", disse Terra."
+    },
+    {
+      "idx": 78,
+      "original": "Os corpos de três pessoas foram resgatados -- acredita-se que sejam tripulantes de um dos cargueiros naufragados, o Nakhichevan, que vazou uma carga de enxofre.",
+      "reference": "O Nakhichevan foi um dos navios de carga que naufragaram.",
+      "prediction": "Três corpos foram encontrados. Acredita-se que sejam tripulantes do cargueiro Nakhichevan, um dos navios que afundou e derramou enxofre no mar.",
+      "raw_output": "Três corpos foram encontrados. Acredita-se que sejam tripulantes do cargueiro Nakhichevan, um dos navios que afundou e derramou enxofre no mar."
+    },
+    {
+      "idx": 79,
+      "original": "Quando entrou no negócio da fabricação de aviões, em meados da década de 70, a Airbus decidiu apostar na inovação.",
+      "reference": "No momento em que entrou no negócio da fabricação de aviões, no meio da década de 70, a Airbus decidiu apostar na novidade.",
+      "prediction": "**\n\nA Airbus entrou no mercado de fabricação de aviões em meados dos anos 70. Desde o início, a empresa apostou na inovação.",
+      "raw_output": "**Simplificação:**\n\nA Airbus entrou no mercado de fabricação de aviões em meados dos anos 70. Desde o início, a empresa apostou na inovação."
+    },
+    {
+      "idx": 80,
+      "original": "Ele sim é o verdadeiro campeão -- elogiou Derly, minutos antes de traduzir essa admiração em lágrimas.",
+      "reference": "Derly elogiou Yves minutos antes de traduzir essa admiração em lágrimas.",
+      "prediction": "\"Ele é o verdadeiro campeão\" — disse Derly, que logo depois começou a chorar de emoção.",
+      "raw_output": "\"Ele é o verdadeiro campeão\" — disse Derly, que logo depois começou a chorar de emoção."
+    },
+    {
+      "idx": 81,
+      "original": "Ainda nesta semana, outro grupo, este integrado pelo também português Banco Espírito Santo e pela Luso Arenas, apresentará oferta ao Grêmio.",
+      "reference": "Esse grupo é formado pelo banco português Espírito Santo e pela Luso Arenas.",
+      "prediction": "** Ainda esta semana, outro grupo também fará uma oferta ao Grêmio. Ele é formado pelo Banco Espírito Santo, de Portugal, e pela Luso Arenas.",
+      "raw_output": "**Simplificação:** Ainda esta semana, outro grupo também fará uma oferta ao Grêmio. Ele é formado pelo Banco Espírito Santo, de Portugal, e pela Luso Arenas."
+    },
+    {
+      "idx": 82,
+      "original": "Vieram 44 grupos de usuários e universidades -- disse o coordenador geral do evento, Sady Jacques, na abertura do Fisl, à tarde.",
+      "reference": "Quarenta e quatro grupos de usuários e universidades vieram -- disse o coordenador geral do evento na abertura do Fisl à tarde.",
+      "prediction": "**\n\n\"44 grupos de usuários e universidades participaram do evento\", disse Sady Jacques, coordenador geral do Fisl, na abertura da tarde.",
+      "raw_output": "**Simplificação:**\n\n\"44 grupos de usuários e universidades participaram do evento\", disse Sady Jacques, coordenador geral do Fisl, na abertura da tarde."
+    },
+    {
+      "idx": 83,
+      "original": "Isso é possível porque seu computador é equipado com uma tecnologia para acessar a Internet sem fios chamada wi-fi.",
+      "reference": "Isso é possível porque seu computador tem uma tecnologia para acessar a Internet sem fios chamada wi-fi.",
+      "prediction": "**\n\nSeu computador tem uma tecnologia chamada wi-fi, que permite acessar a Internet sem usar fios.",
+      "raw_output": "**Simplificação:**\n\nSeu computador tem uma tecnologia chamada wi-fi, que permite acessar a Internet sem usar fios."
+    },
+    {
+      "idx": 84,
+      "original": "O consórcio europeu acreditava que só a mais moderna tecnologia seria capaz de fazer a diferença e estabelecer uma vantagem competitiva.",
+      "reference": "O grupo de empresas europeu acreditava que só a mais moderna tecnologia seria capaz de fazer a diferença e estabelecer uma vantagem na competição comercial.",
+      "prediction": "**\n\nO grupo europeu acreditava que usar a tecnologia mais avançada era a única forma de se destacar e sair na frente da concorrência.",
+      "raw_output": "**Simplificação:**\n\nO grupo europeu acreditava que usar a tecnologia mais avançada era a única forma de se destacar e sair na frente da concorrência."
+    },
+    {
+      "idx": 85,
+      "original": "A pele vem na forma de uma rede flexível, capaz de \"conformabilidade\", adaptando-se, por exemplo, à superfície de um ovo.",
+      "reference": "A pele vem na forma de uma rede flexível, capaz de \"conformabilidade\", adaptando-se à superfície de um ovo, por exemplo.",
+      "prediction": "**\n\nA pele tem formato de rede flexível e consegue se moldar a diferentes superfícies, como a casca de um ovo.",
+      "raw_output": "**Simplificação:**\n\nA pele tem formato de rede flexível e consegue se moldar a diferentes superfícies, como a casca de um ovo."
+    },
+    {
+      "idx": 86,
+      "original": "O cenário inicial da história provavelmente era uma mata tropical fechada, habitat de quase todos os grandes macacos.",
+      "reference": "O cenário inicial da história provavelmente era uma mata tropical fechada, lugar onde vivem quase todos os grandes macacos.",
+      "prediction": "**\n\nA história provavelmente começou em uma floresta tropical densa, onde vivem quase todos os grandes macacos.",
+      "raw_output": "**Simplificação:**\n\nA história provavelmente começou em uma floresta tropical densa, onde vivem quase todos os grandes macacos."
+    },
+    {
+      "idx": 87,
+      "original": "Rambelli mostra como o principal objetivo da arqueologia, tanto em cima como embaixo d'água, é a busca de conhecimento, não de suvenires.",
+      "reference": "Rambelli mostra como o principal objetivo da arqueologia, tanto em cima como embaixo da água, é a busca de conhecimento, não de lembranças.",
+      "prediction": "**\n\nRambelli explica que a arqueologia, seja em terra ou no mar, tem um objetivo principal: buscar conhecimento, e não coletar objetos de lembrança.",
+      "raw_output": "**Simplificação:**\n\nRambelli explica que a arqueologia, seja em terra ou no mar, tem um objetivo principal: buscar conhecimento, e não coletar objetos de lembrança."
+    },
+    {
+      "idx": 88,
+      "original": "O real recuperou toda a desvalorização sofrida ante o dólar na quinta-feira, quando os investidores tiveram um dia de pânico.",
+      "reference": "O real recuperou toda a desvalorização que sofreu diante do dólar na quinta-feira, quando os investidores tiveram um dia de pânico.",
+      "prediction": "**O real voltou ao valor que tinha antes da queda de quinta-feira, quando os investidores entraram em pânico.**",
+      "raw_output": "**O real voltou ao valor que tinha antes da queda de quinta-feira, quando os investidores entraram em pânico.**"
+    },
+    {
+      "idx": 89,
+      "original": "O risco-país, termômetro de confiança do investidor estrangeiro, disparou 9,34% -- passando de 182 para 199 pontos.",
+      "reference": "O risco-país, termômetro de confiança dos estrangeiros que aplicam dinheiro no Brasil, disparou 9,34%.",
+      "prediction": "O risco-país subiu 9,34% — de 182 para 199 pontos. Esse indicador mostra o quanto os investidores estrangeiros confiam na economia do país.",
+      "raw_output": "O risco-país subiu 9,34% — de 182 para 199 pontos. Esse indicador mostra o quanto os investidores estrangeiros confiam na economia do país."
+    },
+    {
+      "idx": 90,
+      "original": "Isso porque carros novos têm cada vez mais dispositivos de segurança, como alarme, bloqueador de combustível e chave codificada.",
+      "reference": "Isso acontece porque os carros novos têm cada vez mais aparelhos de segurança.",
+      "prediction": "**\n\nCarros novos têm mais recursos de segurança. Entre eles estão alarme, bloqueador de combustível e chave com código. Por isso, eles são mais difíceis de roubar.",
+      "raw_output": "**Simplificação:**\n\nCarros novos têm mais recursos de segurança. Entre eles estão alarme, bloqueador de combustível e chave com código. Por isso, eles são mais difíceis de roubar."
+    },
+    {
+      "idx": 91,
+      "original": "Uma redução na colheita dos Estados Unidos, maior produtor de soja do mundo, pode adubar os preços do grão.",
+      "reference": "Uma redução na colheita dos Estados Unidos pode adubar os preços do grão.",
+      "prediction": "**\n\nOs Estados Unidos são o maior produtor de soja do mundo. Se a colheita por lá diminuir, o preço do grão pode subir.",
+      "raw_output": "**Simplificação:**\n\nOs Estados Unidos são o maior produtor de soja do mundo. Se a colheita por lá diminuir, o preço do grão pode subir."
+    },
+    {
+      "idx": 92,
+      "original": "Foi um pedaço desses que, ao colidir com uma das asas do Columbia, levou à sua destruição.",
+      "reference": "Foi um desses pedaços que, ao bater em uma das asas do Columbia, levou à sua destruição.",
+      "prediction": "**Um pedaço desse material bateu em uma das asas do Columbia e destruiu a nave.**",
+      "raw_output": "**Um pedaço desse material bateu em uma das asas do Columbia e destruiu a nave.**"
+    },
+    {
+      "idx": 93,
+      "original": "Assim como o influenza, vírus causador da gripe, os coronavírus (que, em humanos, costumam causar apenas resfriados) são sujeitos a recombinação.",
+      "reference": "Os coronavírus também sofrem recombinação.",
+      "prediction": "**\n\nAssim como o vírus da gripe, os coronavírus também podem se misturar e se combinar com outros vírus. Em humanos, os coronavírus geralmente causam apenas resfriados.",
+      "raw_output": "**Simplificação:**\n\nAssim como o vírus da gripe, os coronavírus também podem se misturar e se combinar com outros vírus. Em humanos, os coronavírus geralmente causam apenas resfriados."
+    },
+    {
+      "idx": 94,
+      "original": "A palavra robô, com o sentido empregado pelas pessoas hoje, surgiu em uma peça de 1920 do dramaturgo checo Karel Capek (1890-1938).",
+      "reference": "A palavra robô surgiu em uma peça de 1920 do dramaturgo checo Karel Capek.",
+      "prediction": "A palavra robô, como usamos hoje, apareceu pela primeira vez em uma peça de teatro de 1920. Ela foi criada pelo escritor tcheco Karel Capek (1890-1938).",
+      "raw_output": "A palavra robô, como usamos hoje, apareceu pela primeira vez em uma peça de teatro de 1920. Ela foi criada pelo escritor tcheco Karel Capek (1890-1938)."
+    },
+    {
+      "idx": 95,
+      "original": "Em vez de subir ao palco para se sentar à mesa de autoridades, inicia o discurso ali mesmo, no nível da platéia.",
+      "reference": "Em lugar de subir ao palco para se sentar à mesa de autoridades, inicia o discurso ali mesmo, no nível da platéia.",
+      "prediction": "**\n\nEm vez de subir ao palco, ele fica no nível da plateia e começa o discurso de lá mesmo.",
+      "raw_output": "**Simplificação:**\n\nEm vez de subir ao palco, ele fica no nível da plateia e começa o discurso de lá mesmo."
+    },
+    {
+      "idx": 96,
+      "original": "Também foram anotados os erros nas perguntas de matemática e a impressão inicial dos participantes sobre os testes, se \"ameaçadores\" ou só \"desafiadores\".",
+      "reference": "Também foram anotados os erros nas perguntas de matemática e a impressão inicial dos participantes sobre os testes, se \"metiam medo\" ou só eram \"difíceis de serem cumpridos\".",
+      "prediction": "**\n\nTambém foram registrados os erros nas questões de matemática e a opinião inicial dos participantes sobre os testes: se eram \"ameaçadores\" ou apenas \"desafiadores\".",
+      "raw_output": "**Simplificação:**\n\nTambém foram registrados os erros nas questões de matemática e a opinião inicial dos participantes sobre os testes: se eram \"ameaçadores\" ou apenas \"desafiadores\"."
+    },
+    {
+      "idx": 97,
+      "original": "\"na zona rural da Venezuela, as pessoas diziam que o gambá era resistente às picadas, mas não se sabia como\", diz.",
+      "reference": "Diz: \"na zona rural da Venezuela, as pessoas diziam que o gambá era resistente às picadas, mas não se sabia como\".",
+      "prediction": "\"No interior da Venezuela, as pessoas diziam que o gambá não morria com picadas de cobra, mas ninguém sabia o motivo\", diz.",
+      "raw_output": "\"No interior da Venezuela, as pessoas diziam que o gambá não morria com picadas de cobra, mas ninguém sabia o motivo\", diz."
+    },
+    {
+      "idx": 98,
+      "original": "Os brasileiros voltaram a dar vexame no levantamento que compara habilidades em leitura, matemática e ciências de estudantes de 57 países.",
+      "reference": "Os brasileiros voltaram a dar vexame na pesquisa que compara habilidades em leitura, matemática e ciências de estudantes de 57 países.",
+      "prediction": "**\n\nO Brasil teve um resultado ruim no ranking que avalia conhecimentos de leitura, matemática e ciências de alunos de 57 países.",
+      "raw_output": "**Simplificação:**\n\nO Brasil teve um resultado ruim no ranking que avalia conhecimentos de leitura, matemática e ciências de alunos de 57 países."
+    },
+    {
+      "idx": 99,
+      "original": "-- O fechamento das pontes, isoladamente, vai acabar colocando os moradores de rua nas praças e na frente dos prédios.",
+      "reference": "-- Fechar as pontes, e nada mais, vai acabar colocando os moradores de rua nas praças e na frente dos prédios.",
+      "prediction": "**\nFechar as pontes vai fazer com que os moradores de rua se concentrem nas praças e na frente dos prédios.",
+      "raw_output": "**Simplificação:**\nFechar as pontes vai fazer com que os moradores de rua se concentrem nas praças e na frente dos prédios."
+    },
+    {
+      "idx": 100,
+      "original": "Num cálculo bastante otimista, a Presidência da República teria ainda de 51 a 53 votos no plenário.",
+      "reference": "O governo teria também de 51 a 53 votos no plenário.",
+      "prediction": "** Mesmo sendo otimista, o governo teria entre 51 e 53 votos no plenário.",
+      "raw_output": "**Simplificação:** Mesmo sendo otimista, o governo teria entre 51 e 53 votos no plenário."
+    },
+    {
+      "idx": 101,
+      "original": "Eles atingiram a vítima em cima da faixa e o corpo foi carregado por alguns metros -- contou Jucélia.",
+      "reference": "Eles atingiram a vítima em cima da faixa e carregaram o corpo por alguns metros -- contou Jucélia.",
+      "prediction": "**\n\nEles atropelaram a vítima na faixa de pedestres. O corpo foi arrastado por alguns metros — contou Jucélia.",
+      "raw_output": "**Simplificação:**\n\nEles atropelaram a vítima na faixa de pedestres. O corpo foi arrastado por alguns metros — contou Jucélia."
+    },
+    {
+      "idx": 102,
+      "original": "A proposta, a ser discutida, dá aos pesquisados o direito de receber terapia dada pelo governo de seu país, que pode ser nenhuma.",
+      "reference": "A proposta dá aos pesquisados o direito de receber tratamento oferecido pelo governo de seu país, que pode ser nenhum.",
+      "prediction": "**\n\nA proposta, que ainda será discutida, garante aos participantes o direito a um tratamento oferecido pelo governo do seu país. Porém, esse tratamento pode não existir.",
+      "raw_output": "**Simplificação:**\n\nA proposta, que ainda será discutida, garante aos participantes o direito a um tratamento oferecido pelo governo do seu país. Porém, esse tratamento pode não existir."
+    },
+    {
+      "idx": 103,
+      "original": "-- O fórum retrata a diversidade da comunidade de software livre, onde todos os grupos, projetos e iniciativas têm espaço.",
+      "reference": "-- O fórum reproduz a variedade da comunidade de software livre, onde todos os grupos, projetos e iniciativas têm espaço.",
+      "prediction": "O fórum representa a diversidade da comunidade de software livre. Nele, todos os grupos, projetos e iniciativas têm seu espaço.",
+      "raw_output": "O fórum representa a diversidade da comunidade de software livre. Nele, todos os grupos, projetos e iniciativas têm seu espaço."
+    },
+    {
+      "idx": 104,
+      "original": "A chamada genômica ambiental tem por objetivo entender não o funcionamento de um organismo, mas de uma coleção deles interagindo entre si.",
+      "reference": "O chamado estudo dos genes ambiental tem por objetivo entender o funcionamento de uma coleção de organismos agindo entre si.",
+      "prediction": "**\n\nA genômica ambiental estuda não um organismo sozinho, mas um conjunto de organismos que vivem e interagem entre si.",
+      "raw_output": "**Simplificação:**\n\nA genômica ambiental estuda não um organismo sozinho, mas um conjunto de organismos que vivem e interagem entre si."
+    },
+    {
+      "idx": 105,
+      "original": "Enquanto os bombeiros eram acionados, dezenas de curiosos discutiam o que fazer para livrar o cavalo dos insetos.",
+      "reference": "Ao mesmo tempo em que chamavam os bombeiros, dezenas de curiosos discutiam o que fazer para livrar o cavalo dos insetos.",
+      "prediction": "**\n\nOs bombeiros foram chamados. Enquanto isso, muitas pessoas tentavam decidir como ajudar o cavalo a se livrar dos insetos.",
+      "raw_output": "**Simplificação:**\n\nOs bombeiros foram chamados. Enquanto isso, muitas pessoas tentavam decidir como ajudar o cavalo a se livrar dos insetos."
+    },
+    {
+      "idx": 106,
+      "original": "Em retribuição, o grupo procura oferecer informação, serviço e entretenimento compatíveis com as exigências de seus usuários.",
+      "reference": "Em agradecimento, o grupo procura oferecer informação, serviço e diversão compatíveis com as exigências de seus usuários.",
+      "prediction": "**\n\nEm troca, o grupo tenta oferecer informação, serviço e entretenimento que atendam ao que seus usuários precisam.",
+      "raw_output": "**Simplificação:**\n\nEm troca, o grupo tenta oferecer informação, serviço e entretenimento que atendam ao que seus usuários precisam."
+    },
+    {
+      "idx": 107,
+      "original": "Para cada uma dessas fases do vôo, o piloto precisa levar manualmente os manetes para a posição correspondente.",
+      "reference": "Para cada uma dessas fases do vôo, o piloto precisa levar os manetes com a mão até a posição correspondente.",
+      "prediction": "**\n\nEm cada fase do voo, o piloto move os manetes manualmente para a posição correta.",
+      "raw_output": "**Simplificação:**\n\nEm cada fase do voo, o piloto move os manetes manualmente para a posição correta."
+    },
+    {
+      "idx": 108,
+      "original": "Batizado de santanaraptor placidus, o fóssil é o único encontrado no país com restos de tecido mole, como fibras musculares, vasos sanguíneos e pele.",
+      "reference": "O fóssil é o único encontrado no país com restos de tecido mole, como fibras musculares, vasos sanguíneos e pele.",
+      "prediction": "O fóssil foi chamado de santanaraptor placidus. Ele é especial porque é o único encontrado no Brasil que tem partes moles preservadas, como músculos, vasos sanguíneos e pele.",
+      "raw_output": "O fóssil foi chamado de santanaraptor placidus. Ele é especial porque é o único encontrado no Brasil que tem partes moles preservadas, como músculos, vasos sanguíneos e pele."
+    },
+    {
+      "idx": 109,
+      "original": "Nesse experimento, foram produzidos 35 embriões em seguida transferidos para 17 receptoras, as chamadas mães de aluguel.",
+      "reference": "Nessa experiência, foram produzidos 35 embriões em seguida transferidos para 17 vacas.",
+      "prediction": "**\n\nNesse experimento, foram criados 35 embriões. Depois, eles foram colocados no útero de 17 mulheres, chamadas de mães de aluguel (ou barrigas de aluguel).",
+      "raw_output": "**Simplificação:**\n\nNesse experimento, foram criados 35 embriões. Depois, eles foram colocados no útero de 17 mulheres, chamadas de mães de aluguel (ou barrigas de aluguel)."
+    },
+    {
+      "idx": 110,
+      "original": "Espectrômetro de massa de ionização por dessorção a laser com auxílio de matriz (Maldi, na sigla em inglês).",
+      "reference": "Espectrômetro de massa de ionização por dessorção a laser com auxílio de matriz.",
+      "prediction": "**\n\nAparelho que identifica substâncias usando laser e uma matriz química para separar e analisar moléculas.",
+      "raw_output": "**Simplificação:**\n\nAparelho que identifica substâncias usando laser e uma matriz química para separar e analisar moléculas."
+    },
+    {
+      "idx": 111,
+      "original": "Portanto, jogos eletrônicos, robôs e bonecas falantes, sem a interatividade de quem os manuseia, não garantem a felicidade de ninguém.",
+      "reference": "Com isso, jogos eletrônicos, robôs e bonecas falantes, sem a participação de quem os manuseia, não garantem a felicidade de ninguém.",
+      "prediction": "**\n\nPor isso, videogames, robôs e bonecas falantes, sozinhos, não fazem ninguém feliz. É preciso que haja pessoas interagindo com eles.",
+      "raw_output": "**Simplificação:**\n\nPor isso, videogames, robôs e bonecas falantes, sozinhos, não fazem ninguém feliz. É preciso que haja pessoas interagindo com eles."
+    },
+    {
+      "idx": 112,
+      "original": "O Riquelme poderia ter morrido em menos de três minutos -- diz o comandante do pelotão, sargento José de Macedo.",
+      "reference": "O Riquelme poderia ter morrido em menos de três minutos -- diz o comandante dos bombeiros.",
+      "prediction": "\"O Riquelme poderia ter morrido em menos de três minutos\", diz o sargento José de Macedo, comandante do pelotão.",
+      "raw_output": "\"O Riquelme poderia ter morrido em menos de três minutos\", diz o sargento José de Macedo, comandante do pelotão."
+    },
+    {
+      "idx": 113,
+      "original": "O homem de fama e fortuna, que na infância pobre quis ser jogador de futebol, tornou-se como artista um craque.",
+      "reference": "Na infância pobre, quis ser jogador de futebol.",
+      "prediction": "**\n\nEle cresceu pobre e sonhava em ser jogador de futebol. Não virou atleta, mas ficou famoso e rico como artista.",
+      "raw_output": "**Simplificação:**\n\nEle cresceu pobre e sonhava em ser jogador de futebol. Não virou atleta, mas ficou famoso e rico como artista."
+    },
+    {
+      "idx": 114,
+      "original": "O Maldi feito pelo grupo do LIP (Laboratório de Instrumentação e Partículas), do Instituto de Física, também financiado pela Fapesp, saiu bem mais em conta:",
+      "reference": "O Maldi feito pelo grupo do Laboratório de Instrumentação e Partículas (LIP), do Instituto de Física, também pago pela Fapesp, saiu muito mais em conta:",
+      "prediction": "**\n\nO Maldi desenvolvido pelo grupo do LIP (Laboratório de Instrumentação e Partículas), do Instituto de Física, com financiamento da Fapesp, custou bem menos:",
+      "raw_output": "**Simplificação:**\n\nO Maldi desenvolvido pelo grupo do LIP (Laboratório de Instrumentação e Partículas), do Instituto de Física, com financiamento da Fapesp, custou bem menos:"
+    },
+    {
+      "idx": 115,
+      "original": "Tenor das multidões, vendilhão da ópera, popstar erudito, gigante bonachão -- não faltaram epítetos, elogiosos ou não, para definir Luciano Pavarotti.",
+      "reference": "Tenor das multidões, vendilhão da ópera, popstar erudito, gigante bonachão.",
+      "prediction": "Luciano Pavarotti recebeu muitos apelidos ao longo da vida — alguns elogiosos, outros nem tanto. O chamavam de ídolo das massas, comerciante da ópera, popstar clássico e gigante gentil.",
+      "raw_output": "Luciano Pavarotti recebeu muitos apelidos ao longo da vida — alguns elogiosos, outros nem tanto. O chamavam de ídolo das massas, comerciante da ópera, popstar clássico e gigante gentil."
+    },
+    {
+      "idx": 116,
+      "original": "É a vontade do povo que vai dizer, não a dos oligarcas -- bradou, no comício de sexta.",
+      "reference": "É a vontade do povo que vai dizer, não a dos oligarcas -- gritou, no comício de sexta-feira.",
+      "prediction": "**\"Quem vai decidir é o povo, não os poderosos\"**, disse ele em discurso no comício de sexta-feira.",
+      "raw_output": "**\"Quem vai decidir é o povo, não os poderosos\"**, disse ele em discurso no comício de sexta-feira."
+    },
+    {
+      "idx": 117,
+      "original": "E desta vez foram além do que havia sido reportado no ano passado, além de pressão, os semicondutores orgânicos puderam detectar temperatura com precisão.",
+      "reference": "E desta vez foram além do que havia sido contado no ano passado, além de pressão, os semicondutores orgânicos puderam detectar temperatura com precisão.",
+      "prediction": "**\n\nDesta vez, os pesquisadores foram mais longe do que no ano passado. Além de detectar pressão, os semicondutores orgânicos também conseguiram medir a temperatura com precisão.",
+      "raw_output": "**Simplificação:**\n\nDesta vez, os pesquisadores foram mais longe do que no ano passado. Além de detectar pressão, os semicondutores orgânicos também conseguiram medir a temperatura com precisão."
+    },
+    {
+      "idx": 118,
+      "original": "Para ser menos afetado pelo estresse, a melhor opção pode estar na companhia de gatos ou cachorros.",
+      "reference": "Com o objetivo de ser menos afetado pelo estresse, a melhor opção pode estar na companhia de gatos ou cachorros.",
+      "prediction": "**Ter um gato ou cachorro pode ajudar a reduzir o estresse.**",
+      "raw_output": "**Ter um gato ou cachorro pode ajudar a reduzir o estresse.**"
+    },
+    {
+      "idx": 119,
+      "original": "A ocorrência atual de um fenômeno El Niño (aquecimento das águas do Pacífico) de intensidade moderada também estaria favorecendo a elevação dos termômetros.",
+      "reference": "O fenômeno El Niño atual tem intensidade menor e também estaria favorecendo a elevação dos termômetros.",
+      "prediction": "O fenômeno El Niño, que aquece as águas do Pacífico, também contribui para o aumento das temperaturas. Atualmente, ele está ocorrendo em intensidade moderada.",
+      "raw_output": "O fenômeno El Niño, que aquece as águas do Pacífico, também contribui para o aumento das temperaturas. Atualmente, ele está ocorrendo em intensidade moderada."
+    },
+    {
+      "idx": 120,
+      "original": "Desde o dia 24 de outubro, a escola foi interditada pelo Corpo de Bombeiros e pela Defesa Civil.",
+      "reference": "Desde o dia 24 de outubro, a escola foi fechada pelo Corpo de Bombeiros e pela Defesa Civil.",
+      "prediction": "**O Corpo de Bombeiros e a Defesa Civil fecharam a escola no dia 24 de outubro.**",
+      "raw_output": "**O Corpo de Bombeiros e a Defesa Civil fecharam a escola no dia 24 de outubro.**"
+    },
+    {
+      "idx": 121,
+      "original": "O Rio Grande do Sul ganhou ontem um novo cardeal da Igreja Católica -- o quarto em toda a história do Estado.",
+      "reference": "O Rio Grande do Sul ganhou ontem um novo cardeal da Igreja Católica.",
+      "prediction": "Ontem, o Rio Grande do Sul ganhou um novo cardeal da Igreja Católica. É o quarto cardeal da história do Estado.",
+      "raw_output": "Ontem, o Rio Grande do Sul ganhou um novo cardeal da Igreja Católica. É o quarto cardeal da história do Estado."
+    },
+    {
+      "idx": 122,
+      "original": "O trabalho de Someya e seus colegas está publicado na última edição da revista da Academia de Ciências dos EUA, a \"PNAS\" (www.pnas.org).",
+      "reference": "O trabalho de Someya e seus colegas está publicado na última edição da revista da Academia de Ciências dos EUA, a \"PNAS\".",
+      "prediction": "O estudo de Someya e sua equipe foi publicado na edição mais recente da revista científica americana PNAS (www.pnas.org).",
+      "raw_output": "O estudo de Someya e sua equipe foi publicado na edição mais recente da revista científica americana PNAS (www.pnas.org)."
+    },
+    {
+      "idx": 123,
+      "original": "Mas esse não será o único a passar por análise antes que o clube decida erguer sua nova casa, após quase 53 anos no Olímpico.",
+      "reference": "Mas esse não será o único projeto a passar por análise antes que o Grêmio decida construir seu novo estádio, após quase 53 anos no Olímpico.",
+      "prediction": "** Mas esse não será o único projeto analisado antes de o clube decidir onde construir seu novo estádio, depois de quase 53 anos no Olímpico.",
+      "raw_output": "**Simplificação:** Mas esse não será o único projeto analisado antes de o clube decidir onde construir seu novo estádio, depois de quase 53 anos no Olímpico."
+    },
+    {
+      "idx": 124,
+      "original": "Advogado, Márcio Antônio Cardoso, 40 anos, acredita que o filho reconhecerá, quando jovem, o legado que está sendo deixado para ele agora.",
+      "reference": "Márcio Antônio cardoso acredita que o filho reconhecerá a herança que vai receber.",
+      "prediction": "O advogado Márcio Antônio Cardoso, de 40 anos, acredita que o filho vai crescer e entender o que foi feito por ele.",
+      "raw_output": "O advogado Márcio Antônio Cardoso, de 40 anos, acredita que o filho vai crescer e entender o que foi feito por ele."
+    },
+    {
+      "idx": 125,
+      "original": "O grupo diz de saída que não tem nenhuma intenção de montar uma empresa para fazer espectrômetros em série.",
+      "reference": "O grupo diz logo que não tem nenhuma intenção de montar uma empresa para fazer espectrômetros em série.",
+      "prediction": "**O grupo afirma, desde o início, que não pretende criar uma empresa para fabricar espectrômetros em larga escala.**",
+      "raw_output": "**O grupo afirma, desde o início, que não pretende criar uma empresa para fabricar espectrômetros em larga escala.**"
+    },
+    {
+      "idx": 126,
+      "original": "Em alguns casos, as pastorais e dioceses coordenam o rodízio das imagens, enquanto em outros as comunidades se organizam.",
+      "reference": "As pastorais e dioceses organizam o revezamento das imagens em alguns casos.",
+      "prediction": "**\n\nEm alguns lugares, as pastorais e dioceses organizam a troca das imagens. Em outros, são as próprias comunidades que se organizam.",
+      "raw_output": "**Simplificação:**\n\nEm alguns lugares, as pastorais e dioceses organizam a troca das imagens. Em outros, são as próprias comunidades que se organizam."
+    },
+    {
+      "idx": 127,
+      "original": "O aumento da população de rua, de um lado, é acompanhado da redução dos espaços públicos historicamente usados por mendigos.",
+      "reference": "O aumento da população de rua é acompanhado da redução dos espaços públicos historicamente usados por mendigos.",
+      "prediction": "**\n\nO número de pessoas em situação de rua está crescendo. Ao mesmo tempo, os espaços públicos que elas costumavam usar estão diminuindo.",
+      "raw_output": "**Simplificação:**\n\nO número de pessoas em situação de rua está crescendo. Ao mesmo tempo, os espaços públicos que elas costumavam usar estão diminuindo."
+    },
+    {
+      "idx": 128,
+      "original": "-- Por falta de dinheiro e de disposição, essa campanha será mais pobre e mais rápida -- afirma.",
+      "reference": "-- Essa campanha será mais pobre e mais rápida, por falta de dinheiro e de disposição -- afirma Céli Pinto.",
+      "prediction": "**Ele diz que a campanha será mais curta e com menos recursos, pois falta dinheiro e ânimo.**",
+      "raw_output": "**Ele diz que a campanha será mais curta e com menos recursos, pois falta dinheiro e ânimo.**"
+    },
+    {
+      "idx": 129,
+      "original": "\"Se há um animal de boa qualidade genética, a gente consegue manter isso em um filho [clonado] do animal, mesmo que esteja velho\".",
+      "reference": "\"Se há um animal com genes de boa qualidade, a gente consegue manter isso em um filho clonado do animal, mesmo que esteja velho\".",
+      "prediction": "\"Se um animal tem bons genes, podemos preservar essas características em seu clone, mesmo que ele já seja velho.\"",
+      "raw_output": "\"Se um animal tem bons genes, podemos preservar essas características em seu clone, mesmo que ele já seja velho.\""
+    },
+    {
+      "idx": 130,
+      "original": "Um deles se refere ao fato de cada deputado ter três carros cadastrados para fins de indenização por uso de carro particular.",
+      "reference": "Um dos temas é o fato de cada deputado ter três carros registrados para receber devolução de dinheiro por uso de carro particular.",
+      "prediction": "**\n\nCada deputado pode cadastrar até três carros para receber indenização por usar veículo próprio.",
+      "raw_output": "**Simplificação:**\n\nCada deputado pode cadastrar até três carros para receber indenização por usar veículo próprio."
+    },
+    {
+      "idx": 131,
+      "original": "Os abusos com veículos particulares e a formação de servidores em alguns setores foram pontos cruciais de relatório sobre os gastos da Assembléia.",
+      "reference": "O uso indevido de veículos particulares e a formação de servidores em alguns setores foram pontos importantes do relatório sobre os gastos da Assembléia.",
+      "prediction": "**\n\nO relatório sobre os gastos da Assembleia apontou dois problemas principais: o uso indevido de carros particulares e a falta de treinamento adequado de servidores em alguns setores.",
+      "raw_output": "**Simplificação:**\n\nO relatório sobre os gastos da Assembleia apontou dois problemas principais: o uso indevido de carros particulares e a falta de treinamento adequado de servidores em alguns setores."
+    },
+    {
+      "idx": 132,
+      "original": "-- É uma alternativa, assim como o são a construção de uma marina ou da quarta ponte, mas não podemos resolver problemas da Capital sem pensar nos municípios vizinhos -- alerta.",
+      "reference": "-- É uma alternativa, assim como a construção de uma marina ou da quarta ponte, mas não podemos resolver problemas da Capital sem pensar nos municípios vizinhos -- alerta.",
+      "prediction": "\"É uma opção, assim como construir uma marina ou uma quarta ponte. Mas não dá para resolver os problemas da Capital sem pensar nas cidades vizinhas\", alerta.",
+      "raw_output": "\"É uma opção, assim como construir uma marina ou uma quarta ponte. Mas não dá para resolver os problemas da Capital sem pensar nas cidades vizinhas\", alerta."
+    },
+    {
+      "idx": 133,
+      "original": "\"no futuro, quando a produção de tecido hepático se tornar uma realidade, o número de transplantes poderá ser minimizado\", disse à Folha por e-mail Joe Jackson, um dos autores do estudo que sai hoje na revista \"Nature\".",
+      "reference": "\"No futuro, quando a produção de tecido do fígado se tornar uma realidade, o número de transplantes poderá ser diminuído\", disse à Folha por e-mail Joe Jackson, um dos autores do estudo que sai hoje na revista \"Nature\".",
+      "prediction": "\"No futuro, quando conseguirmos produzir tecido do fígado em laboratório, vamos precisar de menos transplantes\", disse Joe Jackson, um dos autores do estudo publicado hoje na revista \"Nature\".",
+      "raw_output": "\"No futuro, quando conseguirmos produzir tecido do fígado em laboratório, vamos precisar de menos transplantes\", disse Joe Jackson, um dos autores do estudo publicado hoje na revista \"Nature\"."
+    },
+    {
+      "idx": 134,
+      "original": "Apesar de os lobos já estarem no continente americano há dezenas de milhares de anos, os cachorros modernos só fizeram a viagem de volta da Eurásia às Américas entre 12 mil e 14 mil anos atrás, acompanhando levas migratórias humanas.",
+      "reference": "Os lobos já estavam no continente americano há dezenas de milhares de anos, mas os cachorros modernos só voltaram da Eurásia para as Américas entre 12 mil e 14 mil anos atrás, acompanhando o deslocamento dos seres humanos.",
+      "prediction": "Os lobos já viviam nas Américas há dezenas de milhares de anos. Já os cachorros modernos chegaram muito depois, entre 12 mil e 14 mil anos atrás. Eles vieram da Eurásia junto com grupos de humanos que migravam para o continente.",
+      "raw_output": "Os lobos já viviam nas Américas há dezenas de milhares de anos. Já os cachorros modernos chegaram muito depois, entre 12 mil e 14 mil anos atrás. Eles vieram da Eurásia junto com grupos de humanos que migravam para o continente."
+    },
+    {
+      "idx": 135,
+      "original": "Conforme membros da comissão, sempre que se debruçou sobre o assunto, a Assembléia produziu resoluções que foram \"afrouxando o controle\", que hoje é baseado apenas na declaração de gasto feita pelo parlamentar.",
+      "reference": "Os membros da comissão dizem que a Assembléia produziu resoluções que foram afrouxando o controle dos gastos.",
+      "prediction": "**\n\nSegundo membros da comissão, toda vez que a Assembleia discutiu o tema, aprovou resoluções que reduziram o controle dos gastos. Hoje, o parlamentar só precisa declarar quanto gastou, sem precisar comprovar.",
+      "raw_output": "**Simplificação:**\n\nSegundo membros da comissão, toda vez que a Assembleia discutiu o tema, aprovou resoluções que reduziram o controle dos gastos. Hoje, o parlamentar só precisa declarar quanto gastou, sem precisar comprovar."
+    },
+    {
+      "idx": 136,
+      "original": "Computando semelhanças e diferenças, os cientistas estimaram que a domesticação deve ter ocorrido 15 mil anos atrás, embora também possa ter acontecido antes (há 40 mil anos).",
+      "reference": "Calculando semelhanças e diferenças, os cientistas concluíram que a domesticação deve ter ocorrido 15 mil anos atrás, mas também pode ter acontecido antes, há 40 mil anos.",
+      "prediction": "Os cientistas compararam as semelhanças e diferenças entre os animais e concluíram que a domesticação provavelmente aconteceu há 15 mil anos. Porém, ela pode ter ocorrido ainda antes, há cerca de 40 mil anos.",
+      "raw_output": "Os cientistas compararam as semelhanças e diferenças entre os animais e concluíram que a domesticação provavelmente aconteceu há 15 mil anos. Porém, ela pode ter ocorrido ainda antes, há cerca de 40 mil anos."
+    },
+    {
+      "idx": 137,
+      "original": "-- Além de encontrar o pessoal do software livre, com quem a gente está sempre em contato, vim para ver algumas palestras e me atualizar em novas tendências debatidas aqui.",
+      "reference": "-- Além de encontrar o pessoal do software livre, com quem a gente está sempre em contato, vim com o objetivo de ver algumas palestras e me atualizar em novas tendências discutidas aqui.",
+      "prediction": "**\n\nVim para encontrar pessoas do software livre, com quem sempre me comunico. Também quero assistir a palestras e conhecer as novidades discutidas aqui.",
+      "raw_output": "**Simplificação:**\n\nVim para encontrar pessoas do software livre, com quem sempre me comunico. Também quero assistir a palestras e conhecer as novidades discutidas aqui."
+    },
+    {
+      "idx": 138,
+      "original": "Quem estava torcendo para o Cristo Redentor se tornar uma das novas maravilhas do mundo tem hoje a última chance de dar uma forcinha para o candidato brasileiro.",
+      "reference": "Quem estava torcendo para o Cristo Redentor se tornar uma das novas maravilhas do mundo tem hoje a última chance de votar nele.",
+      "prediction": "**\n\nHoje é o último dia para votar pelo Cristo Redentor como uma das novas maravilhas do mundo. Se você quer ver o monumento brasileiro nessa lista, vote agora!",
+      "raw_output": "**Simplificação:**\n\nHoje é o último dia para votar pelo Cristo Redentor como uma das novas maravilhas do mundo. Se você quer ver o monumento brasileiro nessa lista, vote agora!"
+    },
+    {
+      "idx": 139,
+      "original": "Mas caso o resgate demore ou uma vida esteja em risco, a orientação básica ao socorrista é que se abaixe o máximo, ficando o mais perto que puder do chão, com um pano molhado no nariz.",
+      "reference": "Mas caso o salvamento demore ou uma vida esteja em risco, a orientação básica é que a pessoa se abaixe ao máximo.",
+      "prediction": "**\n\nMas se o resgate demorar ou alguém estiver em perigo, o socorrista deve se abaixar o máximo possível, ficando rente ao chão e cobrindo o nariz com um pano molhado.",
+      "raw_output": "**Simplificação:**\n\nMas se o resgate demorar ou alguém estiver em perigo, o socorrista deve se abaixar o máximo possível, ficando rente ao chão e cobrindo o nariz com um pano molhado."
+    },
+    {
+      "idx": 140,
+      "original": "O banco central chinês aumentou recentemente o depósito compulsório à vista dos bancos, retirando dinheiro de circulação para evitar especulação com ações, uma das principais formas de investimento no país.",
+      "reference": "O banco central chinês aumentou há pouco tempo o depósito à vista obrigatório para os bancos.",
+      "prediction": "O banco central da China aumentou o valor que os bancos são obrigados a guardar em reserva. Com isso, menos dinheiro fica disponível no mercado. O objetivo é evitar que as pessoas especulem com ações, que são um dos investimentos mais comuns no país.",
+      "raw_output": "O banco central da China aumentou o valor que os bancos são obrigados a guardar em reserva. Com isso, menos dinheiro fica disponível no mercado. O objetivo é evitar que as pessoas especulem com ações, que são um dos investimentos mais comuns no país."
+    },
+    {
+      "idx": 141,
+      "original": "Para isso, investe no talento e no desenvolvimento de seus colaboradores, que têm suas atividades pautadas pelo Guia de Ética, Qualidade e Responsabilidade Social, um conjunto de orientações éticas e editoriais destinado a facilitar aos profissionais da RBS o conhecimento dos valores da empresa e sua aplicação prática em situações de trabalho.",
+      "reference": "O Guia de Ética é um conjunto de orientações éticas e editoriais destinado a facilitar o conhecimento dos valores da empresa e sua aplicação prática em situações de trabalho.",
+      "prediction": "Para isso, a empresa investe no desenvolvimento de seus funcionários. Eles seguem o Guia de Ética, Qualidade e Responsabilidade Social. Esse guia traz orientações éticas e editoriais. O objetivo é ajudar os profissionais da RBS a conhecer os valores da empresa e aplicá-los no dia a dia do trabalho.",
+      "raw_output": "Para isso, a empresa investe no desenvolvimento de seus funcionários. Eles seguem o Guia de Ética, Qualidade e Responsabilidade Social. Esse guia traz orientações éticas e editoriais. O objetivo é ajudar os profissionais da RBS a conhecer os valores da empresa e aplicá-los no dia a dia do trabalho."
+    },
+    {
+      "idx": 142,
+      "original": "É o que apurou Vera Celina Candido de Farias, mestranda em Serviço Social pela PUCRS e integrante do Núcleo de Pesquisa em Demandas e Políticas Sociais:",
+      "reference": "Vera Celina Candido de Farias é aluna do mestrado em Serviço Social da PUCRS e integrante do Núcleo de Pesquisa em Demandas e Políticas Sociais.",
+      "prediction": "**\n\nFoi o que descobriu Vera Celina Candido de Farias, estudante de mestrado em Serviço Social pela PUCRS e pesquisadora do Núcleo de Pesquisa em Demandas e Políticas Sociais:",
+      "raw_output": "**Simplificação:**\n\nFoi o que descobriu Vera Celina Candido de Farias, estudante de mestrado em Serviço Social pela PUCRS e pesquisadora do Núcleo de Pesquisa em Demandas e Políticas Sociais:"
+    },
+    {
+      "idx": 143,
+      "original": "O objetivo é constatar as condições das edificações e a higiene e segurança dos alunos para envio de laudo técnico aos órgãos oficiais recomendando providências, se necessárias.",
+      "reference": "O objetivo é verificar as condições dos prédios e a higiene e segurança dos alunos, para enviar um laudo técnico aos órgãos oficiais.",
+      "prediction": "**\n\nO objetivo é verificar as condições das escolas e a segurança e higiene dos alunos. Depois, um laudo técnico será enviado aos órgãos responsáveis com as medidas necessárias a serem tomadas.",
+      "raw_output": "**Simplificação:**\n\nO objetivo é verificar as condições das escolas e a segurança e higiene dos alunos. Depois, um laudo técnico será enviado aos órgãos responsáveis com as medidas necessárias a serem tomadas."
+    },
+    {
+      "idx": 144,
+      "original": "Quando entre os aprovados já existir algum do perfil de cotas, a UFSC não precisará repor vagas, pois já estará preenchido o que prevê o sistema.",
+      "reference": "Se já existir algum do sistema de cotas entre os aprovados, a UFSC não precisará repor vagas, isso porque já estará preenchido o que o sistema prevê.",
+      "prediction": "**\n\nSe já houver candidatos cotistas aprovados, a UFSC não precisará abrir novas vagas. Isso porque a cota já estará sendo cumprida.",
+      "raw_output": "**Simplificação:**\n\nSe já houver candidatos cotistas aprovados, a UFSC não precisará abrir novas vagas. Isso porque a cota já estará sendo cumprida."
+    },
+    {
+      "idx": 145,
+      "original": "Antes de sobrevoar a Zona Norte, os portugueses ainda se reunirão no Olímpico com a direção do Grêmio e integrantes do Conselho Deliberativo para discutir o projeto.",
+      "reference": "Os portugueses se reunirão no Olímpico com a direção do Grêmio e com integrantes do Conselho Deliberativo para discutir o projeto.",
+      "prediction": "**\n\nAntes de visitar a Zona Norte, os portugueses vão se reunir no Olímpico com a direção do Grêmio e membros do Conselho Deliberativo. O objetivo é discutir o projeto.",
+      "raw_output": "**Simplificação:**\n\nAntes de visitar a Zona Norte, os portugueses vão se reunir no Olímpico com a direção do Grêmio e membros do Conselho Deliberativo. O objetivo é discutir o projeto."
+    },
+    {
+      "idx": 146,
+      "original": "\"Estamos recolhendo amostras de coprólitos [fezes fossilizadas] de duas cavernas em Israel com 40 mil anos, onde provavelmente Cro-Magnons [os primeiros humanos modernos] e neandertais viveram lado a lado\", contou o pesquisador durante a reunião da Associação Americana para o Avanço da Ciência.",
+      "reference": "\"Estamos recolhendo pedaços de cocô fossilizado em duas cavernas em Israel com 40 mil anos, onde provavelmente os primeiros humanos modernos e os homens de Neandertal viveram lado a lado\", contou o pesquisador durante a reunião da Associação Americana para o Avanço da Ciência.",
+      "prediction": "\"Estamos coletando amostras de fezes fossilizadas de duas cavernas em Israel. Essas cavernas têm 40 mil anos e provavelmente foram habitadas por humanos modernos e neandertais ao mesmo tempo\", disse o pesquisador em uma reunião científica nos Estados Unidos.",
+      "raw_output": "\"Estamos coletando amostras de fezes fossilizadas de duas cavernas em Israel. Essas cavernas têm 40 mil anos e provavelmente foram habitadas por humanos modernos e neandertais ao mesmo tempo\", disse o pesquisador em uma reunião científica nos Estados Unidos."
+    },
+    {
+      "idx": 147,
+      "original": "O bispo de Passo Fundo, dom Ercílio Simon, afirma que isso não se trata de uma tradição religiosa oficial, mas sim de um ato popular incorporado à religiosidade dos gaúchos.",
+      "reference": "O bispo de Passo Fundo afirma que não se trata de uma tradição religiosa oficial, mas sim de um ato popular incorporado ao sentimento religioso dos gaúchos.",
+      "prediction": "O bispo de Passo Fundo, dom Ercílio Simon, diz que esse costume não é uma tradição religiosa oficial. É um ato popular que faz parte da fé do povo gaúcho.",
+      "raw_output": "O bispo de Passo Fundo, dom Ercílio Simon, diz que esse costume não é uma tradição religiosa oficial. É um ato popular que faz parte da fé do povo gaúcho."
+    },
+    {
+      "idx": 148,
+      "original": "A expectativa é de que a nova companhia adote uma gestão moderna, com folha de salários mais enxuta, para vencer a crise em que se envolveu, com dívidas beirando R$ 9 bilhões.",
+      "reference": "A expectativa é de que a nova companhia adote uma administração moderna, com folha de salários mais reduzida, com o objetivo de vencer a crise em que se envolveu, com dívidas próximas de R$ 9 bilhões.",
+      "prediction": "**\n\nEspera-se que a nova empresa reduza gastos com funcionários e adote uma gestão mais eficiente. Assim, ela poderá superar a crise financeira em que se encontra, com dívidas de quase R$ 9 bilhões.",
+      "raw_output": "**Simplificação:**\n\nEspera-se que a nova empresa reduza gastos com funcionários e adote uma gestão mais eficiente. Assim, ela poderá superar a crise financeira em que se encontra, com dívidas de quase R$ 9 bilhões."
+    },
+    {
+      "idx": 149,
+      "original": "-- Uma seda vinda da Índia de cor dourado envelhecido será usada em Aparecida e um traje com predomínio da cor branca foi reservada para a capela do mosteiro -- disse.",
+      "reference": "Um traje quase todo branco foi reservado para a capela do mosteiro -- disse.",
+      "prediction": "**\n\n— Uma seda dourada, vinda da Índia, será usada em Aparecida. Já um traje com a cor branca predominante foi reservado para a capela do mosteiro — disse.",
+      "raw_output": "**Simplificação:**\n\n— Uma seda dourada, vinda da Índia, será usada em Aparecida. Já um traje com a cor branca predominante foi reservado para a capela do mosteiro — disse."
+    },
+    {
+      "idx": 150,
+      "original": "Ao evitar que o espaço fosse mais um destinado à agricultura ou à pecuária e transformá-lo num recanto ambiental, o casal também possibilitou que alunos da 8ª série do Ensino Fundamental da Escola Municipal Dr Paulo Schramm, de Rondinha, tivessem uma aula prática sobre as plantas.",
+      "reference": "O casal também tornou possível que alunos da 8ª série do Ensino Fundamental da Escola Municipal Dr Paulo Schramm tivessem uma aula prática sobre as plantas.",
+      "prediction": "O casal decidiu não usar o espaço para agricultura ou criação de animais. Em vez disso, transformaram o local em uma área de preservação ambiental. Com isso, alunos do 9º ano da Escola Municipal Dr. Paulo Schramm, de Rondinha, puderam ter uma aula prática sobre plantas no local.",
+      "raw_output": "O casal decidiu não usar o espaço para agricultura ou criação de animais. Em vez disso, transformaram o local em uma área de preservação ambiental. Com isso, alunos do 9º ano da Escola Municipal Dr. Paulo Schramm, de Rondinha, puderam ter uma aula prática sobre plantas no local."
+    },
+    {
+      "idx": 151,
+      "original": "Conforme as pesquisas progrediram, a equipe descobriu que a resistência não se estende só ao gambá propriamente dito, mas também às cuícas e outros parentes do animal, todos caçadores de cobras, que teriam tido vantagens em desenvolver tais defesas bioquímicas.",
+      "reference": "À medida que as pesquisas progrediram, a equipe descobriu que a resistência não se estende só ao gambá, mas também às cuícas e outros parentes do animal, todos caçadores de cobras, que teriam tido vantagens em desenvolver tais defesas bioquímicas.",
+      "prediction": "Com o avanço das pesquisas, a equipe descobriu que a resistência ao veneno não é exclusiva do gambá. Cuícas e outros parentes dele também são resistentes. Todos esses animais caçam cobras, o que pode explicar por que desenvolveram essa defesa natural.",
+      "raw_output": "Com o avanço das pesquisas, a equipe descobriu que a resistência ao veneno não é exclusiva do gambá. Cuícas e outros parentes dele também são resistentes. Todos esses animais caçam cobras, o que pode explicar por que desenvolveram essa defesa natural."
+    },
+    {
+      "idx": 152,
+      "original": "A explosão de uma bomba nuclear no subsolo do país coincidiu com a indicação de um diplomata da Coréia do Sul (um país inimigo) para a sucessão de Kofi Annan no cargo de secretário-geral da Organização das Nações Unidas (ONU).",
+      "reference": "A explosão de uma bomba nuclear no subsolo do país aconteceu ao mesmo tempo que a indicação de um diplomata da Coréia do Sul para substituir Kofi Annan no cargo de secretário-geral da Organização das Nações Unidas.",
+      "prediction": "A Coreia do Norte detonou uma bomba nuclear no subsolo. Isso aconteceu ao mesmo tempo em que um diplomata da Coreia do Sul foi indicado para substituir Kofi Annan como secretário-geral da ONU. Vale lembrar que os dois países são inimigos.",
+      "raw_output": "A Coreia do Norte detonou uma bomba nuclear no subsolo. Isso aconteceu ao mesmo tempo em que um diplomata da Coreia do Sul foi indicado para substituir Kofi Annan como secretário-geral da ONU. Vale lembrar que os dois países são inimigos."
+    },
+    {
+      "idx": 153,
+      "original": "A escassez de chuva -- as precipitações passageiras registradas esta semana não foram suficientes para resfriar a atmosfera por muito tempo­, o fenômeno El Niño e o processo de aquecimento global ajudam a explicar o calorão gaúcho.",
+      "reference": "A escassez de chuva, o fenômeno El Niño e o aquecimento global ajudam a explicar o calorão gaúcho.",
+      "prediction": "**\n\nA falta de chuva, o El Niño e o aquecimento global explicam o calor intenso no Rio Grande do Sul. As chuvas rápidas desta semana não foram suficientes para refrescar o ar por muito tempo.",
+      "raw_output": "**Simplificação:**\n\nA falta de chuva, o El Niño e o aquecimento global explicam o calor intenso no Rio Grande do Sul. As chuvas rápidas desta semana não foram suficientes para refrescar o ar por muito tempo."
+    },
+    {
+      "idx": 154,
+      "original": "Entre os danos ambientais, ele cita a percolação (perda de água superficial), a fratura de rochas que pode causar rachaduras nas casas e a poluição do ar, devido à suspensão de partículas.",
+      "reference": "Entre os danos ambientais, ele cita a perda de água superficial, a fratura de rochas que pode causar rachaduras nas casas e a poluição do ar, em razão da suspensão de partículas.",
+      "prediction": "**\n\nEle cita alguns danos ao meio ambiente: a perda de água da superfície do solo, as rachaduras em rochas que podem danificar casas e a poluição do ar causada por partículas de poeira suspensas no ar.",
+      "raw_output": "**Simplificação:**\n\nEle cita alguns danos ao meio ambiente: a perda de água da superfície do solo, as rachaduras em rochas que podem danificar casas e a poluição do ar causada por partículas de poeira suspensas no ar."
+    },
+    {
+      "idx": 155,
+      "original": "Como parte da sua nova estratégia para a guerra no Iraque, a ser divulgada nos próximos dias, o presidente dos EUA, George W Bush, deve anunciar o envio de mais 20 mil militares ao país do Oriente Médio.",
+      "reference": "O envio de mais militares ao Iraque é parte da nova estratégia de George W Bush para a guerra no Iraque.",
+      "prediction": "O presidente dos EUA, George W. Bush, vai anunciar uma nova estratégia para a guerra no Iraque. Como parte dessa estratégia, ele pretende enviar mais 20 mil soldados americanos para o país. O anúncio deve acontecer nos próximos dias.",
+      "raw_output": "O presidente dos EUA, George W. Bush, vai anunciar uma nova estratégia para a guerra no Iraque. Como parte dessa estratégia, ele pretende enviar mais 20 mil soldados americanos para o país. O anúncio deve acontecer nos próximos dias."
+    },
+    {
+      "idx": 156,
+      "original": "Pavarotti não foi apenas um propagador da ópera para o grande público -- foi um dos principais responsáveis pela revitalização do gênero ao longo do século passado.",
+      "reference": "Ele foi um dos principais responsáveis por dar nova vida à ópera no século passado.",
+      "prediction": "Pavarotti não só popularizou a ópera — ele foi um dos grandes responsáveis por renovar o interesse pelo gênero no século passado.",
+      "raw_output": "Pavarotti não só popularizou a ópera — ele foi um dos grandes responsáveis por renovar o interesse pelo gênero no século passado."
+    },
+    {
+      "idx": 157,
+      "original": "Em busca do que chama de \"novo socialismo\", o advogado Ricardo Jahn trocará esta semana o sossego de Rainha do Mar e a companhia das duas filhas e da neta pela agitação de Nairóbi, a capital do Quênia.",
+      "reference": "O advogado Ricardo Jahn trocará esta semana o sossego de Rainha do Mar e a companhia das duas filhas e da neta pela agitação de Nairóbi, a capital do Quênia.",
+      "prediction": "O advogado Ricardo Jahn vai viajar para Nairóbi, capital do Quênia, nesta semana. Ele deixará para trás a cidade tranquila de Rainha do Mar e a companhia de suas duas filhas e neta. O objetivo da viagem é buscar o que ele chama de \"novo socialismo\".",
+      "raw_output": "O advogado Ricardo Jahn vai viajar para Nairóbi, capital do Quênia, nesta semana. Ele deixará para trás a cidade tranquila de Rainha do Mar e a companhia de suas duas filhas e neta. O objetivo da viagem é buscar o que ele chama de \"novo socialismo\"."
+    },
+    {
+      "idx": 158,
+      "original": "A identificação e descrição está sendo feita com a ajuda de Marina Capelari, do Instituto de Botânica de São Paulo, e Dennis Desjardin, da Universidade Estadual de San Francisco (Unidos).",
+      "reference": "A identificação e descrição está sendo feita com a ajuda de Marina Capelari, do Instituto de Botânica de São Paulo, e Dennis Desjardin, da Universidade Estadual de San Francisco, Unidos.",
+      "prediction": "Marina Capelari, do Instituto de Botânica de São Paulo, e Dennis Desjardin, da Universidade Estadual de San Francisco (EUA), estão ajudando a identificar e descrever as espécies.",
+      "raw_output": "Marina Capelari, do Instituto de Botânica de São Paulo, e Dennis Desjardin, da Universidade Estadual de San Francisco (EUA), estão ajudando a identificar e descrever as espécies."
+    },
+    {
+      "idx": 159,
+      "original": "A menos de 24 horas da chegada de Bento XVI, militares fardados subiam e desciam escadas de mármore e agentes federais faziam as últimas revistas nos aposentos que abrigarão o visitante ilustre.",
+      "reference": "Agentes federais faziam as últimas revistas no apartamento que abrigará o visitante importante.",
+      "prediction": "Faltavam menos de 24 horas para a chegada de Bento XVI. No local, soldados uniformizados circulavam pelas escadas de mármore. Agentes federais faziam as últimas verificações nos quartos onde o ilustre visitante ficaria hospedado.",
+      "raw_output": "Faltavam menos de 24 horas para a chegada de Bento XVI. No local, soldados uniformizados circulavam pelas escadas de mármore. Agentes federais faziam as últimas verificações nos quartos onde o ilustre visitante ficaria hospedado."
+    },
+    {
+      "idx": 160,
+      "original": "Isso porque há alguns meses Anbar era o principal foco da insurgência sunita, e hoje -- depois que líderes tribais se rebelaram contra o grupo terrorista Al-Qaeda no Iraque --, a violência na província foi controlada.",
+      "reference": "Isso porque, há alguns meses, Anbar era o principal foco da rebelião sunita e, hoje -- depois que líderes de tribos se revoltaram contra o grupo terrorista Al-Qaeda no Iraque --, a violência na província foi controlada.",
+      "prediction": "Há alguns meses, Anbar era o centro da rebelião sunita. Hoje, a situação mudou. Líderes tribais se voltaram contra o grupo terrorista Al-Qaeda no Iraque. Com isso, a violência na região diminuiu.",
+      "raw_output": "Há alguns meses, Anbar era o centro da rebelião sunita. Hoje, a situação mudou. Líderes tribais se voltaram contra o grupo terrorista Al-Qaeda no Iraque. Com isso, a violência na região diminuiu."
+    },
+    {
+      "idx": 161,
+      "original": "A divergência ocorre porque educadores como Helvécio Aguiar, da Faculdade de Educação da Universidade Federal do Rio Grande do Sul (UFRGS), afirmam que a peça é desnecessária no uniforme obrigatório.",
+      "reference": "Helvécio Aguiar é da Faculdade de Educação da Universidade Federal do Rio Grande do Sul.",
+      "prediction": "O conflito existe porque educadores, como Helvécio Aguiar, da UFRGS, dizem que essa peça não precisa fazer parte do uniforme obrigatório.",
+      "raw_output": "O conflito existe porque educadores, como Helvécio Aguiar, da UFRGS, dizem que essa peça não precisa fazer parte do uniforme obrigatório."
+    },
+    {
+      "idx": 162,
+      "original": "Apenas um dos parlamentares -- a deputada Jusmari de Oliveira, que deixou o DEM e ingressou no PR -- trocou de legenda após 27 de março.",
+      "reference": "Apenas um dos deputados trocou de partido após 27 de março.",
+      "prediction": "Apenas uma parlamentar trocou de partido depois de 27 de março: a deputada Jusmari de Oliveira, que saiu do DEM e entrou no PR.",
+      "raw_output": "Apenas uma parlamentar trocou de partido depois de 27 de março: a deputada Jusmari de Oliveira, que saiu do DEM e entrou no PR."
+    },
+    {
+      "idx": 163,
+      "original": "Para o músico e professor da UFRGS Celso Loureiro Chaves, o cantor é o maior vulto do universo operístico nos últimos 40 anos -- e não só pelo imponente porte físico de 1m90cm de altura.",
+      "reference": "Mas Pavarotti não é o maior vulto só pelo porte físico grande de 1m90cm de altura.",
+      "prediction": "Para o músico e professor da UFRGS Celso Loureiro Chaves, o cantor é o maior nome da ópera nos últimos 40 anos — e não apenas por seu físico imponente de 1m90cm de altura.",
+      "raw_output": "Para o músico e professor da UFRGS Celso Loureiro Chaves, o cantor é o maior nome da ópera nos últimos 40 anos — e não apenas por seu físico imponente de 1m90cm de altura."
+    },
+    {
+      "idx": 164,
+      "original": "Em uma atitude de claro desafio ao Ocidente, o presidente do Irã, Mahmoud Ahmadinejad, disse ontem considerar improvável que o Conselho de Segurança da Organização das Nações Unidas (ONU) imponha sanções ao país devido a seu programa nuclear.",
+      "reference": "Ele disse ontem que considera que o Conselho de Segurança da Organização das Nações Unidas não vai impor castigos ao país por causa de seu programa nuclear.",
+      "prediction": "O presidente do Irã, Mahmoud Ahmadinejad, desafiou o Ocidente ontem. Ele disse que não acredita que a ONU vá punir o Irã por causa do seu programa nuclear.",
+      "raw_output": "O presidente do Irã, Mahmoud Ahmadinejad, desafiou o Ocidente ontem. Ele disse que não acredita que a ONU vá punir o Irã por causa do seu programa nuclear."
+    },
+    {
+      "idx": 165,
+      "original": "No Dia da Liberdade de Impostos, criado pela Associação da Classe Média (Aclame) para marcar a data em que os brasileiros, simbolicamente, deixam de trabalhar para pagar tributos, foram vendidos em Novo Hamburgo gasolina, computadores, cestas básicas, televisores e um carro.",
+      "reference": "O objetivo é marcar a data em que os brasileiros, simbolicamente, deixam de trabalhar para pagar tributos.",
+      "prediction": "**\n\nO Dia da Liberdade de Impostos é uma data criada pela Aclame. Ela representa o momento em que os brasileiros param de \"trabalhar para pagar impostos\". Nesse dia, em Novo Hamburgo, foram vendidos produtos sem a cobrança de tributos, como gasolina, computadores, cestas básicas, televisores e até um carro.",
+      "raw_output": "**Simplificação:**\n\nO Dia da Liberdade de Impostos é uma data criada pela Aclame. Ela representa o momento em que os brasileiros param de \"trabalhar para pagar impostos\". Nesse dia, em Novo Hamburgo, foram vendidos produtos sem a cobrança de tributos, como gasolina, computadores, cestas básicas, televisores e até um carro."
+    },
+    {
+      "idx": 166,
+      "original": "A equipe de Takão Someya já havia, no ano passado, anunciado o desenvolvimento de uma pele artificial capaz de sentir diferenças de pressão, ou seja, uma forma de tato.",
+      "reference": "No ano passado, a equipe de Takão Someya já havia anunciado o desenvolvimento de uma pele artificial capaz de sentir diferenças de pressão, isto é, uma forma de tato.",
+      "prediction": "**\n\nNo ano passado, a equipe de Takão Someya anunciou a criação de uma pele artificial. Ela consegue sentir variações de pressão, funcionando como um sentido do tato.",
+      "raw_output": "**Simplificação:**\n\nNo ano passado, a equipe de Takão Someya anunciou a criação de uma pele artificial. Ela consegue sentir variações de pressão, funcionando como um sentido do tato."
+    },
+    {
+      "idx": 167,
+      "original": "Moradora de lagoa bonita, no interior de Pontão, no norte gaúcho, há mais de 40 anos ela faz questão de sempre levar pessoalmente a imagem até os vizinhos.",
+      "reference": "Ela mora em Lagoa Bonita, no interior de Pontão, no norte gaúcho, há mais de 40 anos.",
+      "prediction": "Ela mora em Lagoa Bonita, distrito de Pontão, no norte do Rio Grande do Sul. Há mais de 40 anos, ela carrega pessoalmente a imagem até a casa dos vizinhos.",
+      "raw_output": "Ela mora em Lagoa Bonita, distrito de Pontão, no norte do Rio Grande do Sul. Há mais de 40 anos, ela carrega pessoalmente a imagem até a casa dos vizinhos."
+    },
+    {
+      "idx": 168,
+      "original": "\"Em oito anos, detectamos mais de 300 eventos, graças ao nosso sistema de calibragem dos dados de satélite\", conta Douglas Revelle, do Laboratório Nacional de Los Alamos, um dos autores do estudo, que está publicado na edição de hoje da revista britânica \"Nature\" (www.nature.com).",
+      "reference": "\"Em oito anos, detectamos mais de 300 eventos, graças ao nosso sistema de medida dos dados de satélite\", conta Douglas Revelle, do Laboratório Nacional de Los Alamos, um dos autores do estudo que está publicado na edição de hoje da revista britânica \"Nature\".",
+      "prediction": "\"Em oito anos, encontramos mais de 300 eventos. Isso foi possível graças ao nosso sistema de calibração dos dados de satélite\", explica Douglas Revelle, do Laboratório Nacional de Los Alamos, um dos autores do estudo publicado hoje na revista britânica \"Nature\".",
+      "raw_output": "\"Em oito anos, encontramos mais de 300 eventos. Isso foi possível graças ao nosso sistema de calibração dos dados de satélite\", explica Douglas Revelle, do Laboratório Nacional de Los Alamos, um dos autores do estudo publicado hoje na revista britânica \"Nature\"."
+    },
+    {
+      "idx": 169,
+      "original": "O presidente da Associação Gaúcha de Empresas Florestais (Ageflor), Roque Justen, entidade que congrega 57 empresas do setor, acredita que somente estudos mais aprofundados realizados em cada município serão capazes de determinar com exatidão as áreas aptas.",
+      "reference": "Roque Justen acredita que somente estudos mais aprofundados de cada município serão capazes de determinar exatamente as áreas adequadas.",
+      "prediction": "Roque Justen é presidente da Ageflor, associação que reúne 57 empresas florestais do Rio Grande do Sul. Ele acredita que só estudos detalhados, feitos em cada município, poderão identificar com precisão as áreas adequadas para o setor.",
+      "raw_output": "Roque Justen é presidente da Ageflor, associação que reúne 57 empresas florestais do Rio Grande do Sul. Ele acredita que só estudos detalhados, feitos em cada município, poderão identificar com precisão as áreas adequadas para o setor."
+    },
+    {
+      "idx": 170,
+      "original": "Com base nesses dados, ele elogia a iniciativa de projetar um metrô de superfície para a Capital, afirmando que o sistema pode ajudar a humanizar o trânsito da região metropolitana.",
+      "reference": "Com base nesses dados, ele elogia a iniciativa de projetar um metrô de superfície para a Capital, afirmando que o sistema pode ajudar a tornar mais humano o trânsito da região metropolitana.",
+      "prediction": "Com base nesses dados, ele elogia a ideia de criar um metrô de superfície para a Capital. Segundo ele, esse sistema pode tornar o trânsito da região metropolitana mais humano.",
+      "raw_output": "Com base nesses dados, ele elogia a ideia de criar um metrô de superfície para a Capital. Segundo ele, esse sistema pode tornar o trânsito da região metropolitana mais humano."
+    },
+    {
+      "idx": 171,
+      "original": "Os ministérios da Agricultura e da Ciência e Tecnologia defenderam ontem o uso da soja transgênica na produção do biodiesel para abastecer parte da frota nacional de veículos.",
+      "reference": "Os ministérios da Agricultura e da Ciência e Tecnologia defenderam ontem o uso da soja transgênica na produção do biodiesel com o objetivo de abastecer parte do conjunto nacional de veículos.",
+      "prediction": "Os ministérios da Agricultura e da Ciência e Tecnologia apoiaram o uso da soja transgênica para fazer biodiesel. O objetivo é usar esse combustível em parte dos veículos do país.",
+      "raw_output": "Os ministérios da Agricultura e da Ciência e Tecnologia apoiaram o uso da soja transgênica para fazer biodiesel. O objetivo é usar esse combustível em parte dos veículos do país."
+    },
+    {
+      "idx": 172,
+      "original": "Essa decisão não altera a taxa básica de juro de curto prazo, que tem impacto mais direto sobre os juros que as instituições financeiras cobram de seus clientes.",
+      "reference": "Essa decisão não altera a taxa básica de juro de curto prazo, que tem influência mais direta sobre os juros que as instituições financeiras cobram de seus clientes.",
+      "prediction": "**\n\nEssa decisão não muda a taxa básica de juros. É essa taxa que influencia diretamente os juros cobrados pelos bancos de seus clientes.",
+      "raw_output": "**Simplificação:**\n\nEssa decisão não muda a taxa básica de juros. É essa taxa que influencia diretamente os juros cobrados pelos bancos de seus clientes."
+    },
+    {
+      "idx": 173,
+      "original": "Os mais de 15 mil participantes da conferência do clima aguardavam a reabertura dos trabalhos neste sábado, em uma sessão extra convocada depois que as negociações estagnaram ao longo do dia.",
+      "reference": "Os mais de 15 mil participantes da conferência do clima aguardavam que abrissem novamente os trabalhos neste sábado, em uma sessão extra.",
+      "prediction": "Os mais de 15 mil participantes da conferência do clima esperavam o reinício das atividades neste sábado. Uma sessão extra foi convocada porque as negociações travaram durante o dia.",
+      "raw_output": "Os mais de 15 mil participantes da conferência do clima esperavam o reinício das atividades neste sábado. Uma sessão extra foi convocada porque as negociações travaram durante o dia."
+    },
+    {
+      "idx": 174,
+      "original": "Decidiu conhecer Gramado em suas primeiras férias desde 2001, quando os treinamentos para a Missão Centenário (que o levou ao espaço, no ano passado) se intensificaram.",
+      "reference": "Em 2001, os treinamentos para a Missão Centenário ficaram mais fortes.",
+      "prediction": "Nas suas primeiras férias desde 2001, ele decidiu visitar Gramado. Desde aquela época, os treinos para a Missão Centenário — que o levou ao espaço no ano passado — tinham tomado todo o seu tempo.",
+      "raw_output": "Nas suas primeiras férias desde 2001, ele decidiu visitar Gramado. Desde aquela época, os treinos para a Missão Centenário — que o levou ao espaço no ano passado — tinham tomado todo o seu tempo."
+    },
+    {
+      "idx": 175,
+      "original": "Finalmente, após dias de apreensão com problemas no veículo e uma histórica caminhada espacial de reparos, a agência espacial americana autorizou o ônibus espacial Discovery a enfrentar a turbulenta jornada que o separa da terra firme.",
+      "reference": "Afinal, em seguida a dias de preocupação com problemas no veículo e a uma histórica caminhada espacial de consertos, a agência espacial americana autorizou o ônibus espacial Discovery a enfrentar a agitada jornada que o separa da terra firme.",
+      "prediction": "Depois de dias preocupantes com problemas na nave e um conserto feito durante uma caminhada espacial histórica, a NASA liberou o ônibus espacial Discovery para voltar à Terra.",
+      "raw_output": "Depois de dias preocupantes com problemas na nave e um conserto feito durante uma caminhada espacial histórica, a NASA liberou o ônibus espacial Discovery para voltar à Terra."
+    },
+    {
+      "idx": 176,
+      "original": "A expectativa é de que a fusão seja concluída até 31 de dezembro, necessitando também do aval de agências reguladoras e órgãos de defesa da concorrência.",
+      "reference": "Há necessidade do aval de agências reguladoras e órgãos de defesa da concorrência.",
+      "prediction": "A fusão deve ser concluída até 31 de dezembro. Para isso, ainda precisa ser aprovada por órgãos reguladores e de defesa da concorrência.",
+      "raw_output": "A fusão deve ser concluída até 31 de dezembro. Para isso, ainda precisa ser aprovada por órgãos reguladores e de defesa da concorrência."
+    },
+    {
+      "idx": 177,
+      "original": "No ano passado, um grupo da Comissão de Energia Atômica da França havia anunciado a existência de um verdadeiro campo minado composto por centenas de milhares de buracos negros distribuídos ao redor da Via Láctea.",
+      "reference": "No ano passado, um grupo da Comissão de Energia Atômica da França havia anunciado a existência de um campo composto por centenas de milhares de buracos negros distribuídos ao redor da Via Láctea.",
+      "prediction": "No ano passado, cientistas franceses descobriram algo surpreendente. Centenas de milhares de buracos negros estão espalhados ao redor da Via Láctea, nossa galáxia. É como se o espaço fosse um campo minado cheio deles.",
+      "raw_output": "No ano passado, cientistas franceses descobriram algo surpreendente. Centenas de milhares de buracos negros estão espalhados ao redor da Via Láctea, nossa galáxia. É como se o espaço fosse um campo minado cheio deles."
+    },
+    {
+      "idx": 178,
+      "original": "Os cientistas buscam fazer isso despedaçando o DNA dos seres vivos na própria amostra e então decifrando as letras genéticas contidas em cada um dos pequenos trechos.",
+      "reference": "Os cientistas buscam fazer isso despedaçando o DNA dos seres vivos e entendendo os genes contidos em cada um dos pequenos trechos.",
+      "prediction": "**\n\nOs cientistas fazem isso quebrando o DNA dos seres vivos em pedaços pequenos. Depois, eles leem as informações genéticas de cada pedaço.",
+      "raw_output": "**Simplificação:**\n\nOs cientistas fazem isso quebrando o DNA dos seres vivos em pedaços pequenos. Depois, eles leem as informações genéticas de cada pedaço."
+    },
+    {
+      "idx": 179,
+      "original": "Para muitos, como Matheus Luis Romminger, 12 anos, a simples oportunidade de espiar a galáxia através das lentes de um telescópio soou como algo de \"outro mundo\".",
+      "reference": "Para muitos, a simples oportunidade de espiar a galáxia através das lentes de um telescópio foi algo \"de outro mundo\".",
+      "prediction": "**\n\nPara muitos, como Matheus Luis Romminger, de 12 anos, poder ver a galáxia pelo telescópio pareceu algo incrível e fora do comum.",
+      "raw_output": "**Simplificação:**\n\nPara muitos, como Matheus Luis Romminger, de 12 anos, poder ver a galáxia pelo telescópio pareceu algo incrível e fora do comum."
+    },
+    {
+      "idx": 180,
+      "original": "Os primeiros animais aparentados com os cachorros modernos, os primeiros canídeos, foram identificados em fósseis de 37 milhões de anos achados na América do Norte e aparecem na forma de fósseis na Europa há 7 milhões de anos.",
+      "reference": "Os primeiros animais parentes dos cachorros modernos foram identificados em fósseis de 37 milhões de anos achados na América do Norte e em fósseis de 7 milhões de anos na Europa.",
+      "prediction": "Os ancestrais dos cachorros modernos surgiram há 37 milhões de anos na América do Norte. Eles são chamados de canídeos. Fósseis desses animais também foram encontrados na Europa, com cerca de 7 milhões de anos.",
+      "raw_output": "Os ancestrais dos cachorros modernos surgiram há 37 milhões de anos na América do Norte. Eles são chamados de canídeos. Fósseis desses animais também foram encontrados na Europa, com cerca de 7 milhões de anos."
+    },
+    {
+      "idx": 181,
+      "original": "A direção da escola tem consciência do alto número de migrantes de outras cidades e de crianças em situação de risco social, já que elas moram lado a lado com traficantes na Vila Universal.",
+      "reference": "A direção da escola em consciência do alto número de pessoas que vêm de outras cidades e de crianças em situação de risco social, já que elas moram lado a lado com traficantes na Vila Universal.",
+      "prediction": "A direção da escola sabe que muitos alunos vieram de outras cidades e que várias crianças vivem em situação de risco. Isso acontece porque elas moram perto de traficantes na Vila Universal.",
+      "raw_output": "A direção da escola sabe que muitos alunos vieram de outras cidades e que várias crianças vivem em situação de risco. Isso acontece porque elas moram perto de traficantes na Vila Universal."
+    },
+    {
+      "idx": 182,
+      "original": "Tanto que as irmãs Cláudia Honecker, responsável pelas pílulas, e Célia Cedarin, que postulou a causa de Frei Galvão junto à Santa Sé, cansaram de dar entrevistas.",
+      "reference": "As monjas Cláudia Honecker e Célia Cedarin cansaram de dar entrevistas.",
+      "prediction": "**\n\nAs irmãs Cláudia Honecker e Célia Cedarin ficaram cansadas de dar tantas entrevistas. A primeira era responsável pelas pílulas, e a segunda havia defendido a causa de Frei Galvão junto ao Vaticano.",
+      "raw_output": "**Simplificação:**\n\nAs irmãs Cláudia Honecker e Célia Cedarin ficaram cansadas de dar tantas entrevistas. A primeira era responsável pelas pílulas, e a segunda havia defendido a causa de Frei Galvão junto ao Vaticano."
+    },
+    {
+      "idx": 183,
+      "original": "Presidente dos EUA fez ontem uma visita surpresa ao Iraque e apontou a pacificação da província de Anbar como um exemplo de sucesso a ser seguido.",
+      "reference": "Presidente dos EUA fez ontem uma visita surpresa ao Iraque e apontou o estabelecimento da paz na província de Anbar como um exemplo de sucesso a ser seguido.",
+      "prediction": "O presidente dos EUA visitou o Iraque de surpresa ontem. Ele disse que a paz alcançada na província de Anbar é um bom exemplo a ser seguido.",
+      "raw_output": "O presidente dos EUA visitou o Iraque de surpresa ontem. Ele disse que a paz alcançada na província de Anbar é um bom exemplo a ser seguido."
+    },
+    {
+      "idx": 184,
+      "original": "No texto original de Antoine de Saint-Exupéry, um menino parte em uma jornada de autodescoberta, aprendendo a perceber a beleza de um pôr-do-sol ou a transcendência de ficar admirando uma flor.",
+      "reference": "Ele aprende a perceber a beleza de um pôr do sol ou a importância de ficar admirando uma flor.",
+      "prediction": "**\n\nNo livro de Antoine de Saint-Exupéry, um menino viaja pelo mundo e cresce por dentro. Nessa viagem, ele aprende a valorizar coisas simples, como admirar um pôr do sol ou contemplar uma flor.",
+      "raw_output": "**Simplificação:**\n\nNo livro de Antoine de Saint-Exupéry, um menino viaja pelo mundo e cresce por dentro. Nessa viagem, ele aprende a valorizar coisas simples, como admirar um pôr do sol ou contemplar uma flor."
+    },
+    {
+      "idx": 185,
+      "original": "-- Mesmo que a poliomielite não exista no Brasil há mais de 10 anos, países da África e Ásia ainda têm o vírus, o que faz da vacina uma prevenção importante -- afirma a enfermeira Maria Aparecida Müller Vilarino, coordenadora do núcleo de imunizações da Secretaria Municipal da Saúde.",
+      "reference": "-- A poliomielite não existe no Brasil há mais de 10 anos, mas países da África e Ásia ainda têm o vírus, o que faz da vacina uma prevenção importante -- afirma a enfermeira Maria Aparecida Müller Vilarino.",
+      "prediction": "A enfermeira Maria Aparecida Müller Vilarino, coordenadora de vacinas da Secretaria Municipal da Saúde, explica: -- O Brasil não registra casos de poliomielite há mais de 10 anos. Porém, países da África e da Ásia ainda têm a doença. Por isso, a vacina continua sendo importante.",
+      "raw_output": "A enfermeira Maria Aparecida Müller Vilarino, coordenadora de vacinas da Secretaria Municipal da Saúde, explica: -- O Brasil não registra casos de poliomielite há mais de 10 anos. Porém, países da África e da Ásia ainda têm a doença. Por isso, a vacina continua sendo importante."
+    },
+    {
+      "idx": 186,
+      "original": "Diante do fracasso de projetos como o da Elétrica Jacuí (Eleja), envolvida no escândalo das usinas que redundou até em prisões, as dúvidas sobre o potencial da geração térmica a carvão no estado persistem.",
+      "reference": "Diante do fracasso de projetos como o da Elétrica Jacuí, as dúvidas sobre o potencial da geração de calor a carvão no estado continuam.",
+      "prediction": "O fracasso de projetos como o da Elétrica Jacuí (Eleja), que se envolveu em um escândalo de corrupção e levou pessoas à prisão, faz com que muitos ainda duvidem da capacidade do Rio Grande do Sul de gerar energia elétrica a partir do carvão.",
+      "raw_output": "O fracasso de projetos como o da Elétrica Jacuí (Eleja), que se envolveu em um escândalo de corrupção e levou pessoas à prisão, faz com que muitos ainda duvidem da capacidade do Rio Grande do Sul de gerar energia elétrica a partir do carvão."
+    },
+    {
+      "idx": 187,
+      "original": "Conforme a Companhia de Geração Térmica de Energia Elétrica (CGTEE), em janeiro 250 trabalhadores já estarão no canteiro de obras até agosto, devem ser 1,5 mil.",
+      "reference": "De acordo com a Companhia de Geração Térmica de Energia Elétrica, em janeiro, 250 trabalhadores já estarão no canteiro de obras.",
+      "prediction": "**\n\nSegundo a CGTEE, em janeiro haverá 250 trabalhadores na obra. Esse número deve chegar a 1.500 até agosto.",
+      "raw_output": "**Simplificação:**\n\nSegundo a CGTEE, em janeiro haverá 250 trabalhadores na obra. Esse número deve chegar a 1.500 até agosto."
+    },
+    {
+      "idx": 188,
+      "original": "O aparelho de Maldi foi projetado e construído ao longo dos últimos dois anos pelo grupo de Vasconcelos, do qual também fazem parte os pesquisadores Olacio Dietzsch, Eduardo Macchione, Kiyomi Koide e José Hirata.",
+      "reference": "O Maldi foi projetado e construído nos últimos dois anos pelo grupo de Vasconcelos, do qual também fazem parte os pesquisadores Olacio Dietzsch, Eduardo Macchione, Kiyomi Koide e José Hirata.",
+      "prediction": "O aparelho de Maldi foi criado pelo grupo de Vasconcelos nos últimos dois anos. A equipe é formada pelos pesquisadores Olacio Dietzsch, Eduardo Macchione, Kiyomi Koide e José Hirata.",
+      "raw_output": "O aparelho de Maldi foi criado pelo grupo de Vasconcelos nos últimos dois anos. A equipe é formada pelos pesquisadores Olacio Dietzsch, Eduardo Macchione, Kiyomi Koide e José Hirata."
+    },
+    {
+      "idx": 189,
+      "original": "Apesar da tentativa da produção de manter a gravação em sigilo, a movimentação de fiscais da EPTC e de policiais da Brigada Militar e a van branca identificada com o nome do programa fizeram dezenas de pessoas aglomerarem-se na frente da casa da família.",
+      "reference": "Mas a movimentação de fiscais da EPTC e de policiais e a van branca identificada com o nome do programa fizeram dezenas de pessoas se aglomerarem na frente da casa.",
+      "prediction": "A produção tentou manter a gravação em segredo. Porém, a presença de fiscais da EPTC, policiais da Brigada Militar e uma van branca com o nome do programa chamou a atenção. Por isso, dezenas de pessoas se reuniram em frente à casa da família.",
+      "raw_output": "A produção tentou manter a gravação em segredo. Porém, a presença de fiscais da EPTC, policiais da Brigada Militar e uma van branca com o nome do programa chamou a atenção. Por isso, dezenas de pessoas se reuniram em frente à casa da família."
+    },
+    {
+      "idx": 190,
+      "original": "Primeiro, pede que a Comissão Técnica Nacional de Biossegurança (CTNBio) seja a única instância a regulamentar tanto a pesquisa como a comercialização de transgênicos, no âmbito do mérito científico.",
+      "reference": "Primeiro, pede que a Comissão Técnica Nacional de Biossegurança seja a única autoridade a estabelecer regras tanto para a pesquisa como para o comércio de transgênicos, no campo do valor científico.",
+      "prediction": "**\n\nPrimeiro, pede que apenas a CTNBio (Comissão Técnica Nacional de Biossegurança) tenha o poder de decidir sobre pesquisa e venda de transgênicos, com base em critérios científicos.",
+      "raw_output": "**Simplificação:**\n\nPrimeiro, pede que apenas a CTNBio (Comissão Técnica Nacional de Biossegurança) tenha o poder de decidir sobre pesquisa e venda de transgênicos, com base em critérios científicos."
+    },
+    {
+      "idx": 191,
+      "original": "Os cientistas ainda não sabem exatamente qual o papel do PB2, mas ele parece codificar uma enzima responsável pela indução de um número maior de partículas virais nas células infectadas.",
+      "reference": "Os cientistas ainda não sabem exatamente qual o papel do PB2, mas ele parece estabelecer o código de uma enzima responsável pelo maior número de vírus nas células contaminadas.",
+      "prediction": "Os cientistas ainda não sabem exatamente o que o PB2 faz. Mas acredita-se que ele produz uma enzima que aumenta a quantidade de vírus dentro das células infectadas.",
+      "raw_output": "Os cientistas ainda não sabem exatamente o que o PB2 faz. Mas acredita-se que ele produz uma enzima que aumenta a quantidade de vírus dentro das células infectadas."
+    },
+    {
+      "idx": 192,
+      "original": "Além de abrir as portas para os colegas de fora, alunos e professores gaúchos mantêm a tradição de enviar equipes aos municípios pobres da Amazônia e do Nordeste.",
+      "reference": "Eles também mantêm a tradição de enviar equipes aos municípios pobres da Amazônia e do Nordeste.",
+      "prediction": "**\n\nAlunos e professores gaúchos recebem colegas de outras regiões e também viajam para cidades pobres da Amazônia e do Nordeste. Essa é uma tradição que eles mantêm até hoje.",
+      "raw_output": "**Simplificação:**\n\nAlunos e professores gaúchos recebem colegas de outras regiões e também viajam para cidades pobres da Amazônia e do Nordeste. Essa é uma tradição que eles mantêm até hoje."
+    },
+    {
+      "idx": 193,
+      "original": "Mas os cientistas se preocupam com a possibilidade de que mutações aleatórias no vírus acabem criando cepas capazes de serem transmitidas de pessoa a pessoa, criando o potencial de uma nova pandemia, uma epidemia de proporções globais.",
+      "reference": "Mas os cientistas se preocupam com a possibilidade de que alterações ocasionais no vírus acabem criando grupos capazes de serem transmitidos de pessoa a pessoa, criando a possibilidade de uma nova pandemia, uma epidemia de proporções globais.",
+      "prediction": "**\n\nMas os cientistas têm um medo: o vírus pode sofrer mutações e criar novas versões que se espalham de pessoa para pessoa. Se isso acontecer, pode surgir uma nova pandemia, ou seja, uma doença que se espalha pelo mundo inteiro.",
+      "raw_output": "**Simplificação:**\n\nMas os cientistas têm um medo: o vírus pode sofrer mutações e criar novas versões que se espalham de pessoa para pessoa. Se isso acontecer, pode surgir uma nova pandemia, ou seja, uma doença que se espalha pelo mundo inteiro."
+    },
+    {
+      "idx": 194,
+      "original": "A cerração, que ocultou o amanhecer dos porto-alegrenses, voltou a comprometer as operações do aeroporto por mais de oito horas, entre 1h50 min e 9h56 min.",
+      "reference": "A neblina comprometeu as operações do aeroporto entre 1h50 min e 9h56 min..",
+      "prediction": "O nevoeiro encobriu o amanhecer em Porto Alegre e prejudicou as operações do aeroporto por mais de oito horas, das 1h50 às 9h56.",
+      "raw_output": "O nevoeiro encobriu o amanhecer em Porto Alegre e prejudicou as operações do aeroporto por mais de oito horas, das 1h50 às 9h56."
+    },
+    {
+      "idx": 195,
+      "original": "Uma pesquisa com 240 casais heterossexuais nos EUA revelou que a presença de um animal doméstico não só fez com que a tarefa desagradável fosse percebida como menos estressante, como também resultou em melhor resposta do organismo ao estresse.",
+      "reference": "Uma pesquisa com 240 casais compostos de homem e mulher nos EUA revelou que a presença de um animal doméstico não só fez a tarefa desagradável ser percebida como menos causadora de estresse, como também resultou em melhor resposta do organismo ao estresse.",
+      "prediction": "Um estudo com 240 casais nos EUA mostrou que ter um animal de estimação por perto ajuda a reduzir o estresse. Com o pet presente, as pessoas se sentiram menos pressionadas durante tarefas difíceis e o corpo delas reagiu melhor às situações estressantes.",
+      "raw_output": "Um estudo com 240 casais nos EUA mostrou que ter um animal de estimação por perto ajuda a reduzir o estresse. Com o pet presente, as pessoas se sentiram menos pressionadas durante tarefas difíceis e o corpo delas reagiu melhor às situações estressantes."
+    },
+    {
+      "idx": 196,
+      "original": "Ontem, durante as celebrações de Páscoa, em discurso no balcão da basílica de São Pedro, na bênção Urbi et Orbi (para a cidade de Roma e o mundo), o Papa falou de temas que têm sido freqüentes em seus discursos e que podem ser repetidos no Brasil:",
+      "reference": "Os temas são a situação do Iraque, a fome e as crises políticas que ocorrem na Ásia e na África.",
+      "prediction": "Ontem, na celebração da Páscoa, o Papa fez um discurso na basílica de São Pedro. Ele deu a bênção Urbi et Orbi, que é destinada a Roma e ao mundo inteiro. No discurso, ele abordou assuntos que costuma tratar com frequência e que também podem ser mencionados no Brasil:",
+      "raw_output": "Ontem, na celebração da Páscoa, o Papa fez um discurso na basílica de São Pedro. Ele deu a bênção Urbi et Orbi, que é destinada a Roma e ao mundo inteiro. No discurso, ele abordou assuntos que costuma tratar com frequência e que também podem ser mencionados no Brasil:"
+    },
+    {
+      "idx": 197,
+      "original": "Fundado em 1977, o parque na RS-020, em Gravataí, é a concretização de um sonho do empresário Lauro Febernati -- morto em 2005, que, quando criança, planejava um dia morar na África.",
+      "reference": "Criado em 1977, o parque, que fica na RS-020, em Gravataí, é a realização de um sonho do empresário Lauro Febernati, que morreu em 2005.",
+      "prediction": "O parque fica na RS-020, em Gravataí, e foi fundado em 1977. Ele foi criado pelo empresário Lauro Febernati, que morreu em 2005. Desde criança, Lauro sonhava em morar na África. O parque foi a realização desse sonho.",
+      "raw_output": "O parque fica na RS-020, em Gravataí, e foi fundado em 1977. Ele foi criado pelo empresário Lauro Febernati, que morreu em 2005. Desde criança, Lauro sonhava em morar na África. O parque foi a realização desse sonho."
+    },
+    {
+      "idx": 198,
+      "original": "As áreas mais atingidas, claro, são as regiões áridas do norte da África, da Ásia Central e do Oriente Médio.",
+      "reference": "As áreas mais atingidas são as regiões áridas do norte da África, da Ásia Central e do Oriente Médio.",
+      "prediction": "**\n\nAs regiões mais afetadas são as áreas secas do norte da África, da Ásia Central e do Oriente Médio.",
+      "raw_output": "**Simplificação:**\n\nAs regiões mais afetadas são as áreas secas do norte da África, da Ásia Central e do Oriente Médio."
+    },
+    {
+      "idx": 199,
+      "original": "-- Duas famílias -- limitou-se a dizer, sussurrando para as monjas do outro lado da parede.",
+      "reference": "-- Duas famílias -- Edna falou baixinho para as monjas que estavam do outro lado da parede.",
+      "prediction": "— Duas famílias — ele disse baixinho, sussurrando para as freiras do outro lado da parede.",
+      "raw_output": "— Duas famílias — ele disse baixinho, sussurrando para as freiras do outro lado da parede."
+    }
+  ]
+}

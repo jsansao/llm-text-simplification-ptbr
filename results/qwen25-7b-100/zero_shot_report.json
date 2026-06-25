@@ -1,0 +1,736 @@
+{
+  "strategy": "zero_shot",
+  "num_samples": 100,
+  "metrics": {
+    "rouge1": 0.5976,
+    "rouge2": 0.416,
+    "rougeL": 0.5352,
+    "bertscore_mean": 0.8528,
+    "bertscore_std": 0.0565,
+    "ori_pred_rouge1": 0.709,
+    "ori_pred_rouge2": 0.5251,
+    "ori_pred_rougeL": 0.6525,
+    "ori_pred_bertscore_mean": 0.8934,
+    "ori_pred_bertscore_std": 0.044,
+    "ori_ref_rouge1": 0.7418,
+    "ori_ref_rouge2": 0.639,
+    "ori_ref_rougeL": 0.71,
+    "ori_ref_bertscore_mean": 0.9001,
+    "ori_ref_bertscore_std": 0.0617,
+    "sari": 35.7259,
+    "flesch_original": 3.3,
+    "flesch_prediction": 10.94,
+    "flesch_improvement": 7.64,
+    "fog_original": 22.36,
+    "fog_prediction": 19.91,
+    "fog_improvement": -2.46,
+    "ref_flesch_original": 3.3,
+    "ref_flesch_prediction": 9.31,
+    "ref_flesch_improvement": 6.02,
+    "ref_fog_original": 22.36,
+    "ref_fog_prediction": 20.45,
+    "ref_fog_improvement": -1.92
+  },
+  "results": [
+    {
+      "idx": 0,
+      "original": "As salas de cinema de todo o mundo exibiam uma produção do diretor Joe Dante em que um cardume de piranhas escapava de um laboratório militar e atacava participantes de um festival aquático.",
+      "reference": "Na produção do diretor Joe Dante, um cardume de piranhas escapava de um laboratório militar e atacava participantes de um festival aquático.",
+      "prediction": "Cinemas ao redor do mundo exibiram um filme de Joe Dante sobre piranhas que escaparam de um laboratório e atacaram pessoas em um festival aquático.",
+      "raw_output": "Cinemas ao redor do mundo exibiram um filme de Joe Dante sobre piranhas que escaparam de um laboratório e atacaram pessoas em um festival aquático."
+    },
+    {
+      "idx": 1,
+      "original": "Mais de 20 pessoas foram mordidas por palometas (Serrasalmus spilopleura, espécie de piranha) que vivem nas águas da barragem Sanchuri, na margem da Br-472, a 40 quilômetros da cidade.",
+      "reference": "As palometas vivem nas águas da barragem Sanchuri, na margem da Br-472, a 40 quilômetros da cidade.",
+      "prediction": "Mais de 20 pessoas foram mordidas por palometas nas águas da barragem Sanchuri, perto da BR-472, a 40 km da cidade.",
+      "raw_output": "Mais de 20 pessoas foram mordidas por palometas nas águas da barragem Sanchuri, perto da BR-472, a 40 km da cidade."
+    },
+    {
+      "idx": 2,
+      "original": "O que chamou a atenção das autoridades foi o aumento no número de ataques em relação aos outros anos.",
+      "reference": "O aumento no número de ataques em relação aos outros anos chamou a atenção das autoridades.",
+      "prediction": "O que chamou atenção das autoridades foi o aumento no número de ataques comparado aos outros anos.",
+      "raw_output": "O que chamou atenção das autoridades foi o aumento no número de ataques comparado aos outros anos."
+    },
+    {
+      "idx": 3,
+      "original": "Ele e amigos, como Giovane Silva Ferreira, 13 anos, passam as tardes pescando o peixe, depois levado para uma associação de artesãos que faz o curtimento da pele do animal.",
+      "reference": "Ele e amigos, como Giovane Silva Ferreira, 13 anos, passam as tardes pescando o peixe.",
+      "prediction": "Ele e seus amigos, como Giovane Silva Ferreira, de 13 anos, passam as tardes pescando peixes. Depois, levam os peixes para uma associação de artesãos que faz o curtimento da pele dos animais.",
+      "raw_output": "Ele e seus amigos, como Giovane Silva Ferreira, de 13 anos, passam as tardes pescando peixes. Depois, levam os peixes para uma associação de artesãos que faz o curtimento da pele dos animais."
+    },
+    {
+      "idx": 4,
+      "original": "Com o fim da piracema, período em que a pesca é proibida, será realizado no domingo o torneio Combate à Palometa.",
+      "reference": "Com o fim da piracema, será realizado no domingo o torneio Combate à Palometa.",
+      "prediction": "No domingo, será realizado o torneio Combate à Palometa, após o fim da piracema.",
+      "raw_output": "No domingo, será realizado o torneio Combate à Palometa, após o fim da piracema."
+    },
+    {
+      "idx": 5,
+      "original": "Pescadores tentarão retirar o maior número de peixes da espécie, que pode atingir 20 centímetros de comprimento e um quilo.",
+      "reference": "A espécie pode atingir 20 centímetros de comprimento e um quilo.",
+      "prediction": "Pescadores tentarão pegar o maior número possível desses peixes, que podem medir até 20 centímetros e pesar até 1 quilo.",
+      "raw_output": "Pescadores tentarão pegar o maior número possível desses peixes, que podem medir até 20 centímetros e pesar até 1 quilo."
+    },
+    {
+      "idx": 6,
+      "original": "Segundo o chefe substituto do escritório regional, Guaracy Cunha, ainda há tempo para o pedido de licença.",
+      "reference": "Segundo o chefe substituto do escritório regional, ainda há tempo para o pedido de licença.",
+      "prediction": "O chefe substituto Guaracy Cunha disse que ainda é possível pedir licença.",
+      "raw_output": "O chefe substituto Guaracy Cunha disse que ainda é possível pedir licença."
+    },
+    {
+      "idx": 7,
+      "original": "-- Elas atacam mais nos locais em que o pessoal das excursões lava mãos e pratos após as refeições -- diz Adalberto Silva, presidente da associação dos moradores da localidade.",
+      "reference": "-- Elas atacam mais nos locais em que o pessoal das excursões lava mãos e pratos após as refeições -- diz Adalberto Silva.",
+      "prediction": "As criaturas atacam mais nos lugares onde o pessoal das excursões lava mãos e pratos após as refeições, according to Adalberto Silva, presidente da associação dos moradores.",
+      "raw_output": "As criaturas atacam mais nos lugares onde o pessoal das excursões lava mãos e pratos após as refeições, according to Adalberto Silva, presidente da associação dos moradores."
+    },
+    {
+      "idx": 8,
+      "original": "Silva adquiriu uma tela de retenção com 150 metros, que deve ser instalada para isolar o trecho da barragem mais usado pelos banhistas, com 3,7 mil hectares de área.",
+      "reference": "A tela deve ser instalada para isolar o trecho da barragem mais usado pelos banhistas.",
+      "prediction": "Silva comprou uma tela de retenção de 150 metros para isolar a parte da barragem mais frequentada pelos banhistas, que tem 3,7 mil hectares.",
+      "raw_output": "Silva comprou uma tela de retenção de 150 metros para isolar a parte da barragem mais frequentada pelos banhistas, que tem 3,7 mil hectares."
+    },
+    {
+      "idx": 9,
+      "original": "Acessório utilizado por adolescentes, o boné é um dos itens que compõem a vestimenta idealizada pela proposta.",
+      "reference": "O boné é um dos itens da roupa imaginada pela proposta.",
+      "prediction": "O boné é um acessório usado por adolescentes e faz parte da vestimenta proposta.",
+      "raw_output": "O boné é um acessório usado por adolescentes e faz parte da vestimenta proposta."
+    },
+    {
+      "idx": 10,
+      "original": "Ao prever a distribuição gratuita de uniforme para alunos da rede pública, um projeto em discussão no Congresso institui uma controvérsia em escolas, prefeituras e secretarias de Educação.",
+      "reference": "Um projeto em discussão no Congresso criou uma polêmica em escolas, prefeituras e secretarias de educação.",
+      "prediction": "O projeto em discussão no Congresso que prevê a distribuição gratuita de uniformes para alunos da rede pública está causando controvérsias em escolas, prefeituras e secretarias de Educação.",
+      "raw_output": "O projeto em discussão no Congresso que prevê a distribuição gratuita de uniformes para alunos da rede pública está causando controvérsias em escolas, prefeituras e secretarias de Educação."
+    },
+    {
+      "idx": 11,
+      "original": "Além de ressuscitar o debate sobre a obrigatoriedade de um traje padrão entre os alunos e reacender a preocupação com a escassez de recursos públicos, a proposta cria uma discussão sobre a incorporação do boné no kit obrigatório.",
+      "reference": "Além disso, a proposta reanima o debate sobre a obrigação de uma roupa igual para todos os alunos.",
+      "prediction": "A proposta traz de volta o debate sobre trajes padrão para os alunos, causa preocupação com a falta de recursos públicos e discute se o boné deve ser incluído no kit obrigatório.",
+      "raw_output": "A proposta traz de volta o debate sobre trajes padrão para os alunos, causa preocupação com a falta de recursos públicos e discute se o boné deve ser incluído no kit obrigatório."
+    },
+    {
+      "idx": 12,
+      "original": "A matéria ainda precisa passar pela Câmara dos Deputados e pela Presidência da República antes de entrar em vigor.",
+      "reference": "O projeto ainda precisa passar pela Câmara dos Deputados e pela Presidência da República antes de entrar em vigor.",
+      "prediction": "A matéria ainda precisa passar pela Câmara dos Deputados e pela Presidência antes de entrar em vigor.",
+      "raw_output": "A matéria ainda precisa passar pela Câmara dos Deputados e pela Presidência antes de entrar em vigor."
+    },
+    {
+      "idx": 13,
+      "original": "O acessório polêmico entrou no projeto, de autoria do senador Cícero Lucena (PSDB-PB), graças a uma emenda aprovada na Comissão de Educação do Senado em outubro.",
+      "reference": "O boné problemático entrou no projeto graças a uma emenda aprovada na Comissão de Educação do Senado em outubro.",
+      "prediction": "O acessório polêmico foi incluído no projeto pelo senador Cícero Lucena (PSDB-PB), graças a uma emenda aprovada na Comissão de Educação do Senado em outubro.",
+      "raw_output": "O acessório polêmico foi incluído no projeto pelo senador Cícero Lucena (PSDB-PB), graças a uma emenda aprovada na Comissão de Educação do Senado em outubro."
+    },
+    {
+      "idx": 14,
+      "original": "Foi o senador Flávio Arns (PT-PR) quem sugeriu a inclusão da peça entre os itens do uniforme de alunos dos ensinos Fundamental e Médio nas escolas municipais, estaduais e federais.",
+      "reference": "Foi o senador Flávio Arns que sugeriu a inclusão do boné no uniforme de alunos dos ensinos Fundamental e Médio nas escolas municipais, estaduais e federais.",
+      "prediction": "O senador Flávio Arns (PT-PR) sugeriu incluir a peça no uniforme escolar para alunos do Fundamental e Médio em escolas municipais, estaduais e federais.",
+      "raw_output": "O senador Flávio Arns (PT-PR) sugeriu incluir a peça no uniforme escolar para alunos do Fundamental e Médio em escolas municipais, estaduais e federais."
+    },
+    {
+      "idx": 15,
+      "original": "Se a idéia for aprovada, os estudantes receberão dois conjuntos anuais, completados por calçado, meias, calça e camiseta.",
+      "reference": "Se a idéia for aprovada, os estudantes receberão dois conjuntos anuais, completados com calçado, meias, calça e camiseta.",
+      "prediction": "Se a ideia for aprovada, os estudantes receberão dois conjuntos por ano, com calçado, meias, calça e camiseta.",
+      "raw_output": "Se a ideia for aprovada, os estudantes receberão dois conjuntos por ano, com calçado, meias, calça e camiseta."
+    },
+    {
+      "idx": 16,
+      "original": "Como será comprado em quantidade, o boné sairá por R$ 1 ou R$ 2.",
+      "reference": "Com isso, o boné sairá por R$ 1 ou R$ 2.",
+      "prediction": "O boné custará R$ 1 ou R$ 2, pois será comprado em grande quantidade.",
+      "raw_output": "O boné custará R$ 1 ou R$ 2, pois será comprado em grande quantidade."
+    },
+    {
+      "idx": 17,
+      "original": "É muito mais barato do que adotar outra medida preventiva -- avalia Arns.",
+      "reference": "É muito mais barato do que adotar outra medida para evitar os males causados pelo sol -- avalia Arns.",
+      "prediction": "É muito mais barato do que usar outra medida -- diz Arns.",
+      "raw_output": "É muito mais barato do que usar outra medida -- diz Arns."
+    },
+    {
+      "idx": 18,
+      "original": "A divergência ocorre porque educadores como Helvécio Aguiar, da Faculdade de Educação da Universidade Federal do Rio Grande do Sul (UFRGS), afirmam que a peça é desnecessária no uniforme obrigatório.",
+      "reference": "O desentendimento ocorre porque educadores como Helvécio Aguiar afirmam que o boné é desnecessário no uniforme obrigatório.",
+      "prediction": "A divergência acontece porque educadores, como Helvécio Aguiar, da UFRGS, dizem que a peça não é necessária no uniforme obrigatório.",
+      "raw_output": "A divergência acontece porque educadores, como Helvécio Aguiar, da UFRGS, dizem que a peça não é necessária no uniforme obrigatório."
+    },
+    {
+      "idx": 19,
+      "original": "A divergência ocorre porque educadores como Helvécio Aguiar, da Faculdade de Educação da Universidade Federal do Rio Grande do Sul (UFRGS), afirmam que a peça é desnecessária no uniforme obrigatório.",
+      "reference": "Helvécio Aguiar é da Faculdade de Educação da Universidade Federal do Rio Grande do Sul.",
+      "prediction": "A divergência acontece porque educadores, como Helvécio Aguiar, da UFRGS, dizem que a peça não é necessária no uniforme obrigatório.",
+      "raw_output": "A divergência acontece porque educadores, como Helvécio Aguiar, da UFRGS, dizem que a peça não é necessária no uniforme obrigatório."
+    },
+    {
+      "idx": 20,
+      "original": "Professores ainda temem que a distribuição do acessório dificulte a imposição, nas classes, de uma regra da boa conduta:",
+      "reference": "Professores temem também que a distribuição de boné torne difícil impor nas classes uma regra da boa maneira de se comportar:",
+      "prediction": "Os professores ainda temem que a distribuição desse acessório dificulte a aplicação de uma regra de boa conduta nas classes.",
+      "raw_output": "Os professores ainda temem que a distribuição desse acessório dificulte a aplicação de uma regra de boa conduta nas classes."
+    },
+    {
+      "idx": 21,
+      "original": "A retirada de chapéus e bonés da cabeça em ambientes fechados.",
+      "reference": "Retirar chapéus e bonés da cabeça em ambientes fechados.",
+      "prediction": "Retire chapéus e bonés quando estiverem em ambientes fechados.",
+      "raw_output": "Retire chapéus e bonés quando estiverem em ambientes fechados."
+    },
+    {
+      "idx": 22,
+      "original": "Na Federação das Associações de Municípios do RS (Famurs) e na Secretaria Estadual de Educação (Sec), a preocupação reside em outro ponto.",
+      "reference": "A preocupação está em outro ponto na Federação das Associações de Municípios do RS (Famurs) e na Secretaria Estadual de Educação (Sec).",
+      "prediction": "Na Famurs e na Sec, a preocupação está em outro ponto.",
+      "raw_output": "Na Famurs e na Sec, a preocupação está em outro ponto."
+    },
+    {
+      "idx": 23,
+      "original": "Eles se inquietam com a fonte para custear os gastos milionários com a medida.",
+      "reference": "Elas se preocupam com o dinheiro para pagar os gastos de milhões de reais com a medida.",
+      "prediction": "Eles se preocupam com onde vai sair o dinheiro para pagar essa medida cara.",
+      "raw_output": "Eles se preocupam com onde vai sair o dinheiro para pagar essa medida cara."
+    },
+    {
+      "idx": 24,
+      "original": "O projeto prevê a criação do Programa Nacional de Uniforme Escolar para que o Palácio do Planalto ajude Estados e municípios, mas mantém as dúvidas se as verbas serão suficientes.",
+      "reference": "O projeto prevê a criação do Programa Nacional de Uniforme escolar para que o governo federal ajude Estados e municípios.",
+      "prediction": "O projeto cria o Programa Nacional de Uniforme Escolar para ajudar Estados e municípios, mas há dúvidas se haverá dinheiro suficiente.",
+      "raw_output": "O projeto cria o Programa Nacional de Uniforme Escolar para ajudar Estados e municípios, mas há dúvidas se haverá dinheiro suficiente."
+    },
+    {
+      "idx": 25,
+      "original": "Já não temos recursos suficientes para a manutenção das escolas, por exemplo, e também precisamos valorizar o magistério -- justifica a diretora do Departamento Pedagógico da Sec, Sonia Balzano.",
+      "reference": "Além disso, precisamos valorizar os professores -- justifica a diretora do Departamento Pedagógico da Sec.",
+      "prediction": "A diretora Sonia Balzano explica que não temos recursos para manter as escolas e precisamos valorizar os professores.",
+      "raw_output": "A diretora Sonia Balzano explica que não temos recursos para manter as escolas e precisamos valorizar os professores."
+    },
+    {
+      "idx": 26,
+      "original": "Não fosse o aspecto financeiro, o projeto teria o apoio incondicional de Balzano e do presidente da Famurs, Flávio Luiz Lammel.",
+      "reference": "O projeto teria o apoio total de Balzano e do presidente da Famurs, se não fosse o problema de dinheiro.",
+      "prediction": "O projeto teria o apoio total de Balzano e do presidente da Famurs, Flávio Luiz Lammel, se não fosse o aspecto financeiro.",
+      "raw_output": "O projeto teria o apoio total de Balzano e do presidente da Famurs, Flávio Luiz Lammel, se não fosse o aspecto financeiro."
+    },
+    {
+      "idx": 27,
+      "original": "Com a oferta do uniforme, as escolas públicas poderão torná-lo obrigatório, o que eliminaria a roupa como um indicador de diferenças sociais nas escolas e não criaria constrangimento aos alunos mais pobres.",
+      "reference": "Se o uniforme for oferecido, as escolas públicas poderão torná-lo obrigatório, com isso a roupa deixaria de ser um indicador de diferenças sociais nas escolas e não criaria vergonha nos alunos mais pobres.",
+      "prediction": "Com o uniforme oferecido, as escolas públicas podem torná-lo obrigatório. Isso eliminaria a diferença na roupa entre os alunos e não deixaria os mais pobres se sentindo constrangidos.",
+      "raw_output": "Com o uniforme oferecido, as escolas públicas podem torná-lo obrigatório. Isso eliminaria a diferença na roupa entre os alunos e não deixaria os mais pobres se sentindo constrangidos."
+    },
+    {
+      "idx": 28,
+      "original": "O foco principal da resistência vem dos próprios estudantes:",
+      "reference": "A principal resistência vem dos próprios estudantes:",
+      "prediction": "O principal da resistência são os próprios estudantes.",
+      "raw_output": "O principal da resistência são os próprios estudantes."
+    },
+    {
+      "idx": 29,
+      "original": "Uma parcela critica o uniforme, porque acredita que ele ameaçaria a individualidade de cada um.",
+      "reference": "Alguns criticam o uniforme, porque acreditam que ele ameaça a individualidade de cada um.",
+      "prediction": "Algumas pessoas criticam o uniforme porque acham que ele ameaça a individualidade de cada um.",
+      "raw_output": "Algumas pessoas criticam o uniforme porque acham que ele ameaça a individualidade de cada um."
+    },
+    {
+      "idx": 30,
+      "original": "Para complicar ainda mais a situação dos militares dos EUA no Iraque, uma nova denúncia de massacre de civis por suas tropas veio à tona ontem.",
+      "reference": "Uma nova denúncia de matança de civis por tropas dos EUA surgiu ontem, para complicar ainda mais a situação dos militares americanos no Iraque.",
+      "prediction": "A situação dos militares americanos no Iraque ficou ainda mais complicada porque ontem saiu uma nova denúncia sobre o massacre de civis por suas tropas.",
+      "raw_output": "A situação dos militares americanos no Iraque ficou ainda mais complicada porque ontem saiu uma nova denúncia sobre o massacre de civis por suas tropas."
+    },
+    {
+      "idx": 31,
+      "original": "Um vídeo gravado após uma operação militar dos EUA em 15 de março na vila de Ishaqi, 80 quilômetros ao norte de Bagdá, mostra o resultado da operação:",
+      "reference": "Um vídeo gravado após uma operação militar dos EUA em 15 de março na vila de Ishaqi mostra o resultado da operação:",
+      "prediction": "Um vídeo gravado em 15 de março, após uma operação militar dos EUA perto de Ishaqi, mostra o resultado da operação.",
+      "raw_output": "Um vídeo gravado em 15 de março, após uma operação militar dos EUA perto de Ishaqi, mostra o resultado da operação."
+    },
+    {
+      "idx": 32,
+      "original": "Corpos de crianças e adultos iraquianos crivados de balas, alguns com tiros na cabeça.",
+      "reference": "A vila de Ishaqi fica 80 quilômetros ao norte de Bagdá.",
+      "prediction": "Corpos de crianças e adultos iraquianos cheios de balas, alguns com tiros na cabeça.",
+      "raw_output": "Corpos de crianças e adultos iraquianos cheios de balas, alguns com tiros na cabeça."
+    },
+    {
+      "idx": 33,
+      "original": "A conclusão da investigação do exército sobre o caso, que vazou para a imprensa, afirma que as acusações de homicídio doloso (com intenção) eram \"infundadas\".",
+      "reference": "A conclusão da investigação do exército sobre o caso afirma que as acusações de homicídio doloso eram \"infundadas\".",
+      "prediction": "A investigação do exército concluiu que as acusações de assassinato intencional eram falsas. Essa conclusão vazou para a imprensa.",
+      "raw_output": "A investigação do exército concluiu que as acusações de assassinato intencional eram falsas. Essa conclusão vazou para a imprensa."
+    },
+    {
+      "idx": 34,
+      "original": "-- Parece que o assassinato de civis iraquianos transformou-se em um fenômeno cotidiano e banal -- disse o presidente da Associação Iraquiana dos Direitos Humanos, Muayed al-Anbaki.",
+      "reference": "-- Parece que o assassinato de civis iraquianos transformou-se em um fenômeno comum e banal -- disse o presidente da Associação Iraquiana dos Direitos Humanos, Muayed al-Anbaki.",
+      "prediction": "O presidente da Associação Iraquiana dos Direitos Humanos, Muayed al-Anbaki, disse que o assassinato de civis iraquianos se tornou algo comum e rotineiro.",
+      "raw_output": "O presidente da Associação Iraquiana dos Direitos Humanos, Muayed al-Anbaki, disse que o assassinato de civis iraquianos se tornou algo comum e rotineiro."
+    },
+    {
+      "idx": 35,
+      "original": "Trechos do vídeo foram exibidos pela rede britânica BBC e mostram uma fileira de corpos com ferimentos claramente provocados por tiros.",
+      "reference": "Os trechos do vídeo mostram uma fileira de corpos com ferimentos claramente provocados por tiros.",
+      "prediction": "Partes do vídeo foram mostradas pela BBC e mostram fileiras de corpos com ferimentos de balas.",
+      "raw_output": "Partes do vídeo foram mostradas pela BBC e mostram fileiras de corpos com ferimentos de balas."
+    },
+    {
+      "idx": 36,
+      "original": "Mais cedo, o primeiro-ministro iraquiano, Nouri al-Maliki, havia criticado os EUA devido à acusação de que seus fuzileiros navais mataram 24 civis desarmados na cidade de Haditha, em novembro.",
+      "reference": "Ele criticou os EUA por causa da morte de 24 civis desarmados na cidade de Haditha em novembro.",
+      "prediction": "O primeiro-ministro iraquiano, Nouri al-Maliki, criticou os EUA por acusá-los de terem matado 24 civis desarmados em Haditha em novembro.",
+      "raw_output": "O primeiro-ministro iraquiano, Nouri al-Maliki, criticou os EUA por acusá-los de terem matado 24 civis desarmados em Haditha em novembro."
+    },
+    {
+      "idx": 37,
+      "original": "Toda a operação teria sido armada para vingar a morte de um companheiro em um atentado a bomba.",
+      "reference": "Toda a operação teria sido preparada para vingar a morte de um companheiro em um atentado a bomba.",
+      "prediction": "A operação foi montada para vingar a morte de um companheiro em um ataque com bomba.",
+      "raw_output": "A operação foi montada para vingar a morte de um companheiro em um ataque com bomba."
+    },
+    {
+      "idx": 38,
+      "original": "O premier classificou o episódio de \"crime horrível\".",
+      "reference": "O primeiro-ministro classificou a operação de \"crime horrível\".",
+      "prediction": "O premier chamou o episódio de \"um crime horrível\".",
+      "raw_output": "O premier chamou o episódio de \"um crime horrível\"."
+    },
+    {
+      "idx": 39,
+      "original": "Além de uma investigação sobre o incidente, o comando das forças armadas ordenou que todos os soldados recebam treinamento extra sobre \"padrões morais, éticos e legais no campo de batalha\".",
+      "reference": "Além disso, o comando das forças armadas ordenou que todos os soldados recebam treinamento extra sobre \"padrões morais, éticos e legais no campo de batalha\".",
+      "prediction": "O comando das forças armadas pediu que todos os soldados recebam treinamento extra sobre padrões morais, éticos e legais no campo de batalha, além de investigar o incidente.",
+      "raw_output": "O comando das forças armadas pediu que todos os soldados recebam treinamento extra sobre padrões morais, éticos e legais no campo de batalha, além de investigar o incidente."
+    },
+    {
+      "idx": 40,
+      "original": "Isso dificilmente conterá a torrente de denúncias que ameaça minar o novo governo iraquiano e o apoio do público nos EUA à guerra iniciada pelo presidente George W Bush.",
+      "reference": "Isso dificilmente conterá a grande quantidade de denúncias que ameaça o apoio do público dos EUA à guerra iniciada pelo presidente George W Bush.",
+      "prediction": "Isso provavelmente não impedirá as denúncias que ameaçam prejudicar o novo governo do Iraque e a aprovação dos americanos para a guerra iniciada por George W. Bush.",
+      "raw_output": "Isso provavelmente não impedirá as denúncias que ameaçam prejudicar o novo governo do Iraque e a aprovação dos americanos para a guerra iniciada por George W. Bush."
+    },
+    {
+      "idx": 41,
+      "original": "Na época da operação em Ishaqi, os militares dos EUA anunciaram que houve um confronto entre os fuzileiros e um suposto integrante da Al-Qaeda.",
+      "reference": "Os militares dos EUA anunciaram que houve um confronto entre os fuzileiros e alguém que achavam que era integrante da Al-Qaeda na época da operação em Ishaqi.",
+      "prediction": "Durante a operação em Ishaqi, os militares dos EUA disseram que houve um confronto com um suposto membro da Al-Qaeda.",
+      "raw_output": "Durante a operação em Ishaqi, os militares dos EUA disseram que houve um confronto com um suposto membro da Al-Qaeda."
+    },
+    {
+      "idx": 42,
+      "original": "Em meio à intensa troca de tiros, uma casa desabou, matando o suspeito, duas mulheres e uma criança.",
+      "reference": "Uma casa desabou no meio da troca de tiros, matando o suspeito, duas mulheres e uma criança.",
+      "prediction": "Durante a intensa troca de tiros, uma casa caiu e morreram o suspeito, duas mulheres e uma criança.",
+      "raw_output": "Durante a intensa troca de tiros, uma casa caiu e morreram o suspeito, duas mulheres e uma criança."
+    },
+    {
+      "idx": 43,
+      "original": "Mas um vídeo de um cinegrafista da agência de notícias Associated Press (AP), divulgado no mesmo dia, já mostrava pelo menos cinco crianças mortas.",
+      "reference": "Mas um vídeo de um cinegrafista da agência de notícias Associated Press já mostrava pelo menos cinco crianças mortas.",
+      "prediction": "Um vídeo da agência AP, divulgado no mesmo dia, mostrava pelo menos cinco crianças mortas.",
+      "raw_output": "Um vídeo da agência AP, divulgado no mesmo dia, mostrava pelo menos cinco crianças mortas."
+    },
+    {
+      "idx": 44,
+      "original": "Um adulto e quatro crianças têm evidentes marcas de tiros na cabeça -- o que reforça a tese de execuções.",
+      "reference": "Um adulto e quatro crianças têm marcas claras de tiros na cabeça.",
+      "prediction": "Um adulto e quatro crianças têm marcas de tiros na cabeça, o que indica que foram executados.",
+      "raw_output": "Um adulto e quatro crianças têm marcas de tiros na cabeça, o que indica que foram executados."
+    },
+    {
+      "idx": 45,
+      "original": "Moradores do local afirmam que 11 pessoas foram mortas -- e garantem que isso ocorreu antes de a casa ser destruída.",
+      "reference": "Moradores do local garantem que isso ocorreu antes de a casa ser destruída.",
+      "prediction": "Os moradores disseram que 11 pessoas foram mortas antes da casa ser destruída.",
+      "raw_output": "Os moradores disseram que 11 pessoas foram mortas antes da casa ser destruída."
+    },
+    {
+      "idx": 46,
+      "original": "Considerado culpado de ameaçar com um cachorro sem focinheira um dos detentos e de negligência no cumprimento do dever, ele foi rebaixado e condenado ontem por um tribunal militar a 90 dias de trabalho forçado sem confinamento.",
+      "reference": "Ele foi condenado ontem por um tribunal militar a 90 dias de trabalho forçado sem prisão.",
+      "prediction": "Ele foi condenado ontem por um tribunal militar a 90 dias de trabalho forçado. Isso aconteceu porque ele ameaçou um detento com um cachorro sem focinheira e não cumpriu bem seu dever.",
+      "raw_output": "Ele foi condenado ontem por um tribunal militar a 90 dias de trabalho forçado. Isso aconteceu porque ele ameaçou um detento com um cachorro sem focinheira e não cumpriu bem seu dever."
+    },
+    {
+      "idx": 47,
+      "original": "Estatísticas de março indicam que o roubo de carros é um crime resistente às ações policiais.",
+      "reference": "Números de março indicam que o roubo de carros é um crime resistente às ações policiais.",
+      "prediction": "As estatísticas de março mostram que o roubo de carros continua sendo difícil de combater para a polícia.",
+      "raw_output": "As estatísticas de março mostram que o roubo de carros continua sendo difícil de combater para a polícia."
+    },
+    {
+      "idx": 48,
+      "original": "Blitze, barreiras e operações em profusão foram insuficientes para conter um crescimento de 11,12% em relação a março de 2006.",
+      "reference": "Fiscalizações policiais, barreiras e operações em grande quantidade foram pouco para conter um crescimento de 11,12% quando comparado com março de 2006.",
+      "prediction": "Blitzes, barreiras e operações em grande número não conseguiram frear um crescimento de 11,12% em comparação com março de 2006.",
+      "raw_output": "Blitzes, barreiras e operações em grande número não conseguiram frear um crescimento de 11,12% em comparação com março de 2006."
+    },
+    {
+      "idx": 49,
+      "original": "O aumento de casos frustrou expectativas e fez as autoridades reverem estratégias.",
+      "reference": "O aumento de casos fez as autoridades reverem estratégias.",
+      "prediction": "Aumento de casos decepcionou as autoridades e fez elas reavaliarem as estratégias.",
+      "raw_output": "Aumento de casos decepcionou as autoridades e fez elas reavaliarem as estratégias."
+    },
+    {
+      "idx": 50,
+      "original": "O secretário da Segurança Pública, Enio Bacci, disse que o aumento está ligado à legislação branda contra desmanches, ao aumento da frota e ao chamado golpe do seguro -- quando o dono vende o carro a bandidos e recebe um novo da seguradora, mas reconheceu que precisa ajustar a repressão.",
+      "reference": "O secretário da Segurança Pública disse que o aumento está ligado à legislação pouco rigorosa contra desmanches, ao aumento da quantidade de carros e ao chamado golpe do seguro.",
+      "prediction": "O secretário Enio Bacci disse que o aumento é devido a leis mais fracas contra desmanches, ao aumento do número de carros e ao que chamam de golpe do seguro. Ele também admitiu que precisa melhorar a repressão.",
+      "raw_output": "O secretário Enio Bacci disse que o aumento é devido a leis mais fracas contra desmanches, ao aumento do número de carros e ao que chamam de golpe do seguro. Ele também admitiu que precisa melhorar a repressão."
+    },
+    {
+      "idx": 51,
+      "original": "-- Propomos mudanças na legislação, com a numeração das peças dos carros que vão para desmanches.",
+      "reference": "-- Propomos mudanças na legislação, com a colocação de números nas peças dos carros que vão para desmanches.",
+      "prediction": "Propomos mudar a lei para numerar as peças dos carros que vão para desmanches.",
+      "raw_output": "Propomos mudar a lei para numerar as peças dos carros que vão para desmanches."
+    },
+    {
+      "idx": 52,
+      "original": "Estamos cadastrando ferros-velhos, mas não tivemos um trabalho forte contra a clonagem e agora vamos atacar para valer -- admitiu Bacci.",
+      "reference": "Estamos reunindo informações sobre ferros-velhos, mas não tivemos um trabalho forte contra a clonagem.",
+      "prediction": "Estamos registrando ferros-velhos, mas não fizemos nada contra a clonagem. Agora, vamos nos esforçar muito para resolver isso -- admitiu Bacci.",
+      "raw_output": "Estamos registrando ferros-velhos, mas não fizemos nada contra a clonagem. Agora, vamos nos esforçar muito para resolver isso -- admitiu Bacci."
+    },
+    {
+      "idx": 53,
+      "original": "O secretário estimou que a clonagem pode ser o destino de até 40% dos veículos roubados.",
+      "reference": "O secretário calculou que a clonagem pode ser o destino de até 40% dos veículos roubados.",
+      "prediction": "O secretário pensou que até 40% dos carros roubados podem ser clonados.",
+      "raw_output": "O secretário pensou que até 40% dos carros roubados podem ser clonados."
+    },
+    {
+      "idx": 54,
+      "original": "Segundo ele, foram identificados pontos de clonagem na Região Metropolitana, que serão desarticulados em breve.",
+      "reference": "O secretário afirma que foram identificados pontos de clonagem na Região Metropolitana.",
+      "prediction": "Ele disse que encontraram lugares onde há clonagem na Região Metropolitana, e esses lugares serão desarticulados em breve.",
+      "raw_output": "Ele disse que encontraram lugares onde há clonagem na Região Metropolitana, e esses lugares serão desarticulados em breve."
+    },
+    {
+      "idx": 55,
+      "original": "Um deles teria a participação de policiais civis e militares que dariam proteção aos bandidos.",
+      "reference": "Um deles teria a participação de policiais civis e militares.",
+      "prediction": "Eles teriam policiais civis e militares ajudando a proteger os bandidos.",
+      "raw_output": "Eles teriam policiais civis e militares ajudando a proteger os bandidos."
+    },
+    {
+      "idx": 56,
+      "original": "Outra forma para combater o crime deverá contar com a ajuda de ladrões de carro.",
+      "reference": "Outra forma para combater o crime deverá contar com a ajuda de ladrões de carros.",
+      "prediction": "Outra maneira de combater o crime pode contar com a ajuda de ladrões de carro.",
+      "raw_output": "Outra maneira de combater o crime pode contar com a ajuda de ladrões de carro."
+    },
+    {
+      "idx": 57,
+      "original": "Bacci pretende oferecer recompensa, a chamada delação premiada, a bandidos que colaborarem com as investigações para desarticular as grandes quadrilhas.",
+      "reference": "Bacci pretende oferecer recompensa a bandidos que colaborarem com as investigações para desmanchar as grandes quadrilhas.",
+      "prediction": "Bacci quer oferecer recompensa para bandidos que ajudarem nas investigações para desarticular as grandes organizações criminosas.",
+      "raw_output": "Bacci quer oferecer recompensa para bandidos que ajudarem nas investigações para desarticular as grandes organizações criminosas."
+    },
+    {
+      "idx": 58,
+      "original": "Autores de furto estariam migrando para o roubo.",
+      "reference": "Autores de furto estariam mudando para o roubo.",
+      "prediction": "Autores de furtos estariam passando para o roubo.",
+      "raw_output": "Autores de furtos estariam passando para o roubo."
+    },
+    {
+      "idx": 59,
+      "original": "O subcomandante-geral da BM, coronel Paulo Roberto Mendes, reconheceu que o incremento nos roubos pode estar ligado a deficiências nas manobras adotadas.",
+      "reference": "O subcomandante-geral da BM reconheceu que o aumento nos roubos pode estar ligado a deficiências nas medidas aplicadas, especialmente na Capital, onde ocorrem 54,9% dos casos do Estado.",
+      "prediction": "O coronel Paulo Roberto Mendes, subcomandante-geral da BM, admitiu que o aumento dos roubos pode estar relacionado a falhas nas estratégias usadas.",
+      "raw_output": "O coronel Paulo Roberto Mendes, subcomandante-geral da BM, admitiu que o aumento dos roubos pode estar relacionado a falhas nas estratégias usadas."
+    },
+    {
+      "idx": 60,
+      "original": "Especialmente na Capital, onde ocorrem 54,9% dos casos do Estado.",
+      "reference": "O subcomandante-geral da BM é o coronel Paulo Roberto Mendes.",
+      "prediction": "Na Capital, 54,9% dos casos do Estado ocorrem.",
+      "raw_output": "Na Capital, 54,9% dos casos do Estado ocorrem."
+    },
+    {
+      "idx": 61,
+      "original": "Em março, o Comando de Policiamento da Capital (CPC) atingiu 40% do número previsto para fiscalização de veículos, enquanto outros comandos regionais, como Metropolitano, Sul, Missões e Vale do Taquari, superaram as metas estipuladas.",
+      "reference": "O Comando de Policiamento da Capital (CPC) atingiu em março 40% do número previsto para controle de veículos.",
+      "prediction": "Em março, o CPC atingiu 40% da meta de fiscalização de veículos. Os comandos regionais Metropolitano, Sul, Missões e Vale do Taquari superaram suas metas.",
+      "raw_output": "Em março, o CPC atingiu 40% da meta de fiscalização de veículos. Os comandos regionais Metropolitano, Sul, Missões e Vale do Taquari superaram suas metas."
+    },
+    {
+      "idx": 62,
+      "original": "-- O CPC está abaixo do que queremos, apesar do aumento em relação a janeiro, quando atingiu 5% da meta.",
+      "reference": "-- O CPC está abaixo do que queremos, apesar do aumento quando comparado com janeiro.",
+      "prediction": "O CPC ainda está abaixo do que queremos, apesar do aumento em relação a janeiro, quando foi de 5% da meta.",
+      "raw_output": "O CPC ainda está abaixo do que queremos, apesar do aumento em relação a janeiro, quando foi de 5% da meta."
+    },
+    {
+      "idx": 63,
+      "original": "Sabemos que o crime anda sobre rodas e que o problema está em Porto Alegre.",
+      "reference": "Sabemos que o problema está em Porto Alegre.",
+      "prediction": "Sabemos que o crime é organizado e que o problema está em Porto Alegre.",
+      "raw_output": "Sabemos que o crime é organizado e que o problema está em Porto Alegre."
+    },
+    {
+      "idx": 64,
+      "original": "Hoje (ontem) mesmo nos reunimos para buscar soluções -- afirmou Mendes.",
+      "reference": "Hoje mesmo nos reunimos para buscar soluções -- afirmou Mendes.",
+      "prediction": "Hoje (ontem), Mendes nos disse que nos reunimos para buscar soluções.",
+      "raw_output": "Hoje (ontem), Mendes nos disse que nos reunimos para buscar soluções."
+    },
+    {
+      "idx": 65,
+      "original": "Enquanto subiu o roubo de carros -- quando a vítima é abordada por assaltantes­, diminuíram em 28,67% os casos de furto de veículos -- quando o ladrão age sem a presença da vítima.",
+      "reference": "O furto acontece quando o ladrão age sem a presença da vítima.",
+      "prediction": "Enquanto o roubo de carros diminuiu, o furto de veículos aumentou.",
+      "raw_output": "Enquanto o roubo de carros diminuiu, o furto de veículos aumentou."
+    },
+    {
+      "idx": 66,
+      "original": "Isso porque carros novos têm cada vez mais dispositivos de segurança, como alarme, bloqueador de combustível e chave codificada.",
+      "reference": "Isso acontece porque os carros novos têm cada vez mais aparelhos de segurança.",
+      "prediction": "Carros novos têm muitos dispositivos de segurança, como alarme, bloqueador de combustível e chave codificada.",
+      "raw_output": "Carros novos têm muitos dispositivos de segurança, como alarme, bloqueador de combustível e chave codificada."
+    },
+    {
+      "idx": 67,
+      "original": "Segundo especialistas, a ampliação de tecnologias seria a razão para a queda dos furtos.",
+      "reference": "Os especialistas afirmam que a maior quantidade de tecnologias seria a razão para a queda dos furtos.",
+      "prediction": "Segundo especialistas, a razão para a diminuição dos furtos é o aumento das tecnologias.",
+      "raw_output": "Segundo especialistas, a razão para a diminuição dos furtos é o aumento das tecnologias."
+    },
+    {
+      "idx": 68,
+      "original": "-- Quando o criminoso quer um carro novo, ele prefere assaltar -- diz Marcos Vinícius Souza, professor do curso de Gestão em Segurança da Universidade de Santa Cruz.",
+      "reference": "Marcos Vinícius Souza é professor do curso de Gestão em Segurança da Universidade de Santa Cruz.",
+      "prediction": "Quando o criminoso quer um carro novo, ele prefere assaltar, according to Marcos Vinícius Souza, professor do curso de Gestão em Segurança da Universidade de Santa Cruz.",
+      "raw_output": "Quando o criminoso quer um carro novo, ele prefere assaltar, according to Marcos Vinícius Souza, professor do curso de Gestão em Segurança da Universidade de Santa Cruz."
+    },
+    {
+      "idx": 69,
+      "original": "A quatro meses da eleição de 1º de outubro, a maioria dos partidos ainda não fechou sua escalação para a disputa pelo Palácio Piratini, formando o cenário mais instável dos últimos anos.",
+      "reference": "Quatro meses antes da eleição de 1º de outubro, a maioria dos partidos ainda não escolheu os candidatos para a disputa pelo Palácio Piratini.",
+      "prediction": "A eleição para o Palácio Piratini está em quatro meses, mas ainda não há consenso entre os partidos sobre suas candidaturas. Isso está criando o cenário mais instável nos últimos anos.",
+      "raw_output": "A eleição para o Palácio Piratini está em quatro meses, mas ainda não há consenso entre os partidos sobre suas candidaturas. Isso está criando o cenário mais instável nos últimos anos."
+    },
+    {
+      "idx": 70,
+      "original": "Diferentemente de outros pleitos, as legendas este ano são obrigadas a driblar novas regras eleitorais, desgaste da imagem da classe política e projetos nacionais envolvendo líderes gaúchos.",
+      "reference": "Diferentemente de outras eleições, as legendas este ano são obrigadas a driblar novas regras eleitorais, enfraquecimento da imagem da classe política e projetos nacionais envolvendo líderes gaúchos.",
+      "prediction": "As legendas este ano precisam seguir novas regras eleitorais, lidar com a má impressão da política e lidar com projetos nacionais que envolvem líderes gaúchos.",
+      "raw_output": "As legendas este ano precisam seguir novas regras eleitorais, lidar com a má impressão da política e lidar com projetos nacionais que envolvem líderes gaúchos."
+    },
+    {
+      "idx": 71,
+      "original": "Nesta época em 2002, candidatos já estavam em campo.",
+      "reference": "Nesta época em 2002, os candidatos já estavam em campo.",
+      "prediction": "Em 2002, os candidatos já estavam participando.",
+      "raw_output": "Em 2002, os candidatos já estavam participando."
+    },
+    {
+      "idx": 72,
+      "original": "Pelo PP (então PPB), Celso Bernardi disparava críticas contra o então secretário da Justiça e da Segurança, José Paulo Bisol.",
+      "reference": "Celso Bernardi disparava críticas contra o secretário da Justiça e da Segurança daquela época.",
+      "prediction": "Celso Bernardi criticava o secretário da Justiça e Segurança, José Paulo Bisol.",
+      "raw_output": "Celso Bernardi criticava o secretário da Justiça e Segurança, José Paulo Bisol."
+    },
+    {
+      "idx": 73,
+      "original": "Bernardi tinha Denise Kempf como vice.",
+      "reference": "Denise Kempf era vice de Bernardi.",
+      "prediction": "Bernardi tinha Denise Kempf como vice-presidente.",
+      "raw_output": "Bernardi tinha Denise Kempf como vice-presidente."
+    },
+    {
+      "idx": 74,
+      "original": "O PP de hoje apresenta o deputado federal Francisco Turra como concorrente, mas negocia a composição da chapa.",
+      "reference": "O PP de hoje apresenta o deputado federal Francisco Turra como concorrente.",
+      "prediction": "O PP de hoje apresenta Francisco Turra como candidato, mas está negociando a formação da chapa.",
+      "raw_output": "O PP de hoje apresenta Francisco Turra como candidato, mas está negociando a formação da chapa."
+    },
+    {
+      "idx": 75,
+      "original": "Em 29 de maio de 2002, Antônio Britto (PPS) cumpria agenda no Vale do Sinos.",
+      "reference": "Em 29 de maio de 2002, Antônio Britto cumpria agenda no Vale dos Sinos.",
+      "prediction": "Em 29 de maio de 2002, Antônio Britto (PPS) estava em viagem no Vale do Sinos.",
+      "raw_output": "Em 29 de maio de 2002, Antônio Britto (PPS) estava em viagem no Vale do Sinos."
+    },
+    {
+      "idx": 76,
+      "original": "Germano Bonow (PFL) era seu companheiro de chapa.",
+      "reference": "Germano Bonow era seu companheiro de chapa.",
+      "prediction": "Germano Bonow (PFL) era seu parceiro de chapa.",
+      "raw_output": "Germano Bonow (PFL) era seu companheiro de chapa. (A frase já está relativamente simples, mas podemos fazer uma pequena alteração para torná-la ainda mais clara.)\n\nSimplificação: Germano Bonow (PFL) era seu parceiro de chapa."
+    },
+    {
+      "idx": 77,
+      "original": "O PFL de 2006 ainda não cravou um nome na disputa, e o PPS tenta firmar uma aliança em torno do deputado federal Nelson Proença.",
+      "reference": "O PPS tenta fazer uma aliança em torno do deputado federal Nelson Proença.",
+      "prediction": "O PFL de 2006 ainda não decidiu seu candidato. O PPS está tentando se aliar ao deputado federal Nelson Proença.",
+      "raw_output": "O PFL de 2006 ainda não decidiu seu candidato. O PPS está tentando se aliar ao deputado federal Nelson Proença."
+    },
+    {
+      "idx": 78,
+      "original": "Novas regras eleitorais dificultam negociação.",
+      "reference": "Novas regras eleitorais tornam o entendimento mais difícil.",
+      "prediction": "As novas regras dificultam a negociação.",
+      "raw_output": "As novas regras dificultam a negociação."
+    },
+    {
+      "idx": 79,
+      "original": "Para os analistas políticos, a indecisão eleitoral de 2006 é fruto de uma confluência de fatores.",
+      "reference": "Para os analistas políticos, a indecisão eleitoral de 2006 é resultado do encontro de muitos fatores.",
+      "prediction": "Os analistas políticos acham que a indecisão na eleição de 2006 foi causada por várias razões.",
+      "raw_output": "Os analistas políticos acham que a indecisão na eleição de 2006 foi causada por várias razões."
+    },
+    {
+      "idx": 80,
+      "original": "O cientista político Paulo Moura observa que o envolvimento do governador Germano Rigotto e do senador Pedro Simon na briga pela candidatura própria do PMDB a presidente congelou as negociações no estado.",
+      "reference": "O cientista político Paulo Moura observa que a participação do governador Germano Rigotto e do senador Pedro Simon na briga pela candidatura própria do PMDB a presidente congelou os entendimentos no estado.",
+      "prediction": "O cientista político Paulo Moura notou que o envolvimento do governador Germano Rigotto e do senador Pedro Simon na disputa pela candidatura do PMDB fez com que as negociações no estado parassem.",
+      "raw_output": "O cientista político Paulo Moura notou que o envolvimento do governador Germano Rigotto e do senador Pedro Simon na disputa pela candidatura do PMDB fez com que as negociações no estado parassem."
+    },
+    {
+      "idx": 81,
+      "original": "Rigotto, lembra Moura, também provocou incertezas nos aliados ao assumir que buscaria a reeleição apenas no final de abril.",
+      "reference": "Moura lembra que Rigotto também provocou incertezas nos aliados ao assumir que buscaria a reeleição apenas no final de abril.",
+      "prediction": "Rigotto disse que queria se reeleger no final de abril, o que causou incertezas entre seus aliados, como Moura.",
+      "raw_output": "Rigotto disse que queria se reeleger no final de abril, o que causou incertezas entre seus aliados, como Moura."
+    },
+    {
+      "idx": 82,
+      "original": "O cientista político André Marenco afirma que a Justiça Eleitoral tem sido rigorosa em relação à propaganda antes do prazo legal e que a verticalização impôs aos partidos a conciliação de nacionais e regionais.",
+      "reference": "O cientista político André Marenco afirma que a Justiça Eleitoral tem sido rigorosa sobre a propaganda antes do prazo legal.",
+      "prediction": "O cientista político André Marenco diz que a Justiça Eleitoral tem sido muito rigorosa com a propaganda antes do prazo. Ele também explica que a verticalização fez com que os partidos precisassem conciliar interesses nacionais e regionais.",
+      "raw_output": "O cientista político André Marenco diz que a Justiça Eleitoral tem sido muito rigorosa com a propaganda antes do prazo. Ele também explica que a verticalização fez com que os partidos precisassem conciliar interesses nacionais e regionais."
+    },
+    {
+      "idx": 83,
+      "original": "A regra obriga as legendas a fechar nos Estados apenas coligações que não colidam com as nacionais.",
+      "reference": "A regra obriga as legendas a fechar nos Estados apenas as uniões que não se choquem com as nacionais.",
+      "prediction": "A regra diz que apenas coligações que não conflitam com as legendas nacionais devem fechar nos Estados.",
+      "raw_output": "A regra diz que apenas coligações que não conflitam com as legendas nacionais devem fechar nos Estados."
+    },
+    {
+      "idx": 84,
+      "original": "As pequenas têm dado mais atenção à eleição para deputado federal para atingir as metas impostas pela norma -- 5% do total de votos para a Câmara e 2% do total de votos válidos dos candidatos a deputado federal em nove Estados.",
+      "reference": "As metas impostas pela norma são 5% do total de votos para a Câmara e 2% do total de votos válidos dos candidatos a deputado federal em nove Estados.",
+      "prediction": "As pequenas empresas estão focando mais nas eleições para deputado federal para alcançar as metas da norma — 5% dos votos totais para a Câmara e 2% dos votos válidos em nove Estados.",
+      "raw_output": "As pequenas empresas estão focando mais nas eleições para deputado federal para alcançar as metas da norma — 5% dos votos totais para a Câmara e 2% dos votos válidos em nove Estados."
+    },
+    {
+      "idx": 85,
+      "original": "-- Os partidos estão mais cautelosos.",
+      "reference": "-- Os partidos estão mais cuidadosos.",
+      "prediction": "Os partidos estão mais cautelosos.",
+      "raw_output": "Os partidos estão mais cautelosos."
+    },
+    {
+      "idx": 86,
+      "original": "Sabem que um movimento errado pode significar a morte -- diz o cientista político Murillo de Aragão.",
+      "reference": "Os partidos sabem que um movimento errado pode significar a morte -- diz o cientista político Murillo de Aragão.",
+      "prediction": "Um movimento errado pode significar a morte, diz o cientista político Murillo de Aragão.",
+      "raw_output": "Um movimento errado pode significar a morte, diz o cientista político Murillo de Aragão."
+    },
+    {
+      "idx": 87,
+      "original": "Para explicar a instabilidade no quadro eleitoral, a cientista política Céli Pinto acrescenta uma espécie de retração da classe política provocada pelos escândalos de corrupção no país:",
+      "reference": "Para explicar a falta de firmeza no quadro eleitoral, a cientista política Céli Pinto acrescenta uma espécie de diminuição da classe política.",
+      "prediction": "A cientista política Céli Pinto explica a instabilidade no quadro eleitoral devido à retração da classe política, causada pelos escândalos de corrupção.",
+      "raw_output": "A cientista política Céli Pinto explica a instabilidade no quadro eleitoral devido à retração da classe política, causada pelos escândalos de corrupção."
+    },
+    {
+      "idx": 88,
+      "original": "-- Por falta de dinheiro e de disposição, essa campanha será mais pobre e mais rápida -- afirma.",
+      "reference": "-- Essa campanha será mais pobre e mais rápida, por falta de dinheiro e de disposição -- afirma Céli Pinto.",
+      "prediction": "Por falta de dinheiro e disposição, essa campanha será mais pobre e mais rápida.",
+      "raw_output": "Por falta de dinheiro e disposição, essa campanha será mais pobre e mais rápida."
+    },
+    {
+      "idx": 89,
+      "original": "Os abusos com veículos particulares e a formação de servidores em alguns setores foram pontos cruciais de relatório sobre os gastos da Assembléia.",
+      "reference": "O uso indevido de veículos particulares e a formação de servidores em alguns setores foram pontos importantes do relatório sobre os gastos da Assembléia.",
+      "prediction": "Os relatório destacou abusos com veículos particulares e formação de servidores em alguns setores.",
+      "raw_output": "Os relatório destacou abusos com veículos particulares e formação de servidores em alguns setores."
+    },
+    {
+      "idx": 90,
+      "original": "O relatório produzido pela comissão criada para revisar processos administrativos da Assembléia Legislativa destaca temas que devem provocar polêmica no parlamento.",
+      "reference": "O relatório da comissão criada para examinar os processos administrativos da Assembléia Legislativa destaca temas que devem provocar polêmica no parlamento.",
+      "prediction": "O relatório feito pela comissão para revisar processos administrativos da Assembleia Legislativa traz temas que podem causar debates no parlamento.",
+      "raw_output": "O relatório feito pela comissão para revisar processos administrativos da Assembleia Legislativa traz temas que podem causar debates no parlamento."
+    },
+    {
+      "idx": 91,
+      "original": "Um deles se refere ao fato de cada deputado ter três carros cadastrados para fins de indenização por uso de carro particular.",
+      "reference": "Um dos temas é o fato de cada deputado ter três carros registrados para receber devolução de dinheiro por uso de carro particular.",
+      "prediction": "Um deles diz que cada deputado tem três carros registrados para receber dinheiro por usar seu carro pessoal.",
+      "raw_output": "Um deles diz que cada deputado tem três carros registrados para receber dinheiro por usar seu carro pessoal."
+    },
+    {
+      "idx": 92,
+      "original": "A comissão entende que, para que seja preservado o caráter de indenização, cada parlamentar deve ter apenas um carro registrado.",
+      "reference": "A comissão entende que cada deputado deve ter apenas um carro registrado.",
+      "prediction": "Cada parlamentar deve ter apenas um carro registrado para manter o caráter de indenização, according to the commission.",
+      "raw_output": "Cada parlamentar deve ter apenas um carro registrado para manter o caráter de indenização, according to the commission."
+    },
+    {
+      "idx": 93,
+      "original": "Outra questão destacada no relatório se refere à qualificação dos servidores.",
+      "reference": "Outro tema destacado no relatório é a qualificação dos servidores.",
+      "prediction": "O relatório menciona também a qualificação dos servidores.",
+      "raw_output": "O relatório menciona também a qualificação dos servidores."
+    },
+    {
+      "idx": 94,
+      "original": "Duas situações foram detectadas pelo grupo:",
+      "reference": "Duas situações foram detectadas pela comissão:",
+      "prediction": "Duas situações foram encontradas pelo grupo:",
+      "raw_output": "Duas situações foram encontradas pelo grupo:"
+    },
+    {
+      "idx": 95,
+      "original": "Há setores com carência de pessoal ou, naqueles em que não faltam funcionários, há pessoas atuando em uma função para a qual não têm qualificação.",
+      "reference": "Mas, nos setores em que não faltam servidores, há pessoas fazendo trabalhos para os quais não são qualificadas.",
+      "prediction": "Há setores sem pessoal suficiente, e em outros, as pessoas trabalham em funções para as quais não estão qualificadas.",
+      "raw_output": "Há setores sem pessoal suficiente, e em outros, as pessoas trabalham em funções para as quais não estão qualificadas."
+    },
+    {
+      "idx": 96,
+      "original": "Esse tipo de cenário, conforme servidores da Casa, pode abrir brechas para a ocorrência de irregularidades, como a que produziu a fraude dos selos e deixou um rombo de pelo menos R$ 3,3 milhões ao parlamento.",
+      "reference": "A fraude dos selos deixou um rombo de pelo menos R$ 3,3 milhões na Assembléia Legislativa.",
+      "prediction": "Esse tipo de situação pode deixar espaço para irregularidades, como a fraude com os selos que custou pelo menos R$ 3,3 milhões ao parlamento.",
+      "raw_output": "Esse tipo de situação pode deixar espaço para irregularidades, como a fraude com os selos que custou pelo menos R$ 3,3 milhões ao parlamento."
+    },
+    {
+      "idx": 97,
+      "original": "O presidente da Casa, deputado Frederico Antunes (PP), afirmou ontem, ao receber o relatório, que a comissão será mantida enquanto for necessário.",
+      "reference": "Quando recebeu o relatório ontem, o presidente da Assembléia Legislativa afirmou que a comissão será mantida enquanto for necessário.",
+      "prediction": "O presidente da Casa, deputado Frederico Antunes (PP), disse ontem que a comissão continuará existindo enquanto for necessário.",
+      "raw_output": "O presidente da Casa, deputado Frederico Antunes (PP), disse ontem que a comissão continuará existindo enquanto for necessário."
+    },
+    {
+      "idx": 98,
+      "original": "A Casa tem em torno de 160 contratos para serem analisados.",
+      "reference": "A Assembléia Legislativa tem em torno de 160 contratos para serem analisados.",
+      "prediction": "A casa tem cerca de 160 contratos para analisar.",
+      "raw_output": "A casa tem cerca de 160 contratos para analisar."
+    },
+    {
+      "idx": 99,
+      "original": "Antunes vai apresentar o conteúdo do relatório hoje à Mesa Diretora e, posteriormente, implementar novas medidas de contenção e controle.",
+      "reference": "Antunes vai apresentar o relatório hoje à Mesa Diretora.",
+      "prediction": "Antunes vai apresentar o relatório hoje para a Mesa Diretora e depois implementar novas medidas de contenção e controle.",
+      "raw_output": "Antunes vai apresentar o relatório hoje para a Mesa Diretora e depois implementar novas medidas de contenção e controle."
+    }
+  ]
+}

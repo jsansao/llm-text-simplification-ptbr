@@ -1,0 +1,67 @@
+{
+  "strategy": "few_shot",
+  "num_samples": 5,
+  "metrics": {
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "ori_pred_rouge1": 0.0,
+    "ori_pred_rouge2": 0.0,
+    "ori_pred_rougeL": 0.0,
+    "ori_ref_rouge1": 0.6933,
+    "ori_ref_rouge2": 0.6055,
+    "ori_ref_rougeL": 0.6933,
+    "ori_ref_bertscore_mean": 0.8948,
+    "ori_ref_bertscore_std": 0.0497,
+    "sari": 15.4465,
+    "flesch_original": -2.86,
+    "flesch_prediction": 0.0,
+    "flesch_improvement": 2.86,
+    "fog_original": 21.51,
+    "fog_prediction": 0.0,
+    "fog_improvement": -21.51,
+    "ref_flesch_original": -2.86,
+    "ref_flesch_prediction": 13.97,
+    "ref_flesch_improvement": 16.84,
+    "ref_fog_original": 21.51,
+    "ref_fog_prediction": 19.49,
+    "ref_fog_improvement": -2.02
+  },
+  "results": [
+    {
+      "idx": 0,
+      "original": "O livro também busca conscientizar os mergulhadores sobre o patrimônio subaquático.",
+      "reference": "O livro também busca alertar os mergulhadores sobre a riqueza que está debaixo da água.",
+      "prediction": "",
+      "raw_output": ""
+    },
+    {
+      "idx": 1,
+      "original": "Os animaizinhos são filhotes -- cervos e zebras, por exemplo -- que nasceram no parque e, por algum motivo, tiveram de ser criados por veterinários.",
+      "reference": "Os animaizinhos são filhotes que nasceram no parque e, por algum motivo, tiveram de ser criados por veterinários.",
+      "prediction": "",
+      "raw_output": ""
+    },
+    {
+      "idx": 2,
+      "original": "-- É uma alternativa, assim como o são a construção de uma marina ou da quarta ponte, mas não podemos resolver problemas da Capital sem pensar nos municípios vizinhos -- alerta.",
+      "reference": "-- É uma alternativa, assim como a construção de uma marina ou da quarta ponte, mas não podemos resolver problemas da Capital sem pensar nos municípios vizinhos -- alerta.",
+      "prediction": "",
+      "raw_output": ""
+    },
+    {
+      "idx": 3,
+      "original": "Em 2006, envolveu 150 mil crianças de 144 municípios -- este ano, já são 157 mil beneficiados em 162 municípios.",
+      "reference": "Neste ano, já são 157 mil que receberam o benefício em 162 municípios.",
+      "prediction": "",
+      "raw_output": ""
+    },
+    {
+      "idx": 4,
+      "original": "O guia ganhou recentemente um capítulo de Qualidade, centrado numa premissa prioritária:",
+      "reference": "O guia ganhou nos últimos tempos um capítulo de qualidade, apoiado numa idéia mais importante:",
+      "prediction": "",
+      "raw_output": ""
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "few_shot": {
+    "metrics": {
+      "rouge1": 0.6752,
+      "rouge2": 0.5176,
+      "rougeL": 0.6421,
+      "bertscore_mean": 0.8822,
+      "bertscore_std": 0.0629,
+      "ori_pred_rouge1": 0.7932,
+      "ori_pred_rouge2": 0.6405,
+      "ori_pred_rougeL": 0.7495,
+      "ori_pred_bertscore_mean": 0.9207,
+      "ori_pred_bertscore_std": 0.0374,
+      "ori_ref_rouge1": 0.7631,
+      "ori_ref_rouge2": 0.6578,
+      "ori_ref_rougeL": 0.7378,
+      "ori_ref_bertscore_mean": 0.9069,
+      "ori_ref_bertscore_std": 0.0625,
+      "sari": 42.1904,
+      "flesch_original": 7.61,
+      "flesch_prediction": 15.89,
+      "flesch_improvement": 8.27,
+      "fog_original": 21.63,
+      "fog_prediction": 19.33,
+      "fog_improvement": -2.3,
+      "ref_flesch_original": 7.61,
+      "ref_flesch_prediction": 15.51,
+      "ref_flesch_improvement": 7.89,
+      "ref_fog_original": 21.63,
+      "ref_fog_prediction": 19.73,
+      "ref_fog_improvement": -1.9
+    },
+    "num_samples": 200
+  }
+}

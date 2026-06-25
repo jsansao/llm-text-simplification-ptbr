@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Environment
+.env
+
+# API cache
+cache/
+cache2/
+cache2_deepseek_test/
+cache2_gptoss_test/
+cache2_nemotron_test/
+cache3/
+
+# Logs
+logs/
+
+# Models (checkpoints too large for git)
+models/
+
+# Human evaluation
+human_eval/
+
+# LaTeX build artifacts
+artigo/*.pdf
+artigo/*.log
+artigo/*.aux
+artigo/*.bbl
+artigo/*.blg
+artigo/*.out
+artigo/*.toc
+artigo/*.lof
+artigo/*.lot
+artigo/*.fls
+artigo/*.fdb_latexmk
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (downstream, not redistributed here)
+data/porsimplessent/*.tsv
+
+# Obsidian/notes
+obs_texto.md
+parecer_2026-06-23.md
+review_final.md
+review_round2.md
+review_simulada.md
+review4.md

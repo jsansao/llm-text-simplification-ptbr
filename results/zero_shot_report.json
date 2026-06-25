@@ -1,0 +1,57 @@
+{
+  "strategy": "zero_shot",
+  "num_samples": 3,
+  "metrics": {
+    "rouge1": 0.726,
+    "rouge2": 0.4457,
+    "rougeL": 0.6708,
+    "bertscore_mean": 0.8951,
+    "bertscore_std": 0.0362,
+    "ori_pred_rouge1": 0.6638,
+    "ori_pred_rouge2": 0.457,
+    "ori_pred_rougeL": 0.6274,
+    "ori_pred_bertscore_mean": 0.8545,
+    "ori_pred_bertscore_std": 0.0208,
+    "ori_ref_rouge1": 0.791,
+    "ori_ref_rouge2": 0.727,
+    "ori_ref_rougeL": 0.791,
+    "ori_ref_bertscore_mean": 0.9255,
+    "ori_ref_bertscore_std": 0.0418,
+    "sari": 35.0386,
+    "flesch_original": -2.6,
+    "flesch_prediction": 27.99,
+    "flesch_improvement": 30.59,
+    "fog_original": 21.9,
+    "fog_prediction": 15.29,
+    "fog_improvement": -6.61,
+    "ref_flesch_original": -2.6,
+    "ref_flesch_prediction": 10.76,
+    "ref_flesch_improvement": 13.36,
+    "ref_fog_original": 21.9,
+    "ref_fog_prediction": 20.94,
+    "ref_fog_improvement": -0.97
+  },
+  "results": [
+    {
+      "idx": 0,
+      "original": "O livro também busca conscientizar os mergulhadores sobre o patrimônio subaquático.",
+      "reference": "O livro também busca alertar os mergulhadores sobre a riqueza que está debaixo da água.",
+      "prediction": "O livro também quer alertar os mergulhadores sobre o que há de valor debaixo d'água.",
+      "raw_output": "O livro também quer alertar os mergulhadores sobre o que há de valor debaixo d'água."
+    },
+    {
+      "idx": 1,
+      "original": "Os animaizinhos são filhotes -- cervos e zebras, por exemplo -- que nasceram no parque e, por algum motivo, tiveram de ser criados por veterinários.",
+      "reference": "Os animaizinhos são filhotes que nasceram no parque e, por algum motivo, tiveram de ser criados por veterinários.",
+      "prediction": "Os animaizinhos são filhotes de cervos e zebras que nasceram no parque. Por algum motivo, eles foram cuidados por veterinários.",
+      "raw_output": "Os animaizinhos são filhotes de cervos e zebras que nasceram no parque. Por algum motivo, eles foram cuidados por veterinários."
+    },
+    {
+      "idx": 2,
+      "original": "-- É uma alternativa, assim como o são a construção de uma marina ou da quarta ponte, mas não podemos resolver problemas da Capital sem pensar nos municípios vizinhos -- alerta.",
+      "reference": "-- É uma alternativa, assim como a construção de uma marina ou da quarta ponte, mas não podemos resolver problemas da Capital sem pensar nos municípios vizinhos -- alerta.",
+      "prediction": "É uma opção, assim como construir uma marina ou a quarta ponte. Mas não podemos resolver os problemas da cidade sem considerar os municípios ao redor.",
+      "raw_output": "É uma opção, assim como construir uma marina ou a quarta ponte. Mas não podemos resolver os problemas da cidade sem considerar os municípios ao redor."
+    }
+  ]
+}

@@ -1,0 +1,2258 @@
+[
+  {
+    "idx": 0,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 0,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 0,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 0,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 0,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 0,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 0,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 0,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 0,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 3,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 0,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 1,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 1,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 1,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 1,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 1,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 1,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 1,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 1,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 1,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 2,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 3,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 2,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 2,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 2,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 2,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 2,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 3,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 2,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 2,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 2,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 2,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 2,
+      "adequacao": 1
+    },
+    "type": "model"
+  },
+  {
+    "idx": 2,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 3,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 3,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 3,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 3,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 3,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 3,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 3,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 3,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 3,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 3,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 1,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 3,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 3,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 4,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 4,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 4,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 4,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 4,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 4,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 4,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 4,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 4,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 4,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 5,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 5,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 5,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 5,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 5,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 5,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 5,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 5,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 5,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 2,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 5,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 6,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 6,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 6,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 6,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 6,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 6,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 6,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 6,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 6,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 7,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 7,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 7,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 7,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 7,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 7,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 7,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 7,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 7,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 7,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 8,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 8,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 8,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 8,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 8,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 8,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 8,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 8,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 8,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 1
+    },
+    "type": "model"
+  },
+  {
+    "idx": 8,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 9,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 3,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 9,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 9,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 9,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 9,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 9,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 1,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 9,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 1,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 9,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 1,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 9,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 2,
+      "adequacao": 1
+    },
+    "type": "model"
+  },
+  {
+    "idx": 9,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 10,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 10,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 10,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 10,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 10,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 10,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 10,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 10,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 10,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 10,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 11,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 11,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 11,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 11,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 11,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 11,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 11,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 11,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 11,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 1
+    },
+    "type": "model"
+  },
+  {
+    "idx": 11,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 12,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 12,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 12,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 12,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 12,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 12,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 2,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 12,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 2,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 12,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 2,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 12,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 2,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 12,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 13,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 13,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 13,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 13,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 13,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 13,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 2,
+      "adequacao": 1
+    },
+    "type": "model"
+  },
+  {
+    "idx": 13,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 1,
+      "adequacao": 1
+    },
+    "type": "model"
+  },
+  {
+    "idx": 13,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 3,
+      "adequacao": 1
+    },
+    "type": "model"
+  },
+  {
+    "idx": 13,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 13,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 14,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 14,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 4,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 14,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 3,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 14,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 14,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 3,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 14,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 14,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 14,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 14,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 14,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 15,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 3,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 15,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 15,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 15,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 15,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 1,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 15,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 15,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 15,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 2,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 15,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 16,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 16,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 16,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 16,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 16,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 16,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 16,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 16,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 16,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 16,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 17,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 4,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 17,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 4,
+      "adequacao": 3
+    },
+    "type": "model"
+  },
+  {
+    "idx": 17,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 4,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 17,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 2,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 17,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 3,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 17,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 17,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 3,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 17,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 3,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 17,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 3,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 17,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 18,
+    "run": 0,
+    "model": "openai/gpt-4o-mini",
+    "model_display": "GPT-4o mini",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 18,
+    "run": 0,
+    "model": "openai/gpt-4o-2024-11-20",
+    "model_display": "GPT-4o",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 4,
+      "adequacao": 4
+    },
+    "type": "model"
+  },
+  {
+    "idx": 18,
+    "run": 0,
+    "model": "anthropic/claude-sonnet-4.6",
+    "model_display": "Claude S. 4.6",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 18,
+    "run": 0,
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "model_display": "Llama 4 Scout",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 3,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 18,
+    "run": 0,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "model_display": "Qwen 2.5 7B",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 4,
+      "adequacao": 2
+    },
+    "type": "model"
+  },
+  {
+    "idx": 18,
+    "run": 0,
+    "model": "ptt5-rank8",
+    "model_display": "PTT5 LoRA r=8",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 18,
+    "run": 0,
+    "model": "ptt5-rank32",
+    "model_display": "PTT5 LoRA r=32",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 18,
+    "run": 0,
+    "model": "ptt5-full",
+    "model_display": "PTT5 full FT",
+    "ratings": {
+      "simplicidade": 2,
+      "fluencia": 4,
+      "adequacao": 5
+    },
+    "type": "model"
+  },
+  {
+    "idx": 18,
+    "run": 0,
+    "model": "qwen05b",
+    "model_display": "Qwen 2.5 0.5B FT",
+    "ratings": {
+      "simplicidade": 4,
+      "fluencia": 5,
+      "adequacao": 1
+    },
+    "type": "model"
+  },
+  {
+    "idx": 18,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  },
+  {
+    "idx": 19,
+    "run": 0,
+    "model": "reference",
+    "model_display": "Referência Humana",
+    "ratings": {
+      "simplicidade": 5,
+      "fluencia": 5,
+      "adequacao": 5
+    },
+    "type": "sanity"
+  }
+]

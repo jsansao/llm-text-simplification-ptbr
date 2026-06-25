@@ -1,0 +1,736 @@
+{
+  "strategy": "cot",
+  "num_samples": 100,
+  "metrics": {
+    "rouge1": 0.5156,
+    "rouge2": 0.3091,
+    "rougeL": 0.4645,
+    "bertscore_mean": 0.8346,
+    "bertscore_std": 0.0597,
+    "ori_pred_rouge1": 0.5744,
+    "ori_pred_rouge2": 0.3563,
+    "ori_pred_rougeL": 0.5323,
+    "ori_pred_bertscore_mean": 0.8605,
+    "ori_pred_bertscore_std": 0.053,
+    "ori_ref_rouge1": 0.7425,
+    "ori_ref_rouge2": 0.6407,
+    "ori_ref_rougeL": 0.7099,
+    "ori_ref_bertscore_mean": 0.9001,
+    "ori_ref_bertscore_std": 0.0617,
+    "sari": 32.895,
+    "flesch_original": 3.3,
+    "flesch_prediction": 13.93,
+    "flesch_improvement": 10.63,
+    "fog_original": 22.36,
+    "fog_prediction": 19.64,
+    "fog_improvement": -2.72,
+    "ref_flesch_original": 3.3,
+    "ref_flesch_prediction": 9.31,
+    "ref_flesch_improvement": 6.02,
+    "ref_fog_original": 22.36,
+    "ref_fog_prediction": 20.45,
+    "ref_fog_improvement": -1.92
+  },
+  "results": [
+    {
+      "idx": 0,
+      "original": "As salas de cinema de todo o mundo exibiam uma produção do diretor Joe Dante em que um cardume de piranhas escapava de um laboratório militar e atacava participantes de um festival aquático.",
+      "reference": "Na produção do diretor Joe Dante, um cardume de piranhas escapava de um laboratório militar e atacava participantes de um festival aquático.",
+      "prediction": "Os cinemas mostravam um filme de Joe Dante sobre um grupo de piranhas que fogem de um lugar do exército e atacam pessoas em um evento na água.",
+      "raw_output": "Vamos seguir o processo passo a passo:\n\n1. **Identificar palavras difíceis**: \n   - \"exibiam\" pode ser considerada uma palavra um pouco formal.\n   - \"produção\" pode ser genérica, mas é compreensível.\n   - \"cardume\" é uma palavra específica que pode ser difícil para alguns.\n   - \"laboratório militar\" é um termo que pode ser entendido por muitos, mas \"militar\" pode ser substituído por algo mais simples se necessário.\n   - \"festival aquático\" pode ser entendido como um evento na água.\n\n2. **Substituir por sinônimos simples**:\n   - \"exibiam\" pode ser substituído por \"mostravam\".\n   - \"produção\" pode ser substituído por \"filme\".\n   - \"cardume\" pode ser substituído por \"grupo\" ou \"bando\".\n   - \"laboratório militar\" pode ser substituído por \"um lugar secreto do exército\".\n   - \"festival aquático\" pode ser substituído por \"festival na água\" ou \"evento na praia\".\n\n3. **Reescrever em ordem direta**:\n   - A frase original já está em uma ordem direta, mas vamos ajustá-la com as substituições: \n     - \"Os cinemas de todo o mundo mostravam um filme do diretor Joe Dante.\"\n     - \"Nesse filme, um grupo de piranhas escapava de um lugar secreto do exército.\"\n     - \"Eles então atacavam as pessoas que estavam em um evento na água.\"\n\n4. **Verificar o sentido e ajustar**:\n   - A ideia é que os cinemas mostravam um filme de Joe Dante sobre piranhas que escapam e atacam pessoas em um evento aquático. \n   - Então, podemos reescrever de forma simplificada: \n     - \"Os cinemas mostravam um filme de Joe Dante sobre um grupo de piranhas que fogem de um lugar do exército e atacam pessoas em um evento na água.\"\n\n**Simplificação final:** \nOs cinemas mostravam um filme de Joe Dante sobre um grupo de piranhas que fogem de um lugar do exército e atacam pessoas em um evento na água."
+    },
+    {
+      "idx": 1,
+      "original": "Mais de 20 pessoas foram mordidas por palometas (Serrasalmus spilopleura, espécie de piranha) que vivem nas águas da barragem Sanchuri, na margem da Br-472, a 40 quilômetros da cidade.",
+      "reference": "As palometas vivem nas águas da barragem Sanchuri, na margem da Br-472, a 40 quilômetros da cidade.",
+      "prediction": "Mais de 20 pessoas foram mordidas por piranhas na barragem Sanchuri, perto da cidade.",
+      "raw_output": "Pessoas foram picadas por piranhas que vivem na barragem Sanchuri, perto da cidade.\n\nSimplificação final: Mais de 20 pessoas foram mordidas por piranhas na barragem Sanchuri, perto da cidade."
+    },
+    {
+      "idx": 2,
+      "original": "O que chamou a atenção das autoridades foi o aumento no número de ataques em relação aos outros anos.",
+      "reference": "O aumento no número de ataques em relação aos outros anos chamou a atenção das autoridades.",
+      "prediction": "As autoridades notaram um aumento nos ataques em comparação com outros anos.",
+      "raw_output": "O que as autoridades notaram foi que houve mais ataques do que nos outros anos.\n\nSimplificação final: As autoridades notaram um aumento nos ataques em comparação com outros anos."
+    },
+    {
+      "idx": 3,
+      "original": "Ele e amigos, como Giovane Silva Ferreira, 13 anos, passam as tardes pescando o peixe, depois levado para uma associação de artesãos que faz o curtimento da pele do animal.",
+      "reference": "Ele e amigos, como Giovane Silva Ferreira, 13 anos, passam as tardes pescando o peixe.",
+      "prediction": "Ele e os amigos passam as tardes pescando peixes. Depois, levam os peixes para uma associação que prepara as peles.",
+      "raw_output": "Ele e os amigos, como o Giovane Silva Ferreira de 13 anos, passam as tardes pescando o peixe. Depois, levam o peixe para uma associação de artesãos que prepara a pele do animal.\n\nSimplificação final: Ele e os amigos passam as tardes pescando peixes. Depois, levam os peixes para uma associação que prepara as peles."
+    },
+    {
+      "idx": 4,
+      "original": "Com o fim da piracema, período em que a pesca é proibida, será realizado no domingo o torneio Combate à Palometa.",
+      "reference": "Com o fim da piracema, será realizado no domingo o torneio Combate à Palometa.",
+      "prediction": "Quando acabar a piracema, período de proibição da pesca, será realizado no domingo o torneio de Combate à Palometa.",
+      "raw_output": "Com o fim da piracema, que é o período em que a pesca é proibida, será realizado no domingo o torneio de Combate à Palometa.\n\nou \n\nSimplificação final: Quando acabar a piracema, período de proibição da pesca, será realizado no domingo o torneio de Combate à Palometa."
+    },
+    {
+      "idx": 5,
+      "original": "Pescadores tentarão retirar o maior número de peixes da espécie, que pode atingir 20 centímetros de comprimento e um quilo.",
+      "reference": "A espécie pode atingir 20 centímetros de comprimento e um quilo.",
+      "prediction": "Pescadores tentarão tirar o maior número de peixes de um tipo que pode chegar a 20 centímetros de comprimento e pesar um quilo.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - espécie (pode ser substituída por \"tipo\")\n   - atingir (pode ser substituída por \"chegar a\")\n\n2. Substitua por sinônimos simples:\n   - espécie -> tipo\n   - atingir -> chegar a\n\n3. Reescreva em ordem direta:\n   - A ordem direta já está sendo seguida.\n\n4. Verifique o sentido:\n   - A frase original fala que pescadores tentarão tirar o maior número de peixes de um certo tipo que pode chegar a 20 centímetros de comprimento e pesar um quilo.\n\nSimplificação final: Pescadores tentarão tirar o maior número de peixes de um tipo que pode chegar a 20 centímetros de comprimento e pesar um quilo."
+    },
+    {
+      "idx": 6,
+      "original": "Segundo o chefe substituto do escritório regional, Guaracy Cunha, ainda há tempo para o pedido de licença.",
+      "reference": "Segundo o chefe substituto do escritório regional, ainda há tempo para o pedido de licença.",
+      "prediction": "Ainda há tempo para pedir licença, segundo o chefe do escritório local, Guaracy Cunha.",
+      "raw_output": "Pense passo a passo:\n\n- Identifique palavras difíceis: \"chefe substituto\", \"escritório regional\" e \"pedido de licença\" podem ser considerados termos um pouco formais, mas não extremamente difíceis. No entanto, \"substituto\" pode ser um termo que nem todos conhecem ou usam com frequência.\n- Substitua por sinônimos simples: \"chefe substituto\" pode ser \"chefe temporário\" ou simplesmente \"chefe\"; \"escritório regional\" pode ser \"escritório local\" ou \"sede\"; \"pedido de licença\" pode ser \"pedido para sair\" ou \"requerimento de afastamento\", mas este último ainda é formal.\n- Reescreva em ordem direta: A frase já está razoavelmente direta.\n- Verifique o sentido: A ideia é que ainda há tempo para solicitar uma licença.\n\nSimplificação final: Ainda há tempo para pedir licença, segundo o chefe do escritório local, Guaracy Cunha."
+    },
+    {
+      "idx": 7,
+      "original": "-- Elas atacam mais nos locais em que o pessoal das excursões lava mãos e pratos após as refeições -- diz Adalberto Silva, presidente da associação dos moradores da localidade.",
+      "reference": "-- Elas atacam mais nos locais em que o pessoal das excursões lava mãos e pratos após as refeições -- diz Adalberto Silva.",
+      "prediction": "Elas atacam mais onde os turistas lavam as mãos e pratos após as comidas -- diz Adalberto Silva, presidente da associação de moradores.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identificar palavras difíceis:\n   - \"atacam\" (pode ser mantido, mas vamos verificar se há um sinônimo mais simples)\n   - \"pessoal das excursões\" (pode ser simplificado)\n   - \"refeições\" (pode ser mantido, mas vamos verificar se há um sinônimo mais simples)\n\n2. Substituir por sinônimos simples:\n   - \"atacam\" pode ser mantido ou substituído por \"aparecem\" ou \"são encontradas\", mas \"atacam\" está razoavelmente simples.\n   - \"pessoal das excursões\" pode ser substituído por \"turistas\" ou \"visitantes\".\n   - \"refeições\" pode ser mantido ou substituído por \"refeições\" por \"comidas\" ou \"alimentações\", mas \"refeições\" está razoavelmente simples.\n\n3. Reescrever em ordem direta:\n   - A frase original já está em ordem direta.\n\n4. Verificar o sentido:\n   - A frase original: \"Elas atacam mais nos locais em que o pessoal das excursões lava mãos e pratos após as refeições -- diz Adalberto Silva, presidente da associação dos moradores da localidade.\"\n   - Sentido: Os mosquitos (ou outro agente) atacam mais onde os turistas lavam as mãos e pratos depois de comer.\n\nSimplificação final: Elas atacam mais onde os turistas lavam as mãos e pratos após as comidas -- diz Adalberto Silva, presidente da associação de moradores."
+    },
+    {
+      "idx": 8,
+      "original": "Silva adquiriu uma tela de retenção com 150 metros, que deve ser instalada para isolar o trecho da barragem mais usado pelos banhistas, com 3,7 mil hectares de área.",
+      "reference": "A tela deve ser instalada para isolar o trecho da barragem mais usado pelos banhistas.",
+      "prediction": "Silva comprou uma barreira de 150 metros para separar a parte da barragem mais usada por nadadores, que tem 3,7 mil hectares.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"tela de retenção\" pode ser um termo técnico, mas podemos considerar \"tela\" ou \"barreira\" como substitutos mais simples.\n   - \"banhistas\" pode ser substituído por \"pessoas que banham\" ou simplesmente \"nadadores\".\n   - \"hectares\" pode ser mantido, mas é importante entender que é uma medida de área.\n\n2. Substitua por sinônimos simples:\n   - \"tela de retenção\" -> \"barreira\"\n   - \"banhistas\" -> \"nadadores\" ou \"pessoas que nadam\"\n\n3. Reescreva em ordem direta:\n   A frase já está em uma ordem direta razoável, mas podemos ajustar para uma melhor compreensão.\n\n4. Verifique o sentido:\n   - A frase original fala sobre a aquisição de uma tela de retenção para isolar uma área da barragem usada por banhistas.\n\nSimplificação final:\nSilva comprou uma barreira de 150 metros para separar a parte da barragem mais usada por nadadores, que tem 3,7 mil hectares."
+    },
+    {
+      "idx": 9,
+      "original": "Acessório utilizado por adolescentes, o boné é um dos itens que compõem a vestimenta idealizada pela proposta.",
+      "reference": "O boné é um dos itens da roupa imaginada pela proposta.",
+      "prediction": "O boné é uma coisa que os jovens usam como parte da roupa.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - Acessório: algo que se usa junto com outra coisa para complementar.\n   - Adolescentes: jovens que estão na fase da adolescência.\n   - Vestimenta: roupa.\n\n2. Substitua por sinônimos simples:\n   - Acessório -> coisa que se usa junto\n   - Adolescentes -> jovens\n   - Vestimenta -> roupa\n\n3. Reescreva em ordem direta:\n   A frase já está razoavelmente em ordem direta, mas podemos ajustar para melhor clareza.\n\n4. Verifique o sentido:\n   A frase original fala sobre um acessório chamado boné, usado por adolescentes, como parte de uma roupa ideal.\n\nSimplificação final: O boné é uma coisa que os jovens usam como parte da roupa."
+    },
+    {
+      "idx": 10,
+      "original": "Ao prever a distribuição gratuita de uniforme para alunos da rede pública, um projeto em discussão no Congresso institui uma controvérsia em escolas, prefeituras e secretarias de Educação.",
+      "reference": "Um projeto em discussão no Congresso criou uma polêmica em escolas, prefeituras e secretarias de educação.",
+      "prediction": "Um plano no Congresso para dar uniformes de graça para alunos das escolas públicas causa discussão em escolas, prefeituras e secretarias de Educação.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"prever\" pode ser substituído por \"planejar\" ou \"pensar que vai acontecer\",\n   - \"distribuição\" pode ser substituído por \"entrega\",\n   - \"uniforme\" permanece simples,\n   - \"alunos da rede pública\" pode ser mantido ou simplificado para \"alunos das escolas públicas\",\n   - \"projeto em discussão\" pode ser substituído por \"um plano\",\n   - \"instituto\" pode ser substituído por \"causa\" ou \"gera\",\n   - \"controvérsia\" pode ser substituído por \"discussão\" ou \"desacordo\",\n   - \"escolas, prefeituras e secretarias de Educação\" pode ser mantido ou simplificado.\n\n2. Substitua por sinônimos simples:\n   - Prever: planejar\n   - Distribuição: entrega\n   - Institui: causa ou gera\n   - Controvérsia: discussão ou desacordo\n\n3. Reescreva em ordem direta:\n   - Um plano no Congresso para dar uniformes de graça para alunos das escolas públicas causa discussão em escolas, prefeituras e secretarias de Educação.\n\n4. Verifique o sentido:\n   - O sentido original é sobre um plano que gera discussão devido à sua proposta de distribuir uniformes gratuitamente para alunos da rede pública.\n\nSimplificação final: Um plano no Congresso para dar uniformes de graça para alunos das escolas públicas causa discussão em escolas, prefeituras e secretarias de Educação."
+    },
+    {
+      "idx": 11,
+      "original": "Além de ressuscitar o debate sobre a obrigatoriedade de um traje padrão entre os alunos e reacender a preocupação com a escassez de recursos públicos, a proposta cria uma discussão sobre a incorporação do boné no kit obrigatório.",
+      "reference": "Além disso, a proposta reanima o debate sobre a obrigação de uma roupa igual para todos os alunos.",
+      "prediction": "A sugestão de incluir o boné no uniforme escolar obrigatório traz de volta debates sobre o uso obrigatório de uniforme, mostra preocupação com a falta de recursos e gera discussões sobre o assunto.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. **Identificar palavras difíceis**:\n   - ressuscitar (pode ser substituído por \"retomar\" ou \"reacender\"),\n   - obrigatoriedade (pode ser substituído por \"obrigação\"),\n   - escassez (pode ser substituído por \"falta\"),\n   - preocupação (pode ser substituído por \"preocupação\" ou \"cuidado\"),\n   - proposta (pode ser substituído por \"sugestão\" ou \"ideia\"),\n   - incorporação (pode ser substituído por \"inclusão\" ou \"adição\"),\n   - kit obrigatório (pode ser substituído por \"uniforme escolar\" ou simplesmente \"material escolar obrigatório\").\n\n2. **Substituir por sinônimos simples**:\n   - A frase fica: \"Além de retomar o debate sobre a obrigação de um traje padrão entre os alunos e reacender o cuidado com a falta de recursos públicos, a sugestão cria uma discussão sobre a inclusão do boné no material escolar obrigatório.\"\n\n3. **Reescrever em ordem direta**:\n   - A frase já está razoavelmente direta, mas podemos ajustar para: \"A sugestão de incluir o boné no uniforme escolar obrigatório faz retomar o debate sobre a obrigação de um traje padrão entre os alunos, reacende o cuidado com a falta de recursos públicos e gera discussão sobre o assunto.\"\n\n4. **Verificar o sentido**:\n   - O sentido original é sobre uma proposta que traz de volta discussões sobre uniforme obrigatório, preocupa com a falta de recursos e traz a questão do boné no uniforme.\n\n**Simplificação final:**\nA sugestão de incluir o boné no uniforme escolar obrigatório traz de volta debates sobre o uso obrigatório de uniforme, mostra preocupação com a falta de recursos e gera discussões sobre o assunto."
+    },
+    {
+      "idx": 12,
+      "original": "A matéria ainda precisa passar pela Câmara dos Deputados e pela Presidência da República antes de entrar em vigor.",
+      "reference": "O projeto ainda precisa passar pela Câmara dos Deputados e pela Presidência da República antes de entrar em vigor.",
+      "prediction": "A matéria ainda precisa ser aprovada pelo Congresso e pelo Governo antes de valer.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis:\n   - Câmara dos Deputados: pode ser difícil para alguns, pois é um termo específico da política brasileira.\n   - Presidência da República: também é um termo específico.\n\n2. Substitua por sinônimos simples:\n   - Câmara dos Deputados: Congresso (embora não seja exatamente um sinônimo, é mais simples e conhecido).\n   - Presidência da República: Governo\n\n3. Reescreva em ordem direta:\n   - A matéria ainda precisa ser aprovada pelo Congresso e pelo Governo antes de valer.\n\n4. Verifique o sentido:\n   - A simplificação mantém o sentido original de que a matéria precisa passar por duas instâncias antes de vigorar.\n\nSimplificação final: A matéria ainda precisa ser aprovada pelo Congresso e pelo Governo antes de valer."
+    },
+    {
+      "idx": 13,
+      "original": "O acessório polêmico entrou no projeto, de autoria do senador Cícero Lucena (PSDB-PB), graças a uma emenda aprovada na Comissão de Educação do Senado em outubro.",
+      "reference": "O boné problemático entrou no projeto graças a uma emenda aprovada na Comissão de Educação do Senado em outubro.",
+      "prediction": "O acessório controvertido entrou no projeto do senador Cícero Lucena graças a uma alteração aprovada na Comissão de Educação do Senado em outubro.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"polêmico\" (pode ser considerado difícil, mas é compreensível; vamos substituir por \"controverso\" ou manter, dependendo do contexto desejado de simplificação)\n   - \"autoria\" (pode ser substituída por \"do senador\")\n   - \"emenda\" (pode ser substituída por \"alteração\" ou \"mudança\")\n\n2. Substitua por sinônimos simples:\n   - \"polêmico\" pode ser mantido ou substituído por \"controverso\"\n   - \"autoria\" por \"do senador\"\n   - \"emenda\" por \"alteração\"\n\n3. Reescreva em ordem direta:\n   - A frase já está razoavelmente em ordem direta, mas pode ser ajustada para facilitar a compreensão.\n\n4. Verifique o sentido:\n   - O sentido original é que um acessório controverso foi incluído no projeto do senador Cícero Lucena por meio de uma alteração na Comissão de Educação do Senado.\n\nSimplificação final: \nO acessório controvertido entrou no projeto do senador Cícero Lucena graças a uma alteração aprovada na Comissão de Educação do Senado em outubro."
+    },
+    {
+      "idx": 14,
+      "original": "Foi o senador Flávio Arns (PT-PR) quem sugeriu a inclusão da peça entre os itens do uniforme de alunos dos ensinos Fundamental e Médio nas escolas municipais, estaduais e federais.",
+      "reference": "Foi o senador Flávio Arns que sugeriu a inclusão do boné no uniforme de alunos dos ensinos Fundamental e Médio nas escolas municipais, estaduais e federais.",
+      "prediction": "O senador Flávio Arns sugeriu que a peça fosse parte do uniforme de alunos do Ensino Fundamental e Médio em escolas municipais, estaduais e federais.",
+      "raw_output": "Foi o senador Flávio Arns quem sugeriu que a peça fosse incluída no uniforme dos alunos do Ensino Fundamental e Médio nas escolas municipais, estaduais e federais.\n\nSimplificação final: O senador Flávio Arns sugeriu que a peça fosse parte do uniforme de alunos do Ensino Fundamental e Médio em escolas municipais, estaduais e federais."
+    },
+    {
+      "idx": 15,
+      "original": "Se a idéia for aprovada, os estudantes receberão dois conjuntos anuais, completados por calçado, meias, calça e camiseta.",
+      "reference": "Se a idéia for aprovada, os estudantes receberão dois conjuntos anuais, completados com calçado, meias, calça e camiseta.",
+      "prediction": "Se o plano for aprovado, os estudantes receberão dois uniformes completos por ano.",
+      "raw_output": "Vamos seguir os passos para simplificar a frase:\n\n1. **Identificar palavras difíceis**: A palavra \"idéia\" pode ser considerada um pouco formal. Um sinônimo simples poderia ser \"proposta\" ou \"sugestão\", mas para manter a simplicidade e o contexto, vamos optar por \"plano\" ou manter \"idéia\" e ajustar o resto.\n\n2. **Substituir por sinônimos simples**: \n   - \"idéia\" pode ser substituída por \"plano\" ou mantida,\n   - \"aprovada\" pode ser mantida,\n   - \"conjuntos anuais\" parece um pouco complicado. Poderia ser \"uniformes\" se considerarmos o contexto escolar,\n   - \"completados\" pode ser substituído por \"e também\",\n   - \"calçado, meias, calça e camiseta\" são itens específicos que podem ser mantidos ou generalizados para \"uniforme completo\".\n\n3. **Reescrever em ordem direta**: \n   - A frase original está quase em ordem direta. Vamos tentar: \"Se o plano for aprovado, os estudantes vão receber dois uniformes por ano, mais um par de sapatos, meias, uma calça e uma camiseta.\"\n\n4. **Verificar o sentido**: \n   - O sentido original é que, se a proposta for aceita, os estudantes terão dois conjuntos de uniforme por ano, incluindo sapatos, meias, calça e camiseta. A essência é que eles receberão dois uniformes completos anualmente.\n\n**Simplificação final:** Se o plano for aprovado, os estudantes receberão dois uniformes completos por ano."
+    },
+    {
+      "idx": 16,
+      "original": "Como será comprado em quantidade, o boné sairá por R$ 1 ou R$ 2.",
+      "reference": "Com isso, o boné sairá por R$ 1 ou R$ 2.",
+      "prediction": "Como vamos comprar muitos, o boné vai sair barato, R$ 1 ou R$ 2.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identificar palavras difíceis: A frase contém as palavras \"quantidade\" que podem ser consideradas um pouco formais.\n2. Substituir por sinônimos simples: \"quantidade\" pode ser substituída por \"muitos\".\n3. Reescrever em ordem direta: A frase pode ser reescrita de forma mais direta, mantendo o mesmo sentido.\n4. Verificar o sentido: O sentido original é que, por ser comprado em grande quantidade, o preço do boné será baixo, R$ 1 ou R$ 2.\n\nSimplificação final: Como será comprado muitos, o boné vai custar R$ 1 ou R$ 2.\n\nMelhorando ainda mais para um português brasileiro mais coloquial e simples:\n\nSimplificação final: Como vamos comprar muitos, o boné vai sair barato, R$ 1 ou R$ 2."
+    },
+    {
+      "idx": 17,
+      "original": "É muito mais barato do que adotar outra medida preventiva -- avalia Arns.",
+      "reference": "É muito mais barato do que adotar outra medida para evitar os males causados pelo sol -- avalia Arns.",
+      "prediction": "É mais barato do que usar outra medida preventiva, segundo Arns.",
+      "raw_output": "Pense passo a passo:\n\n- Identifique palavras difíceis: Nenhuma palavra muito difícil, mas \"adotar\" pode ser considerada um pouco formal.\n- Substitua por sinônimos simples: \"adotar\" pode ser substituído por \"usar\" ou \"adotar\" pode ser mantido, já que tem um sinônimo mais simples que é \"usar\", mas neste contexto \"adotar\" está bem empregado e de fácil entendimento para o público brasileiro.\n- Reescreva em ordem direta: A avaliação de Arns é que é muito mais barato do que usar outra medida preventiva.\n- Verifique o sentido: A frase ainda tem um tom formal, mas o sentido está preservado.\n\nSimplificação final: É mais barato do que usar outra medida preventiva, segundo Arns."
+    },
+    {
+      "idx": 18,
+      "original": "A divergência ocorre porque educadores como Helvécio Aguiar, da Faculdade de Educação da Universidade Federal do Rio Grande do Sul (UFRGS), afirmam que a peça é desnecessária no uniforme obrigatório.",
+      "reference": "O desentendimento ocorre porque educadores como Helvécio Aguiar afirmam que o boné é desnecessário no uniforme obrigatório.",
+      "prediction": "O desacordo existe porque professores como Helvécio Aguiar, da Faculdade de Educação da UFRGS, dizem que a peça não é necessária no uniforme obrigatório.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"divergência\" pode ser difícil para alguns;\n   - \"educadores\" é um termo um pouco formal;\n   - \"afirmam\" pode ser considerado um pouco formal.\n\n2. Substitua por sinônimos simples:\n   - \"divergência\" pode ser substituído por \"discordância\" ou simplesmente \"desacordo\";\n   - \"educadores\" pode ser substituído por \"professores\" ou \"especialistas em educação\";\n   - \"afirmam\" pode ser substituído por \"dizem\".\n\n3. Reescreva em ordem direta:\n   - A frase já está em uma ordem direta razoável.\n\n4. Verifique o sentido:\n   - A frase original fala sobre um desacordo entre algumas pessoas (educadores) e algo (a necessidade de uma peça no uniforme obrigatório).\n\nSimplificação final: \nO desacordo existe porque professores como Helvécio Aguiar, da Faculdade de Educação da UFRGS, dizem que a peça não é necessária no uniforme obrigatório."
+    },
+    {
+      "idx": 19,
+      "original": "A divergência ocorre porque educadores como Helvécio Aguiar, da Faculdade de Educação da Universidade Federal do Rio Grande do Sul (UFRGS), afirmam que a peça é desnecessária no uniforme obrigatório.",
+      "reference": "Helvécio Aguiar é da Faculdade de Educação da Universidade Federal do Rio Grande do Sul.",
+      "prediction": "O desacordo existe porque professores como Helvécio Aguiar, da Faculdade de Educação da UFRGS, dizem que a peça não é necessária no uniforme obrigatório.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"divergência\" pode ser difícil para alguns;\n   - \"educadores\" é um termo um pouco formal;\n   - \"afirmam\" pode ser considerado um pouco formal.\n\n2. Substitua por sinônimos simples:\n   - \"divergência\" pode ser substituído por \"discordância\" ou simplesmente \"desacordo\";\n   - \"educadores\" pode ser substituído por \"professores\" ou \"especialistas em educação\";\n   - \"afirmam\" pode ser substituído por \"dizem\".\n\n3. Reescreva em ordem direta:\n   - A frase já está em uma ordem direta razoável.\n\n4. Verifique o sentido:\n   - A frase original fala sobre um desacordo entre algumas pessoas (educadores) e algo (a necessidade de uma peça no uniforme obrigatório).\n\nSimplificação final: \nO desacordo existe porque professores como Helvécio Aguiar, da Faculdade de Educação da UFRGS, dizem que a peça não é necessária no uniforme obrigatório."
+    },
+    {
+      "idx": 20,
+      "original": "Professores ainda temem que a distribuição do acessório dificulte a imposição, nas classes, de uma regra da boa conduta:",
+      "reference": "Professores temem também que a distribuição de boné torne difícil impor nas classes uma regra da boa maneira de se comportar:",
+      "prediction": "Professores ainda têm medo de que a entrega do material cause problemas para fazer cumprir uma regra de comportamento nas turmas.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"temem\" (pode ser substituído por \"têm medo\")\n   - \"acessório\" (pode ser substituído por \"equipamento\" ou \"material\")\n   - \"dificulte\" (pode ser substituído por \"dê problemas\" ou \"cause problemas\")\n   - \"imposição\" (pode ser substituído por \"aplicação\" ou \"cumprimento\")\n   - \"classes\" (pode ser substituído por \"turmas\" ou \"salas de aula\")\n   - \"regra da boa conduta\" (pode ser substituído por \"regra de comportamento\")\n\n2. Substitua por sinônimos simples:\n   - \"temem\" por \"têm medo\"\n   - \"acessório\" por \"material\"\n   - \"dificulte\" por \"cause problemas\"\n   - \"imposição\" por \"cumprimento\"\n   - \"classes\" por \"turmas\"\n   - \"regra da boa conduta\" por \"regra de comportamento\"\n\n3. Reescreva em ordem direta:\n   - Original: Professores ainda temem que a distribuição do acessório dificulte a imposição, nas classes, de uma regra da boa conduta.\n   - Simplificado: Professores ainda têm medo de que a entrega do material cause problemas para fazer cumprir uma regra de comportamento nas turmas.\n\n4. Verifique o sentido:\n   - A frase original e a simplificada têm o mesmo sentido.\n\nSimplificação final: Professores ainda têm medo de que a entrega do material cause problemas para fazer cumprir uma regra de comportamento nas turmas."
+    },
+    {
+      "idx": 21,
+      "original": "A retirada de chapéus e bonés da cabeça em ambientes fechados.",
+      "reference": "Retirar chapéus e bonés da cabeça em ambientes fechados.",
+      "prediction": "Tirar chapéu e boné em lugares fechados.",
+      "raw_output": "Tirar chapéu e boné em lugares fechados.\n\nSimplificação final: Tirar chapéu e boné em lugares fechados."
+    },
+    {
+      "idx": 22,
+      "original": "Na Federação das Associações de Municípios do RS (Famurs) e na Secretaria Estadual de Educação (Sec), a preocupação reside em outro ponto.",
+      "reference": "A preocupação está em outro ponto na Federação das Associações de Municípios do RS (Famurs) e na Secretaria Estadual de Educação (Sec).",
+      "prediction": "A preocupação está em outro ponto na união das cidades do RS e na secretaria de educação do estado.",
+      "raw_output": "Pense passo a passo:\n\n- Identifique palavras difíceis: \n  - Federação\n  - Associações\n  - Municípios\n  - Secretaria\n  - Estadual\n  - Preocupação\n  - Reside\n\n- Substitua por sinônimos simples:\n  - Federação = União\n  - Associações = Grupos\n  - Municípios = Cidades\n  - Secretaria = Departamento\n  - Estadual = do Estado\n  - Preocupação = Preocupação (simples)\n  - Reside = Está\n\n- Reescreva em ordem direta:\n  - A preocupação está em outro ponto na União dos Grupos das Cidades do RS e no Departamento de Educação do Estado.\n\n- Verifique o sentido:\n  - O sentido original é que a preocupação está em outro ponto tanto na Federação das Associações de Municípios do RS quanto na Secretaria Estadual de Educação.\n\nSimplificação final: A preocupação está em outro ponto na união das cidades do RS e na secretaria de educação do estado."
+    },
+    {
+      "idx": 23,
+      "original": "Eles se inquietam com a fonte para custear os gastos milionários com a medida.",
+      "reference": "Elas se preocupam com o dinheiro para pagar os gastos de milhões de reais com a medida.",
+      "prediction": "Eles se preocupam com como pagar as contas altas da",
+      "raw_output": " simplificar a a passo:\n\n1. Identificar palavras difíceis:\n   - inquietam (pode ser substituído por \"se preocupam\")\n   - custear (podeído por \"pagar\")\n   - milionários (pode ser mantido, mas \"muito caros\" ou \"altos\")\n\n2. Reescrever em ordem direta e substituir sinônimos simples:\n   - Eles se preocupam com a fonte para pagar os gastos muito caros com a medida.\n\n3. Verificar o sentido:\n   - A frase ainda faz sentido e está.\n\nSimplificação final: Eles se preocupam com como pagar as contas altas da"
+    },
+    {
+      "idx": 24,
+      "original": "O projeto prevê a criação do Programa Nacional de Uniforme Escolar para que o Palácio do Planalto ajude Estados e municípios, mas mantém as dúvidas se as verbas serão suficientes.",
+      "reference": "O projeto prevê a criação do Programa Nacional de Uniforme escolar para que o governo federal ajude Estados e municípios.",
+      "prediction": "O projeto planeja criar um programa para que o governo federal ajude estados e municípios a fornecer uniformes escolares, mas ainda há dúvidas se o dinheiro será suficiente.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"prevê\" (pode ser substituído por \"planeja\" ou \"pretende\"),\n   - \"Programa Nacional de Uniforme Escolar\" (pode ser mantido, mas explicado de forma mais simples),\n   - \"Palácio do Planalto\" (pode ser substituído por \"governo federal\"),\n   - \"verbas\" (pode ser substituído por \"dinheiro\" ou \"recursos\").\n\n2. Substitua por sinônimos simples:\n   - \"prevê\" -> \"planeja\",\n   - \"Palácio do Planalto\" -> \"governo federal\",\n   - \"verbas\" -> \"recursos\" ou \"dinheiro\".\n\n3. Reescreva em ordem direta:\n   - A frase já está razoavelmente em ordem direta.\n\n4. Verifique o sentido:\n   - O projeto quer criar um programa para ajudar estados e municípios a dar uniformes escolares, com ajuda do governo federal, mas ainda há dúvidas se o dinheiro será suficiente.\n\nSimplificação final: O projeto planeja criar um programa para que o governo federal ajude estados e municípios a fornecer uniformes escolares, mas ainda há dúvidas se o dinheiro será suficiente."
+    },
+    {
+      "idx": 25,
+      "original": "Já não temos recursos suficientes para a manutenção das escolas, por exemplo, e também precisamos valorizar o magistério -- justifica a diretora do Departamento Pedagógico da Sec, Sonia Balzano.",
+      "reference": "Além disso, precisamos valorizar os professores -- justifica a diretora do Departamento Pedagógico da Sec.",
+      "prediction": "Não temos dinheiro suficiente para cuidar bem das escolas e também precisamos melhorar as condições de trabalho dos professores.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"suficientes\" pode ser entendido por todos, mas \"manutenção\" e \"magistério\" podem ser difíceis para alguns. \"Manutenção\" significa cuidar para que algo continue funcionando e \"magistério\" refere-se ao conjunto de professores ou à profissão de ensinar.\n   - \"justifica\" pode ser substituído por \"explica\" ou \"diz\".\n   - \"diretora do Departamento Pedagógico da Sec\" é um cargo específico e pode ser simplificado para \"responsável pelo departamento de ensino\".\n\n2. Substitua por sinônimos simples:\n   - \"recursos\" pode ficar como está, pois é um termo comum.\n   - \"manutenção\" pode ser dito como \"custo de funcionamento\" ou apenas \"cuidar das escolas\".\n   - \"magistério\" pode ser referido como \"professores\" ou \"quem ensina\".\n   - \"valorizar\" pode ser \"dar mais valor\" ou \"melhorar as condições de trabalho\".\n\n3. Reescreva em ordem direta:\n   - A frase original está em ordem direta, mas vamos tentar simplificar ainda mais.\n\n4. Verifique o sentido:\n   - A frase original diz que falta dinheiro para cuidar das escolas e que é preciso melhorar as condições dos professores.\n\nSimplificação final: \nNão temos dinheiro suficiente para cuidar bem das escolas e também precisamos melhorar as condições de trabalho dos professores."
+    },
+    {
+      "idx": 26,
+      "original": "Não fosse o aspecto financeiro, o projeto teria o apoio incondicional de Balzano e do presidente da Famurs, Flávio Luiz Lammel.",
+      "reference": "O projeto teria o apoio total de Balzano e do presidente da Famurs, se não fosse o problema de dinheiro.",
+      "prediction": "Se não fosse o problema financeiro, o projeto teria o apoio total de Balzano e do presidente da Famurs, Flávio Luiz Lammel.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"Não fosse\" pode ser considerado um pouco formal, mas é uma expressão comum.\n   - \"incondicional\" é uma palavra que pode ser difícil para alguns.\n\n2. Substitua por sinônimos simples:\n   - \"Não fosse\" pode ser substituído por \"Se não fosse\".\n   - \"incondicional\" pode ser substituído por \"total\" ou \"sem restrições\".\n\n3. Reescreva em ordem direta:\n   - A frase já está em uma ordem direta razoável.\n\n4. Verifique o sentido:\n   - A frase original: \"Não fosse o aspecto financeiro, o projeto teria o apoio incondicional de Balzano e do presidente da Famurs, Flávio Luiz Lammel.\"\n   - Sentido: O projeto teria apoio total de Balzano e do presidente da Famurs se não fosse pelo problema financeiro.\n\nSimplificação final: Se não fosse o problema financeiro, o projeto teria o apoio total de Balzano e do presidente da Famurs, Flávio Luiz Lammel."
+    },
+    {
+      "idx": 27,
+      "original": "Com a oferta do uniforme, as escolas públicas poderão torná-lo obrigatório, o que eliminaria a roupa como um indicador de diferenças sociais nas escolas e não criaria constrangimento aos alunos mais pobres.",
+      "reference": "Se o uniforme for oferecido, as escolas públicas poderão torná-lo obrigatório, com isso a roupa deixaria de ser um indicador de diferenças sociais nas escolas e não criaria vergonha nos alunos mais pobres.",
+      "prediction": "Com o uniforme obrigatório, as escolas públicas deixariam de ter roupas como sinal de diferença social e os alunos pobres não se sentiriam desconfortáveis.",
+      "raw_output": "Com a oferta do uniforme, as escolas públicas podem torná-lo obrigatório. Isso faria com que a roupa deixe de ser um sinal de diferenças sociais nas escolas e não causaria desconforto aos alunos mais pobres.\n\nSimplificação final: Com o uniforme obrigatório, as escolas públicas deixariam de ter roupas como sinal de diferença social e os alunos pobres não se sentiriam desconfortáveis."
+    },
+    {
+      "idx": 28,
+      "original": "O foco principal da resistência vem dos próprios estudantes:",
+      "reference": "A principal resistência vem dos próprios estudantes:",
+      "prediction": "A principal oposição vem dos próprios estudantes.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis: Não há palavras muito difíceis na frase, mas podemos considerar \"resistência\" como uma palavra que pode ser substituída por um sinônimo mais simples.\n\n2. Substitua por sinônimos simples: \"Resistência\" pode ser substituída por \"oposição\" ou \"reação\".\n\n3. Reescreva em ordem direta: A frase já está em ordem direta.\n\n4. Verifique o sentido: O sentido da frase é claro, indica que a principal oposição ou reação vem dos próprios estudantes.\n\nSimplificação final: A principal oposição vem dos próprios estudantes."
+    },
+    {
+      "idx": 29,
+      "original": "Uma parcela critica o uniforme, porque acredita que ele ameaçaria a individualidade de cada um.",
+      "reference": "Alguns criticam o uniforme, porque acreditam que ele ameaça a individualidade de cada um.",
+      "prediction": "Um grupo de pessoas não gosta do uniforme porque acha que ele tira a liberdade de cada pessoa ser como é.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"parcela\" pode ser difícil para alguns, pode ser substituída por \"parte\" ou \"grupo\".\n   - \"uniforme\" é um termo comum, mas pode ser mantido.\n   - \"individualidade\" pode ser difícil, pode ser substituída por \"personalidade\" ou \"ser jeito de ser\".\n\n2. Substitua por sinônimos simples:\n   - \"parcela\" -> \"parte\" ou \"grupo\".\n   - \"individualidade\" -> \"personalidade\" ou \"jeito de ser\".\n\n3. Reescreva em ordem direta:\n   - A frase já está em uma ordem direta razoável.\n\n4. Verifique o sentido:\n   - A frase original fala que um grupo critica o uniforme por achar que ele ameaçaria a personalidade de cada pessoa.\n\nSimplificando com essas considerações:\n\nUma parte critica o uniforme, porque acredita que ele ameaçaria o jeito de ser de cada um.\n\nSimplificação final: \nUm grupo de pessoas não gosta do uniforme porque acha que ele tira a liberdade de cada pessoa ser como é."
+    },
+    {
+      "idx": 30,
+      "original": "Para complicar ainda mais a situação dos militares dos EUA no Iraque, uma nova denúncia de massacre de civis por suas tropas veio à tona ontem.",
+      "reference": "Uma nova denúncia de matança de civis por tropas dos EUA surgiu ontem, para complicar ainda mais a situação dos militares americanos no Iraque.",
+      "prediction": "A situação dos militares dos EUA no Iraque piorou com uma nova acusação de massacre de civis por suas tropas ontem.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"complicar\" pode ser substituído por \"piorar\" ou \"complicar\" é um termo razoavelmente simples, mas vamos manter para ver se há algo mais complexo.\n   - \"denúncia\" é um termo que pode ser entendido por muitos, mas vamos verificar se há um sinônimo mais simples.\n   - \"massacre\" é um termo forte e pode ser substituído por \"matança\" ou \"morte em massa\", mas vamos manter \"massacre\" por ser amplamente compreendido.\n\n2. Substitua por sinônimos simples:\n   - \"complicar\" pode ficar como está ou ser substituído por \"piorar\".\n   - \"denúncia\" pode ser substituído por \"acusação\" ou simplesmente manter \"denúncia\".\n\n3. Reescreva em ordem direta:\n   - A frase já está em ordem direta: apresenta um problema (complicar a situação), seguido de uma ação (denúncia de massacre), e conclui com a circunstância temporal (ontem).\n\n4. Verifique o sentido:\n   - O sentido é claro: a situação dos militares dos EUA no Iraque piorou com uma nova acusação de massacre de civis.\n\nSimplificação final: A situação dos militares dos EUA no Iraque piorou com uma nova acusação de massacre de civis por suas tropas ontem."
+    },
+    {
+      "idx": 31,
+      "original": "Um vídeo gravado após uma operação militar dos EUA em 15 de março na vila de Ishaqi, 80 quilômetros ao norte de Bagdá, mostra o resultado da operação:",
+      "reference": "Um vídeo gravado após uma operação militar dos EUA em 15 de março na vila de Ishaqi mostra o resultado da operação:",
+      "prediction": "Um vídeo mostra o resultado de uma ação militar dos EUA em uma vila a 80km de Bagdá.",
+      "raw_output": "Um vídeo filmado depois de uma ação militar dos EUA em 15 de março na cidade de Ishaqi, 80 quilômetros ao norte de Bagdá, mostra o que aconteceu.\n\nSimplificação final: Um vídeo mostra o resultado de uma ação militar dos EUA em uma vila a 80km de Bagdá."
+    },
+    {
+      "idx": 32,
+      "original": "Corpos de crianças e adultos iraquianos crivados de balas, alguns com tiros na cabeça.",
+      "reference": "A vila de Ishaqi fica 80 quilômetros ao norte de Bagdá.",
+      "prediction": "Corpos de crianças e adultos iraquianos com muitos tiros, alguns com tiros na cabeça.",
+      "raw_output": "Pense passo a passo:\n\n- Identifique palavras difíceis: \"crivados\" pode ser considerado uma palavra difícil.\n- Substitua por sinônimos simples: \"crivados\" pode ser substituído por \"cheios\" ou \"com muitos tiros\".\n- Reescreva em ordem direta: A ordem direta já está presente na frase.\n- Verifique o sentido: O sentido é claro e deve ser mantido.\n\nSimplificação final: Corpos de crianças e adultos iraquianos com muitos tiros, alguns com tiros na cabeça."
+    },
+    {
+      "idx": 33,
+      "original": "A conclusão da investigação do exército sobre o caso, que vazou para a imprensa, afirma que as acusações de homicídio doloso (com intenção) eram \"infundadas\".",
+      "reference": "A conclusão da investigação do exército sobre o caso afirma que as acusações de homicídio doloso eram \"infundadas\".",
+      "prediction": "O resultado da análise do exército sobre o caso mostra que as acusações de assassinato eram falsas.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identificar palavras difíceis:\n   - \"conclusão\" pode ser entendida como \"resultado\" ou \"fim\",\n   - \"investigação\" é um pouco difícil, mas podemos usar \"análise\" ou \"apuração\",\n   - \"homicídio doloso\" é jurídico e pode ser substituído por \"assassinato\" ou \"morte intencional\",\n   - \"infundadas\" pode ser substituído por \"sem fundamento\" ou \"falsas\".\n\n2. Substituir por sinônimos simples:\n   - \"conclusão\" por \"resultado\",\n   - \"investigação\" por \"análise\",\n   - \"homicídio doloso\" por \"assassinato\",\n   - \"infundadas\" por \"falsas\".\n\n3. Reescrever em ordem direta:\n   - Original: \"A conclusão da investigação do exército sobre o caso, que vazou para a imprensa, afirma que as acusações de homicídio doloso (com intenção) eram 'infundadas'.\"\n   - Simplificado: \"O resultado da análise do exército sobre o caso mostra que as acusações de assassinato eram falsas.\"\n\n4. Verificar o sentido:\n   - A frase original e a simplificada têm o mesmo sentido: o exército concluiu que as acusações de assassinato não tinham fundamento.\n\nSimplificação final: O resultado da análise do exército sobre o caso mostra que as acusações de assassinato eram falsas."
+    },
+    {
+      "idx": 34,
+      "original": "-- Parece que o assassinato de civis iraquianos transformou-se em um fenômeno cotidiano e banal -- disse o presidente da Associação Iraquiana dos Direitos Humanos, Muayed al-Anbaki.",
+      "reference": "-- Parece que o assassinato de civis iraquianos transformou-se em um fenômeno comum e banal -- disse o presidente da Associação Iraquiana dos Direitos Humanos, Muayed al-Anbaki.",
+      "prediction": "\"Matanças de inocentes no Iraque viraram rotina, segundo um defensor de direitos humanos.\"",
+      "raw_output": "Pense passo a passo:\n\n- \"assassinato\" pode ser substituído por \"morte\" ou \"mortes\", mas para manter o impacto, vamos usar \"matança\".\n- \"civis iraquianos\" pode ser entendido como \"pessoas comuns no Iraque\".\n- \"transformou-se\" pode ser substituído por \"se tornou\".\n- \"fenômeno cotidiano e banal\" pode ser entendido como \"algo que acontece todos os dias e não é mais chocante\".\n\nReescrevendo em ordem direta: \n\"O presidente da Associação Iraquiana dos Direitos Humanos, Muayed al-Anbaki, disse que matar pessoas comuns no Iraque todos os dias se tornou algo normal.\"\n\nVerificando o sentido: A frase transmite a ideia de que a violência contra civis no Iraque se tornou comum e aceita, perdendo o choque inicial.\n\nSimplificação final: \n\"Matanças de inocentes no Iraque viraram rotina, segundo um defensor de direitos humanos.\""
+    },
+    {
+      "idx": 35,
+      "original": "Trechos do vídeo foram exibidos pela rede britânica BBC e mostram uma fileira de corpos com ferimentos claramente provocados por tiros.",
+      "reference": "Os trechos do vídeo mostram uma fileira de corpos com ferimentos claramente provocados por tiros.",
+      "prediction": "Partes do vídeo foram mostradas pela rede britânica BBC e mostram uma fila de corpos com machucados claramente causados por tiros.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"exibidos\" pode ser considerado um pouco formal.\n   - \"ferimentos\" é um termo um pouco formal.\n\n2. Substitua por sinônimos simples:\n   - \"exibidos\" pode ser substituído por \"mostrados\".\n   - \"ferimentos\" pode ser substituído por \"machucados\" ou \"feridas\", mas \"machucados\" é mais coloquial e adequado para o contexto.\n\n3. Reescreva em ordem direta:\n   A frase já está em ordem direta.\n\n4. Verifique o sentido:\n   A frase original e a simplificada precisam ter o mesmo sentido.\n\nSimplificação final: Partes do vídeo foram mostradas pela rede britânica BBC e mostram uma fila de corpos com machucados claramente causados por tiros."
+    },
+    {
+      "idx": 36,
+      "original": "Mais cedo, o primeiro-ministro iraquiano, Nouri al-Maliki, havia criticado os EUA devido à acusação de que seus fuzileiros navais mataram 24 civis desarmados na cidade de Haditha, em novembro.",
+      "reference": "Ele criticou os EUA por causa da morte de 24 civis desarmados na cidade de Haditha em novembro.",
+      "prediction": "Mais cedo, o chefe de governo do Iraque, Nouri al-Maliki, havia criticado os EUA porque seus soldados mataram 24 civis que não estavam armados na cidade de Haditha, em novembro.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"primeiro-ministro\" (pode ser entendido como o chefe de governo, mas é um termo específico)\n   - \"fuzileiros navais\" (são militares, mas o termo pode ser pouco comum para alguns)\n   - \"desarmados\" (é uma condição, mas é um termo que pode ser entendido por muitos)\n\n2. Substitua por sinônimos simples:\n   - \"primeiro-ministro\" pode ser substituído por \"chefe de governo\" ou simplesmente manter como está, pois é um termo que muitas pessoas conhecem.\n   - \"fuzileiros navais\" pode ser substituído por \"soldados\" ou \"militares\".\n   - \"desarmados\" já é um termo simples.\n\n3. Reescreva em ordem direta:\n   - A frase já está em ordem direta.\n\n4. Verifique o sentido:\n   - A frase original fala sobre uma crítica do chefe de governo do Iraque aos EUA por causa de uma ação de seus militares.\n\nSimplificação final: \nMais cedo, o chefe de governo do Iraque, Nouri al-Maliki, havia criticado os EUA porque seus soldados mataram 24 civis que não estavam armados na cidade de Haditha, em novembro."
+    },
+    {
+      "idx": 37,
+      "original": "Toda a operação teria sido armada para vingar a morte de um companheiro em um atentado a bomba.",
+      "reference": "Toda a operação teria sido preparada para vingar a morte de um companheiro em um atentado a bomba.",
+      "prediction": "Tudo foi planejado para se vingar da morte de um colega em um ataque com bomba.",
+      "raw_output": " a passo:\n\n- \"Toda a operação\" pode ser simplificado para \"Tudo\"\n- \"teria sido armada\" pode ser substituído por \"foi planejada\"\n- \"vingar\" pode ser substituído por \"vingança\" ou \"fazer justiça\", mas para simplificar, vamos usar \"vingar\" como está, mas pensando em algo mais simples: \"para se vingar\"\n- \"a morte de um companheiro\" pode ser mantido, mas pensando em simplicidade: \"a morte de um colega\"\n- \"em um atentado a bomba\" pode ser substituído por \"em um ataque com bomba\"\n\nReescrevendo em ordem direta: \nA operação foi planejada para se vingar da morte de um colega em um ataque com bomba.\n\nSimplificação final: Tudo foi planejado para se vingar da morte de um colega em um ataque com bomba."
+    },
+    {
+      "idx": 38,
+      "original": "O premier classificou o episódio de \"crime horrível\".",
+      "reference": "O primeiro-ministro classificou a operação de \"crime horrível\".",
+      "prediction": "O primeiro-ministro classificou o fato como um crime horrível.",
+      "raw_output": "Pense passo a passo:\n\n- A palavra \"premier\" pode ser substituída por \"primeiro-ministro\", que é mais conhecida.\n- A palavra \"episódio\" pode ser substituída por \"ocorrência\" ou \"fato\", que são mais simples.\n- A expressão \"crime horrível\" já é simples e direta.\n\nReescrevendo em ordem direta: O primeiro-ministro disse que o fato foi um crime horrível.\n\nVerificando o sentido: A simplificação manteve o sentido original.\n\nSimplificação final: O primeiro-ministro classificou o fato como um crime horrível."
+    },
+    {
+      "idx": 39,
+      "original": "Além de uma investigação sobre o incidente, o comando das forças armadas ordenou que todos os soldados recebam treinamento extra sobre \"padrões morais, éticos e legais no campo de batalha\".",
+      "reference": "Além disso, o comando das forças armadas ordenou que todos os soldados recebam treinamento extra sobre \"padrões morais, éticos e legais no campo de batalha\".",
+      "prediction": "A liderança dos militares decidiu investigar o evento e ordenou que os soldados fizessem treinamento extra sobre regras, valores e leis na batalha.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identificar palavras difíceis:\n   - incidente: evento\n   - comando: liderança\n   - forças armadas: militares\n   - treinamento: instrução\n   - padrões: regras\n   - morais: valores\n   - éticos: princípios\n   - legais: jurídicos\n\n2. Substituir por sinônimos simples:\n   - incidente -> evento\n   - comando -> liderança\n   - forças armadas -> militares\n   - treinamento -> instrução\n   - padrões -> regras\n   - morais -> valores\n   - éticos -> princípios\n   - legais -> jurídicos\n\n3. Reescrever em ordem direta:\n   - A liderança dos militares decidiu investigar o que aconteceu e mandou que todos os soldados fizessem uma instrução adicional sobre regras, princípios e leis durante as batalhas.\n\n4. Verificar o sentido:\n   - A simplificação mantém o sentido original de que, além de uma investigação, os militares ordenaram que os soldados recebessem mais instrução sobre como agir corretamente em batalha.\n\nSimplificação final: A liderança dos militares decidiu investigar o evento e ordenou que os soldados fizessem treinamento extra sobre regras, valores e leis na batalha."
+    },
+    {
+      "idx": 40,
+      "original": "Isso dificilmente conterá a torrente de denúncias que ameaça minar o novo governo iraquiano e o apoio do público nos EUA à guerra iniciada pelo presidente George W Bush.",
+      "reference": "Isso dificilmente conterá a grande quantidade de denúncias que ameaça o apoio do público dos EUA à guerra iniciada pelo presidente George W Bush.",
+      "prediction": "Isso dificilmente conterá a grande quantidade de reclamações que ameaça enfraquecer o novo governo iraquiano e o suporte do público nos EUA à guerra começada pelo presidente George W. Bush.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis:\n   - dificilmente\n   - torrente\n   - denúncias\n   - minar\n   - apoio\n   - iniciada\n\n2. Substitua por sinônimos simples:\n   - dificilmente -> dificilmente pode ser substituído por \"com dificuldade\" ou \"com esforço\", mas manterei para simplificar sem perder o sentido original.\n   - torrente -> grande quantidade\n   - denúncias -> reclamações\n   - minar -> enfraquecer\n   - apoio -> suporte\n   - iniciada -> começada\n\n3. Reescreva em ordem direta:\n   A frase já está em uma ordem direta razoável.\n\n4. Verifique o sentido:\n   A frase original fala sobre a dificuldade de conter uma grande quantidade de reclamações que pode enfraquecer o novo governo iraquiano e o suporte do público nos EUA à guerra começada pelo presidente George W. Bush.\n\nSimplificação final: Isso dificilmente conterá a grande quantidade de reclamações que ameaça enfraquecer o novo governo iraquiano e o suporte do público nos EUA à guerra começada pelo presidente George W. Bush."
+    },
+    {
+      "idx": 41,
+      "original": "Na época da operação em Ishaqi, os militares dos EUA anunciaram que houve um confronto entre os fuzileiros e um suposto integrante da Al-Qaeda.",
+      "reference": "Os militares dos EUA anunciaram que houve um confronto entre os fuzileiros e alguém que achavam que era integrante da Al-Qaeda na época da operação em Ishaqi.",
+      "prediction": "Durante a operação em Ishaqi, os militares dos EUA disseram que houve uma luta entre os fuzileiros e um aparente membro da Al-Qaeda.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"época\" pode ser entendida como \"momento\" ou \"ocasião\",\n   - \"confronto\" pode ser entendido como \"luta\" ou \"enfrentamento\",\n   - \"suposto\" pode ser entendido como \"que se diz ser\" ou \"aparente\",\n   - \"integrante\" pode ser entendido como \"membro\" ou \"parte\".\n\n2. Substitua por sinônimos simples:\n   - \"época\" por \"momento\",\n   - \"confronto\" por \"luta\",\n   - \"suposto\" por \"aparente\",\n   - \"integrante\" por \"membro\".\n\n3. Reescreva em ordem direta:\n   - A ordem direta já está razoavelmente mantida na frase original, então vamos ajustá-la levemente para uma melhor fluência: \"Durante a operação em Ishaqi, os militares dos EUA disseram que houve uma luta entre os fuzileiros e um aparente membro da Al-Qaeda.\"\n\n4. Verifique o sentido:\n   - A frase original informou sobre um evento em Ishaqi envolvendo uma operação militar dos EUA, um confronto entre fuzileiros e um membro aparente da Al-Qaeda.\n   - A simplificação mantém esse sentido.\n\nSimplificação final: Durante a operação em Ishaqi, os militares dos EUA disseram que houve uma luta entre os fuzileiros e um aparente membro da Al-Qaeda."
+    },
+    {
+      "idx": 42,
+      "original": "Em meio à intensa troca de tiros, uma casa desabou, matando o suspeito, duas mulheres e uma criança.",
+      "reference": "Uma casa desabou no meio da troca de tiros, matando o suspeito, duas mulheres e uma criança.",
+      "prediction": "A frase original fala sobre uma troca de tiros intensa, uma casa desabando e as vítimas. Vamos garantir que o sentido seja preservadoificação final: Em meio troca de tiros violenta caiu e matou, duas mulheres e uma criança.",
+      "raw_output": " passo a passo:\n\n1. palavras difíceis:\n   - \"intensa troca de tiros\" pode uma expressão um pouco complexa, mas vamos encontrar um sinônimo mais simples paraensa\" que seja compreensível.\n\n2. Substitua por sinônimos - \"intensa\" pode ser substituído por \"forte\" ou \"violenta\".\n\n3. Reescreva em ordem direta:\n   - A ordem direta já está razoavelmente mantida na frase original: \"Em meio à troca de tiros forte, uma casa caiu, matando o suspeito e mais pessoas.\"\n\n4. Verifique o sentido e ajuste:\n   - A frase original fala sobre uma troca de tiros intensa, uma casa desabando e as vítimas. Vamos garantir que o sentido seja preservadoificação final: Em meio troca de tiros violenta caiu e matou, duas mulheres e uma criança."
+    },
+    {
+      "idx": 43,
+      "original": "Mas um vídeo de um cinegrafista da agência de notícias Associated Press (AP), divulgado no mesmo dia, já mostrava pelo menos cinco crianças mortas.",
+      "reference": "Mas um vídeo de um cinegrafista da agência de notícias Associated Press já mostrava pelo menos cinco crianças mortas.",
+      "prediction": "Mas um vídeo de um repórter de uma agência de notícias, divulgado no mesmo dia, mostrava pelo menos cinco crianças mortas.",
+      "raw_output": "Pense passo a passo:\n\n- Identifique palavras difíceis: \"cinegrafista\", \"agência de notícias\", \"Associated Press\" (AP) podem ser consideradas difíceis ou técnicas.\n- Substitua por sinônimos simples: \n  - \"cinegrafista\" pode ser substituído por \"repórter\" ou simplesmente mantido como está, pois é um termo conhecido, mas vamos usar \"repórter\" para filmar.\n  - \"agência de notícias\" pode ser substituída por \"empresa de notícias\" ou simplesmente \"agência\".\n  - \"Associated Press\" (AP) é uma agência de notícias famosa, pode ser mantida como está ou simplificada para \"uma agência de notícias\".\n- Reescreva em ordem direta: A frase já está em uma ordem direta.\n- Verifique o sentido: O sentido é claro.\n\nSimplificação final: Mas um vídeo de um repórter de uma agência de notícias, divulgado no mesmo dia, mostrava pelo menos cinco crianças mortas."
+    },
+    {
+      "idx": 44,
+      "original": "Um adulto e quatro crianças têm evidentes marcas de tiros na cabeça -- o que reforça a tese de execuções.",
+      "reference": "Um adulto e quatro crianças têm marcas claras de tiros na cabeça.",
+      "prediction": "Um adulto e quatro crianças foram mortos com tiros na cabeça, mostrando que foram execuções.",
+      "raw_output": "Um adulto e quatro crianças têm marcas de tiros na cabeça. Isso mostra que as mortes foram por execução.\n\nSimplificação final: Um adulto e quatro crianças foram mortos com tiros na cabeça, mostrando que foram execuções."
+    },
+    {
+      "idx": 45,
+      "original": "Moradores do local afirmam que 11 pessoas foram mortas -- e garantem que isso ocorreu antes de a casa ser destruída.",
+      "reference": "Moradores do local garantem que isso ocorreu antes de a casa ser destruída.",
+      "prediction": "Moradores dizem que 11 pessoas morreram antes de a casa ser destruída.",
+      "raw_output": "Pessoas que moram perto dizem que 11 pessoas morreram. Elas dizem que isso aconteceu antes de a casa ser destruída.\n\nSimplificação final: Moradores dizem que 11 pessoas morreram antes de a casa ser destruída."
+    },
+    {
+      "idx": 46,
+      "original": "Considerado culpado de ameaçar com um cachorro sem focinheira um dos detentos e de negligência no cumprimento do dever, ele foi rebaixado e condenado ontem por um tribunal militar a 90 dias de trabalho forçado sem confinamento.",
+      "reference": "Ele foi condenado ontem por um tribunal militar a 90 dias de trabalho forçado sem prisão.",
+      "prediction": "Ele foi acusado de ameaçar um prisioneiro com um cachorro sem focinheira e de ter descuido no trabalho. Por isso, ele perdeu o posto e foi sentenciado pelo corte militar a 90 dias de trabalho forçado sem confinamento.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - considerado culpado: acusado e condenado\n   - ameaçar: ameaçou\n   - detento: prisioneiro\n   - negligência: descuido\n   - cumprimento: cumprimento do dever -> fazer o seu trabalho\n   - rebaixado: teve seu posto reduzido ou perdeu uma promoção\n   - condenado: sentenciado\n   - tribunal militar: corte militar\n\n2. Substitua por sinônimos simples:\n   - considerado culpado -> acusado e condenado\n   - ameaçar -> ameaçou\n   - detento -> prisioneiro\n   - negligência -> descuido\n   - cumprimento do dever -> fazer o seu trabalho\n   - rebaixado -> perdeu o posto\n   - condenado -> sentenciado\n   - tribunal militar -> corte militar\n\n3. Reescreva em ordem direta:\n   Ele foi acusado de ameaçar um prisioneiro com um cachorro sem focinheira e de ter descuido no trabalho. Por isso, ele perdeu o posto e foi sentenciado pelo corte militar a 90 dias de trabalho forçado sem confinamento.\n\n4. Verifique o sentido:\n   A frase reescrita tem o mesmo sentido da original, mas é mais simples.\n\nSimplificação final: Ele foi acusado de ameaçar um prisioneiro com um cachorro sem focinheira e de ter descuido no trabalho. Por isso, ele perdeu o posto e foi sentenciado pelo corte militar a 90 dias de trabalho forçado sem confinamento."
+    },
+    {
+      "idx": 47,
+      "original": "Estatísticas de março indicam que o roubo de carros é um crime resistente às ações policiais.",
+      "reference": "Números de março indicam que o roubo de carros é um crime resistente às ações policiais.",
+      "prediction": "Os números de março mostram que o roubo de carros não diminuiu com as ações da polícia.",
+      "raw_output": "Vamos seguir o processo passo a passo:\n\n1. **Identificar palavras difíceis**: \n   - \"Estatísticas\" pode ser considerada uma palavra um pouco complexa para alguns falantes, mas é bastante usada. No entanto, podemos pensar em \"dados\" ou \"números\" como alternativas mais simples.\n   - \"Resistente\" pode ser um pouco difícil; podemos pensar em \"que não funciona\" ou \"que não dá resultado\" como alternativas.\n\n2. **Substituir por sinônimos simples**:\n   - \"Estatísticas\" pode ser substituído por \"números\" ou \"dados\".\n   - \"Resistente\" pode ser substituído por \"que não dá resultado\" ou \"ineficaz\".\n\n3. **Reescrever em ordem direta**:\n   - A frase já está em uma ordem direta, mas podemos tentar simplificar ainda mais.\n\n4. **Verificar o sentido**:\n   - O sentido original é que, de acordo com os dados de março, o roubo de carros continua acontecendo muito, apesar das ações da polícia.\n\n**Simplificação**:\n- Original: \"Estatísticas de março indicam que o roubo de carros é um crime resistente às ações policiais.\"\n- Simplificada com substituições: \"Os números de março mostram que o roubo de carros não diminuiu com as ações da polícia.\"\n\n**Simplificação final:**\nSimplificação final: Os números de março mostram que o roubo de carros não diminuiu com as ações da polícia."
+    },
+    {
+      "idx": 48,
+      "original": "Blitze, barreiras e operações em profusão foram insuficientes para conter um crescimento de 11,12% em relação a março de 2006.",
+      "reference": "Fiscalizações policiais, barreiras e operações em grande quantidade foram pouco para conter um crescimento de 11,12% quando comparado com março de 2006.",
+      "prediction": "Muitas operações policiais não foram suficientes para crescimento de 11,12% em relação a março de 2006.",
+      "raw_output": " a frase passo a passo. Identificar palavras difíceis:\n   - Blitze: operações policiais surpresa\n   - Insuficientes: não foram o bastante\n   - Profusão: grande quantidade\n\n2. Substituir por sinônimos simples:\n   - Blitze -> operações policiais\n   - Insuficientes -> não foram suficientes\n   - Profusão -> muitas\n\n3. Reescrever em ordem direta:\n   - A frase já está razoavelmente em ordem direta, mas vamos ajustar para facilitar a leitura.\n\n4. Verificar o sentido:\n   - O sentido é que as ações (blitze, barreiras, operações) não foram o bastante para impedir um aumento de 11,12% comparado a março de 2006.\n\nSimplificação final: Muitas operações policiais não foram suficientes para crescimento de 11,12% em relação a março de 2006."
+    },
+    {
+      "idx": 49,
+      "original": "O aumento de casos frustrou expectativas e fez as autoridades reverem estratégias.",
+      "reference": "O aumento de casos fez as autoridades reverem estratégias.",
+      "prediction": "O aumento de casos decepcionou as esperanças e fez os governantes mudarem os planos.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - frustrou (pode ser substituído por \"decepcionou\" ou \"desapontou\")\n   - expectativas (pode ser substituído por \"esperanças\" ou \"previsões\")\n   - autoridades (pode ser mantido ou substituído por \"governantes\" ou \"responsáveis\")\n   - estratégias (pode ser substituído por \"planos\" ou \"ações\")\n\n2. Substitua por sinônimos simples:\n   - frustrou -> decepcionou\n   - expectativas -> esperanças\n   - autoridades -> governantes\n   - estratégias -> planos\n\n3. Reescreva em ordem direta:\n   - Original: O aumento de casos frustrou expectativas e fez as autoridades reverem estratégias.\n   - Simplificado: O aumento de casos decepcionou as esperanças e fez os governantes mudarem os planos.\n\n4. Verifique o sentido:\n   - A frase original e a simplificada têm o mesmo sentido: o aumento de casos foi uma surpresa negativa que fez com que as pessoas responsáveis reconsiderassem suas ações.\n\nSimplificação final: O aumento de casos decepcionou as esperanças e fez os governantes mudarem os planos."
+    },
+    {
+      "idx": 50,
+      "original": "O secretário da Segurança Pública, Enio Bacci, disse que o aumento está ligado à legislação branda contra desmanches, ao aumento da frota e ao chamado golpe do seguro -- quando o dono vende o carro a bandidos e recebe um novo da seguradora, mas reconheceu que precisa ajustar a repressão.",
+      "reference": "O secretário da Segurança Pública disse que o aumento está ligado à legislação pouco rigorosa contra desmanches, ao aumento da quantidade de carros e ao chamado golpe do seguro.",
+      "prediction": "de Segurança Pública, Enio Bacci, afirmou que o aumento de problemas com causa de leis suaves contra a desmontagem de carros, do aumento do número de veículos e de uma fraude que envolve seguros, na qual o dono vende o carro para criminosos e depois ganha um novo da seguradora. Ele também disse que é preciso",
+      "raw_output": " a frase passo a passo:\n\n1. **Identificar palavras difíceis**:\n \"legislação branda\" pode ser difícil para alguns; significa leis suaves ou pouco rigorosas.\n   - \"desmanches\" se refere à des de veículos para vender peças, pode ser substituído por \"desmontagem de carros similar.\n   - \"f se refere ao conjunto de veículos; pode ser mantido como está, pois é de.\n   - \"golpe do é uma expressão que pode ser entend um tipo de fraude envolvendo seguros.\n\n2Substituir por sinôn**:\n   - \"legislação\" -> \"leis suaves\"\n   - \"desmanches\" -> \"agem de carros\"\n   - \"golpe do seguro\" -> \"fraude do seguro\"\n\n3. **Reescrever em ordem direta**:\n   - A frase original está razoavelmente em ordem direta, mas simplificar ainda mais o conteúdo.\n\n4. **Verificar o sentido**:\n   - Enio Bacci falou sobre o algo (provavelmente crimes ou ocorrências relacionadas a carros).\n   - Ele disse ocorre por causa de leis suaves desmontagem de carros, pelo número de carros e por uma fraude seguros.\n\n**Simplificação final:**\n de Segurança Pública, Enio Bacci, afirmou que o aumento de problemas com causa de leis suaves contra a desmontagem de carros, do aumento do número de veículos e de uma fraude que envolve seguros, na qual o dono vende o carro para criminosos e depois ganha um novo da seguradora. Ele também disse que é preciso"
+    },
+    {
+      "idx": 51,
+      "original": "-- Propomos mudanças na legislação, com a numeração das peças dos carros que vão para desmanches.",
+      "reference": "-- Propomos mudanças na legislação, com a colocação de números nas peças dos carros que vão para desmanches.",
+      "prediction": "Propomos mudanças nas leis para numerar as",
+      "raw_output": " a frase passo a passo:\n\n1. **Identificar palavras difíceis**: A palavra \"legislação\" pode ser considerada um pouco difícil para alguns, e \"desmanches\" é um termo que pode não ser familiar para todos.\n\n2. **Substituir por sinônimos simples**: \n   - \"Legislação\" pode ser substituída por \"leis\".\n   - \"Desmanches\" refere-se a locais onde carros são desmontados para venderem peças, então pode ser simplificado para \"desmontagem de carros\" ou algo que indique a ideia de carros sendo desmontados.\n\n3. **Reescrever em ordem direta**: A frase já está razoavelmente direta.\n\n4. **Verificar o sentido**: Queremos dizer que estamos sugerindo alterações nas leis para que as peças dos carros que são desmontados sejam numeradas.\n\nSimplificação: \n- Propomos mudanças nas leis para numerar as"
+    },
+    {
+      "idx": 52,
+      "original": "Estamos cadastrando ferros-velhos, mas não tivemos um trabalho forte contra a clonagem e agora vamos atacar para valer -- admitiu Bacci.",
+      "reference": "Estamos reunindo informações sobre ferros-velhos, mas não tivemos um trabalho forte contra a clonagem.",
+      "prediction": "Estamos registrando sucatas, mas não fizemos um trabalho efetivo contra a fraude e agora vamos agir com mais força -- admitiu Bacci.",
+      "raw_output": "Vamos pensar passo a passo:\n\n- Identifique palavras difíceis: \n  - \"ferros-velhos\" (pode ser entendido como sucatas ou restos de metal, mas é um termo específico)\n  - \"clonagem\" (pode ser entendido como cópia ou reprodução, mas nesse contexto, parece referir-se a algum tipo de fraude ou irregularidade)\n\n- Substitua por sinônimos simples:\n  - \"ferros-velhos\" por \"sucatas\"\n  - \"clonagem\" por \"fraude\" ou \"irregularidade\"\n\n- Reescreva em ordem direta:\n  - A frase original está praticamente em ordem direta, mas pode ser simplificada.\n\n- Verifique o sentido:\n  - A frase original admite que estão cadastrando sucatas, mas não trabalharam suficientemente contra a fraude e agora pretendem agir com mais força.\n\nSimplificação final: Estamos registrando sucatas, mas não fizemos um trabalho efetivo contra a fraude e agora vamos agir com mais força -- admitiu Bacci."
+    },
+    {
+      "idx": 53,
+      "original": "O secretário estimou que a clonagem pode ser o destino de até 40% dos veículos roubados.",
+      "reference": "O secretário calculou que a clonagem pode ser o destino de até 40% dos veículos roubados.",
+      "prediction": "O secretário acha que até 40% dos carros roubados podem ser transformados em cópias.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"estimou\" pode ser substituído por \"calculou\" ou \"acha que\";\n   - \"clonagem\" pode ser explicado como \"criar uma cópia\" ou \"fazer uma réplica\";\n   - \"destino\" pode ser substituído por \"fim\" ou \"sorte\";\n\n2. Substitua por sinônimos simples:\n   - \"estimou\" -> \"acha que\";\n   - \"clonagem\" -> \"criar cópias\";\n   - \"destino\" -> \"fim\";\n\n3. Reescreva em ordem direta:\n   - A frase já está em ordem direta.\n\n4. Verifique o sentido:\n   - O sentido é que o secretário acha que até 40% dos carros roubados podem acabar sendo clonados.\n\nSimplificação final: O secretário acha que até 40% dos carros roubados podem ser transformados em cópias."
+    },
+    {
+      "idx": 54,
+      "original": "Segundo ele, foram identificados pontos de clonagem na Região Metropolitana, que serão desarticulados em breve.",
+      "reference": "O secretário afirma que foram identificados pontos de clonagem na Região Metropolitana.",
+      "prediction": "Encontraram locais de clonagem na Região Metropolitana que logo serão fechados.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identificar palavras difíceis:\n- \"identificados\" pode ser substituído por \"encontrados\"\n- \"pontos de clonagem\" pode ser substituído por \"locais de clonagem\" ou simplesmente \"clonagens\"\n- \"desarticulados\" pode ser substituído por \"desmantelados\" ou \"fechados\"\n\n2. Reescrever em ordem direta e verificar o sentido:\n- A frase original está em ordem direta, mas vamos tentar simplificar: \"Encontraram locais de clonagem na Região Metropolitana que logo serão fechados.\"\n\n3. Simplificação final:\nSimplificação final: Encontraram locais de clonagem na Região Metropolitana que logo serão fechados."
+    },
+    {
+      "idx": 55,
+      "original": "Um deles teria a participação de policiais civis e militares que dariam proteção aos bandidos.",
+      "reference": "Um deles teria a participação de policiais civis e militares.",
+      "prediction": "Um deles teria o envolvimento de policiais que protegeriam os criminosos.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis: \n   - \"participação\" pode ser um pouco complexa, mas vamos manter por enquanto.\n   - \"policiais civis e militares\" é um termo específico, mas claro.\n   - \"bandidos\" é um termo que pode ser substituído por um sinônimo mais neutro, como \"criminosos\".\n\n2. Substitua por sinônimos simples:\n   - \"participação\" pode ser substituída por \"envolvimento\".\n   - \"bandidos\" por \"criminosos\".\n\n3. Reescreva em ordem direta:\n   - A frase já está em ordem direta.\n\n4. Verifique o sentido:\n   - A frase original e a adaptada até agora querem dizer que um dos envolvidos teria o apoio de policiais para proteger criminosos.\n\nSimplificação final: Um deles teria o envolvimento de policiais que protegeriam os criminosos."
+    },
+    {
+      "idx": 56,
+      "original": "Outra forma para combater o crime deverá contar com a ajuda de ladrões de carro.",
+      "reference": "Outra forma para combater o crime deverá contar com a ajuda de ladrões de carros.",
+      "prediction": "Outra forma de lutar contra o roubo de carros vai precisar da ajuda de ladrões de carro.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identificar palavras difíceis: A palavra \"combater\" pode ser considerada um pouco formal, mas vamos manter por enquanto. A expressão \"deverá contar\" pode ser simplificada.\n\n2. Substituir por sinônimos simples: Em vez de \"combater\", podemos pensar em \"lutar contra\" ou simplesmente \"prevenir\", mas \"combater\" é razoavelmente simples. \"Deverá contar\" pode ser substituído por \"precisará\" ou \"vai precisar\".\n\n3. Reescrever em ordem direta: A frase já está em uma ordem direta razoável.\n\n4. Verificar o sentido: A frase original sugere que uma forma de lutar contra o crime de roubo de carros é obter ajuda de ladrões de carro. Isso pode parecer contraintuitivo, mas a ideia pode ser que, entendendo como os ladrões agem, pode-se prevenir o crime.\n\nSimplificação final: Outra forma de lutar contra o roubo de carros vai precisar da ajuda de ladrões de carro."
+    },
+    {
+      "idx": 57,
+      "original": "Bacci pretende oferecer recompensa, a chamada delação premiada, a bandidos que colaborarem com as investigações para desarticular as grandes quadrilhas.",
+      "reference": "Bacci pretende oferecer recompensa a bandidos que colaborarem com as investigações para desmanchar as grandes quadrilhas.",
+      "prediction": "Bacci vai dar um prêmio para que ajudarem a polícia a acabarilhas grandes.",
+      "raw_output": " a passo:\n\n- \"\" parece ser um nome próprio, então não há necessidade de substituição.\n- \"pretende\" pode ser substituído por \"quer\" ou \"planeja\", optando por \"vai\".\n- \"oferecer recompensa\" pode ser mantido ou substituído por \"dar um prêmio\", optando por manter.\n- \"delação premiada\" é um termo jurídico, pode ser substituído por \" premiada\" ou simplesmente manter o termo se o público-al familiarizado, optando por explicar de forma simples: \"prêmio para quem ajudar\".\n- \"bandidos\" pode ser \"criminosos\".\n- \"colaborarem com as investigações\" pode ser simplificado para \"ajudarem na investigação\".\n- \"desarticular\" pode por \"acabar\" oumontar\", optando por \"\".\n\nReescrevendo em ordem direta: Bacci vai oferecer um prêmio para criminosos que ajudarem na investigação para acabar quadrilhas.\n\nSimplificação final: Bacci vai dar um prêmio para que ajudarem a polícia a acabarilhas grandes."
+    },
+    {
+      "idx": 58,
+      "original": "Autores de furto estariam migrando para o roubo.",
+      "reference": "Autores de furto estariam mudando para o roubo.",
+      "prediction": "Ladrões de objetos estão mudando para assaltos.",
+      "raw_output": "Pessoas que cometem furtos estão passando a cometer roubos.\n\nSimplificação final: Ladrões de objetos estão mudando para assaltos."
+    },
+    {
+      "idx": 59,
+      "original": "O subcomandante-geral da BM, coronel Paulo Roberto Mendes, reconheceu que o incremento nos roubos pode estar ligado a deficiências nas manobras adotadas.",
+      "reference": "O subcomandante-geral da BM reconheceu que o aumento nos roubos pode estar ligado a deficiências nas medidas aplicadas, especialmente na Capital, onde ocorrem 54,9% dos casos do Estado.",
+      "prediction": "O segundo em comando da BM, coronel Paulo Roberto Mendes, admitiu que o aumento nos roubos pode estar relacionado a problemas nas estratégias usadas.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"subcomandante-geral\" é um cargo específico, mas pode ser simplificado para um termo mais geral como \"segundo em comando\" ou mantido como está para precisão.\n   - \"incremento\" pode ser entendido como \"aumento\".\n   - \"deficiências\" pode ser substituído por \"falhas\" ou \"problemas\".\n   - \"manobras\" pode ser entendido como \"estratégias\" ou \"ações\".\n\n2. Substitua por sinônimos simples:\n   - \"subcomandante-geral\" = segundo em comando / mantemos como está para precisão.\n   - \"incremento\" = aumento.\n   - \"deficiências\" = falhas / problemas.\n   - \"manobras\" = estratégias / ações.\n\n3. Reescreva em ordem direta:\n   A frase já está razoavelmente direta, mas vamos ajustar: \"O segundo em comando da BM, coronel Paulo Roberto Mendes, admitiu que o aumento nos roubos pode estar relacionado a problemas nas estratégias usadas.\"\n\n4. Verifique o sentido:\n   A simplificação mantém o sentido original de que o coronel reconheceu uma possível ligação entre o aumento de roubos e problemas nas estratégias da BM.\n\nSimplificação final: O segundo em comando da BM, coronel Paulo Roberto Mendes, admitiu que o aumento nos roubos pode estar relacionado a problemas nas estratégias usadas."
+    },
+    {
+      "idx": 60,
+      "original": "Especialmente na Capital, onde ocorrem 54,9% dos casos do Estado.",
+      "reference": "O subcomandante-geral da BM é o coronel Paulo Roberto Mendes.",
+      "prediction": "Principalmente na capital, ocorrem mais da metade dos casos do estado.",
+      "raw_output": "Especialmente na capital, é onde acontecem mais da metade dos casos do estado.\n\nSimplificação final: Principalmente na capital, ocorrem mais da metade dos casos do estado."
+    },
+    {
+      "idx": 61,
+      "original": "Em março, o Comando de Policiamento da Capital (CPC) atingiu 40% do número previsto para fiscalização de veículos, enquanto outros comandos regionais, como Metropolitano, Sul, Missões e Vale do Taquari, superaram as metas estipuladas.",
+      "reference": "O Comando de Policiamento da Capital (CPC) atingiu em março 40% do número previsto para controle de veículos.",
+      "prediction": "Em março, a polícia da capital alcançou 40% da meta de verificar veículos, enquanto outras regiões ultrapassaram as suas metas.",
+      "raw_output": "Pense passo a passo:\n\n- Identifique palavras difíceis: \n  - Comando de Policiamento da Capital (CPC): é uma unidade específica da polícia.\n  - Fiscalização: verificação ou inspeção.\n  - Metas estipuladas: objetivos estabelecidos.\n\n- Substitua por sinônimos simples:\n  - Comando de Policiamento da Capital (CPC) pode ser referido como \"polícia da capital\".\n  - Fiscalização pode ser substituída por \"inspeção\" ou \"verificação\".\n  - Metas estipuladas pode ser substituída por \"objetivos\".\n\n- Reescreva em ordem direta:\n  - A frase já está razoavelmente em ordem direta.\n\n- Verifique o sentido:\n  - A frase informa que em março, a polícia da capital atingiu 40% da meta de verificar veículos, enquanto outras regiões ultrapassaram seus objetivos.\n\nSimplificação final: Em março, a polícia da capital alcançou 40% da meta de verificar veículos, enquanto outras regiões ultrapassaram as suas metas."
+    },
+    {
+      "idx": 62,
+      "original": "-- O CPC está abaixo do que queremos, apesar do aumento em relação a janeiro, quando atingiu 5% da meta.",
+      "reference": "-- O CPC está abaixo do que queremos, apesar do aumento quando comparado com janeiro.",
+      "prediction": "Nosso índice ainda está baixo, mas melhorou em relação a janeiro.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"CPC\" pode ser um termo técnico, mas sem contexto, vamos considerar que se refere a algum tipo de indicador ou percentual. Vamos manter por enquanto.\n   - \"atingiu\" é um verbo um pouco formal.\n\n2. Substitua por sinônimos simples:\n   - \"CPC\" pode ser mantido por enquanto, mas vamos considerar que é um índice ou percentual.\n   - \"atingiu\" pode ser substituído por \"chegou a\" ou \"alcançou\".\n\n3. Reescreva em ordem direta:\n   - A frase já está em uma ordem direta razoável.\n\n4. Verifique o sentido:\n   - O sentido é que o CPC (índice/percentual) não está no nível desejado, mas melhorou em relação a janeiro, quando estava em 5% da meta.\n\nSimplificando \"CPC\" para algo mais genérico e mantendo o resto da frase simples:\n\nO nosso índice ainda está baixo, mas melhorou comparado a janeiro, quando estava em 5% do objetivo.\n\nSimplificação final: Nosso índice ainda está baixo, mas melhorou em relação a janeiro."
+    },
+    {
+      "idx": 63,
+      "original": "Sabemos que o crime anda sobre rodas e que o problema está em Porto Alegre.",
+      "reference": "Sabemos que o problema está em Porto Alegre.",
+      "prediction": "Sabemos que o crime circula e há um problema em Porto Alegre.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identificar palavras difíceis: \n   - \"crime\" pode ser entendido como \"delinquência\" ou atividades ilegais, mas vamos manter \"crime\" por ser simples.\n   - \"anda sobre rodas\" é uma expressão que pode ser substituída por \"se move rapidamente\" ou algo similar, mas uma boa opção é \"circula\" ou \"se desloca\", para manter a simplicidade e a clareza.\n\n2. Substitua por sinônimos simples:\n   - \"crime\" pode ficar como está, pois é simples.\n   - \"anda sobre rodas\" pode ser substituído por \"circula\".\n\n3. Reescreva em ordem direta:\n   - A frase já está em ordem direta: Sabemos que o crime circula e que o problema está em Porto Alegre.\n\n4. Verifique o sentido:\n   - A frase original e a reescrita dão a entender que o crime está se deslocando ou circulando e que há um problema específico em Porto Alegre. \n\nSimplificação final: Sabemos que o crime circula e há um problema em Porto Alegre."
+    },
+    {
+      "idx": 64,
+      "original": "Hoje (ontem) mesmo nos reunimos para buscar soluções -- afirmou Mendes.",
+      "reference": "Hoje mesmo nos reunimos para buscar soluções -- afirmou Mendes.",
+      "prediction": "Ontem, nos reunimos para encontrar soluções -- disse Mendes.",
+      "raw_output": "Pense passo a passo:\n\n- \"Hoje\" está entre parênteses e \"ontem\", o que sugere que a data pode não ser precisa ou está sendo questionada. Vamos manter a data que parece mais certa no contexto, mas como está entre parênteses, pode ser omitida para simplificar.\n- \"mesmo\" pode ser omitido para simplificar a frase.\n- \"nos reunimos\" pode ser substituído por \"nos reunimos\" que já é uma expressão simples.\n- \"buscar soluções\" é uma expressão simples.\n\nReescrevendo em ordem direta e verificando o sentido:\n\n\"Ontem mesmo, nos reunimos para buscar soluções -- afirmou Mendes.\"\n\nMas para uma simplificação maior, mantendo o sentido:\n\n\"Ontem, nos reunimos para encontrar soluções -- disse Mendes.\"\n\nSimplificação final:\nOntem, nos reunimos para encontrar soluções -- disse Mendes."
+    },
+    {
+      "idx": 65,
+      "original": "Enquanto subiu o roubo de carros -- quando a vítima é abordada por assaltantes­, diminuíram em 28,67% os casos de furto de veículos -- quando o ladrão age sem a presença da vítima.",
+      "reference": "O furto acontece quando o ladrão age sem a presença da vítima.",
+      "prediction": "O roubo de carros, quando a vítima é surpreendida por ladrões, aumentou, mas o furto de carros, quando o ladrão pega o carro sem a pessoa estar presente, caiu 28,67%.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"roubo de carros\" pode ser entendido como \"roubo de veículos\", mas vamos manter para simplificar.\n   - \"abordada por assaltantes\" pode ser simplificado.\n   - \"diminuíram\" é um verbo que pode ser mantido.\n   - \"furto de veículos\" pode ser mantido, mas vamos explicar de forma mais simples.\n   - \"quando o ladrão age sem a presença da vítima\" pode ser simplificado.\n\n2. Substitua por sinônimos simples:\n   - \"abordada por assaltantes\" pode ser \"quando a vítima é surpreendida por ladrões\".\n   - \"diminuíram\" pode ser mantido ou substituído por \"caíram\".\n   - \"furto de veículos\" pode ser explicado como \"quando o ladrão pega o carro sem a pessoa estar presente\".\n\n3. Reescreva em ordem direta:\n   - Original: Enquanto subiu o roubo de carros -- quando a vítima é abordada por assaltantes­, diminuíram em 28,67% os casos de furto de veículos -- quando o ladrão age sem a presença da vítima.\n   - Simplificado: O roubo de carros (quando a vítima é surpreendida por ladrões) aumentou, mas o furto de carros (quando o ladrão pega o carro sem a pessoa estar presente) caiu 28,67%.\n\n4. Verifique o sentido:\n   - A frase original compara dois tipos de crimes contra veículos: roubo (com a presença da vítima) e furto (sem a presença da vítima). O roubo aumentou, e o furto diminuiu significativamente.\n\nSimplificação final: \nO roubo de carros, quando a vítima é surpreendida por ladrões, aumentou, mas o furto de carros, quando o ladrão pega o carro sem a pessoa estar presente, caiu 28,67%."
+    },
+    {
+      "idx": 66,
+      "original": "Isso porque carros novos têm cada vez mais dispositivos de segurança, como alarme, bloqueador de combustível e chave codificada.",
+      "reference": "Isso acontece porque os carros novos têm cada vez mais aparelhos de segurança.",
+      "prediction": "Carros novos têm mais itens de segurança, como alarme, bloqueio de combustível e chave codificada.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis: Nenhuma palavra parece particularmente difícil, mas podemos considerar \"dispositivos de segurança\" como um termo que pode ser simplificado.\n\n2. Substitua por sinônimos simples: \"dispositivos de segurança\" pode ser substituído por \"equipamentos de segurança\" ou simplesmente \"itens de segurança\".\n\n3. Reescreva em ordem direta: A frase já está em uma ordem direta razoável.\n\n4. Verifique o sentido: O sentido da frase é claro, explica por que carros novos são mais seguros devido aos itens de segurança.\n\nSimplificação final: Carros novos têm mais itens de segurança, como alarme, bloqueio de combustível e chave codificada."
+    },
+    {
+      "idx": 67,
+      "original": "Segundo especialistas, a ampliação de tecnologias seria a razão para a queda dos furtos.",
+      "reference": "Os especialistas afirmam que a maior quantidade de tecnologias seria a razão para a queda dos furtos.",
+      "prediction": "Especialistas dizem que o aumento da tecnologia é a razão para a diminuição dos furtos.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"especialistas\" (pode ser um termo um pouco formal)\n   - \"ampliação\" (pode ser substituído por um termo mais simples)\n   - \"tecnologias\" (pode ser mantido, mas entendido como \"tecnologia\" no geral)\n\n2. Substitua por sinônimos simples:\n   - \"especialistas\" por \"especialistas\" ou \"peritos\" (mantendo o original para precisão, mas \"peritos\" pode ser mais acessível)\n   - \"ampliação\" por \"aumento\" ou \"expansão\"\n   - \"tecnologias\" pode ser entendido como \"tecnologia\"\n\n3. Reescreva em ordem direta:\n   - A frase já está em ordem direta.\n\n4. Verifique o sentido:\n   - O sentido é que, de acordo com especialistas, o aumento da tecnologia é o motivo para a diminuição dos furtos.\n\nSimplificação final: \nEspecialistas dizem que o aumento da tecnologia é a razão para a diminuição dos furtos."
+    },
+    {
+      "idx": 68,
+      "original": "-- Quando o criminoso quer um carro novo, ele prefere assaltar -- diz Marcos Vinícius Souza, professor do curso de Gestão em Segurança da Universidade de Santa Cruz.",
+      "reference": "Marcos Vinícius Souza é professor do curso de Gestão em Segurança da Universidade de Santa Cruz.",
+      "prediction": "\"Quando o ladrão quer um carro novo, ele prefere roubar\", diz Marcos Vinícius Souza, professor de segurança da Universidade de Santa Cruz.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identificar palavras difíceis:\n   - criminoso (pode ser substituído por \"ladrão\" ou \"bandido\")\n   - assaltar (pode ser substituído por \"roubar\")\n   - Gestão em Segurança (pode ser substituído por \"segurança\")\n\n2. Substituir por sinônimos simples:\n   - criminoso -> ladrão\n   - assaltar -> roubar\n   - Gestão em Segurança -> segurança\n\n3. Reescrever em ordem direta:\n   A frase já está em ordem direta.\n\n4. Verificar o sentido:\n   A frase original e a simplificada devem ter o mesmo sentido.\n\nFrase original reescrita com substituições: \n-- Quando o ladrão quer um carro novo, ele prefere roubar -- diz Marcos Vinícius Souza, professor de segurança da Universidade de Santa Cruz.\n\nSimplificação final: \nSimplificação final: \"Quando o ladrão quer um carro novo, ele prefere roubar\", diz Marcos Vinícius Souza, professor de segurança da Universidade de Santa Cruz."
+    },
+    {
+      "idx": 69,
+      "original": "A quatro meses da eleição de 1º de outubro, a maioria dos partidos ainda não fechou sua escalação para a disputa pelo Palácio Piratini, formando o cenário mais instável dos últimos anos.",
+      "reference": "Quatro meses antes da eleição de 1º de outubro, a maioria dos partidos ainda não escolheu os candidatos para a disputa pelo Palácio Piratini.",
+      "prediction": "Com quatro meses para a eleição, a maioria dos partidos ainda não definiu seus candidatos para o governo do estado, criando o cenário mais instável dos últimos anos.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"escalação\" pode ser um termo menos comum para alguns leitores.\n   - \"Palácio Piratini\" é um termo específico que pode ser pouco conhecido por pessoas que não estão familiarizadas com a política do Rio Grande do Sul.\n\n2. Substitua por sinônimos simples:\n   - \"escalação\" pode ser substituído por \"lista de candidatos\" ou simplesmente \"candidatos\".\n   - \"Palácio Piratini\" pode ser substituído por \"governadoria\" ou \"governo do estado\", já que é o local onde se encontra o governo do Rio Grande do Sul.\n\n3. Reescreva em ordem direta:\n   - A frase original está razoavelmente em ordem direta, mas pode ser reescrita para clareza.\n\n4. Verifique o sentido:\n   - A frase original fala que a maioria dos partidos ainda não definiu seus candidatos para a eleição com quatro meses de antecedência, o que cria um cenário instável.\n\nSimplificação final: Com quatro meses para a eleição, a maioria dos partidos ainda não definiu seus candidatos para o governo do estado, criando o cenário mais instável dos últimos anos."
+    },
+    {
+      "idx": 70,
+      "original": "Diferentemente de outros pleitos, as legendas este ano são obrigadas a driblar novas regras eleitorais, desgaste da imagem da classe política e projetos nacionais envolvendo líderes gaúchos.",
+      "reference": "Diferentemente de outras eleições, as legendas este ano são obrigadas a driblar novas regras eleitorais, enfraquecimento da imagem da classe política e projetos nacionais envolvendo líderes gaúchos.",
+      "prediction": "Ao contrário de outras eleições, os partidos políticos deste ano precisam seguir novas regras eleitorais, lidar com problemas na imagem dos políticos e projetos importantes do país que envolvem líderes do Rio Grande do Sul.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"pleitos\" (pode ser substituído por \"eleições\")\n   - \"legendas\" (pode ser mantido, mas é importante entender que se refere a partidos políticos)\n   - \"driblar\" (pode ser substituído por \"cumprir\" ou \"seguir\")\n   - \"desgaste\" (pode ser substituído por \"deterioração\" ou \"problemas\")\n   - \"classe política\" (pode ser substituído por \"políticos\")\n   - \"projetos nacionais\" (pode ser mantido, mas entendido como planos ou ações importantes para o país)\n   - \"líderes gaúchos\" (se refere a líderes do Rio Grande do Sul, mas pode ser especificado)\n\n2. Substitua por sinônimos simples e reescreva em ordem direta:\n   - Original: \"Diferentemente de outros pleitos, as legendas este ano são obrigadas a driblar novas regras eleitorais, desgaste da imagem da classe política e projetos nacionais envolvendo líderes gaúchos.\"\n   - Simplificado: \"Ao contrário de outras eleições, os partidos políticos deste ano precisam seguir novas regras eleitorais, lidar com problemas na imagem dos políticos e projetos importantes do país que envolvem líderes do Rio Grande do Sul.\"\n\n3. Verifique o sentido:\n   - A frase original fala que as legendas (partidos políticos) este ano têm que lidar com novas regras eleitorais, problemas na imagem dos políticos e projetos nacionais que envolvem líderes do Rio Grande do Sul, de forma diferente de outros pleitos.\n   - A simplificação mantém o sentido de que os partidos políticos este ano enfrentam desafios diferentes em comparação com eleições passadas.\n\nSimplificação final: \nAo contrário de outras eleições, os partidos políticos deste ano precisam seguir novas regras eleitorais, lidar com problemas na imagem dos políticos e projetos importantes do país que envolvem líderes do Rio Grande do Sul."
+    },
+    {
+      "idx": 71,
+      "original": "Nesta época em 2002, candidatos já estavam em campo.",
+      "reference": "Nesta época em 2002, os candidatos já estavam em campo.",
+      "prediction": "Em 2002, já havia candidatos na disputa.",
+      "raw_output": "Nesta época, em 2002, já havia candidatos concorrendo. \n\nSimplificação final: Em 2002, já havia candidatos na disputa."
+    },
+    {
+      "idx": 72,
+      "original": "Pelo PP (então PPB), Celso Bernardi disparava críticas contra o então secretário da Justiça e da Segurança, José Paulo Bisol.",
+      "reference": "Celso Bernardi disparava críticas contra o secretário da Justiça e da Segurança daquela época.",
+      "prediction": "Pelo PP, Celso Bernardi criticava o secretário de Justiça, José Paulo Bisol.",
+      "raw_output": "Pelo partido Progressista Brasileiro (PPB), Celso Bernardi criticava o secretário de Justiça e Segurança, José Paulo Bisol.\n\nSimplificação final: Pelo PP, Celso Bernardi criticava o secretário de Justiça, José Paulo Bisol."
+    },
+    {
+      "idx": 73,
+      "original": "Bernardi tinha Denise Kempf como vice.",
+      "reference": "Denise Kempf era vice de Bernardi.",
+      "prediction": "Denise Kempf era a vice de Bernardi.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis: Nenhuma palavra parece particularmente difícil aqui.\n2. Substitua por sinônimos simples: Não há necessidade de substituição.\n3. Reescreva em ordem direta: A frase já está em ordem direta.\n4. Verifique o sentido: A frase informa que Denise Kempf era a vice de Bernardi.\n\nSimplificação final: Bernardi tinha Denise Kempf como sua vice. \n\n(Melhorou um pouco para deixar mais claro o \"como vice\") \n\nou \n\nSimplificação final: Denise Kempf era a vice de Bernardi."
+    },
+    {
+      "idx": 74,
+      "original": "O PP de hoje apresenta o deputado federal Francisco Turra como concorrente, mas negocia a composição da chapa.",
+      "reference": "O PP de hoje apresenta o deputado federal Francisco Turra como concorrente.",
+      "prediction": "O PP de hoje tem um político chamado Francisco Turra como candidato, mas está negociando a formação da lista.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identificar palavras difíceis:\n   - \"PP\" pode ser entendido como um partido político, mas para simplificar, vamos considerar que se refere a um grupo ou partido.\n   - \"Deputado federal\" é um termo que pode ser simplificado.\n   - \"Concorrente\" pode ser entendido como alguém que compete.\n   - \"Composição da chapa\" pode ser entendido como a formação de uma lista ou grupo de candidatos.\n\n2. Substituir por sinônimos simples:\n   - \"PP\" pode ser mantido como está, ou trocado por \"partido\", mas manteremos \"PP\" para não perder a especificidade.\n   - \"Deputado federal\" pode ser trocado por \"político\".\n   - \"Concorrente\" pode ser mantido ou trocado por \"candidato\".\n   - \"Composição da chapa\" pode ser trocado por \"formação da lista\".\n\n3. Reescrever em ordem direta:\n   - A frase original está razoavelmente em ordem direta, mas vamos ajustar para tornar mais clara: \"O PP de hoje tem um político chamado Francisco Turra como candidato, mas está negociando a formação da lista.\"\n\n4. Verificar o sentido:\n   - A frase simplificada mantém o sentido original: o partido PP apresenta Francisco Turra como um de seus candidatos, mas ainda está discutindo quem mais fará parte da lista.\n\nSimplificação final: O PP de hoje tem um político chamado Francisco Turra como candidato, mas está negociando a formação da lista."
+    },
+    {
+      "idx": 75,
+      "original": "Em 29 de maio de 2002, Antônio Britto (PPS) cumpria agenda no Vale do Sinos.",
+      "reference": "Em 29 de maio de 2002, Antônio Britto cumpria agenda no Vale dos Sinos.",
+      "prediction": "Em 29 de maio de 2002, Antônio Britto cumpria uma agenda no Vale do Sinos.",
+      "raw_output": "Em 29 de maio de 2002, Antônio Britto (PPS) tinha compromissos no Vale do Sinos.\n\nSimplificação final: Em 29 de maio de 2002, Antônio Britto cumpria uma agenda no Vale do Sinos."
+    },
+    {
+      "idx": 76,
+      "original": "Germano Bonow (PFL) era seu companheiro de chapa.",
+      "reference": "Germano Bonow era seu companheiro de chapa.",
+      "prediction": "Germano Bonow, do PFL, era seu parceiro de eleição.",
+      "raw_output": "ense passo a passo:\n\n- A frase é simples e não contém palavras muito difíceis.\n- \"Companheiro de chapa\" pode ser entendido como alguém que concorre junto com outro em uma eleição, formando uma dupla.\n- A ordem direta é: Germano Bonow, do partido PFL, era o companheiro de dele.\n\nSimplificação final: Germano Bonow, do PFL, era seu parceiro de eleição."
+    },
+    {
+      "idx": 77,
+      "original": "O PFL de 2006 ainda não cravou um nome na disputa, e o PPS tenta firmar uma aliança em torno do deputado federal Nelson Proença.",
+      "reference": "O PPS tenta fazer uma aliança em torno do deputado federal Nelson Proença.",
+      "prediction": "O PFL de 2006 ainda não definiu um nome para a disputa, e o PPS está tentando fazer um acordo com o deputado federal Nelson Proença.",
+      "raw_output": "Pense passo a passo:\n\n- Identifique palavras difíceis: \n  - \"cravou\" é um verbo que pode ser substituído por \"definiu\" ou \"escolheu\".\n  - \"aliança\" pode ser entendida como \"acordo\" ou \"parceria\".\n  - \"em torno de\" pode ser reescrito como \"com\" ou \"ao redor de\", mas para simplificar, podemos usar \"com\".\n\n- Substitua por sinônimos simples:\n  - \"cravou\" por \"definiu\".\n  - \"aliança\" por \"acordo\".\n\n- Reescreva em ordem direta:\n  - A ordem direta já está razoavelmente mantida, mas podemos ajustar para melhorar a clareza.\n\n- Verifique o sentido:\n  - O sentido original é que o PFL de 2006 ainda não escolheu um nome para a disputa, e o PPS está tentando fazer um acordo com o deputado Nelson Proença.\n\nSimplificação final: O PFL de 2006 ainda não definiu um nome para a disputa, e o PPS está tentando fazer um acordo com o deputado federal Nelson Proença."
+    },
+    {
+      "idx": 78,
+      "original": "Novas regras eleitorais dificultam negociação.",
+      "reference": "Novas regras eleitorais tornam o entendimento mais difícil.",
+      "prediction": "Novas regras para eleições dificultam acordo.",
+      "raw_output": "Vamos seguir os passos indicados:\n\n1. **Identificar palavras difíceis**: A palavra \"eleitorais\" pode ser considerada difícil para alguns falantes de português brasileiro, pois não é usada com frequência no dia a dia.\n\n2. **Substituir por sinônimos simples**: A palavra \"eleitorais\" pode ser substituída por \"para eleições\" ou simplesmente relacionada ao contexto de \"votação\" ou \"eleições\".\n\n3. **Reescrever em ordem direta**: A frase já está em uma ordem direta razoável, mas podemos tentar deixá-la ainda mais simples: \"Novas regras para eleições dificultam a negociação.\"\n\n4. **Verificar o sentido**: A frase reescrita mantém o mesmo sentido da original.\n\nSimplificação final: Novas regras para eleições dificultam acordo."
+    },
+    {
+      "idx": 79,
+      "original": "Para os analistas políticos, a indecisão eleitoral de 2006 é fruto de uma confluência de fatores.",
+      "reference": "Para os analistas políticos, a indecisão eleitoral de 2006 é resultado do encontro de muitos fatores.",
+      "prediction": "Os especialistas em política acham que a indecisão sobre quem votar em 2006 veio de vários motivos.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. **Identificar palavras difíceis**: \n   - \"analistas políticos\" (pode ser entendido como especialistas em política)\n   - \"indecisão eleitoral\" (pode ser substituído por \"decisão difícil sobre votos\" ou simplesmente \"indecisão sobre quem votar\")\n   - \"confluência de fatores\" (pode ser entendido como \"conjunto de razões\" ou \"vários motivos\")\n\n2. **Substituir por sinônimos simples**:\n   - \"analistas políticos\" por \"especialistas em política\"\n   - \"indecisão eleitoral\" por \"indecisão sobre quem votar\"\n   - \"confluência de fatores\" por \"vários motivos\"\n\n3. **Reescrever em ordem direta**:\n   - A frase original já está em uma ordem direta lógica.\n\n4. **Verificar o sentido**:\n   - A frase original fala que, segundo especialistas em política, a indecisão sobre quem votar em 2006 veio de vários motivos.\n\n**Simplificação final:** \nOs especialistas em política acham que a indecisão sobre quem votar em 2006 veio de vários motivos."
+    },
+    {
+      "idx": 80,
+      "original": "O cientista político Paulo Moura observa que o envolvimento do governador Germano Rigotto e do senador Pedro Simon na briga pela candidatura própria do PMDB a presidente congelou as negociações no estado.",
+      "reference": "O cientista político Paulo Moura observa que a participação do governador Germano Rigotto e do senador Pedro Simon na briga pela candidatura própria do PMDB a presidente congelou os entendimentos no estado.",
+      "prediction": "O político Paulo Moura diz que a participação do governador Germano Rigotto e do senador Pedro Simon na disputa pela candidatura do PMDB à presidência paralisou as negociações no estado.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"cientista político\" (pode ser substituído por \"especialista em política\" ou simplesmente \"político\")\n   - \"envolvimento\" (pode ser substituído por \"participação\")\n   - \"candidatura própria\" (pode ser substituído por \"candidatura\")\n   - \"congelou\" (pode ser substituído por \"paralisou\" ou \"parou\")\n\n2. Substitua por sinônimos simples:\n   - \"cientista político\" -> \"político\"\n   - \"envolvimento\" -> \"participação\"\n   - \"candidatura própria\" -> \"candidatura\"\n   - \"congelou\" -> \"paralisou\"\n\n3. Reescreva em ordem direta:\n   A frase já está razoavelmente direta, mas vamos tentar deixá-la ainda mais clara.\n\n4. Verifique o sentido:\n   O sentido é que as negociações no estado pararam por causa da participação de certas pessoas em uma disputa.\n\nSimplificação final: \nO político Paulo Moura diz que a participação do governador Germano Rigotto e do senador Pedro Simon na disputa pela candidatura do PMDB à presidência paralisou as negociações no estado."
+    },
+    {
+      "idx": 81,
+      "original": "Rigotto, lembra Moura, também provocou incertezas nos aliados ao assumir que buscaria a reeleição apenas no final de abril.",
+      "reference": "Moura lembra que Rigotto também provocou incertezas nos aliados ao assumir que buscaria a reeleição apenas no final de abril.",
+      "prediction": "Rigotto fez com que seus amigos políticos tivessem dúvidas quando disse que só iria tentar ser reeleito novamente no final de abril.",
+      "raw_output": "Pense passo a passo:\n\n- Identifique palavras difíceis: \"incertezas\", \"reeleição\" e \"aliados\" podem ser considerados difíceis, mas vamos simplificar com sinônimos.\n- Substitua por sinônimos simples: \n  - \"incertezas\" pode ser \"dúvidas\";\n  - \"reeleição\" pode ser \"ser reeleito novamente\";\n  - \"aliados\" pode ser \"amigos políticos\" ou \"apoiadores\".\n\n- Reescreva em ordem direta: \n  - Original: Rigotto, lembra Moura, também provocou incertezas nos aliados ao assumir que buscaria a reeleição apenas no final de abril.\n  - Simplificado: Rigotto fez com que seus amigos políticos tivessem dúvidas quando disse que só iria tentar ser reeleito novamente no final de abril.\n\n- Verifique o sentido: A simplificação mantém o mesmo sentido da frase original.\n\nSimplificação final: Rigotto fez com que seus amigos políticos tivessem dúvidas quando disse que só iria tentar ser reeleito novamente no final de abril."
+    },
+    {
+      "idx": 82,
+      "original": "O cientista político André Marenco afirma que a Justiça Eleitoral tem sido rigorosa em relação à propaganda antes do prazo legal e que a verticalização impôs aos partidos a conciliação de nacionais e regionais.",
+      "reference": "O cientista político André Marenco afirma que a Justiça Eleitoral tem sido rigorosa sobre a propaganda antes do prazo legal.",
+      "prediction": "O especialista em política André Marenco diz que a Justiça Eleitoral tem sido rigorosa com a campanha antes do tempo permitido e que o controle centralizado fez com que os partidos combinassem as estratégias nacionais e regionais.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identificar palavras difíceis:\n   - \"cientista político\" pode ser entendido como um especialista em política.\n   - \"Justiça Eleitoral\" se refere ao órgão responsável por fiscalizar as eleições.\n   - \"propaganda\" pode ser substituída por \"publicidade\" ou \"campanha\".\n   - \"prazo legal\" significa o tempo permitido por lei.\n   - \"verticalização\" é um termo que pode ser substituído por \"controle centralizado\" ou simplesmente entendido como um processo de organização.\n   - \"conciliação\" pode ser entendida como \"combinação\" ou \"ajuste\".\n\n2. Substituir por sinônimos simples:\n   - \"cientista político\" por \"especialista em política\".\n   - \"propaganda\" por \"campanha\".\n   - \"prazo legal\" por \"tempo permitido\".\n   - \"verticalização\" por \"controle centralizado\".\n   - \"conciliação\" por \"ajuste\".\n\n3. Reescrever em ordem direta:\n   A frase original está razoavelmente em ordem direta, mas vamos tentar simplificar ainda mais.\n\n4. Verificar o sentido:\n   - O especialista em política André Marenco diz que a Justiça Eleitoral tem sido rigorosa com a campanha antes do tempo permitido e que o controle centralizado fez com que os partidos combinassem as estratégias nacionais e regionais.\n\nSimplificação final: \nO especialista em política André Marenco diz que a Justiça Eleitoral tem sido rigorosa com a campanha antes do tempo permitido e que o controle centralizado fez com que os partidos combinassem as estratégias nacionais e regionais."
+    },
+    {
+      "idx": 83,
+      "original": "A regra obriga as legendas a fechar nos Estados apenas coligações que não colidam com as nacionais.",
+      "reference": "A regra obriga as legendas a fechar nos Estados apenas as uniões que não se choquem com as nacionais.",
+      "prediction": "A regra faz com que os partidos nos estados só possam fazer alianças que não entrem em conflito com as alianças nacionais.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"legendas\" pode ser entendido como partidos políticos ou siglas partidárias.\n   - \"coligações\" refere-se a alianças entre partidos políticos.\n   - \"colidam\" significa entrar em conflito ou incompatibilidade.\n\n2. Substitua por sinônimos simples:\n   - \"legendas\" pode ser substituído por \"partidos\".\n   - \"coligações\" pode ser mantido ou substituído por \"alianças\".\n   - \"colidam\" pode ser substituído por \"entrem em conflito\".\n\n3. Reescreva em ordem direta:\n   - A frase original está razoavelmente em ordem direta, mas pode ser simplificada para melhor entendimento.\n\n4. Verifique o sentido:\n   - A frase original fala que as regras fazem com que os partidos só façam alianças locais que não entrem em conflito com as alianças nacionais.\n\nSimplificação final: A regra faz com que os partidos nos estados só possam fazer alianças que não entrem em conflito com as alianças nacionais."
+    },
+    {
+      "idx": 84,
+      "original": "As pequenas têm dado mais atenção à eleição para deputado federal para atingir as metas impostas pela norma -- 5% do total de votos para a Câmara e 2% do total de votos válidos dos candidatos a deputado federal em nove Estados.",
+      "reference": "As metas impostas pela norma são 5% do total de votos para a Câmara e 2% do total de votos válidos dos candidatos a deputado federal em nove Estados.",
+      "prediction": "As pequenas estão dando mais atenção à eleição para deputado federal para alcançar os objetivos estabelecidos pela regra -- 5% do total de votos para a Câmara e 2% do total de votos válidos dos candidatos a deputado federal em nove Estados.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identificar palavras difíceis:\n   - \"atingir\" pode ser substituído por \"alcançar\"\n   - \"metas\" pode ser mantido ou substituído por \"objetivos\"\n   - \"impostas\" pode ser substituído por \"estabelecidas\"\n   - \"norma\" pode ser substituído por \"regra\"\n\n2. Substituir por sinônimos simples:\n   - \"atingir\" por \"alcançar\"\n   - \"metas\" por \"objetivos\"\n   - \"impostas\" por \"estabelecidas\"\n   - \"norma\" por \"regra\"\n\n3. Reescrever em ordem direta:\n   - A frase já está razoavelmente em ordem direta, mas vamos ajustar para melhorar a clareza.\n\n4. Verificar o sentido:\n   - O sentido é que as pequenas estão prestando mais atenção à eleição para alcançar objetivos específicos relacionados a votos.\n\nSimplificação final: \nAs pequenas estão dando mais atenção à eleição para deputado federal para alcançar os objetivos estabelecidos pela regra -- 5% do total de votos para a Câmara e 2% do total de votos válidos dos candidatos a deputado federal em nove Estados."
+    },
+    {
+      "idx": 85,
+      "original": "-- Os partidos estão mais cautelosos.",
+      "reference": "-- Os partidos estão mais cuidadosos.",
+      "prediction": "Os partidos estão mais cuidadosos.",
+      "raw_output": "Os partidos estão mais cuidadosos.\n\nSimplificação final: Os partidos estão mais cuidadosos."
+    },
+    {
+      "idx": 86,
+      "original": "Sabem que um movimento errado pode significar a morte -- diz o cientista político Murillo de Aragão.",
+      "reference": "Os partidos sabem que um movimento errado pode significar a morte -- diz o cientista político Murillo de Aragão.",
+      "prediction": "Um erro pode resultar em morte, de acordo com o especialista em política Murillo de Aragão.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis: \n   - \"movimento errado\" pode ser um pouco vago, mas vamos manter por enquanto.\n   - \"significar\" é uma palavra comum, mas podemos verificar se há sinônimo mais simples.\n   - \"morte\" é uma palavra forte e direta.\n   - \"cientista político\" pode ser simplificado para \"especialista em política\".\n\n2. Substitua por sinônimos simples:\n   - \"movimento errado\" pode ser substituído por \"erro\" ou \"decisão errada\".\n   - \"significar\" pode ser substituído por \"ser\" ou \"resultar em\".\n   - \"cientista político\" pode ser substituído por \"especialista em política\".\n\n3. Reescreva em ordem direta:\n   - A frase original está em ordem direta: \"Sabem que um movimento errado pode significar a morte -- diz o cientista político Murillo de Aragão.\"\n   - Uma versão reescrita poderia ser: \"Um movimento errado pode resultar em morte, de acordo com o especialista em política Murillo de Aragão.\"\n\n4. Verifique o sentido:\n   - A frase original e a reescrita dão a entender que um erro pode levar à morte, de acordo com um especialista.\n\nSimplificação final:\nUm erro pode resultar em morte, de acordo com o especialista em política Murillo de Aragão."
+    },
+    {
+      "idx": 87,
+      "original": "Para explicar a instabilidade no quadro eleitoral, a cientista política Céli Pinto acrescenta uma espécie de retração da classe política provocada pelos escândalos de corrupção no país:",
+      "reference": "Para explicar a falta de firmeza no quadro eleitoral, a cientista política Céli Pinto acrescenta uma espécie de diminuição da classe política.",
+      "prediction": "A especialista Céli Pinto diz que os políticos estão recuando por causa dos casos de corrupção, o que deixa a política instável.",
+      "raw_output": " simplificar a frase passo a passo:\n\n1. **Identificar palavras difíceis:**\n   - Instabilidade\n   - Quadro eleitoral\n   - Cientista política\n   - Retração\n   - Classe política\n   - Escândalos\n\n2. **Substituir por sinônimos simples:**\n   - Instabilidade -> Insegurança\n   - Quadro eleitoral -> Situação política\n   - Cientista política -> Especialista em política\n   - Retração -> Recuo\n   - Classe política -> Políticos\n   - Escândalos -> Casos de corrupção\n\n3. **Reescrever em ordem direta:**\n   - A especialista em política Céli Pinto explica que há uma espécie de recuo dos políticos por causa dos casos de corrupção no país, o que deixa a situação política insegura.\n\n4. **Verificar o sentido:**\n   - A simplificação mantém o sentido original de que, segundo Céli Pinto, os casos de corrupção levam a um recuo dos políticos, o que causa insegurança na situação política.\n\nSimplificação final: A especialista Céli Pinto diz que os políticos estão recuando por causa dos casos de corrupção, o que deixa a política instável."
+    },
+    {
+      "idx": 88,
+      "original": "-- Por falta de dinheiro e de disposição, essa campanha será mais pobre e mais rápida -- afirma.",
+      "reference": "-- Essa campanha será mais pobre e mais rápida, por falta de dinheiro e de disposição -- afirma Céli Pinto.",
+      "prediction": "Por não ter dinheiro e falta de vontade, essa campanha será mais simples e mais rápida -- afirma.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - disposição: pode ser um pouco difícil para alguns, mas podemos considerar \"vontade\" como sinônimo.\n\n2. Substitua por sinônimos simples:\n   - falta de dinheiro = não tem dinheiro\n   - falta de disposição = falta de vontade\n\n3. Reescreva em ordem direta:\n   - A frase já está em uma ordem direta razoável, mas vamos ajustar para melhor compreensão.\n\n4. Verifique o sentido:\n   - A frase original afirma que a campanha será mais pobre e mais rápida por falta de dinheiro e disposição. Vamos manter esse sentido.\n\nSimplificação final: \nPor não ter dinheiro e falta de vontade, essa campanha será mais simples e mais rápida -- afirma."
+    },
+    {
+      "idx": 89,
+      "original": "Os abusos com veículos particulares e a formação de servidores em alguns setores foram pontos cruciais de relatório sobre os gastos da Assembléia.",
+      "reference": "O uso indevido de veículos particulares e a formação de servidores em alguns setores foram pontos importantes do relatório sobre os gastos da Assembléia.",
+      "prediction": "O mau uso de veículos particulares e o treinamento de funcionários em alguns setores foram aspectos fundamentais do relatório sobre as despesas da Assembléia.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"abusos\" pode ser entendido como \"usos indevidos\" ou \"mau uso\",\n   - \"formação\" pode ser substituído por \"treinamento\",\n   - \"servidores\" pode ser mantido ou substituído por \"funcionários\",\n   - \"pontos cruciais\" pode ser substituído por \"pontos importantes\" ou \"aspectos fundamentais\",\n   - \"relatório\" pode ser mantido,\n   - \"gastos\" pode ser mantido ou substituído por \"despesas\".\n\n2. Substitua por sinônimos simples:\n   - \"abusos\" -> \"mau uso\",\n   - \"formação\" -> \"treinamento\",\n   - \"servidores\" -> \"funcionários\",\n   - \"pontos cruciais\" -> \"aspectos fundamentais\",\n   - \"gastos\" -> \"despesas\".\n\n3. Reescreva em ordem direta:\n   - Original: \"Os abusos com veículos particulares e a formação de servidores em alguns setores foram pontos cruciais de relatório sobre os gastos da Assembléia.\"\n   - Reescrito: \"O mau uso de veículos particulares e o treinamento de funcionários em alguns setores foram aspectos fundamentais do relatório sobre as despesas da Assembléia.\"\n\n4. Verifique o sentido:\n   - A simplificação mantém o sentido original de que o mau uso de veículos particulares e o treinamento de funcionários foram pontos importantes em um relatório sobre as despesas da Assembléia.\n\nSimplificação final: O mau uso de veículos particulares e o treinamento de funcionários em alguns setores foram aspectos fundamentais do relatório sobre as despesas da Assembléia."
+    },
+    {
+      "idx": 90,
+      "original": "O relatório produzido pela comissão criada para revisar processos administrativos da Assembléia Legislativa destaca temas que devem provocar polêmica no parlamento.",
+      "reference": "O relatório da comissão criada para examinar os processos administrativos da Assembléia Legislativa destaca temas que devem provocar polêmica no parlamento.",
+      "prediction": "Um relatório de uma comissão que analisa os procedimentos internos da Assembléia Legislativa mostra temas que podem causar discussões entre os parlamentares.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"Assembléia Legislativa\" pode ser um termo menos conhecido para alguns.\n   - \"processos administrativos\" pode ser complexo.\n   - \"destaca\" é um verbo que pode ser substituído.\n   - \"provocar polêmica\" pode ser difícil de entender para alguns.\n\n2. Substitua por sinônimos simples:\n   - \"Assembléia Legislativa\" pode ser substituída por \"Câmara dos Deputados\" ou simplesmente \"parlamento\" para facilitar, mas manteremos \"Assembléia Legislativa\" para precisão.\n   - \"processos administrativos\" pode ser substituído por \"assuntos internos\" ou \"procedimentos\".\n   - \"destaca\" pode ser substituído por \"mostra\" ou \"ressalta\".\n   - \"provocar polêmica\" pode ser substituído por \"gerar discussões\" ou \"causar controvérsias\".\n\n3. Reescreva em ordem direta:\n   A frase já está razoavelmente em ordem direta, mas podemos ajustar para melhorar a clareza.\n\n4. Verifique o sentido:\n   O sentido é que um relatório produzido por uma comissão sobre processos na Assembléia Legislativa aponta temas que podem gerar discussões no parlamento.\n\nSimplificação final: \nUm relatório de uma comissão que analisa os procedimentos internos da Assembléia Legislativa mostra temas que podem causar discussões entre os parlamentares."
+    },
+    {
+      "idx": 91,
+      "original": "Um deles se refere ao fato de cada deputado ter três carros cadastrados para fins de indenização por uso de carro particular.",
+      "reference": "Um dos temas é o fato de cada deputado ter três carros registrados para receber devolução de dinheiro por uso de carro particular.",
+      "prediction": "Um deles fala que cada deputado tem três carros registrados para pagamento por uso de carro particular.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis: \"cadastrados\", \"indenização\" \n2. Substitua por sinônimos simples: \"registrados\", \"pagamento\"\n3. Reescreva em ordem direta: Um deles fala que cada deputado tem três carros registrados para pagamento por uso de carro particular.\n4. Verifique o sentido: A frase reescrita tem o mesmo sentido da original.\n\nSimplificação final: Um deles fala que cada deputado tem três carros registrados para pagamento por uso de carro particular."
+    },
+    {
+      "idx": 92,
+      "original": "A comissão entende que, para que seja preservado o caráter de indenização, cada parlamentar deve ter apenas um carro registrado.",
+      "reference": "A comissão entende que cada deputado deve ter apenas um carro registrado.",
+      "prediction": "Cada parlamentar pode ter apenas um carro para preservar a indenização.",
+      "raw_output": "Para manter a indenização, cada parlamentar pode ter apenas um carro registrado.\n\nSimplificação final: Cada parlamentar pode ter apenas um carro para preservar a indenização."
+    },
+    {
+      "idx": 93,
+      "original": "Outra questão destacada no relatório se refere à qualificação dos servidores.",
+      "reference": "Outro tema destacado no relatório é a qualificação dos servidores.",
+      "prediction": "Outra coisa importante no documento é sobre a capacitação dos funcionários.",
+      "raw_output": "Pense passo a passo:\n\n1. Identifique palavras difíceis: \"questão destacada\", \"relatório\", \"qualificação\", \"servidores\".\n2. Substitua por sinônimos simples: \n   - \"questão destacada\" pode ser \"assunto importante\",\n   - \"relatório\" pode ser \"documento\" ou mantido como está para precisão,\n   - \"qualificação\" pode ser \"capacitação\" ou \"habilidades\",\n   - \"servidores\" pode ser \"funcionários públicos\" ou simplesmente \"funcionários\".\n\n3. Reescreva em ordem direta: Outra coisa importante no documento é sobre a capacitação dos funcionários.\n\n4. Verifique o sentido: A frase reescrita mantém o sentido original de que o documento aborda a importância da capacitação dos funcionários.\n\nSimplificação final: Outra coisa importante no documento é sobre a capacitação dos funcionários."
+    },
+    {
+      "idx": 94,
+      "original": "Duas situações foram detectadas pelo grupo:",
+      "reference": "Duas situações foram detectadas pela comissão:",
+      "prediction": "O grupo identificou duas situações.",
+      "raw_output": "O grupo encontrou duas situações:\n\nSimplificação final: \nO grupo identificou duas situações."
+    },
+    {
+      "idx": 95,
+      "original": "Há setores com carência de pessoal ou, naqueles em que não faltam funcionários, há pessoas atuando em uma função para a qual não têm qualificação.",
+      "reference": "Mas, nos setores em que não faltam servidores, há pessoas fazendo trabalhos para os quais não são qualificadas.",
+      "prediction": "SimplificaçãoEm alguns setores, falta pessoal. Em outros, há funcionários, mas eles trabalham em cargos para os quais não têm habilidade.",
+      "raw_output": "ificar a frase passo a passo:\n\n **Identificar palavras difíceis**:\n   - Carência: falta, necessidade\n   - Setores: áreas, setores pode ser mantido como é de fácil entendimento\n   - Faltam: não têm, carecem\n   - Qualificação: habilidade, preparação\n\n2. **Substituir por sinônimos simples**:\n   - Carência -> falta\n   - Pessoal -> funcionários, colaboradores\n   - Atuando -> trabalhando\n   - Função -> cargo, trabalho\n   - Qualificação -> habilidade\n\n3. **Reescrever em ordem direta**:\n   - Original: Há setores com falta de funcionários ou, naqueles em que não faltam funcionários, há pessoas trabalhando em um cargo para o qual não têm habilidade.\n   - Reescrita: Em alguns setores, falta pessoal. Em outros, há funcionários, masham em cargos para os quais não têm4. **Verificar o sentido**:\n   - A reescrita mantém o sentido original de que existem áreas com falta de funcionários e áreas onde os funcionários não estão no cargo certo para suas habilidades.\n\n**SimplificaçãoEm alguns setores, falta pessoal. Em outros, há funcionários, mas eles trabalham em cargos para os quais não têm habilidade."
+    },
+    {
+      "idx": 96,
+      "original": "Esse tipo de cenário, conforme servidores da Casa, pode abrir brechas para a ocorrência de irregularidades, como a que produziu a fraude dos selos e deixou um rombo de pelo menos R$ 3,3 milhões ao parlamento.",
+      "reference": "A fraude dos selos deixou um rombo de pelo menos R$ 3,3 milhões na Assembléia Legislativa.",
+      "prediction": "Esse tipo de situação pode criar aberturas para problemas, como a fraude dos selos, que causou um prejuízo de pelo menos R$ 3,3 milhões ao parlamento.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identificar palavras difíceis:\n   - \"cenário\" (pode ser substituído por \"situação\")\n   - \"brechas\" (pode ser substituído por \"oportunidades\" ou \"aberturas\")\n   - \"irregularidades\" (pode ser substituído por \"problemas\" ou \"erros\")\n   - \"rombo\" (pode ser substituído por \"prejuízo\" ou \"dano\")\n\n2. Substituir por sinônimos simples:\n   - \"cenário\" por \"situação\"\n   - \"brechas\" por \"aberturas\"\n   - \"irregularidades\" por \"problemas\"\n   - \"rombo\" por \"prejuízo\"\n\n3. Reescrever em ordem direta:\n   A situação pode criar aberturas para problemas, como a fraude dos selos, que causou um prejuízo de pelo menos R$ 3,3 milhões ao parlamento.\n\n4. Verificar o sentido:\n   A frase reescrita mantém o sentido original, de que um determinado tipo de situação pode permitir a ocorrência de problemas, citando como exemplo uma fraude que resultou em prejuízo.\n\nSimplificação final: Esse tipo de situação pode criar aberturas para problemas, como a fraude dos selos, que causou um prejuízo de pelo menos R$ 3,3 milhões ao parlamento."
+    },
+    {
+      "idx": 97,
+      "original": "O presidente da Casa, deputado Frederico Antunes (PP), afirmou ontem, ao receber o relatório, que a comissão será mantida enquanto for necessário.",
+      "reference": "Quando recebeu o relatório ontem, o presidente da Assembléia Legislativa afirmou que a comissão será mantida enquanto for necessário.",
+      "prediction": "Ontem, o líder da Câmara disse que a comissão continuará funcionando enquanto for necessário.",
+      "raw_output": "Vamos simplificar a frase passo a passo:\n\n1. Identifique palavras difíceis:\n   - \"presidente da Casa\" pode ser entendido como o líder da Câmara dos Deputados, mas para simplificar, podemos pensar em \"líder\" ou manter como está para não perder o contexto específico.\n   - \"deputado Frederico Antunes (PP)\" é um nome próprio e uma sigla partidária, que podem ser mantidos para precisão, mas o entendimento pode ser simplificado para \"um deputado\".\n   - \"afirmou\" pode ser substituído por \"disse\".\n   - \"ao receber o relatório\" pode ser simplificado para \"quando recebeu o relatório\".\n   - \"a comissão será mantida\" pode ser entendido como \"a comissão continuará funcionando\".\n\n2. Substitua por sinônimos simples:\n   - \"presidente da Casa\" = líder da Câmara\n   - \"afirmou\" = disse\n   - \"será mantida\" = continuará funcionando\n\n3. Reescreva em ordem direta:\n   - Original: O presidente da Casa, deputado Frederico Antunes (PP), afirmou ontem, ao receber o relatório, que a comissão será mantida enquanto for necessário.\n   - Simplificado: Ontem, o líder da Câmara, Frederico Antunes do PP, disse que a comissão continuará funcionando enquanto for necessário.\n\n4. Verifique o sentido:\n   - A simplificação mantém o sentido original de que o líder da Câmara disse que uma comissão continuará ativa por quanto tempo for necessário.\n\nSimplificação final: Ontem, o líder da Câmara disse que a comissão continuará funcionando enquanto for necessário."
+    },
+    {
+      "idx": 98,
+      "original": "A Casa tem em torno de 160 contratos para serem analisados.",
+      "reference": "A Assembléia Legislativa tem em torno de 160 contratos para serem analisados.",
+      "prediction": "A Casa tem cerca de 160 contratos para serem vistos.",
+      "raw_output": "Pense passo a passo:\n\n- Identifique palavras difíceis: \"em torno de\" pode ser considerado um pouco formal, mas não é difícil. \"Contratos\" pode ser entendido por todos, mas \"analisados\" pode ser um pouco mais complicado.\n\n- Substitua por sinônimos simples: \"em torno de\" pode ser substituído por \"cerca de\" ou simplesmente \"quase\", mas para manter a precisão, \"cerca de\" é melhor. \"Analisados\" pode ser substituído por \"vistos\" ou \"examinados\", mas um termo mais simples e coloquial seria \"chegados\".\n\n- Reescreva em ordem direta: A ordem direta já está presente na frase.\n\n- Verifique o sentido: A frase original informa que a Casa possui aproximadamente 160 contratos a serem examinados.\n\nSimplificação final: A Casa tem cerca de 160 contratos para serem vistos."
+    },
+    {
+      "idx": 99,
+      "original": "Antunes vai apresentar o conteúdo do relatório hoje à Mesa Diretora e, posteriormente, implementar novas medidas de contenção e controle.",
+      "reference": "Antunes vai apresentar o relatório hoje à Mesa Diretora.",
+      "prediction": "Antunes mostrará o relatório hoje para a liderança e depois adotará novas regras.",
+      "raw_output": " a frase passo a passo:\n\n1. Identificar palavras difíceis:\n   - \"apresentar\" pode ser entendido por \"mostrar\" ou \"expor\",\n   - \"conteúdo\" pode ser substituído por \"informações\" ou \"detalhes\",\n   - \"Mesa Diretora\" presume-se que seja um grupo de líderes, pode ser chamado de \"equipe de liderança\" ou mantido como está para precisão,\n   - \"implementar\" pode ser substituído por \"colocar em prática\" ou \"adotar\",\n   - \"medidas de contenção e controle\" pode ser entendido como \"ações para controlar\" ou \"novas regras\".\n\n2. Reescrever em e verificar o sentido:\n   - Original: Antunes vai apresentar o conteúdo do relatório hoje à Mesa Diretora e, posteriormente, implementar novas medidas de contenção e controle.\n   - Simplificado: Antunes mostrará as informações do relatório hoje para a equipe de liderança e depois colocará em prática ações para controlar.\n\n3. Ajustes finais para uma simplificação clara e objetiva:\n   - Antunes mostrará o relatório hoje para a liderança e depois adotará novas regras.\n\nSimplificação final: \nAntunes mostrará o relatório hoje para a liderança e depois adotará novas regras."
+    }
+  ]
+}

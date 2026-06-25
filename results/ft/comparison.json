@@ -1,0 +1,137 @@
+{
+  "description": "Comparação: prompting vs fine-tuning (100 amostras PorSimplesSent)",
+  "rows": [
+    {
+      "model": "ref (baseline humano)",
+      "type": "baseline",
+      "rouge1": 0.7425,
+      "bertscore": 0.9001,
+      "sari": null,
+      "ori_pred_rouge1": null,
+      "ori_pred_bertscore": null,
+      "flesch_improvement": 6.02,
+      "fog_improvement": -1.92
+    },
+    {
+      "model": "gpt4o-mini (zero_shot)",
+      "type": "prompting",
+      "rouge1": 0.595,
+      "bertscore": 0.8524,
+      "sari": 36.0256,
+      "ori_pred_rouge1": 0.6904,
+      "ori_pred_bertscore": 0.8907,
+      "flesch_improvement": 11.53,
+      "fog_improvement": -3.07
+    },
+    {
+      "model": "gpt4o-mini (few_shot)",
+      "type": "prompting",
+      "rouge1": 0.6318,
+      "bertscore": 0.867,
+      "sari": 39.3538,
+      "ori_pred_rouge1": 0.752,
+      "ori_pred_bertscore": 0.9154,
+      "flesch_improvement": 9.05,
+      "fog_improvement": -2.43
+    },
+    {
+      "model": "gpt4o-mini (cot)",
+      "type": "prompting",
+      "rouge1": 0.5299,
+      "bertscore": 0.8458,
+      "sari": 33.0356,
+      "ori_pred_rouge1": 0.6102,
+      "ori_pred_bertscore": 0.8764,
+      "flesch_improvement": 10.36,
+      "fog_improvement": -2.44
+    },
+    {
+      "model": "qwen25-7b (zero_shot)",
+      "type": "prompting",
+      "rouge1": 0.5976,
+      "bertscore": 0.8528,
+      "sari": 35.7259,
+      "ori_pred_rouge1": 0.709,
+      "ori_pred_bertscore": 0.8934,
+      "flesch_improvement": 7.64,
+      "fog_improvement": -2.46
+    },
+    {
+      "model": "qwen25-7b (few_shot)",
+      "type": "prompting",
+      "rouge1": 0.6163,
+      "bertscore": 0.8618,
+      "sari": 36.9766,
+      "ori_pred_rouge1": 0.7519,
+      "ori_pred_bertscore": 0.9124,
+      "flesch_improvement": 6.08,
+      "fog_improvement": -2.27
+    },
+    {
+      "model": "qwen25-7b (cot)",
+      "type": "prompting",
+      "rouge1": 0.6098,
+      "bertscore": 0.8632,
+      "sari": 37.9376,
+      "ori_pred_rouge1": 0.7075,
+      "ori_pred_bertscore": 0.9041,
+      "flesch_improvement": 3.76,
+      "fog_improvement": -1.63
+    },
+    {
+      "model": "llama4-scout (zero_shot)",
+      "type": "prompting",
+      "rouge1": 0.541,
+      "bertscore": 0.8413,
+      "sari": 33.8082,
+      "ori_pred_rouge1": 0.628,
+      "ori_pred_bertscore": 0.8711,
+      "flesch_improvement": 10.4,
+      "fog_improvement": -3.41
+    },
+    {
+      "model": "llama4-scout (few_shot)",
+      "type": "prompting",
+      "rouge1": 0.5594,
+      "bertscore": 0.8411,
+      "sari": 38.0197,
+      "ori_pred_rouge1": 0.6411,
+      "ori_pred_bertscore": 0.8707,
+      "flesch_improvement": 13.42,
+      "fog_improvement": -3.87
+    },
+    {
+      "model": "llama4-scout (cot)",
+      "type": "prompting",
+      "rouge1": 0.5156,
+      "bertscore": 0.8346,
+      "sari": 32.895,
+      "ori_pred_rouge1": 0.5744,
+      "ori_pred_bertscore": 0.8605,
+      "flesch_improvement": 10.63,
+      "fog_improvement": -2.72
+    },
+    {
+      "model": "ptt5-small FT",
+      "type": "fine-tune",
+      "rouge1": 0.7264,
+      "bertscore": 0.8986,
+      "sari": 55.0333,
+      "ori_pred_rouge1": 0.9447,
+      "ori_pred_bertscore": 0.9748,
+      "flesch_improvement": 2.39,
+      "fog_improvement": -0.8
+    },
+    {
+      "model": "qwen25-05b FT",
+      "type": "fine-tune",
+      "rouge1": 0.6632,
+      "bertscore": 0.8825,
+      "sari": 49.8331,
+      "ori_pred_rouge1": 0.7057,
+      "ori_pred_bertscore": 0.894,
+      "flesch_improvement": 10.31,
+      "fog_improvement": -2.31
+    }
+  ]
+}

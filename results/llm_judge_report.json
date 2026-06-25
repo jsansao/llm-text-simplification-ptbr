@@ -1,0 +1,267 @@
+{
+  "means": {
+    "openai/gpt-4o-mini": {
+      "simplicidade": 4.71,
+      "simplicidade_std": 0.54,
+      "fluencia": 4.99,
+      "fluencia_std": 0.12,
+      "adequacao": 4.87,
+      "adequacao_std": 0.34
+    },
+    "openai/gpt-4o-2024-11-20": {
+      "simplicidade": 4.73,
+      "simplicidade_std": 0.54,
+      "fluencia": 5,
+      "fluencia_std": 0.0,
+      "adequacao": 4.9,
+      "adequacao_std": 0.31
+    },
+    "anthropic/claude-sonnet-4.6": {
+      "simplicidade": 4.55,
+      "simplicidade_std": 0.77,
+      "fluencia": 5,
+      "fluencia_std": 0.0,
+      "adequacao": 4.77,
+      "adequacao_std": 0.45
+    },
+    "meta-llama/llama-4-scout-17b-16e-instruct": {
+      "simplicidade": 4.68,
+      "simplicidade_std": 0.63,
+      "fluencia": 4.8,
+      "fluencia_std": 0.78,
+      "adequacao": 4.72,
+      "adequacao_std": 0.72
+    },
+    "qwen/qwen-2.5-7b-instruct": {
+      "simplicidade": 4.51,
+      "simplicidade_std": 0.69,
+      "fluencia": 4.9,
+      "fluencia_std": 0.41,
+      "adequacao": 4.74,
+      "adequacao_std": 0.59
+    },
+    "ptt5-rank8": {
+      "simplicidade": 2.43,
+      "simplicidade_std": 1.48,
+      "fluencia": 4.91,
+      "fluencia_std": 0.46,
+      "adequacao": 4.63,
+      "adequacao_std": 0.89
+    },
+    "ptt5-rank32": {
+      "simplicidade": 2.73,
+      "simplicidade_std": 1.56,
+      "fluencia": 4.84,
+      "fluencia_std": 0.68,
+      "adequacao": 4.5,
+      "adequacao_std": 0.99
+    },
+    "ptt5-full": {
+      "simplicidade": 2.55,
+      "simplicidade_std": 1.53,
+      "fluencia": 4.86,
+      "fluencia_std": 0.65,
+      "adequacao": 4.57,
+      "adequacao_std": 0.96
+    },
+    "qwen05b": {
+      "simplicidade": 3.72,
+      "simplicidade_std": 1.2,
+      "fluencia": 4.19,
+      "fluencia_std": 1.24,
+      "adequacao": 3.52,
+      "adequacao_std": 1.44
+    }
+  },
+  "consistency": {
+    "openai/gpt-4o-mini": {
+      "simplicidade": 0.006,
+      "fluencia": 0.0,
+      "adequacao": 0.006
+    },
+    "openai/gpt-4o-2024-11-20": {
+      "simplicidade": 0.003,
+      "fluencia": 0.0,
+      "adequacao": 0.003
+    },
+    "anthropic/claude-sonnet-4.6": {
+      "simplicidade": 0.005,
+      "fluencia": 0.0,
+      "adequacao": 0.01
+    },
+    "meta-llama/llama-4-scout-17b-16e-instruct": {
+      "simplicidade": 0.01,
+      "fluencia": 0.003,
+      "adequacao": 0.013
+    },
+    "qwen/qwen-2.5-7b-instruct": {
+      "simplicidade": 0.009,
+      "fluencia": 0.003,
+      "adequacao": 0.003
+    },
+    "ptt5-rank8": {
+      "simplicidade": 0.006,
+      "fluencia": 0.009,
+      "adequacao": 0.019
+    },
+    "ptt5-rank32": {
+      "simplicidade": 0.015,
+      "fluencia": 0.01,
+      "adequacao": 0.005
+    },
+    "ptt5-full": {
+      "simplicidade": 0.028,
+      "fluencia": 0.005,
+      "adequacao": 0.006
+    },
+    "qwen05b": {
+      "simplicidade": 0.037,
+      "fluencia": 0.018,
+      "adequacao": 0.009
+    }
+  },
+  "sanity": {
+    "simplicidade": {
+      "mean": 4.86,
+      "std": 0.58
+    },
+    "fluencia": {
+      "mean": 5.0,
+      "std": 0.06
+    },
+    "adequacao": {
+      "mean": 4.92,
+      "std": 0.45
+    }
+  },
+  "spearman_rouge1": {
+    "simplicidade": {
+      "rho": -0.113,
+      "p": 0.0
+    },
+    "fluencia": {
+      "rho": 0.13,
+      "p": 0.0
+    },
+    "adequacao": {
+      "rho": 0.246,
+      "p": 0.0
+    }
+  },
+  "rankings": {
+    "simplicidade": [
+      [
+        "openai/gpt-4o-2024-11-20",
+        4.73
+      ],
+      [
+        "openai/gpt-4o-mini",
+        4.71
+      ],
+      [
+        "meta-llama/llama-4-scout-17b-16e-instruct",
+        4.68
+      ],
+      [
+        "anthropic/claude-sonnet-4.6",
+        4.55
+      ],
+      [
+        "qwen/qwen-2.5-7b-instruct",
+        4.51
+      ],
+      [
+        "qwen05b",
+        3.72
+      ],
+      [
+        "ptt5-rank32",
+        2.73
+      ],
+      [
+        "ptt5-full",
+        2.55
+      ],
+      [
+        "ptt5-rank8",
+        2.43
+      ]
+    ],
+    "fluencia": [
+      [
+        "openai/gpt-4o-2024-11-20",
+        5
+      ],
+      [
+        "anthropic/claude-sonnet-4.6",
+        5
+      ],
+      [
+        "openai/gpt-4o-mini",
+        4.99
+      ],
+      [
+        "ptt5-rank8",
+        4.91
+      ],
+      [
+        "qwen/qwen-2.5-7b-instruct",
+        4.9
+      ],
+      [
+        "ptt5-full",
+        4.86
+      ],
+      [
+        "ptt5-rank32",
+        4.84
+      ],
+      [
+        "meta-llama/llama-4-scout-17b-16e-instruct",
+        4.8
+      ],
+      [
+        "qwen05b",
+        4.19
+      ]
+    ],
+    "adequacao": [
+      [
+        "openai/gpt-4o-2024-11-20",
+        4.9
+      ],
+      [
+        "openai/gpt-4o-mini",
+        4.87
+      ],
+      [
+        "anthropic/claude-sonnet-4.6",
+        4.77
+      ],
+      [
+        "qwen/qwen-2.5-7b-instruct",
+        4.74
+      ],
+      [
+        "meta-llama/llama-4-scout-17b-16e-instruct",
+        4.72
+      ],
+      [
+        "ptt5-rank8",
+        4.63
+      ],
+      [
+        "ptt5-full",
+        4.57
+      ],
+      [
+        "ptt5-rank32",
+        4.5
+      ],
+      [
+        "qwen05b",
+        3.52
+      ]
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "cot": {
+    "metrics": {
+      "rouge1": 0.531,
+      "rouge2": 0.3314,
+      "rougeL": 0.4802,
+      "bertscore_mean": 0.8397,
+      "bertscore_std": 0.0616,
+      "ori_pred_rouge1": 0.5798,
+      "ori_pred_rouge2": 0.3647,
+      "ori_pred_rougeL": 0.528,
+      "ori_pred_bertscore_mean": 0.8556,
+      "ori_pred_bertscore_std": 0.0508,
+      "ori_ref_rouge1": 0.7629,
+      "ori_ref_rouge2": 0.6578,
+      "ori_ref_rougeL": 0.7365,
+      "ori_ref_bertscore_mean": 0.9069,
+      "ori_ref_bertscore_std": 0.0625,
+      "sari": 34.0359,
+      "flesch_original": 7.61,
+      "flesch_prediction": 19.13,
+      "flesch_improvement": 11.51,
+      "fog_original": 21.63,
+      "fog_prediction": 18.9,
+      "fog_improvement": -2.73,
+      "ref_flesch_original": 7.61,
+      "ref_flesch_prediction": 15.51,
+      "ref_flesch_improvement": 7.89,
+      "ref_fog_original": 21.63,
+      "ref_fog_prediction": 19.73,
+      "ref_fog_improvement": -1.9
+    },
+    "num_samples": 200
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "strategy": "zero_shot",
+  "num_samples": 30,
+  "metrics": {
+    "rouge1": 0.5274,
+    "rouge2": 0.3485,
+    "rougeL": 0.4461,
+    "bertscore_mean": 0.7805,
+    "bertscore_std": 0.2153,
+    "ori_pred_rouge1": 0.5952,
+    "ori_pred_rouge2": 0.3988,
+    "ori_pred_rougeL": 0.5256,
+    "ori_pred_bertscore_mean": 0.8035,
+    "ori_pred_bertscore_std": 0.2201,
+    "ori_ref_rouge1": 0.7176,
+    "ori_ref_rouge2": 0.6237,
+    "ori_ref_rougeL": 0.6833,
+    "ori_ref_bertscore_mean": 0.8896,
+    "ori_ref_bertscore_std": 0.0525,
+    "sari": 36.6728,
+    "flesch_original": 2.67,
+    "flesch_prediction": 18.05,
+    "flesch_improvement": 15.38,
+    "fog_original": 23.39,
+    "fog_prediction": 16.81,
+    "fog_improvement": -6.58,
+    "ref_flesch_original": 2.67,
+    "ref_flesch_prediction": 11.04,
+    "ref_flesch_improvement": 8.38,
+    "ref_fog_original": 23.39,
+    "ref_fog_prediction": 20.58,
+    "ref_fog_improvement": -2.81
+  },
+  "results": [
+    {
+      "idx": 0,
+      "original": "As salas de cinema de todo o mundo exibiam uma produção do diretor Joe Dante em que um cardume de piranhas escapava de um laboratório militar e atacava participantes de um festival aquático.",
+      "reference": "Na produção do diretor Joe Dante, um cardume de piranhas escapava de um laboratório militar e atacava participantes de um festival aquático.",
+      "prediction": "Em todo o mundo, as salas de cinema exibiam um filme do diretor Joe Dante. Nele, um grupo de piranhas foge de um laboratório militar e ataca as pessoas que estão em uma festa na água.",
+      "raw_output": "Em todo o mundo, as salas de cinema exibiam um filme do diretor Joe Dante. Nele, um grupo de piranhas foge de um laboratório militar e ataca as pessoas que estão em uma festa na água."
+    },
+    {
+      "idx": 1,
+      "original": "Mais de 20 pessoas foram mordidas por palometas (Serrasalmus spilopleura, espécie de piranha) que vivem nas águas da barragem Sanchuri, na margem da Br-472, a 40 quilômetros da cidade.",
+      "reference": "As palometas vivem nas águas da barragem Sanchuri, na margem da Br-472, a 40 quilômetros da cidade.",
+      "prediction": "Mais de 20 pessoas foram mordidas por piranhas na barragem Sanchuri, que fica a 40 quilômetros da cidade, na BR-472.",
+      "raw_output": "Mais de 20 pessoas foram mordidas por piranhas na barragem Sanchuri, que fica a 40 quilômetros da cidade, na BR-472."
+    },
+    {
+      "idx": 2,
+      "original": "O que chamou a atenção das autoridades foi o aumento no número de ataques em relação aos outros anos.",
+      "reference": "O aumento no número de ataques em relação aos outros anos chamou a atenção das autoridades.",
+      "prediction": "O que chamou a atenção das autoridades foi que houve mais ataques do que nos outros anos.",
+      "raw_output": "O que chamou a atenção das autoridades foi que houve mais ataques do que nos outros anos."
+    },
+    {
+      "idx": 3,
+      "original": "Ele e amigos, como Giovane Silva Ferreira, 13 anos, passam as tardes pescando o peixe, depois levado para uma associação de artesãos que faz o curtimento da pele do animal.",
+      "reference": "Ele e amigos, como Giovane Silva Ferreira, 13 anos, passam as tardes pescando o peixe.",
+      "prediction": "",
+      "raw_output": ""
+    },
+    {
+      "idx": 4,
+      "original": "Com o fim da piracema, período em que a pesca é proibida, será realizado no domingo o torneio Combate à Palometa.",
+      "reference": "Com o fim da piracema, será realizado no domingo o torneio Combate à Palometa.",
+      "prediction": "",
+      "raw_output": ""
+    },
+    {
+      "idx": 5,
+      "original": "Pescadores tentarão retirar o maior número de peixes da espécie, que pode atingir 20 centímetros de comprimento e um quilo.",
+      "reference": "A espécie pode atingir 20 centímetros de comprimento e um quilo.",
+      "prediction": "Pescadores tentarão tirar o máximo de peixes que conseguirem. Essa espécie pode chegar a 20 centímetros de comprimento e pesar um quilo.",
+      "raw_output": "Pescadores tentarão tirar o máximo de peixes que conseguirem. Essa espécie pode chegar a 20 centímetros de comprimento e pesar um quilo."
+    },
+    {
+      "idx": 6,
+      "original": "Segundo o chefe substituto do escritório regional, Guaracy Cunha, ainda há tempo para o pedido de licença.",
+      "reference": "Segundo o chefe substituto do escritório regional, ainda há tempo para o pedido de licença.",
+      "prediction": "Ainda há tempo para o pedido de licença, segundo Guaracy Cunha, chefe substituto do escritório regional.",
+      "raw_output": "Ainda há tempo para o pedido de licença, segundo Guaracy Cunha, chefe substituto do escritório regional."
+    },
+    {
+      "idx": 7,
+      "original": "-- Elas atacam mais nos locais em que o pessoal das excursões lava mãos e pratos após as refeições -- diz Adalberto Silva, presidente da associação dos moradores da localidade.",
+      "reference": "-- Elas atacam mais nos locais em que o pessoal das excursões lava mãos e pratos após as refeições -- diz Adalberto Silva.",
+      "prediction": "-- Elas atacam mais onde as pessoas das excursões lavam as mãos e os pratos depois das refeições -- diz Adalberto Silva, presidente da associação dos moradores.",
+      "raw_output": "-- Elas atacam mais onde as pessoas das excursões lavam as mãos e os pratos depois das refeições -- diz Adalberto Silva, presidente da associação dos moradores."
+    },
+    {
+      "idx": 8,
+      "original": "Silva adquiriu uma tela de retenção com 150 metros, que deve ser instalada para isolar o trecho da barragem mais usado pelos banhistas, com 3,7 mil hectares de área.",
+      "reference": "A tela deve ser instalada para isolar o trecho da barragem mais usado pelos banhistas.",
+      "prediction": "Silva comprou uma tela de 150 metros para isolar a área da barragem mais usada pelos banhistas. Essa área tem 3,7 mil hectares.",
+      "raw_output": "Silva comprou uma tela de 150 metros para isolar a área da barragem mais usada pelos banhistas. Essa área tem 3,7 mil hectares."
+    },
+    {
+      "idx": 9,
+      "original": "Acessório utilizado por adolescentes, o boné é um dos itens que compõem a vestimenta idealizada pela proposta.",
+      "reference": "O boné é um dos itens da roupa imaginada pela proposta.",
+      "prediction": "Os adolescentes usam o boné como um acessório. Ele é uma parte importante da roupa que eles gostam de usar.",
+      "raw_output": "Os adolescentes usam o boné como um acessório. Ele é uma parte importante da roupa que eles gostam de usar."
+    },
+    {
+      "idx": 10,
+      "original": "Ao prever a distribuição gratuita de uniforme para alunos da rede pública, um projeto em discussão no Congresso institui uma controvérsia em escolas, prefeituras e secretarias de Educação.",
+      "reference": "Um projeto em discussão no Congresso criou uma polêmica em escolas, prefeituras e secretarias de educação.",
+      "prediction": "Um projeto no Congresso quer dar uniformes de graça para alunos da rede pública. Mas isso está criando discussão em escolas, prefeituras e secretarias de Educação.",
+      "raw_output": "Um projeto no Congresso quer dar uniformes de graça para alunos da rede pública. Mas isso está criando discussão em escolas, prefeituras e secretarias de Educação."
+    },
+    {
+      "idx": 11,
+      "original": "Além de ressuscitar o debate sobre a obrigatoriedade de um traje padrão entre os alunos e reacender a preocupação com a escassez de recursos públicos, a proposta cria uma discussão sobre a incorporação do boné no kit obrigatório.",
+      "reference": "Além disso, a proposta reanima o debate sobre a obrigação de uma roupa igual para todos os alunos.",
+      "prediction": "o debate sobre o uniforme obrigatório para os alunos. Além disso, reacende a preocupação com a falta de recursos públicos. Também gera discussão sobre incluir o boné.",
+      "raw_output": " o debate sobre o uniforme obrigatório para os alunos. Além disso, reacende a preocupação com a falta de recursos públicos. Também gera discussão sobre incluir o boné."
+    },
+    {
+      "idx": 12,
+      "original": "A matéria ainda precisa passar pela Câmara dos Deputados e pela Presidência da República antes de entrar em vigor.",
+      "reference": "O projeto ainda precisa passar pela Câmara dos Deputados e pela Presidência da República antes de entrar em vigor.",
+      "prediction": "Ainda é preciso que a matéria seja aprovada pela Câmara dos Deputados e pelo presidente da República para valer.",
+      "raw_output": "Ainda é preciso que a matéria seja aprovada pela Câmara dos Deputados e pelo presidente da República para valer."
+    },
+    {
+      "idx": 13,
+      "original": "O acessório polêmico entrou no projeto, de autoria do senador Cícero Lucena (PSDB-PB), graças a uma emenda aprovada na Comissão de Educação do Senado em outubro.",
+      "reference": "O boné problemático entrou no projeto graças a uma emenda aprovada na Comissão de Educação do Senado em outubro.",
+      "prediction": "O acessório entrou no projeto do senador Cícero Lucena (PSDB-PB) por meio de uma emenda aprovada em outubro na Comissão de Educação do Senado.",
+      "raw_output": "O acessório entrou no projeto do senador Cícero Lucena (PSDB-PB) por meio de uma emenda aprovada em outubro na Comissão de Educação do Senado."
+    },
+    {
+      "idx": 14,
+      "original": "Foi o senador Flávio Arns (PT-PR) quem sugeriu a inclusão da peça entre os itens do uniforme de alunos dos ensinos Fundamental e Médio nas escolas municipais, estaduais e federais.",
+      "reference": "Foi o senador Flávio Arns que sugeriu a inclusão do boné no uniforme de alunos dos ensinos Fundamental e Médio nas escolas municipais, estaduais e federais.",
+      "prediction": "O senador Flávio Arns (PT-PR) sugeriu que a peça entrasse no uniforme de alunos do Fundamental e Médio.",
+      "raw_output": "O senador Flávio Arns (PT-PR) sugeriu que a peça entrasse no uniforme de alunos do Fundamental e Médio."
+    },
+    {
+      "idx": 15,
+      "original": "Se a idéia for aprovada, os estudantes receberão dois conjuntos anuais, completados por calçado, meias, calça e camiseta.",
+      "reference": "Se a idéia for aprovada, os estudantes receberão dois conjuntos anuais, completados com calçado, meias, calça e camiseta.",
+      "prediction": "Se a ideia for aprovada, os estudantes receberão dois conjuntos de roupas por ano, incluindo calçados, meias, calça e camiseta.",
+      "raw_output": "Se a ideia for aprovada, os estudantes receberão dois conjuntos de roupas por ano, incluindo calçados, meias, calça e camiseta."
+    },
+    {
+      "idx": 16,
+      "original": "Como será comprado em quantidade, o boné sairá por R$ 1 ou R$ 2.",
+      "reference": "Com isso, o boné sairá por R$ 1 ou R$ 2.",
+      "prediction": "Como vamos comprar muitos bonés, cada um vai custar R$ 1 ou R$ 2.",
+      "raw_output": "Como vamos comprar muitos bonés, cada um vai custar R$ 1 ou R$ 2."
+    },
+    {
+      "idx": 17,
+      "original": "É muito mais barato do que adotar outra medida preventiva -- avalia Arns.",
+      "reference": "É muito mais barato do que adotar outra medida para evitar os males causados pelo sol -- avalia Arns.",
+      "prediction": "É muito mais barato do que outras medidas preventivas.",
+      "raw_output": "É muito mais barato do que outras medidas preventivas."
+    },
+    {
+      "idx": 18,
+      "original": "A divergência ocorre porque educadores como Helvécio Aguiar, da Faculdade de Educação da Universidade Federal do Rio Grande do Sul (UFRGS), afirmam que a peça é desnecessária no uniforme obrigatório.",
+      "reference": "O desentendimento ocorre porque educadores como Helvécio Aguiar afirmam que o boné é desnecessário no uniforme obrigatório.",
+      "prediction": "Alguns educadores, como Helvécio Aguiar, da UFRGS, acham que a peça não é necessária no uniforme.",
+      "raw_output": "Alguns educadores, como Helvécio Aguiar, da UFRGS, acham que a peça não é necessária no uniforme."
+    },
+    {
+      "idx": 19,
+      "original": "A divergência ocorre porque educadores como Helvécio Aguiar, da Faculdade de Educação da Universidade Federal do Rio Grande do Sul (UFRGS), afirmam que a peça é desnecessária no uniforme obrigatório.",
+      "reference": "Helvécio Aguiar é da Faculdade de Educação da Universidade Federal do Rio Grande do Sul.",
+      "prediction": "uns educadores, como Helvécio Aguiar, da Universidade Federal do Rio Grande do Sul, acham que a peça não é necessária no uniforme.",
+      "raw_output": "uns educadores, como Helvécio Aguiar, da Universidade Federal do Rio Grande do Sul, acham que a peça não é necessária no uniforme."
+    },
+    {
+      "idx": 20,
+      "original": "Professores ainda temem que a distribuição do acessório dificulte a imposição, nas classes, de uma regra da boa conduta:",
+      "reference": "Professores temem também que a distribuição de boné torne difícil impor nas classes uma regra da boa maneira de se comportar:",
+      "prediction": "Professores temem que a distribuição do acessório possa dificultar a imposição de regras de boa conduta nas classes.",
+      "raw_output": "Professores temem que a distribuição do acessório possa dificultar a imposição de regras de boa conduta nas classes."
+    },
+    {
+      "idx": 21,
+      "original": "A retirada de chapéus e bonés da cabeça em ambientes fechados.",
+      "reference": "Retirar chapéus e bonés da cabeça em ambientes fechados.",
+      "prediction": "Em locais fechados, é considerado educado tirar o chapéu ou boné.",
+      "raw_output": "Em locais fechados, é considerado educado tirar o chapéu ou boné."
+    },
+    {
+      "idx": 22,
+      "original": "Na Federação das Associações de Municípios do RS (Famurs) e na Secretaria Estadual de Educação (Sec), a preocupação reside em outro ponto.",
+      "reference": "A preocupação está em outro ponto na Federação das Associações de Municípios do RS (Famurs) e na Secretaria Estadual de Educação (Sec).",
+      "prediction": "Na Federação das Associações de Municípios do RS (Famurs) e na Secretaria Estadual de Educação (Sec), a preocupação é outra.",
+      "raw_output": "Na Federação das Associações de Municípios do RS (Famurs) e na Secretaria Estadual de Educação (Sec), a preocupação é outra."
+    },
+    {
+      "idx": 23,
+      "original": "Eles se inquietam com a fonte para custear os gastos milionários com a medida.",
+      "reference": "Elas se preocupam com o dinheiro para pagar os gastos de milhões de reais com a medida.",
+      "prediction": "Eles se preocupam com quem vai pagar os gastos altos dessa medida.",
+      "raw_output": "Eles se preocupam com quem vai pagar os gastos altos dessa medida."
+    },
+    {
+      "idx": 24,
+      "original": "O projeto prevê a criação do Programa Nacional de Uniforme Escolar para que o Palácio do Planalto ajude Estados e municípios, mas mantém as dúvidas se as verbas serão suficientes.",
+      "reference": "O projeto prevê a criação do Programa Nacional de Uniforme escolar para que o governo federal ajude Estados e municípios.",
+      "prediction": "O projeto quer criar um programa nacional de uniforme escolar. O governo federal ajudaria estados e municípios. Mas ainda há dúvidas se o dinheiro será suficiente.",
+      "raw_output": "O projeto quer criar um programa nacional de uniforme escolar. O governo federal ajudaria estados e municípios. Mas ainda há dúvidas se o dinheiro será suficiente."
+    },
+    {
+      "idx": 25,
+      "original": "Já não temos recursos suficientes para a manutenção das escolas, por exemplo, e também precisamos valorizar o magistério -- justifica a diretora do Departamento Pedagógico da Sec, Sonia Balzano.",
+      "reference": "Além disso, precisamos valorizar os professores -- justifica a diretora do Departamento Pedagógico da Sec.",
+      "prediction": "Não temos mais dinheiro para cuidar das escolas, por exemplo. Também precisamos dar mais valor ao trabalho dos professores.",
+      "raw_output": "Não temos mais dinheiro para cuidar das escolas, por exemplo. Também precisamos dar mais valor ao trabalho dos professores."
+    },
+    {
+      "idx": 26,
+      "original": "Não fosse o aspecto financeiro, o projeto teria o apoio incondicional de Balzano e do presidente da Famurs, Flávio Luiz Lammel.",
+      "reference": "O projeto teria o apoio total de Balzano e do presidente da Famurs, se não fosse o problema de dinheiro.",
+      "prediction": "Se não fosse o problema de dinheiro, Balzano e o presidente da Famurs, Flávio Luiz Lammel, apoiariam totalmente o projeto.",
+      "raw_output": "Se não fosse o problema de dinheiro, Balzano e o presidente da Famurs, Flávio Luiz Lammel, apoiariam totalmente o projeto."
+    },
+    {
+      "idx": 27,
+      "original": "Com a oferta do uniforme, as escolas públicas poderão torná-lo obrigatório, o que eliminaria a roupa como um indicador de diferenças sociais nas escolas e não criaria constrangimento aos alunos mais pobres.",
+      "reference": "Se o uniforme for oferecido, as escolas públicas poderão torná-lo obrigatório, com isso a roupa deixaria de ser um indicador de diferenças sociais nas escolas e não criaria vergonha nos alunos mais pobres.",
+      "prediction": "as escolas derem o uniforme, elas podem torn obrigatório. Isso ajuda a evitar que as roupas sejam um sinal de desigualdade social entre os alunos e não deixa os estudantes mais pobres se sentirem envergonhados.",
+      "raw_output": " as escolas derem o uniforme, elas podem torn obrigatório. Isso ajuda a evitar que as roupas sejam um sinal de desigualdade social entre os alunos e não deixa os estudantes mais pobres se sentirem envergonhados."
+    },
+    {
+      "idx": 28,
+      "original": "O foco principal da resistência vem dos próprios estudantes:",
+      "reference": "A principal resistência vem dos próprios estudantes:",
+      "prediction": "A principal resistência vem dos próprios estudantes:",
+      "raw_output": "A principal resistência vem dos próprios estudantes:"
+    },
+    {
+      "idx": 29,
+      "original": "Uma parcela critica o uniforme, porque acredita que ele ameaçaria a individualidade de cada um.",
+      "reference": "Alguns criticam o uniforme, porque acreditam que ele ameaça a individualidade de cada um.",
+      "prediction": "Algumas pessoas não gostam do uniforme porque acham que ele tira a liberdade de cada um ser como é.",
+      "raw_output": "Algumas pessoas não gostam do uniforme porque acham que ele tira a liberdade de cada um ser como é."
+    }
+  ]
+}
