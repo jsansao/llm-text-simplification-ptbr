@@ -25,6 +25,7 @@ models/
 human_eval/
 
 # LaTeX build artifacts
+artigo.log
 artigo/*.pdf
 artigo/*.log
 artigo/*.aux
@@ -42,7 +43,11 @@ artigo/*.fdb_latexmk
 Thumbs.db
 
 # Data files (downstream, not redistributed here)
-data/porsimplessent/*.tsv
+data/porsimplessent/
+
+# Experiment artifacts
+results/backup-*/
+results/*.out
 
 # Obsidian/notes
 obs_texto.md
