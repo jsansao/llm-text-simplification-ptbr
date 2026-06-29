@@ -99,6 +99,7 @@ PAIRS = [
     ("PTT5 LoRA r=32", "Qwen 2.5 0.5B FT"),
     ("PTT5 full FT", "Qwen 2.5 0.5B FT"),
     ("Claude S. 4.6", "GPT-4o"),
+    ("Qwen 2.5 7B", "Llama 4 Scout"),
     ("Llama 4 Scout", "Llama 4 Scout CoT"),
     ("GPT-4o mini", "GPT-4o mini CoT"),
     ("Llama 4 Scout CoT", "GPT-4o mini CoT"),

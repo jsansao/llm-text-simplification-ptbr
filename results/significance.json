@@ -811,6 +811,60 @@
       "significant": false
     },
     {
+      "pair": "Qwen 2.5 7B vs Llama 4 Scout",
+      "metric": "R1",
+      "diff_mean": 0.088,
+      "ci_low": 0.0646,
+      "ci_high": 0.1127,
+      "p_value": 0.0,
+      "significant": true
+    },
+    {
+      "pair": "Qwen 2.5 7B vs Llama 4 Scout",
+      "metric": "SARI",
+      "diff_mean": 3.0143,
+      "ci_low": 0.8928,
+      "ci_high": 5.1943,
+      "p_value": 0.006,
+      "significant": true
+    },
+    {
+      "pair": "Qwen 2.5 7B vs Llama 4 Scout",
+      "metric": "FΔ",
+      "diff_mean": -7.012,
+      "ci_low": -9.5642,
+      "ci_high": -4.6082,
+      "p_value": 0.0,
+      "significant": true
+    },
+    {
+      "pair": "Qwen 2.5 7B vs Llama 4 Scout",
+      "metric": "FogΔ",
+      "diff_mean": 1.6133,
+      "ci_low": 1.0344,
+      "ci_high": 2.2077,
+      "p_value": 0.0,
+      "significant": true
+    },
+    {
+      "pair": "Qwen 2.5 7B vs Llama 4 Scout",
+      "metric": "R1$_{OP}$",
+      "diff_mean": 0.1227,
+      "ci_low": 0.0968,
+      "ci_high": 0.149,
+      "p_value": 0.0,
+      "significant": true
+    },
+    {
+      "pair": "Qwen 2.5 7B vs Llama 4 Scout",
+      "metric": "BS$_{OP}$",
+      "diff_mean": 0.0402,
+      "ci_low": 0.0304,
+      "ci_high": 0.0506,
+      "p_value": 0.0,
+      "significant": true
+    },
+    {
       "pair": "Llama 4 Scout vs Llama 4 Scout CoT",
       "metric": "R1",
       "diff_mean": 0.039,
@@ -1458,6 +1512,13 @@
       "significant_holm": false
     },
     {
+      "pair": "Qwen 2.5 7B vs Llama 4 Scout",
+      "metric": "R1",
+      "p_value_raw": 0.0,
+      "holm_adjusted_alpha": true,
+      "significant_holm": true
+    },
+    {
       "pair": "Llama 4 Scout vs Llama 4 Scout CoT",
       "metric": "R1",
       "p_value_raw": 0.0028,
@@ -1629,6 +1690,13 @@
       "pair": "Claude S. 4.6 vs GPT-4o",
       "metric": "SARI",
       "p_value_raw": 0.0048,
+      "holm_adjusted_alpha": true,
+      "significant_holm": false
+    },
+    {
+      "pair": "Qwen 2.5 7B vs Llama 4 Scout",
+      "metric": "SARI",
+      "p_value_raw": 0.006,
       "holm_adjusted_alpha": true,
       "significant_holm": false
     },
@@ -1808,6 +1876,13 @@
       "significant_holm": false
     },
     {
+      "pair": "Qwen 2.5 7B vs Llama 4 Scout",
+      "metric": "FΔ",
+      "p_value_raw": 0.0,
+      "holm_adjusted_alpha": true,
+      "significant_holm": true
+    },
+    {
       "pair": "Llama 4 Scout vs Llama 4 Scout CoT",
       "metric": "FΔ",
       "p_value_raw": 0.8722,
@@ -1981,6 +2056,13 @@
       "p_value_raw": 0.1316,
       "holm_adjusted_alpha": true,
       "significant_holm": false
+    },
+    {
+      "pair": "Qwen 2.5 7B vs Llama 4 Scout",
+      "metric": "FogΔ",
+      "p_value_raw": 0.0,
+      "holm_adjusted_alpha": true,
+      "significant_holm": true
     },
     {
       "pair": "Llama 4 Scout vs Llama 4 Scout CoT",
@@ -2158,6 +2240,13 @@
       "significant_holm": true
     },
     {
+      "pair": "Qwen 2.5 7B vs Llama 4 Scout",
+      "metric": "R1_OP",
+      "p_value_raw": 0.0,
+      "holm_adjusted_alpha": true,
+      "significant_holm": true
+    },
+    {
       "pair": "Llama 4 Scout vs Llama 4 Scout CoT",
       "metric": "R1_OP",
       "p_value_raw": 0.0,
@@ -2331,6 +2420,13 @@
       "p_value_raw": 0.1062,
       "holm_adjusted_alpha": true,
       "significant_holm": false
+    },
+    {
+      "pair": "Qwen 2.5 7B vs Llama 4 Scout",
+      "metric": "BS_OP",
+      "p_value_raw": 0.0,
+      "holm_adjusted_alpha": true,
+      "significant_holm": true
     },
     {
       "pair": "Llama 4 Scout vs Llama 4 Scout CoT",
