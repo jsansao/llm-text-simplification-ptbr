@@ -63,7 +63,7 @@ legibilidade (Flesch $\Delta\mathrm{F} = +13,2$, Fog $\Delta\mathrm{Fog} = -4,0$
  Em similaridade lexical, o ajuste em domínio do PTT5-small
 (60M) supera o prompting de modelos 100$\times$ maiores
 (ROUGE-1 até 0,74, SARI até 55,5), mas com
-\underline{comportamento conservador} (R1$_{OP} \approx 0{,}93$,
+ comportamento conservador (R1$_{OP} \approx 0{,}93$,
 $\Delta \mathrm{F} \leq +4{,}2$) que limita os ganhos de
 legibilidade e sugere que, em tarefas de natureza lexical, a
 escala do modelo não substitui o ajuste em domínio. A estratégia
@@ -98,7 +98,7 @@ configurations, both reaching ROUGE-1 = 0.66, while Llama 4 Scout obtains the
 largest readability gains (Flesch $\Delta\mathrm{F} = +13.2$, Fog $\Delta\mathrm{Fog} = -4.0$).
 In similarity, domain-adjusted PTT5-small (60M) outperforms prompting
 of models 100$\times$ larger (ROUGE-1 up to 0.74, SARI up to 55.5), but
-with \emph{extreme conservatism} (R1$_{OP} \approx 0.93$, $\Delta \mathrm{F} \leq +4.2$)
+with extreme conservatism (R1$_{OP} \approx 0.93$, $\Delta \mathrm{F} \leq +4.2$)
 that caps readability gains and suggests that, for lexical tasks, model
 scale does not substitute domain adjustment. The chain-of-thought
 strategy reduces similarity without readability benefits in the four
@@ -147,7 +147,7 @@ paradigmas sob idênticas condições de avaliação; (ii) evidência
 de que o ajuste em domínio do PTT5-small (60M) atinge similaridade
 lexical superior à do prompting de modelos grandes
 (ROUGE-1 até 0,74, SARI até 55,5), mas com
-\underline{comportamento conservador extremo}
+ comportamento conservador extremo
 (R1$_{OP} \approx 0{,}93$, $\Delta \mathrm{F} \leq +4{,}2$),
 sugerindo que, em tarefas de natureza lexical, a escala do modelo
 não substitui o ajuste em domínio; (iii) demonstração de que a
@@ -265,9 +265,9 @@ baseada em grupos vocálicos.
 
 \subsection{Dataset e Pré-processamento}
 
-Utilizamos o dataset PorSimplesSent versão pss2
-(\texttt{pss2\_align\_length\_ori\_nat.tsv}), contendo 2.370 pares de
-frases original--simplificada. As frases originais têm média de 21,8
+Utilizamos o dataset PorSimplesSent versão pss2\footnote{%
+  Arquivo: \texttt{pss2\_align\_length\_ori\_nat.tsv}.}, contendo
+2.370 pares de frases original--simplificada. As frases originais têm média de 21,8
 tokens, e as simplificadas, 17,6 tokens. Para este experimento,
 selecionamos uma amostra estratificada de 200 pares, dividindo o
 dataset em tercis de tamanho (número de tokens) e sorteando
@@ -1312,8 +1312,8 @@ estrato de tamanho e complexidade sintática; (ii) realizar
 fine-tuning do Qwen 2.5 7B com LoRA para investigar se uma base
 maior (7B parâmetros) combinada com treinamento supervisionado
 atinge similaridade próxima ao PTT5 com ganhos de legibilidade
-superiores; (iii) realizar \textbf{avaliação com juízes humanos}
-(prioritária) para calibrar as métricas automáticas e o LLM-judge,
+superiores; (iii) realizar avaliação com juízes humanos
+para calibrar as métricas automáticas e o LLM-judge,
 dada a baixa concordância inter-juiz observada
 ($\alpha = 0{,}181$ em média); (iv) investigar se prompts
 estilísticos (com nível-alvo de simplificação explícito) podem
