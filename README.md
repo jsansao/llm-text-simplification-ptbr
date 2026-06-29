@@ -15,7 +15,6 @@ e Fine-Tuning"**
 - `results/` — predictions, scores, and ablation tables
 - `artigo/` — LaTeX source of the paper
 - `models/` — fine-tuned model checkpoints
-- `human_eval/` — human evaluation samples
 - `requirements.txt` — Python dependencies
 - `.env.example` — API key configuration template
 
