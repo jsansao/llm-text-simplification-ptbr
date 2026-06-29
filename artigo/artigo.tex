@@ -1219,11 +1219,10 @@ k & R1 & SARI & $\Delta \mathrm{F}$ & $\Delta \mathrm{Fog}$ & R1$_{OP}$ \\
 
 Este trabalho apresenta limitações que devem ser consideradas. O
 dataset utilizado
-(PorSimplesSent) contém apenas pares ORI--NAT de um domínio
+ (PorSimplesSent) contém apenas pares ORI--NAT de um domínio
 jornalístico, não abrangendo outros gêneros textuais. Modelos de
-raciocínio (como DeepSeek e Nemotron) não puderam ser completamente
-avaliados devido ao elevado consumo de tokens decorrente do raciocínio
-interno.
+raciocínio (como DeepSeek e Nemotron) foram evitados devido ao
+altíssimo consumo de tokens decorrente do raciocínio interno.
 
 A contagem de sílabas para o português foi feita com um algoritmo
 heurístico que, embora suficiente para análise comparativa, pode conter
@@ -1241,11 +1240,9 @@ diferenças entre as saídas são mais sutis. A avaliação com
 juízes automáticos não captura a diversidade de perspectivas que
 múltiplos avaliadores humanos proporcionariam.
 %
-Este trabalho não conduziu uma validação humana em escala: a
-infraestrutura de anotação humana presente no repositório
-(\texttt{human\_eval/}) não foi integrada ao pipeline experimental
-deste estudo. Como os juízes automáticos discordam fortemente
- ($\alpha$ médio $0{,}181$), a calibração das métricas automáticas
+Este trabalho não conduziu validação humana em escala. Como os
+juízes automáticos discordam fortemente
+($\alpha$ médio $0{,}181$), a calibração das métricas automáticas
 e do LLM-judge por meio de avaliadores humanos permanece em aberto.
 Recomenda-se, em trabalhos futuros, uma anotação humana com ao
 menos 2--3 avaliadores cobrindo 50--100 pares, com cálculo de
