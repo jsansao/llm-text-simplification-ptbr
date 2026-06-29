@@ -276,12 +276,13 @@ erro de alinhamento. A amostra foi mantida na análise por representar
 cenários reais de ruído em dados de simplificação textual. Durante a
 inspeção manual da amostra estratificada, este foi o único par
 identificado com esse problema.\footnote{Uma an\'alise de
-sensibilidade qualitativa (sem rec\'alculo completo das
-m\'etricas) indica que a remo\c{c}\~ao do par \#16 n\~ao altera
-qualitativamente as conclus\~oes deste trabalho: o par aparece
-como outlier em todos os modelos (R1 m\'edio $= 0{,}019$), com
-impacto dilu\'\i{}do pela corre\c{c}\~ao de m\'ultiplas
-compara\c{c}\~oes (Holm-Bonferroni).}
+sensibilidade (recalculo de R-1 e SARI excluindo a amostra
+\#16) confirma que o par n\~ao altera qualitativamente as
+conclus\~oes: Claude S. 4.6 (few-shot) passa de R-1 $= 0{,}661$
+para $0{,}665$ ($\Delta = +0{,}003$) e SARI de $42{,}6$ para
+$42{,}7$ ($\Delta = +0{,}04$); Qwen 2.5 7B (few-shot) passa
+de R-1 $= 0{,}664$ para $0{,}667$ ($\Delta = +0{,}002$) e SARI
+permanece em $41{,}7$.}
 
 \subsection{Modelos Avaliados}
 
