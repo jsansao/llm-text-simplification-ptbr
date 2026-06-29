@@ -1,5 +1,6 @@
 \documentclass[a4paper, twocolumn, 11pt, twoside]{article}
 
+\usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
 \usepackage{linguamatica}
 \usepackage{amsmath}
@@ -215,18 +216,7 @@ que focaram exclusivamente em fine-tuning supervisionado de T5, este
 trabalho combina, no mesmo dataset e com as mesmas 200 amostras de
 avaliação, três estratégias de prompting (zero-shot, few-shot e
 chain-of-thought) em cinco LLMs e fine-tuning de dois modelos, permitindo
-comparação direta e controlada entre paradigmas.%
-%
-\footnote{Sistemas de simplifica\c{c}\~ao textual n\~ao-generativos
-(baseados em regras l\'exicas, morfol\'ogicas ou de
-substitui\c{c}\~ao de sin\^onimos) para portugu\^es brasileiro
-poderiam fornecer baselines complementares para contextualizar
-os ganhos de legibilidade reportados neste trabalho. A
-aus\^encia de compara\c{c}\~ao direta com tais sistemas \'e uma
-limita\c{c}\~ao deste estudo, mitigada parcialmente pelo fato de
-que nosso foco \'e a compara\c{c}\~ao entre paradigmas
-(prompting \emph{vs.}~fine-tuning) e n\~ao a obten\c{c}\~ao do
-estado da arte em simplifica\c{c}\~ao para PT-BR.}
+comparação direta e controlada entre paradigmas.
 
 \subsection{Métricas de Avaliação}
 
@@ -287,9 +277,9 @@ das plataformas. Com n=200, o teste bootstrap pareado (10.000
 iterações) tem poder estatístico de 0,80 para detectar diferenças
 de $\Delta$R1 $\geq 0,03$ ($\alpha = 0,05$, duas caudas),
 suficiente para as comparações realizadas neste trabalho
-\citep{cohen1988}. O valor de Cohen (1988) \'e citado como
-aproxima\c{c}\~ao: an\'alises formais de poder para bootstrap
-pareado com corre\c{c}\~ao de m\'ultiplas compara\c{c}\~oes est\~ao
+\citep{cohen1988}. O valor de Cohen (1988) é citado como
+aproximação: ananálises formais de poder para bootstrap
+pareado com correção de múltiplas comparações estão
 fora do escopo deste trabalho.
 
 Identificamos um par (\#16) no qual original e referência tratam de
@@ -297,10 +287,10 @@ tópicos distintos (vacinação vs.\ servidora pública), provavelmente um
 erro de alinhamento. A amostra foi mantida na análise por representar
 cenários reais de ruído em dados de simplificação textual. Durante a
 inspeção manual da amostra estratificada, este foi o único par
-identificado com esse problema.\footnote{Uma an\'alise de
+identificado com esse problema.\footnote{Uma análise de
 sensibilidade (recalculo de R-1 e SARI excluindo a amostra
-\#16) confirma que o par n\~ao altera qualitativamente as
-conclus\~oes: Claude S. 4.6 (few-shot) passa de R-1 $= 0{,}661$
+\#16) confirma que o par não altera qualitativamente as
+conclusões: Claude S. 4.6 (few-shot) passa de R-1 $= 0{,}661$
 para $0{,}665$ ($\Delta = +0{,}003$) e SARI de $42{,}6$ para
 $42{,}7$ ($\Delta = +0{,}04$); Qwen 2.5 7B (few-shot) passa
 de R-1 $= 0{,}664$ para $0{,}667$ ($\Delta = +0{,}002$) e SARI
@@ -506,7 +496,7 @@ estratégias de prompting testadas.
             SARI da referência humana contra o original (original como
              fonte e referência única), medindo sua divergência lexical
              do texto fonte. Valores arredondados a 2 casas decimais;
-             precis\~ao completa na Tabela~\ref{tab:significancia}.}
+             precisão completa na Tabela~\ref{tab:significancia}.}
 \label{tab:similaridade}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
@@ -593,11 +583,11 @@ para contextualizar a escala da métrica. Tecnicamente, o SARI
 requer texto fonte, predição e uma lista de referências; aqui
 usamos o original como única referência, de modo que o resultado
 mede o quão distante lexicalmente a referência humana está do
-texto fonte. Vale notar que o SARI n\~ao possui, em si, um
+texto fonte. Vale notar que o SARI não possui, em si, um
 teto formal: a métrica cresce com a distância controlada entre
 a saída e a fonte. Assim, o valor 24,6 indica a magnitude da
 divergência lexical entre a referência humana e o original, e
-n\~ao um limite superior absoluto para a tarefa.
+não um limite superior absoluto para a tarefa.
 
 As métricas Origem$\leftrightarrow$Predição (R1$_{OP}$ e BS$_{OP}$)
 medem o quanto a saída do modelo se afasta do texto original. Quanto
@@ -738,16 +728,16 @@ O Qwen 2.5 0.5B apresentou R-1 de 0,60, SARI de 41,8
 e $\Delta \mathrm{F} = +9,6$. As simplificações são menos similares
 lexicalmente, mas os ganhos de legibilidade são substanciais, superando
 o PTT5 em $\Delta \mathrm{F}$ (+9,6 vs.\ +2,6 a +4,2). Em uma inspeção
-manual das 200 amostras, identificamos duas sa\'idas em que o modelo
-reproduz a instru\c{c}\~ao em vez de execut\'a-la (metatexto, 1\%):
+manual das 200 amostras, identificamos duas saídas em que o modelo
+reproduz a instrução em vez de executá-la (metatexto, 1\%):
 a amostra \#16 produz ``Simplifique o texto a seguir: [\ldots]''
-e a amostra \#141 produz apenas ``Aqui est\'a o texto
-simplificado:''. Al\'em disso, doze sa\'idas (6\%) s\~ao c\'opias
+e a amostra \#141 produz apenas ``Aqui está o texto
+simplificado:''. Além disso, doze saídas (6\%) são cópias
 literais do original. Esses casos ilustram uma fragilidade
-conhecida do fine-tuning leve em modelos pequenos, mas n\~ao
-alteram qualitativamente as m\'etricas agregadas reportadas.
+conhecida do fine-tuning leve em modelos pequenos, mas não
+alteram qualitativamente as métricas agregadas reportadas.
 
-As tr\^es variantes do PTT5-small superam \textbf{todos} os
+As três variantes do PTT5-small superam \textbf{todos} os
 resultados de prompting em ROUGE e SARI, apesar de terem 10--100$\times$
 menos parâmetros que os LLMs avaliados. O Qwen 2.5 0.5B, treinado com
 QLoRA, não atinge o mesmo patamar: a escala reduzida
@@ -805,10 +795,10 @@ $\alpha = 0,05$).
 
 \begin{table*}[htbp]
 \centering
-\caption{Grupos de signific\^ancia (corre\c{c}\~ao de Holm-Bonferroni,
-         $\alpha = 0,05$, bootstrap pareado, 10.000 itera\c{c}\~oes).
-         Sobrescritos iguais = sem diferen\c{c}a significativa ap\'os
-         corre\c{c}\~ao.}
+\caption{Grupos de significância (correção de Holm-Bonferroni,
+         $\alpha = 0,05$, bootstrap pareado, 10.000 iterações).
+         Sobrescritos iguais = sem diferença significativa após
+         correção.}
 \label{tab:significancia}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
@@ -1180,12 +1170,12 @@ são comparáveis aos de prompting.
 Uma análise das curvas de perda (Figura~\ref{fig:loss}) descarta a
 hipótese de underfitting: as curvas de treino e validação
 estabilizam em plateaus distintos para todas as variantes,
-indicando que o conservadorismo do PTT5-small n\~ao decorre de
+indicando que o conservadorismo do PTT5-small não decorre de
 underfitting nem de overfitting. Assim, uma poss\'\i{}vel
-explica\c{c}\~ao para o comportamento conservador \'e uma
+explicação para o comportamento conservador é uma
 caracter\'\i{}stica inerente ao modelo, que por ter sido
-pr\'e-treinado para reconstruir o texto original, tende a
-copi\'a-lo. O Qwen 2.5 0.5B, com arquitetura decoder-only, atinge
+pré-treinado para reconstruir o texto original, tende a
+copiá-lo. O Qwen 2.5 0.5B, com arquitetura decoder-only, atinge
 maior ganho de legibilidade ($\Delta \mathrm{F} = +9,6$) mas sofre de alucinações
 semânticas (adequação 3,52), refletindo sua escala reduzida.
 
@@ -1200,28 +1190,28 @@ o próximo token, o que pode favorecer maior diversidade lexical nas
 saídas. Exemplos representativos são apresentados no
 Apêndice~\ref{apendice:qualitativa}.
 
-\subsection{Robustez ao n\'umero de exemplos few-shot}
+\subsection{Robustez ao número de exemplos few-shot}
 
-A escolha de k=3 representa um equil\'ibrio razo\'avel entre
-custo computacional e qualidade das simplifica\c{c}\~oes, e \'e
+A escolha de k=3 representa um equililíbrio razoável entre
+custo computacional e qualidade das simplificações, e é
 consistente com valores adotados em estudos anteriores de
-simplifica\c{c}\~ao textual. Para verificar a sensibilidade dos
-resultados ao n\'umero de exemplos, realizamos uma an\'alise de
+simplificação textual. Para verificar a sensibilidade dos
+resultados ao número de exemplos, realizamos uma análise de
 robustez com k = 1, 3, 5 e 7 no GPT-4o mini
 (Tabela~\ref{tab:ablation}).
-Os resultados mostram que as m\'etricas de similaridade melhoram
+Os resultados mostram que as métricas de similaridade melhoram
 com mais exemplos: SARI sobe de 39,3 (k=1) para 42,2 (k=7),
 e R1 de 0,652 para 0,675.
 O ganho de legibilidade ($\Delta \mathrm{F}$) varia entre +8,3 (k=7) e +10,7 (k=3),
 sem tendência clara.
-As diferen\c{c}as s\~ao moderadas: a varia\c{c}\~ao m\'axima \'e de
-aproximadamente 8\% em SARI e 4\% em R1, e n\~ao alteram o
-posicionamento relativo do GPT-4o mini em rela\c{c}\~ao aos demais
+As diferenças são moderadas: a variação máxima é de
+aproximadamente 8\% em SARI e 4\% em R1, e não alteram o
+posicionamento relativo do GPT-4o mini em relação aos demais
 modelos.
 
 \begin{table*}[htbp]
 \centering
-\caption{An\'alise de robustez ao n\'umero de exemplos few-shot (k)
+\caption{Análise de robustez ao número de exemplos few-shot (k)
 no GPT-4o mini.}
 \label{tab:ablation}
 \footnotesize
@@ -1271,6 +1261,16 @@ menos 2--3 avaliadores cobrindo 50--100 pares, com cálculo de
 concordância inter-anotador (e.g., $\kappa$ de Cohen) e
 comparação sistemática com as notas dos juízes LLM.
 
+Sistemas de simplificação textual não-generativos para português
+brasileiro (baseados em regras léxicas, morfológicas ou de
+substituição de sinônimos) poderiam fornecer baselines
+complementares para contextualizar os ganhos de legibilidade
+reportados neste trabalho. A ausência de comparação direta
+com tais sistemas é uma limitação deste estudo, mitigada
+parcialmente pelo fato de que nosso foco é a comparação entre
+paradigmas (prompting \emph{vs.}~fine-tuning) e não a obtenção
+do estado da arte em simplificação para PT-BR.
+
 O fine-tuning completo do PTT5-small convergiu para perda de validação
 de 1,001, comparável aos adaptadores LoRA (0,95--1,00), indicando
 que os dados disponíveis (1.953 pares) são suficientes para treinar
@@ -1278,9 +1278,9 @@ que os dados disponíveis (1.953 pares) são suficientes para treinar
 Experimentos com mais dados ou técnicas de regularização adicionais
 poderiam alterar este resultado. Cada configuração de fine-tuning foi
 treinada com uma única semente aleatória (sem variação de random
-init ou ordem dos dados), o que impede separar vari\^ancia
-metodol\'ogica (inicializa\c{c}\~ao, ordem do batch) de vari\^ancia
-estrutural (dados, hiperpar\^ametros) e, portanto, limita a
+init ou ordem dos dados), o que impede separar variância
+metodológica (inicialização, ordem do batch) de variância
+estrutural (dados, hiperparâmetros) e, portanto, limita a
 robustez das comparações entre variantes. Recomenda-se, em
 trabalhos futuros, ao menos 3 sementes por configuração.
 
