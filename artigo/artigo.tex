@@ -1361,8 +1361,10 @@ pelo apoio institucional.
 Esta seção apresenta as predições dos modelos em cinco amostras
 selecionadas da amostra estratificada de 200 pares: a de maior consenso
 (\#158, R1 médio 0,964), a de maior dificuldade (\#16, R1 médio 0,019),
-duas de maior divergência (\#103, std=0,296; \#127, std=0,284) e a de
-maior comprimento (\#141, 52 tokens).
+duas de maior divergência entre os modelos (\#103, com desvio padrão
+do ROUGE-1 de 0,296; \#127, com 0,284) e a de maior comprimento
+(\#141, 52 tokens). O desvio padrão é calculado sobre as pontuações
+ROUGE-1 dos nove modelos em cada amostra.
 
 \subsection{Exemplos Selecionados}
 
@@ -1419,7 +1421,7 @@ maior comprimento (\#141, 52 tokens).
 \textbf{Qwen 2.5 0.5B FT:} Simplifique o texto a seguir: Sem contraindicoções, as gotinhas devem ser tomadas até mesmo por crianças com febre.
 
 \bigskip
-\paragraph*{Amostra \#103 (divergência, std=0,296).}
+\paragraph*{Amostra \#103 (divergência entre modelos, desvio padrão do ROUGE-1 = 0,296).}
 
 \textbf{Original:} -- O fórum retrata a diversidade da comunidade de software livre, onde todos os grupos, projetos e iniciativas têm espaço.
 
@@ -1444,7 +1446,7 @@ maior comprimento (\#141, 52 tokens).
 \textbf{Qwen 2.5 0.5B FT:} -- O fórum é um lugar para todas as pessoas que desejam desenvolver software livre.
 
 \bigskip
-\paragraph*{Amostra \#127 (divergência: segunda maior std, std=0,284).}
+\paragraph*{Amostra \#127 (segunda maior divergência entre modelos, desvio padrão do ROUGE-1 = 0,284).}
 
 \textbf{Original:} O aumento da população de rua, de um lado, é acompanhado da redução dos espaços públicos historicamente usados por mendigos.
 
