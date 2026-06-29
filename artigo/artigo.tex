@@ -67,8 +67,8 @@ diferença de escala. Uma avaliação complementar
 LLM-as-judge com dois modelos juízes (Gemini 3.1 Flash Lite e GPT-4o
 mini) confirma a fluência e adequação
 das simplificações, mas revela limitações qualitativas nos
-modelos fine-tunados e baixa concordância entre juízes automáticos para modelos
-de prompting.
+modelos fine-tunados, além de baixa concordância entre juízes
+automáticos para modelos baseados em prompting.
 \end{resumo}
 
 \palavraschave{simplificação textual; LLMs; prompting; fine-tuning; português brasileiro}
@@ -482,8 +482,9 @@ estratégias de prompting testadas.
           {\tt Cópia} mostra o piso de similaridade (copiar o original
            como predição). A linha {\tt Ref.\ como pred.} mostra o
             SARI da referência humana contra o original (original como
-            fonte e referência única), medindo sua divergência lexical
-            do texto fonte.}
+             fonte e referência única), medindo sua divergência lexical
+             do texto fonte. Valores arredondados a 2 casas decimais;
+             precis\~ao completa na Tabela~\ref{tab:significancia}.}
 \label{tab:similaridade}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
@@ -972,9 +973,11 @@ Ref. Humana (sanity) & 5,00 & 5,00 & 5,00 \\
 \end{table*}
 
 O GPT-4o mini como juiz atribui notas sistematicamente mais baixas que
-o Gemini: a média geral em simplicidade cai de 4,64 (Gemini) para 3,79
-(GPT-4o mini), em fluência de 4,91 para 4,27, e em adequação de 4,77
-para 4,23. As
+o Gemini. Restringindo a análise aos cinco modelos de prompting
+(Tabela~\ref{tab:llmjudge}), a média em simplicidade cai de
+$4{,}64$ (Gemini) para $3{,}88$ (GPT-4o mini), em fluência de
+$4{,}94$ para $4{,}45$, e em adequação de $4{,}80$ para
+$4{,}22$. As
 variantes do PTT5, que o Gemini avaliou com simplicidade entre 2,43 e
 2,73, recebem notas ligeiramente superiores do GPT-4o mini
 (2,79--2,90). O sanity check (referência humana avaliada contra si
@@ -1175,7 +1178,7 @@ o próximo token, o que pode favorecer maior diversidade lexical nas
 saídas. Exemplos representativos são apresentados no
 Apêndice~\ref{apendice:qualitativa}.
 
-\subsection{Robustez ao N\'umero de Exemplos Few-Shot}
+\subsection{Robustez ao n\'umero de exemplos few-shot}
 
 A escolha de k=3 representa um equil\'ibrio razo\'avel entre
 custo computacional e qualidade das simplifica\c{c}\~oes, e \'e
@@ -1242,7 +1245,7 @@ Este trabalho não conduziu uma validação humana em escala: a
 infraestrutura de anotação humana presente no repositório
 (\texttt{human\_eval/}) não foi integrada ao pipeline experimental
 deste estudo. Como os juízes automáticos discordam fortemente
-($\alpha$ médio $0{,}18$), a calibração das métricas automáticas
+ ($\alpha$ médio $0{,}181$), a calibração das métricas automáticas
 e do LLM-judge por meio de avaliadores humanos permanece em aberto.
 Recomenda-se, em trabalhos futuros, uma anotação humana com ao
 menos 2--3 avaliadores cobrindo 50--100 pares, com cálculo de
@@ -1293,7 +1296,7 @@ atinge similaridade próxima ao PTT5 com ganhos de legibilidade
 superiores; (iii) realizar \textbf{avaliação com juízes humanos}
 (prioritária) para calibrar as métricas automáticas e o LLM-judge,
 dada a baixa concordância inter-juiz observada
-($\alpha = 0{,}18$ em média); (iv) investigar se prompts
+($\alpha = 0{,}181$ em média); (iv) investigar se prompts
 estilísticos (com nível-alvo de simplificação explícito) podem
 reduzir a lacuna entre similaridade e legibilidade em modelos
 fine-tunados.
@@ -1307,10 +1310,11 @@ licença CC BY 4.0
 (\url{https://github.com/sidleal/porsimplessent}).
 A amostra estratificada de 200 pares, as predições completas de
 todos os modelos e as adaptações dos índices de legibilidade para o
-português acompanham o repositório. O commit de referência
-correspondente a esta versão do manuscrito é o de hash
-\texttt{5de9157} (24 jun. 2026), com versões posteriores mantendo
-reprodutibilidade experimental.
+português acompanham o repositório. O commit base sobre o qual
+esta versão foi editada é o de hash \texttt{5de9157} (24 jun.
+2026); as edições da rodada de revisão interna (3 commits)
+estão registradas no histórico de \texttt{git} do
+repositório, mantendo reprodutibilidade experimental.
 
 \section*{Declaração de Conflito de Interesses}
 Os autores declaram não haver conflitos de interesses.
