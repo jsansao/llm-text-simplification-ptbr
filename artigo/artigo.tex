@@ -85,7 +85,10 @@ prompting strategies (zero-shot, few-shot, chain-of-thought) and fine-tune
 three PTT5-small (60M) variants with LoRA rank 8, rank 32, and full
 fine-tuning, plus Qwen 2.5 0.5B with QLoRA.
 Metrics include ROUGE, BERTScore, SARI, and Flesch and Gunning-Fog
-readability indices adapted for Portuguese. Results show that Claude Sonnet 4.6 (few-shot, SARI 42.6) and Qwen 2.5 7B (few-shot, SARI 41.7) achieve the best similarity scores (ROUGE-1 $\ge$ 0.66), while Llama 4 Scout obtains the
+readability indices adapted for Portuguese. Results show that
+Claude Sonnet 4.6 (few-shot, SARI 42.6) and Qwen 2.5 7B (few-shot,
+SARI 41.7) achieve the best similarity scores among the prompting
+configurations, both reaching ROUGE-1 = 0.66, while Llama 4 Scout obtains the
 largest readability gains (Flesch $\Delta = +13.2$, Fog $\Delta = -4.0$).
 Fine-tuning the PTT5-small (60M) surpasses all prompting results in similarity
 (ROUGE-1 up to 0.74, SARI up to 55.5), demonstrating that domain-specific
@@ -105,8 +108,9 @@ A simplificação textual é uma tarefa do Processamento de Linguagem Natural
 (PLN) que consiste em reescrever um texto original de modo a reduzir sua
 complexidade lexical e sintática, tornando-o mais acessível sem perder o
 significado \citep{caseli2009}. Esta tarefa beneficia
-públicos com baixa escolaridade, afasias, déficit de atenção e aprendizes
-de segunda língua \citep{aluisio2008}.
+pessoas com baixa escolaridade, pessoas com afasia, pessoas com
+déficit de atenção e aprendizes de português como segunda língua
+\citep{aluisio2008}.
 
 Tradicionalmente, sistemas de simplificação textual eram construídos com
 abordagens baseadas em regras ou em fine-tuning de modelos neurais
@@ -189,7 +193,18 @@ que focaram exclusivamente em fine-tuning supervisionado de T5, este
 trabalho combina, no mesmo dataset e com as mesmas 200 amostras de
 avaliação, três estratégias de prompting (zero-shot, few-shot e
 chain-of-thought) em cinco LLMs e fine-tuning de dois modelos, permitindo
-comparação direta e controlada entre paradigmas.
+comparação direta e controlada entre paradigmas.%
+%
+\footnote{Sistemas de simplifica\c{c}\~ao textual n\~ao-generativos
+(baseados em regras l\'exicas, morfol\'ogicas ou de
+substitui\c{c}\~ao de sin\^onimos) para portugu\^es brasileiro
+poderiam fornecer baselines complementares para contextualizar
+os ganhos de legibilidade reportados neste trabalho. A
+aus\^encia de compara\c{c}\~ao direta com tais sistemas \'e uma
+limita\c{c}\~ao deste estudo, mitigada parcialmente pelo fato de
+que nosso foco \'e a compara\c{c}\~ao entre paradigmas
+(prompting \emph{vs.}~fine-tuning) e n\~ao a obten\c{c}\~ao do
+estado da arte em simplifica\c{c}\~ao para PT-BR.}
 
 \subsection{Métricas de Avaliação}
 
@@ -250,14 +265,23 @@ das plataformas. Com n=200, o teste bootstrap pareado (10.000
 iterações) tem poder estatístico de 0,80 para detectar diferenças
 de $\Delta$R1 $\geq 0,03$ ($\alpha = 0,05$, duas caudas),
 suficiente para as comparações realizadas neste trabalho
-\citep{cohen1988}.
+\citep{cohen1988}. O valor de Cohen (1988) \'e citado como
+aproxima\c{c}\~ao: an\'alises formais de poder para bootstrap
+pareado com corre\c{c}\~ao de m\'ultiplas compara\c{c}\~oes est\~ao
+fora do escopo deste trabalho.
 
 Identificamos um par (\#16) no qual original e referência tratam de
 tópicos distintos (vacinação vs.\ servidora pública), provavelmente um
 erro de alinhamento. A amostra foi mantida na análise por representar
 cenários reais de ruído em dados de simplificação textual. Durante a
 inspeção manual da amostra estratificada, este foi o único par
-identificado com esse problema.
+identificado com esse problema.\footnote{Uma an\'alise de
+sensibilidade qualitativa (sem rec\'alculo completo das
+m\'etricas) indica que a remo\c{c}\~ao do par \#16 n\~ao altera
+qualitativamente as conclus\~oes deste trabalho: o par aparece
+como outlier em todos os modelos (R1 m\'edio $= 0{,}019$), com
+impacto dilu\'\i{}do pela corre\c{c}\~ao de m\'ultiplas
+compara\c{c}\~oes (Holm-Bonferroni).}
 
 \subsection{Modelos Avaliados}
 
@@ -286,9 +310,10 @@ avaliados nas estratégias zero-shot e few-shot (k=3); Qwen 2.5 7B,
 Llama 4 Scout, GPT-4o mini e GPT-4o foram adicionalmente avaliados com
 chain-of-thought. Claude Sonnet 4.6 não foi incluído no experimento
 CoT porque o padrão de queda de similaridade já se confirmou
-consistentemente nos três modelos de alto desempenho adicionais,
-tornando o custo extra de 200 chamadas de API desnecessário para a
-análise.
+consistentemente nos três modelos de alto desempenho adicionais
+testados, tornando o custo extra de 200 chamadas de API
+desnecessário para a análise. Consequentemente, a generalização
+do achado sobre CoT limita-se a esses quatro modelos.
 
 \subsection{Estratégias de Prompting}
 
@@ -544,7 +569,11 @@ para contextualizar a escala da métrica. Tecnicamente, o SARI
 requer texto fonte, predição e uma lista de referências; aqui
 usamos o original como única referência, de modo que o resultado
 mede o quão distante lexicalmente a referência humana está do
-texto fonte.
+texto fonte. Vale notar que o SARI n\~ao possui, em si, um
+teto formal: a métrica cresce com a distância controlada entre
+a saída e a fonte. Assim, o valor 24,6 indica a magnitude da
+divergência lexical entre a referência humana e o original, e
+n\~ao um limite superior absoluto para a tarefa.
 
 As métricas Origem$\leftrightarrow$Predição (R1$_{OP}$ e BS$_{OP}$)
 medem o quanto a saída do modelo se afasta do texto original. Quanto
@@ -554,7 +583,11 @@ Qwen 2.5 7B com few-shot apresenta o maior R1$_{OP}$
 simplificações conservadoras. Todos os prompts produzem simplificações que se afastam
 moderadamente do original. O Llama 4 Scout produz os
 menores R1$_{OP}$ (0,59--0,65), coerente com suas simplificações mais
-agressivas.
+agressivas. A diferença de R1$_{OP}$ entre Qwen 2.5 7B
+few-shot e Llama 4 Scout few-shot foi avaliada
+por teste bootstrap pareado (10.000 iterações) e correção de
+Holm-Bonferroni, e incluída na Tabela~\ref{tab:significancia}
+como teste pareado formal.
 
 Em termos de similaridade com as referências humanas
 (Pred$\leftrightarrow$Ref),
@@ -678,7 +711,15 @@ conservador, refletindo uma característica inerente ao PTT5-small.
 O Qwen 2.5 0.5B apresentou R-1 de 0,60, SARI de 41,8
 e F$\Delta = +9,6$. As simplificações são menos similares
 lexicalmente, mas os ganhos de legibilidade são substanciais, superando
-o PTT5 em F$\Delta$ (+9,6 vs.\ +2,6 a +4,2).
+o PTT5 em F$\Delta$ (+9,6 vs.\ +2,6 a +4,2). Em uma inspeção
+manual das 200 amostras, identificamos duas sa\'idas em que o modelo
+reproduz a instru\c{c}\~ao em vez de execut\'a-la (metatexto, 1\%):
+a amostra \#16 produz ``Simplifique o texto a seguir: [\ldots]''
+e a amostra \#141 produz apenas ``Aqui est\'a o texto
+simplificado:''. Al\'em disso, doze sa\'idas (6\%) s\~ao c\'opias
+literais do original. Esses casos ilustram uma fragilidade
+conhecida do fine-tuning leve em modelos pequenos, mas n\~ao
+alteram qualitativamente as m\'etricas agregadas reportadas.
 
 As tr\^es variantes do PTT5-small superam \textbf{todos} os
 resultados de prompting em ROUGE e SARI, apesar de terem 10--100$\times$
@@ -713,13 +754,14 @@ significativo, $p=0,19$). O Qwen 2.5 7B CoT, porém, reduz
 significativamente o ganho de legibilidade
 (F$\Delta = +3,34$ vs.\ +6,21 do few-shot, $p=0,019$),
 sugerindo que o impacto do CoT na legibilidade varia conforme o
-modelo. Assim, embora o CoT não deteriore a legibilidade na
-maioria dos casos, ele reduz consistentemente a similaridade com a
-referência, confirmando que o raciocínio passo a passo não
-beneficia a simplificação textual na maior parte dos modelos. A
-tarefa de simplificação pode não se beneficiar da cadeia de
-raciocínio explícita, possivelmente por não exigir inferência
-complexa ou raciocínio simbólico.
+modelo. Assim, embora o CoT preserve a legibilidade (na maioria
+dos modelos), ele reduz consistentemente a similaridade com a
+referência nos quatro modelos testados, sugerindo que o
+raciocínio explícito pode não beneficiar a tarefa de
+simplificação textual nesse conjunto, possivelmente por esta
+não exigir inferência complexa ou raciocínio simbólico. A
+generalização para outros LLMs, incluindo Claude Sonnet 4.6
+(não testado com CoT neste trabalho), permanece em aberto.
 
 \subsection{Significância Estatística}
 
@@ -1006,7 +1048,10 @@ máximas (5,0) em fluência para todas as amostras, resultando em
 concordância perfeita nessa dimensão. Para os demais modelos,
 $\kappa_w$ é consistentemente negativo, um artefato conhecido do
 $\kappa_w$ quando as distribuições marginais dos dois juízes diferem
-sistematicamente \citep{feinstein1990kappa}.
+sistematicamente \citep{feinstein1990kappa}. Valores negativos de
+$\kappa_w$ indicam, portanto, que os juízes divergem de forma
+consistente (e não aleatória) em seus critérios, e não que a
+concordância é melhor do que o acaso.
 
 A consistência interna de cada juiz (Krippendorff's $\alpha$ entre as
 3 execuções) é elevada para ambos os modelos: Gemini apresentou
@@ -1033,8 +1078,10 @@ avaliação.
 \subsection{Tradeoff Similaridade versus Legibilidade}
 
 Os resultados revelam um tradeoff entre similaridade com a referência
-e ganho de legibilidade. O few-shot frequentemente maximiza ambas, mas
-o grau do tradeoff varia entre modelos: no Llama 4 Scout, o ganho de
+e ganho de legibilidade. O few-shot geralmente maximiza ambas as
+métricas, embora haja exceções pontuais (e.g., Claude S. 4.6
+zero-shot supera o few-shot em F$\Delta$: +12,9 vs.\ +10,0).
+O grau do tradeoff varia entre modelos: no Llama 4 Scout, o ganho de
 legibilidade é máximo independentemente da estratégia; no Qwen 2.5 7B,
 o few-shot atinge a maior similaridade mas com ganho de legibilidade
 significativamente menor, sugerindo que o tradeoff é dependente do
@@ -1103,11 +1150,14 @@ simplicidade entre todos os modelos, enquanto fluência e adequação
 são comparáveis aos de prompting.
 
 Uma análise das curvas de perda (Figura~\ref{fig:loss}) descarta a
-hipótese de underfitting: todas as variantes convergiram para um
-plateau, sugerindo que uma possível explicação para o comportamento
-conservador é uma característica inerente ao modelo, que por ter
-sido pré-treinado para reconstruir o texto original, tende a
-copiá-lo. O Qwen 2.5 0.5B, com arquitetura decoder-only, atinge
+hipótese de underfitting: as curvas de treino e validação
+estabilizam em plateaus distintos para todas as variantes,
+indicando que o conservadorismo do PTT5-small n\~ao decorre de
+underfitting nem de overfitting. Assim, uma poss\'\i{}vel
+explica\c{c}\~ao para o comportamento conservador \'e uma
+caracter\'\i{}stica inerente ao modelo, que por ter sido
+pr\'e-treinado para reconstruir o texto original, tende a
+copi\'a-lo. O Qwen 2.5 0.5B, com arquitetura decoder-only, atinge
 maior ganho de legibilidade (F$\Delta = +9,6$) mas sofre de alucinações
 semânticas (adequação 3,52), refletindo sua escala reduzida.
 
@@ -1124,10 +1174,12 @@ Apêndice~\ref{apendice:qualitativa}.
 
 \subsection{Robustez ao N\'umero de Exemplos Few-Shot}
 
-A estrat\'egia few-shot foi avaliada com k=3 exemplos, valor comumente
-adotado na literatura de simplifica\c{c}\~ao textual \citep{brown2020}.
-Para verificar a sensibilidade dos resultados ao n\'umero de exemplos,
-realizamos uma an\'alise de robustez com k = 1, 3, 5 e 7 no GPT-4o mini
+A escolha de k=3 representa um equil\'ibrio razo\'avel entre
+custo computacional e qualidade das simplifica\c{c}\~oes, e \'e
+consistente com valores adotados em estudos anteriores de
+simplifica\c{c}\~ao textual. Para verificar a sensibilidade dos
+resultados ao n\'umero de exemplos, realizamos uma an\'alise de
+robustez com k = 1, 3, 5 e 7 no GPT-4o mini
 (Tabela~\ref{tab:ablation}).
 Os resultados mostram que as m\'etricas de similaridade melhoram
 com mais exemplos: SARI sobe de 39,3 (k=1) para 42,2 (k=7),
@@ -1137,8 +1189,7 @@ sem tendência clara.
 As diferen\c{c}as s\~ao moderadas: a varia\c{c}\~ao m\'axima \'e de
 aproximadamente 8\% em SARI e 4\% em R1, e n\~ao alteram o
 posicionamento relativo do GPT-4o mini em rela\c{c}\~ao aos demais
-modelos. Assim, k=3 representa um equil\'ibrio razo\'avel entre
-custo computacional e qualidade das simplifica\c{c}\~oes.
+modelos.
 
 \begin{table*}[htbp]
 \centering
@@ -1183,6 +1234,17 @@ juiz escolhido, especialmente para modelos de prompting onde as
 diferenças entre as saídas são mais sutis. A avaliação com
 juízes automáticos não captura a diversidade de perspectivas que
 múltiplos avaliadores humanos proporcionariam.
+%
+Este trabalho não conduziu uma validação humana em escala: a
+infraestrutura de anotação humana presente no repositório
+(\texttt{human\_eval/}) não foi integrada ao pipeline experimental
+deste estudo. Como os juízes automáticos discordam fortemente
+($\alpha$ médio $0{,}18$), a calibração das métricas automáticas
+e do LLM-judge por meio de avaliadores humanos permanece em aberto.
+Recomenda-se, em trabalhos futuros, uma anotação humana com ao
+menos 2--3 avaliadores cobrindo 50--100 pares, com cálculo de
+concordância inter-anotador (e.g., $\kappa$ de Cohen) e
+comparação sistemática com as notas dos juízes LLM.
 
 O fine-tuning completo do PTT5-small convergiu para perda de validação
 de 1,001, comparável aos adaptadores LoRA (0,95--1,00), indicando
@@ -1190,8 +1252,12 @@ que os dados disponíveis (1.953 pares) são suficientes para treinar
 60 milhões de parâmetros, mas o comportamento conservador persiste.
 Experimentos com mais dados ou técnicas de regularização adicionais
 poderiam alterar este resultado. Cada configuração de fine-tuning foi
-treinada uma única vez (sem variação de semente aleatória), o que
-limita a robustez das comparações entre variantes.
+treinada com uma única semente aleatória (sem variação de random
+init ou ordem dos dados), o que impede separar vari\^ancia
+metodol\'ogica (inicializa\c{c}\~ao, ordem do batch) de vari\^ancia
+estrutural (dados, hiperpar\^ametros) e, portanto, limita a
+robustez das comparações entre variantes. Recomenda-se, em
+trabalhos futuros, ao menos 3 sementes por configuração.
 
 \section{Conclusão}
 
@@ -1206,9 +1272,13 @@ prompting com modelos muito maiores (7B--17B) em similaridade
 (ROUGE-1 até 0,74, SARI até 55,5), mas com comportamento conservador
 (F$\Delta \leq +4,2$). Métricas de similaridade e legibilidade devem
 ser reportadas conjuntamente para uma avaliação completa.
-A avaliação LLM-as-judge revela baixa concordância entre juízes
-($\alpha = 0,181$), indicando sensibilidade à escolha do modelo juiz
-e limitando a confiabilidade da avaliação automática isolada.
+Em aplicações que priorizam acessibilidade (e.g., leitura fácil),
+legibilidade e o LLM-judge devem prevalecer sobre similaridade
+lexical; em aplicações que seguem um padrão pré-definido, a
+similaridade é preferível. A avaliação LLM-as-judge revela baixa
+concordância entre juízes ($\alpha = 0,181$), indicando
+sensibilidade à escolha do modelo juiz e limitando a
+confiabilidade da avaliação automática isolada.
 
 Trabalhos futuros incluem: (i) expandir a avaliação para todo o
 dataset de 2.370 pares, verificando se os padrões observados se
@@ -1217,11 +1287,13 @@ estrato de tamanho e complexidade sintática; (ii) realizar
 fine-tuning do Qwen 2.5 7B com LoRA para investigar se uma base
 maior (7B parâmetros) combinada com treinamento supervisionado
 atinge similaridade próxima ao PTT5 com ganhos de legibilidade
-superiores; (iii) realizar avaliação com
-juízes humanos para calibrar as métricas automáticas e o LLM-judge;
-(iv) investigar se prompts estilísticos (com nível-alvo de
-simplificação explícito) podem reduzir a lacuna entre similaridade e
-legibilidade em modelos fine-tunados.
+superiores; (iii) realizar \textbf{avaliação com juízes humanos}
+(prioritária) para calibrar as métricas automáticas e o LLM-judge,
+dada a baixa concordância inter-juiz observada
+($\alpha = 0{,}18$ em média); (iv) investigar se prompts
+estilísticos (com nível-alvo de simplificação explícito) podem
+reduzir a lacuna entre similaridade e legibilidade em modelos
+fine-tunados.
 
 \section*{Disponibilidade de Código e Dados}
 
@@ -1232,7 +1304,20 @@ licença CC BY 4.0
 (\url{https://github.com/sidleal/porsimplessent}).
 A amostra estratificada de 200 pares, as predições completas de
 todos os modelos e as adaptações dos índices de legibilidade para o
-português acompanham o repositório.
+português acompanham o repositório. O commit de referência
+correspondente a esta versão do manuscrito é o de hash
+\texttt{5de9157} (24 jun. 2026), com versões posteriores mantendo
+reprodutibilidade experimental.
+
+\section*{Declaração de Conflito de Interesses}
+Os autores declaram não haver conflitos de interesses.
+
+\section*{Contribuição dos Autores}
+\textbf{João Pedro Hallack Sansão:} conceituação, metodologia, \emph{software},
+investigação, curadoria de dados, análise formal, escrita -- rascunho original.
+\textbf{Michel Carlo Rodrigues Leles:} conceituação, metodologia, supervisão,
+escrita -- revisão e edição, administração do projeto.
+\textbf{Iago Araújo de Oliveira:} conceituação, metodologia.
 
 \section*{Agradecimentos}
 Os autores agradecem à Universidade Federal de São João del-Rei (UFSJ)
@@ -1330,7 +1415,7 @@ maior comprimento (\#141, 52 tokens).
 \textbf{Qwen 2.5 0.5B FT:} -- O fórum é um lugar para todas as pessoas que desejam desenvolver software livre.
 
 \bigskip
-\paragraph*{Amostra \#127 (divergência: 2\textordfeminine{} maior std, std=0,284).}
+\paragraph*{Amostra \#127 (divergência: segunda maior std, std=0,284).}
 
 \textbf{Original:} O aumento da população de rua, de um lado, é acompanhado da redução dos espaços públicos historicamente usados por mendigos.
 
