@@ -60,15 +60,21 @@ Flesch e Gunning-Fog adaptados para o português. Os resultados mostram
 que Claude Sonnet 4.6 (few-shot, SARI=42,6) e Qwen 2.5 7B (few-shot, SARI=41,7) obtêm os melhores escores de
 similaridade (ROUGE-1 $\geq$ 0,66), enquanto o Llama 4 Scout alcança os maiores ganhos de
 legibilidade (Flesch $\Delta\mathrm{F} = +13,2$, Fog $\Delta\mathrm{Fog} = -4,0$).
-O fine-tuning do PTT5-small supera todos os
-resultados de prompting em similaridade (ROUGE-1 até 0,74, SARI até
-55,5). Isso mostra que o treinamento em domínio específico compensa a
-diferença de escala. Uma avaliação complementar
-LLM-as-judge com dois modelos juízes (Gemini 3.1 Flash Lite e GPT-4o
-mini) confirma a fluência e adequação
-das simplificações, mas revela limitações qualitativas nos
-modelos ajustados em domínio, além de baixa concordância entre juízes
-automáticos para modelos baseados em prompting.
+ Em similaridade lexical, o ajuste em domínio do PTT5-small
+(60M) supera o prompting de modelos 100$\times$ maiores
+(ROUGE-1 até 0,74, SARI até 55,5), mas com
+\underline{comportamento conservador} (R1$_{OP} \approx 0{,}93$,
+$\Delta \mathrm{F} \leq +4{,}2$) que limita os ganhos de
+legibilidade e sugere que, em tarefas de natureza lexical, a
+escala do modelo não substitui o ajuste em domínio. A estratégia
+chain-of-thought reduz a similaridade sem benefícios de
+legibilidade nos quatro modelos testados, indicando que a
+tarefa não se beneficia de raciocínio explícito. Uma avaliação
+complementar LLM-as-judge com dois juízes (Gemini 3.1 Flash Lite
+e GPT-4o mini) confirma a fluência e adequação das
+simplificações, mas revela baixa concordância entre juízes
+($\alpha = 0{,}181$ em média) e sensibilidade ao modelo juiz
+escolhido.
 \end{resumo}
 
 \palavraschave{simplificação textual; LLMs; prompting; fine-tuning; português brasileiro}
@@ -90,10 +96,14 @@ Claude Sonnet 4.6 (few-shot, SARI 42.6) and Qwen 2.5 7B (few-shot,
 SARI 41.7) achieve the best similarity scores among the prompting
 configurations, both reaching ROUGE-1 = 0.66, while Llama 4 Scout obtains the
 largest readability gains (Flesch $\Delta\mathrm{F} = +13.2$, Fog $\Delta\mathrm{Fog} = -4.0$).
-Fine-tuning the PTT5-small (60M) surpasses all prompting results in similarity
-(ROUGE-1 up to 0.74, SARI up to 55.5), demonstrating that domain-specific
-training compensates for the scale difference.
-A complementary LLM-as-judge evaluation with two judge models
+In similarity, domain-adjusted PTT5-small (60M) outperforms prompting
+of models 100$\times$ larger (ROUGE-1 up to 0.74, SARI up to 55.5), but
+with \emph{extreme conservatism} (R1$_{OP} \approx 0.93$, $\Delta \mathrm{F} \leq +4.2$)
+that caps readability gains and suggests that, for lexical tasks, model
+scale does not substitute domain adjustment. The chain-of-thought
+strategy reduces similarity without readability benefits in the four
+tested models, indicating that the task does not benefit from explicit
+reasoning. A complementary LLM-as-judge evaluation with two judge models
 (Gemini 3.1 Flash Lite and GPT-4o mini)
 confirms the fluency and adequacy of the simplifications but reveals
 qualitative limitations in fine-tuned models and low inter-judge
@@ -129,16 +139,28 @@ PTT5-small e do Qwen 2.5 0.5B. As métricas empregadas incluem
 tanto medidas de similaridade textual quanto índices de
 legibilidade, além de uma avaliação complementar LLM-as-judge.
 
-As contribuições deste trabalho são: (i) evidência de que o
-fine-tuning de modelo pequeno (PTT5-small, 60M) supera o prompting de
-modelos grandes (7B--17B) em similaridade textual (ROUGE-1 até 0,74,
-SARI até 55,5), mas com comportamento conservador que limita os ganhos
-de legibilidade; (ii) demonstração de que a avaliação LLM-as-judge
-apresenta baixa concordância entre juízes ($\alpha = 0,181$ em média),
-questionando sua confiabilidade como métrica única para simplificação
-textual; e (iii) disponibilização de código, amostra de avaliação e
-adaptação dos índices de legibilidade Flesch e Gunning-Fog ao
-português com contagem silábica baseada em grupos vocálicos\footnote{%
+As contribuições deste trabalho são: (i) comparação controlada de
+cinco LLMs (7B--17B) em três estratégias de prompting e de quatro
+modelos ajustados em domínio (60M--0,5B), no mesmo dataset e nas
+mesmas 200 amostras, permitindo contrastar diretamente os
+paradigmas sob idênticas condições de avaliação; (ii) evidência
+de que o ajuste em domínio do PTT5-small (60M) atinge similaridade
+lexical superior à do prompting de modelos grandes
+(ROUGE-1 até 0,74, SARI até 55,5), mas com
+\underline{comportamento conservador extremo}
+(R1$_{OP} \approx 0{,}93$, $\Delta \mathrm{F} \leq +4{,}2$),
+sugerindo que, em tarefas de natureza lexical, a escala do modelo
+não substitui o ajuste em domínio; (iii) demonstração de que a
+estratégia chain-of-thought reduz a similaridade sem ganho de
+legibilidade nos quatro modelos testados, indicando que a tarefa
+de simplificação não se beneficia de raciocínio explícito;
+(iv) demonstração de que a avaliação LLM-as-judge apresenta baixa
+concordância entre juízes ($\alpha = 0{,}181$ em média), com
+sensibilidade ao modelo juiz escolhido, o que questiona sua
+confiabilidade como métrica única; e (v) disponibilização de
+código, amostra de avaliação e adaptação dos índices de
+legibilidade Flesch e Gunning-Fog ao português com contagem
+silábica baseada em grupos vocálicos\footnote{%
   Repositório: \url{https://github.com/jsansao/llm-text-simplification-ptbr}
   (GPLv3). Dados originais (PorSimplesSent): CC BY 4.0.}. O restante deste
 artigo está organizado como segue: a Seção~2 apresenta os trabalhos
