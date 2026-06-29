@@ -59,7 +59,7 @@ As métricas incluem ROUGE, BERTScore, SARI, e índices de legibilidade
 Flesch e Gunning-Fog adaptados para o português. Os resultados mostram
 que Claude Sonnet 4.6 (few-shot, SARI=42,6) e Qwen 2.5 7B (few-shot, SARI=41,7) obtêm os melhores escores de
 similaridade (ROUGE-1 $\geq$ 0,66), enquanto o Llama 4 Scout alcança os maiores ganhos de
-legibilidade (Flesch $\Delta = +13,2$, Fog $\Delta = -4,0$).
+legibilidade (Flesch $\Delta\mathrm{F} = +13,2$, Fog $\Delta\mathrm{Fog} = -4,0$).
 O fine-tuning do PTT5-small supera todos os
 resultados de prompting em similaridade (ROUGE-1 até 0,74, SARI até
 55,5). Isso mostra que o treinamento em domínio específico compensa a
@@ -67,7 +67,7 @@ diferença de escala. Uma avaliação complementar
 LLM-as-judge com dois modelos juízes (Gemini 3.1 Flash Lite e GPT-4o
 mini) confirma a fluência e adequação
 das simplificações, mas revela limitações qualitativas nos
-modelos fine-tunados, além de baixa concordância entre juízes
+modelos ajustados em domínio, além de baixa concordância entre juízes
 automáticos para modelos baseados em prompting.
 \end{resumo}
 
@@ -89,7 +89,7 @@ readability indices adapted for Portuguese. Results show that
 Claude Sonnet 4.6 (few-shot, SARI 42.6) and Qwen 2.5 7B (few-shot,
 SARI 41.7) achieve the best similarity scores among the prompting
 configurations, both reaching ROUGE-1 = 0.66, while Llama 4 Scout obtains the
-largest readability gains (Flesch $\Delta = +13.2$, Fog $\Delta = -4.0$).
+largest readability gains (Flesch $\Delta\mathrm{F} = +13.2$, Fog $\Delta\mathrm{Fog} = -4.0$).
 Fine-tuning the PTT5-small (60M) surpasses all prompting results in similarity
 (ROUGE-1 up to 0.74, SARI up to 55.5), demonstrating that domain-specific
 training compensates for the scale difference.
@@ -406,8 +406,8 @@ utilizadas nos experimentos de prompting. Cada configuração foi treinada
 uma única vez, sem variação de semente aleatória. Ressaltamos que a
 comparação entre fine-tuning e prompting confunde escala do modelo e
 paradigma de treinamento: modelos de prompting têm 7B--17B parâmetros
-e zero amostras de treino, enquanto os fine-tunados têm 60M--0,5B
-parâmetros e 1.953 amostras de treino. Modelos maiores fine-tunados
+e zero amostras de treino, enquanto os ajustados em domínio têm 60M--0,5B
+parâmetros e 1.953 amostras de treino. Modelos maiores ajustados em domínio
 provavelmente superariam ambos os cenários, mas estavam além do
 escopo computacional deste trabalho.
 
@@ -529,7 +529,7 @@ GPT-4o mini    & zero & 0,60 & 0,41 & 0,56 & 0,86 & 37,0 & 0,67 & 0,88 \\
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{l l r r r r}
 \toprule
-Modelo & Estrat. & Flesch & F$\Delta$ & Fog & Fog$\Delta$\\
+Modelo & Estrat. & Flesch & $\Delta \mathrm{F}$ & Fog & $\Delta \mathrm{Fog}$\\
 \midrule
 Original    & --- &  7,6 & ---   & 21,6 & --- \\
 Humano (Ref)& --- & 15,5 & +7,9  & 19,7 & $-1,9$ \\
@@ -621,10 +621,10 @@ para 200 amostras. A referência humana apresenta melhoria Flesch de
 baseline de legibilidade. O Llama 4 Scout se destaca com ganhos
 superiores ao humano: melhoria Flesch de +13,2 e redução Fog de $-4,0$
 na estratégia few-shot. O Claude S. 4.6 zero-shot também supera o
-humano com Flesch $\Delta$ de +12,9. O GPT-4o mini e o GPT-4o (full)
-zero-shot também superam o humano (F$\Delta = +11,1$ e +9,3,
+humano com Flesch $\Delta \mathrm{F}$ de +12,9. O GPT-4o mini e o GPT-4o (full)
+zero-shot também superam o humano ($\Delta \mathrm{F} = +11,1$ e +9,3,
 respectivamente). O Qwen 2.5 7B few-shot, ao contrário, produz ganhos
-mais modestos (F$\Delta = +6,2$), sugerindo que suas simplificações
+mais modestos ($\Delta \mathrm{F} = +6,2$), sugerindo que suas simplificações
 são mais conservadoras e próximas à estrutura original.
 Quanto ao CoT, o Llama 4 Scout mantém ganho elevado de
 legibilidade (+13,4, similar ao few-shot, $p=0,87$), o
@@ -638,7 +638,7 @@ modelo base.
 \subsection{Resultados do Fine-Tuning}
 
 A Tabela~\ref{tab:finetuning} apresenta os resultados dos modelos
-fine-tunados, comparando-os com o melhor prompting de cada modelo e com
+ajustados em domínio, comparando-os com o melhor prompting de cada modelo e com
 a referência humana.
 
 \begin{table*}[htbp]
@@ -652,7 +652,7 @@ a referência humana.
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{l r r r r r r r r}
 \toprule
-Modelo & R-1 & R-L & BS & SARI & R1$_{OP}$ & BS$_{OP}$ & F$\Delta$ & Fog$\Delta$ \\
+Modelo & R-1 & R-L & BS & SARI & R1$_{OP}$ & BS$_{OP}$ & $\Delta \mathrm{F}$ & $\Delta \mathrm{Fog}$ \\
 \midrule
 Humano (Ref)   & 0,76 & 0,74 & 0,91 & ---   & 0,76 & 0,91 & +7,9  & $-1,9$ \\
 Cópia          & 0,76 & 0,74 & 0,91 & 15,8  & 1,00 & 1,00 & 0,0   & 0,0 \\
@@ -677,19 +677,19 @@ O PTT5-small com LoRA rank=8 atinge ROUGE-1 de 0,74 e SARI de 55,2,
 superando os melhores resultados de prompting (R-1 = 0,66, SARI = 42,6)
 e aproximando-se da similaridade da referência humana
 (R-1 = 0,76, BS = 0,90). No entanto, seu ganho de legibilidade
-é modesto (F$\Delta = +2,6$), e a similaridade
+é modesto ($\Delta \mathrm{F} = +2,6$), e a similaridade
 original--predição (R1$_{OP} = 0,93$) indica simplificações muito
 conservadoras.
 
 O experimento com rank=32 apresentou SARI ligeiramente inferior (53,1)
-mas maior ganho de legibilidade (F$\Delta = +4,2$ vs.\ +2,6),
+mas maior ganho de legibilidade ($\Delta \mathrm{F} = +4,2$ vs.\ +2,6),
 sugerindo que maior capacidade do adaptador permite aprender uma
 transformação de simplificação mais agressiva, ainda que com menor
 sobreposição lexical. O fine-tuning completo alcançou o maior SARI
 (55,5) e R-1 (0,74) entre as três variantes. Contudo, a diferença
 entre as três variantes do PTT5 não é estatisticamente significativa
 em R1 e SARI (grupo $e$ na Tabela~\ref{tab:significancia}):
-os três modelos são equivalentes nessas métricas. Em F$\Delta$,
+os três modelos são equivalentes nessas métricas. Em $\Delta \mathrm{F}$,
 rank=32 e full FT se diferenciam de rank=8 ($p<0,05$), indicando
 que postos mais altos ou fine-tuning completo produzem simplificações
 ligeiramente menos conservadoras. O fine-tuning completo (perda de
@@ -713,9 +713,9 @@ conservador, refletindo uma característica inerente ao PTT5-small.
 \end{figure*}
 
 O Qwen 2.5 0.5B apresentou R-1 de 0,60, SARI de 41,8
-e F$\Delta = +9,6$. As simplificações são menos similares
+e $\Delta \mathrm{F} = +9,6$. As simplificações são menos similares
 lexicalmente, mas os ganhos de legibilidade são substanciais, superando
-o PTT5 em F$\Delta$ (+9,6 vs.\ +2,6 a +4,2). Em uma inspeção
+o PTT5 em $\Delta \mathrm{F}$ (+9,6 vs.\ +2,6 a +4,2). Em uma inspeção
 manual das 200 amostras, identificamos duas sa\'idas em que o modelo
 reproduz a instru\c{c}\~ao em vez de execut\'a-la (metatexto, 1\%):
 a amostra \#16 produz ``Simplifique o texto a seguir: [\ldots]''
@@ -749,14 +749,14 @@ CoT: $p<0,0001$ em R1 e SARI; Qwen 2.5 7B vs.\
 CoT: $p<0,0001$ em R1 e SARI).
 
 Em legibilidade, o CoT do Llama 4 Scout mantém ganho de
-F$\Delta = +13,4$ (vs.\ +13,2 do few-shot, diferença não
+$\Delta \mathrm{F} = +13,4$ (vs.\ +13,2 do few-shot, diferença não
 significativa, $p=0,87$), o GPT-4o mini CoT obtém
-F$\Delta = +12,0$ (vs.\ +10,3 do few-shot, também não
+$\Delta \mathrm{F} = +12,0$ (vs.\ +10,3 do few-shot, também não
 significativo, $p=0,13$), e o GPT-4o CoT obtém
-F$\Delta = +11,5$ (vs.\ +9,9 do few-shot, não
+$\Delta \mathrm{F} = +11,5$ (vs.\ +9,9 do few-shot, não
 significativo, $p=0,19$). O Qwen 2.5 7B CoT, porém, reduz
 significativamente o ganho de legibilidade
-(F$\Delta = +3,34$ vs.\ +6,21 do few-shot, $p=0,019$),
+($\Delta \mathrm{F} = +3,34$ vs.\ +6,21 do few-shot, $p=0,019$),
 sugerindo que o impacto do CoT na legibilidade varia conforme o
 modelo. Assim, embora o CoT preserve a legibilidade (na maioria
 dos modelos), ele reduz consistentemente a similaridade com a
@@ -792,7 +792,7 @@ $\alpha = 0,05$).
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{l c c c c c c}
 \toprule
-Modelo & R-1 & SARI & F$\Delta$ & Fog$\Delta$ & R1$_{OP}$ & BS$_{OP}$ \\
+Modelo & R-1 & SARI & $\Delta \mathrm{F}$ & $\Delta \mathrm{Fog}$ & R1$_{OP}$ & BS$_{OP}$ \\
 \midrule
 GPT-4o mini          & $0,645^{\text{\tiny a}}$   & $39,2^{\text{\tiny a}}$   & $+10,31^{\text{\tiny a}}$  & $-2,82^{\text{\tiny a}}$  & $0,743^{\text{\tiny a}}$  & $0,904^{\text{\tiny a}}$ \\
 GPT-4o               & $0,634^{\text{\tiny a}}$   & $39,2^{\text{\tiny ab}}$  & $+9,89^{\text{\tiny a}}$   & $-2,70^{\text{\tiny a}}$  & $0,721^{\text{\tiny b}}$  & $0,904^{\text{\tiny a}}$ \\
@@ -823,12 +823,12 @@ Claude S. 4.6 ($b$); Qwen 2.5 7B CoT ($d$) supera os demais CoT;
 Llama 4 Scout CoT e GPT-4o CoT ($c$) ficam abaixo, e GPT-4o mini CoT ($cd$)
 é intermediário entre os CoT. O Qwen 2.5 0.5B FT ($a$) é
 equivalente aos modelos de prompting nesta métrica.
-Em F$\Delta$, os três PTT5 ($d$) produzem os menores ganhos de
+Em $\Delta \mathrm{F}$, os três PTT5 ($d$) produzem os menores ganhos de
 legibilidade; Qwen 2.5 7B e Qwen 2.5 7B CoT ($b$) formam grupo
 intermediário; Llama 4 Scout ($ac$), Llama 4 Scout CoT ($c$) e
 GPT-4o CoT ($c$) lideram com os maiores ganhos.
 O Qwen 2.5 0.5B FT ($a$) é equivalente aos modelos proprietários de
-prompting (GPT-4o mini, GPT-4o e Claude S. 4.6) em F$\Delta$,
+prompting (GPT-4o mini, GPT-4o e Claude S. 4.6) em $\Delta \mathrm{F}$,
 confirmando sua capacidade de simplificação lexical mesmo com 0,5B
 parâmetros.
 
@@ -905,11 +905,11 @@ O GPT-4o lidera em simplicidade (4,73) e adequação (4,90);
 Claude e GPT-4o atingem fluência máxima (5,00).
 O Qwen 2.5 7B tem simplicidade ligeiramente inferior
 (4,51), o que é coerente com seu ganho de legibilidade mais modesto.
-O Llama 4 Scout, apesar de liderar em F$\Delta$, tem a fluência
+O Llama 4 Scout, apesar de liderar em $\Delta \mathrm{F}$, tem a fluência
 mais baixa entre os modelos de prompting (4,80) por causa de
 ocasionais quebras de estruturas gramaticais.
 
-Os modelos fine-tunados revelam padrões qualitativos importantes.
+Os modelos ajustados em domínio revelam padrões qualitativos importantes.
 As três variantes do PTT5 obtêm as menores notas de simplicidade
 (2,43 a 2,73), confirmando que o PTT5 tende a copiar o texto original
 com ajustes mínimos independentemente da configuração de treino.
@@ -917,9 +917,9 @@ Suas fluências (4,84--4,91) e adequações (4,50--4,63) são comparáveis
 aos modelos de prompting, indicando que as saídas são gramaticais
 e semanticamente válidas, mas sem simplificar efetivamente.
 O PTT5 LoRA r=32 apresenta a melhor simplicidade entre as três
-variantes (2,73), coerente com seu maior F$\Delta$ (+4,2).
+variantes (2,73), coerente com seu maior $\Delta \mathrm{F}$ (+4,2).
 O Qwen 2.5 0.5B FT, por sua vez, atinge a maior simplicidade entre
-os fine-tunados (3,72), refletindo seu maior ganho de legibilidade,
+os ajustados em domínio (3,72), refletindo seu maior ganho de legibilidade,
 mas apresenta a menor adequação (3,52) e fluência (4,19) entre todos
 os modelos, consistentes com as alucinações semânticas observadas
 (ex. inversão de sentido em ``legislação branda'' $\to$ ``lei muito
@@ -1023,7 +1023,7 @@ Média                &  0,265 & $-0,027$ &  0,306  &  0,115  &  0,110  & 0,962 
 
 Os resultados revelam um padrão claro: a concordância entre juízes
 varia substancialmente conforme o tipo de modelo e a dimensão avaliada.
-Para modelos fine-tunados (PTT5 e Qwen 0.5B), a concordância em
+Para modelos ajustados em domínio (PTT5 e Qwen 0.5B), a concordância em
 simplicidade e adequação é de moderada a substancial
 ($\alpha = 0,360$ a $0,780$), indicando que os juízes convergem ao
 avaliar as diferenças mais marcantes entre cópias próximas do original
@@ -1039,12 +1039,12 @@ texto ``natural e bem formado'' em português, possivelmente porque o
 Gemini é mais tolerante a pequenas variações estruturais enquanto o
 GPT-4o mini penaliza desvios da norma padrão. A adequação é a dimensão
 com melhor concordância ($\alpha = 0,306$), especialmente para modelos
-fine-tunados ($\alpha \geq 0,75$), sugerindo que a preservação de
+ajustados em domínio ($\alpha \geq 0,75$), sugerindo que a preservação de
 significado é o critério mais objetivo entre os dois juízes.
 
 O Cohen's $\kappa$ (não-ponderado) fornece uma visão complementar:
 para concordância exata, os valores são baixos ($\kappa = 0,115$ em
-média), mesmo para os modelos fine-tunados ($\kappa \approx 0,24$),
+média), mesmo para os modelos ajustados em domínio ($\kappa \approx 0,24$),
 refletindo que os juízes raramente atribuem a mesma nota numérica
 exata. O $\kappa_w$ (ponderado linear), que considera discordâncias
 parciais, mostra concordância ligeiramente superior para alguns
@@ -1086,7 +1086,7 @@ avaliação.
 Os resultados revelam um tradeoff entre similaridade com a referência
 e ganho de legibilidade. O few-shot geralmente maximiza ambas as
 métricas, embora haja exceções pontuais (e.g., Claude S. 4.6
-zero-shot supera o few-shot em F$\Delta$: +12,9 vs.\ +10,0).
+zero-shot supera o few-shot em $\Delta \mathrm{F}$: +12,9 vs.\ +10,0).
 O grau do tradeoff varia entre modelos: no Llama 4 Scout, o ganho de
 legibilidade é máximo independentemente da estratégia; no Qwen 2.5 7B,
 o few-shot atinge a maior similaridade mas com ganho de legibilidade
@@ -1149,7 +1149,7 @@ econômico; para usos esporádicos, o prompting via API é mais prático.
 O fine-tuning do PTT5-small (60M) superou todos os resultados de
 prompting em métricas de similaridade, mas isso não significa que seja
 sempre superior: gerou simplificações excessivamente conservadoras
-(R1$_{OP} \approx 0,93$, F$\Delta = +2,6$ a $+4,2$), praticamente
+(R1$_{OP} \approx 0,93$, $\Delta \mathrm{F} = +2,6$ a $+4,2$), praticamente
 copiando o original com pequenos ajustes. O LLM-judge corrobora esta
 análise: as três variantes do PTT5 obtêm as menores notas de
 simplicidade entre todos os modelos, enquanto fluência e adequação
@@ -1164,7 +1164,7 @@ explica\c{c}\~ao para o comportamento conservador \'e uma
 caracter\'\i{}stica inerente ao modelo, que por ter sido
 pr\'e-treinado para reconstruir o texto original, tende a
 copi\'a-lo. O Qwen 2.5 0.5B, com arquitetura decoder-only, atinge
-maior ganho de legibilidade (F$\Delta = +9,6$) mas sofre de alucinações
+maior ganho de legibilidade ($\Delta \mathrm{F} = +9,6$) mas sofre de alucinações
 semânticas (adequação 3,52), refletindo sua escala reduzida.
 
 A principal vantagem do prompting é a flexibilidade: um mesmo modelo
@@ -1190,7 +1190,7 @@ robustez com k = 1, 3, 5 e 7 no GPT-4o mini
 Os resultados mostram que as m\'etricas de similaridade melhoram
 com mais exemplos: SARI sobe de 39,3 (k=1) para 42,2 (k=7),
 e R1 de 0,652 para 0,675.
-O ganho de legibilidade (F$\Delta$) varia entre +8,3 (k=7) e +10,7 (k=3),
+O ganho de legibilidade ($\Delta \mathrm{F}$) varia entre +8,3 (k=7) e +10,7 (k=3),
 sem tendência clara.
 As diferen\c{c}as s\~ao moderadas: a varia\c{c}\~ao m\'axima \'e de
 aproximadamente 8\% em SARI e 4\% em R1, e n\~ao alteram o
@@ -1205,7 +1205,7 @@ no GPT-4o mini.}
 \footnotesize
 \begin{tabular}{c c c c c c}
 \toprule
-k & R1 & SARI & F$\Delta$ & Fog$\Delta$ & R1$_{OP}$ \\
+k & R1 & SARI & $\Delta \mathrm{F}$ & $\Delta \mathrm{Fog}$ & R1$_{OP}$ \\
 \midrule
 1 & 0,652 & 39,3 & +9,1 & $-2,2$ & 0,751 \\
 3 & 0,65 & 39,2 & +10,7 & $-2,9$ & 0,743 \\
@@ -1268,7 +1268,7 @@ trabalhos futuros, ao menos 3 sementes por configuração.
 \section{Conclusão}
 
 Este trabalho comparou cinco LLMs e
-quatro modelos fine-tunados para simplificação textual em português
+quatro modelos ajustados em domínio para simplificação textual em português
 brasileiro. LLMs de grande porte realizam simplificação sem fine-tuning
 com desempenho satisfatório: few-shot (k=3) produz os melhores
 resultados de similaridade e legibilidade, enquanto CoT reduz
@@ -1276,7 +1276,7 @@ consistentemente a similaridade sem benefícios de legibilidade.
 O fine-tuning do PTT5-small (60M) supera todos os resultados de
 prompting com modelos muito maiores (7B--17B) em similaridade
 (ROUGE-1 até 0,74, SARI até 55,5), mas com comportamento conservador
-(F$\Delta \leq +4,2$). Métricas de similaridade e legibilidade devem
+($\Delta \mathrm{F} \leq +4,2$). Métricas de similaridade e legibilidade devem
 ser reportadas conjuntamente para uma avaliação completa.
 Em aplicações que priorizam acessibilidade (e.g., leitura fácil),
 legibilidade e o LLM-judge devem prevalecer sobre similaridade
@@ -1299,7 +1299,7 @@ dada a baixa concordância inter-juiz observada
 ($\alpha = 0{,}181$ em média); (iv) investigar se prompts
 estilísticos (com nível-alvo de simplificação explícito) podem
 reduzir a lacuna entre similaridade e legibilidade em modelos
-fine-tunados.
+ajustados em domínio.
 
 \section*{Disponibilidade de Código e Dados}
 
